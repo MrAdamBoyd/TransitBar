@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		660489ED1B83B3BA00E55412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660489EC1B83B3BA00E55412 /* AppDelegate.swift */; };
+		660489EF1B83B3BA00E55412 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660489EE1B83B3BA00E55412 /* Images.xcassets */; };
+		660489F21B83B3BA00E55412 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660489F01B83B3BA00E55412 /* MainMenu.xib */; };
+		660489FE1B83B3BA00E55412 /* MuniMenuBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660489FD1B83B3BA00E55412 /* MuniMenuBarTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		660489F81B83B3BA00E55412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 660489DF1B83B3BA00E55412 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 660489E61B83B3BA00E55412;
+			remoteInfo = MuniMenuBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		660489E71B83B3BA00E55412 /* MuniMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuniMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		660489EB1B83B3BA00E55412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		660489EC1B83B3BA00E55412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		660489EE1B83B3BA00E55412 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		660489F11B83B3BA00E55412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		660489F71B83B3BA00E55412 /* MuniMenuBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuniMenuBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		660489FC1B83B3BA00E55412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		660489FD1B83B3BA00E55412 /* MuniMenuBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuniMenuBarTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		660489E41B83B3BA00E55412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		660489F41B83B3BA00E55412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		660489DE1B83B3BA00E55412 = {
+			isa = PBXGroup;
+			children = (
+				660489E91B83B3BA00E55412 /* MuniMenuBar */,
+				660489FA1B83B3BA00E55412 /* MuniMenuBarTests */,
+				660489E81B83B3BA00E55412 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		660489E81B83B3BA00E55412 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				660489E71B83B3BA00E55412 /* MuniMenuBar.app */,
+				660489F71B83B3BA00E55412 /* MuniMenuBarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		660489E91B83B3BA00E55412 /* MuniMenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				660489EC1B83B3BA00E55412 /* AppDelegate.swift */,
+				660489EE1B83B3BA00E55412 /* Images.xcassets */,
+				660489F01B83B3BA00E55412 /* MainMenu.xib */,
+				660489EA1B83B3BA00E55412 /* Supporting Files */,
+			);
+			path = MuniMenuBar;
+			sourceTree = "<group>";
+		};
+		660489EA1B83B3BA00E55412 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				660489EB1B83B3BA00E55412 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		660489FA1B83B3BA00E55412 /* MuniMenuBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				660489FD1B83B3BA00E55412 /* MuniMenuBarTests.swift */,
+				660489FB1B83B3BA00E55412 /* Supporting Files */,
+			);
+			path = MuniMenuBarTests;
+			sourceTree = "<group>";
+		};
+		660489FB1B83B3BA00E55412 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				660489FC1B83B3BA00E55412 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		660489E61B83B3BA00E55412 /* MuniMenuBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66048A011B83B3BA00E55412 /* Build configuration list for PBXNativeTarget "MuniMenuBar" */;
+			buildPhases = (
+				660489E31B83B3BA00E55412 /* Sources */,
+				660489E41B83B3BA00E55412 /* Frameworks */,
+				660489E51B83B3BA00E55412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuniMenuBar;
+			productName = MuniMenuBar;
+			productReference = 660489E71B83B3BA00E55412 /* MuniMenuBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		660489F61B83B3BA00E55412 /* MuniMenuBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66048A041B83B3BA00E55412 /* Build configuration list for PBXNativeTarget "MuniMenuBarTests" */;
+			buildPhases = (
+				660489F31B83B3BA00E55412 /* Sources */,
+				660489F41B83B3BA00E55412 /* Frameworks */,
+				660489F51B83B3BA00E55412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				660489F91B83B3BA00E55412 /* PBXTargetDependency */,
+			);
+			name = MuniMenuBarTests;
+			productName = MuniMenuBarTests;
+			productReference = 660489F71B83B3BA00E55412 /* MuniMenuBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		660489DF1B83B3BA00E55412 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Adam Boyd";
+				TargetAttributes = {
+					660489E61B83B3BA00E55412 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					660489F61B83B3BA00E55412 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 660489E61B83B3BA00E55412;
+					};
+				};
+			};
+			buildConfigurationList = 660489E21B83B3BA00E55412 /* Build configuration list for PBXProject "MuniMenuBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 660489DE1B83B3BA00E55412;
+			productRefGroup = 660489E81B83B3BA00E55412 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				660489E61B83B3BA00E55412 /* MuniMenuBar */,
+				660489F61B83B3BA00E55412 /* MuniMenuBarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		660489E51B83B3BA00E55412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660489EF1B83B3BA00E55412 /* Images.xcassets in Resources */,
+				660489F21B83B3BA00E55412 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		660489F51B83B3BA00E55412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		660489E31B83B3BA00E55412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660489ED1B83B3BA00E55412 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		660489F31B83B3BA00E55412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660489FE1B83B3BA00E55412 /* MuniMenuBarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		660489F91B83B3BA00E55412 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 660489E61B83B3BA00E55412 /* MuniMenuBar */;
+			targetProxy = 660489F81B83B3BA00E55412 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		660489F01B83B3BA00E55412 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				660489F11B83B3BA00E55412 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		660489FF1B83B3BA00E55412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		66048A001B83B3BA00E55412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		66048A021B83B3BA00E55412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MuniMenuBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		66048A031B83B3BA00E55412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MuniMenuBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		66048A051B83B3BA00E55412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MuniMenuBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuniMenuBar.app/Contents/MacOS/MuniMenuBar";
+			};
+			name = Debug;
+		};
+		66048A061B83B3BA00E55412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MuniMenuBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuniMenuBar.app/Contents/MacOS/MuniMenuBar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		660489E21B83B3BA00E55412 /* Build configuration list for PBXProject "MuniMenuBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				660489FF1B83B3BA00E55412 /* Debug */,
+				66048A001B83B3BA00E55412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66048A011B83B3BA00E55412 /* Build configuration list for PBXNativeTarget "MuniMenuBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66048A021B83B3BA00E55412 /* Debug */,
+				66048A031B83B3BA00E55412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		66048A041B83B3BA00E55412 /* Build configuration list for PBXNativeTarget "MuniMenuBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66048A051B83B3BA00E55412 /* Debug */,
+				66048A061B83B3BA00E55412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 660489DF1B83B3BA00E55412 /* Project object */;
+}
