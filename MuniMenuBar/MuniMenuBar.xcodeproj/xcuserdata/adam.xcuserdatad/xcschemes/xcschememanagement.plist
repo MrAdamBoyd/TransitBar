@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MuniStatusBar.xcscheme</key>
+		<key>MuniMenuBar.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6627ABCC17D304E3006726DC</key>
+		<key>6666109E1B82C88F00CB2B63</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>666610B01B82C88F00CB2B63</key>
 		<dict>
 			<key>primary</key>
 			<true/>

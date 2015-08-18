@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		666610A51B82C88F00CB2B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666610A41B82C88F00CB2B63 /* AppDelegate.swift */; };
+		666610A71B82C88F00CB2B63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666610A61B82C88F00CB2B63 /* ViewController.swift */; };
+		666610A91B82C88F00CB2B63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666610A81B82C88F00CB2B63 /* Images.xcassets */; };
+		666610AC1B82C88F00CB2B63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666610AA1B82C88F00CB2B63 /* Main.storyboard */; };
+		666610B81B82C88F00CB2B63 /* MuniMenuBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666610B71B82C88F00CB2B63 /* MuniMenuBarTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		666610B21B82C88F00CB2B63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 666610971B82C88F00CB2B63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6666109E1B82C88F00CB2B63;
+			remoteInfo = MuniMenuBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6666109F1B82C88F00CB2B63 /* MuniMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuniMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		666610A31B82C88F00CB2B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		666610A41B82C88F00CB2B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		666610A61B82C88F00CB2B63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		666610A81B82C88F00CB2B63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		666610AB1B82C88F00CB2B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		666610B11B82C88F00CB2B63 /* MuniMenuBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuniMenuBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		666610B61B82C88F00CB2B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		666610B71B82C88F00CB2B63 /* MuniMenuBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuniMenuBarTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6666109C1B82C88F00CB2B63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		666610AE1B82C88F00CB2B63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		666610961B82C88F00CB2B63 = {
+			isa = PBXGroup;
+			children = (
+				666610A11B82C88F00CB2B63 /* MuniMenuBar */,
+				666610B41B82C88F00CB2B63 /* MuniMenuBarTests */,
+				666610A01B82C88F00CB2B63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		666610A01B82C88F00CB2B63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6666109F1B82C88F00CB2B63 /* MuniMenuBar.app */,
+				666610B11B82C88F00CB2B63 /* MuniMenuBarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		666610A11B82C88F00CB2B63 /* MuniMenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				666610A41B82C88F00CB2B63 /* AppDelegate.swift */,
+				666610A61B82C88F00CB2B63 /* ViewController.swift */,
+				666610A81B82C88F00CB2B63 /* Images.xcassets */,
+				666610AA1B82C88F00CB2B63 /* Main.storyboard */,
+				666610A21B82C88F00CB2B63 /* Supporting Files */,
+			);
+			path = MuniMenuBar;
+			sourceTree = "<group>";
+		};
+		666610A21B82C88F00CB2B63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				666610A31B82C88F00CB2B63 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		666610B41B82C88F00CB2B63 /* MuniMenuBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				666610B71B82C88F00CB2B63 /* MuniMenuBarTests.swift */,
+				666610B51B82C88F00CB2B63 /* Supporting Files */,
+			);
+			path = MuniMenuBarTests;
+			sourceTree = "<group>";
+		};
+		666610B51B82C88F00CB2B63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				666610B61B82C88F00CB2B63 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6666109E1B82C88F00CB2B63 /* MuniMenuBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 666610BB1B82C88F00CB2B63 /* Build configuration list for PBXNativeTarget "MuniMenuBar" */;
+			buildPhases = (
+				6666109B1B82C88F00CB2B63 /* Sources */,
+				6666109C1B82C88F00CB2B63 /* Frameworks */,
+				6666109D1B82C88F00CB2B63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuniMenuBar;
+			productName = MuniMenuBar;
+			productReference = 6666109F1B82C88F00CB2B63 /* MuniMenuBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		666610B01B82C88F00CB2B63 /* MuniMenuBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 666610BE1B82C88F00CB2B63 /* Build configuration list for PBXNativeTarget "MuniMenuBarTests" */;
+			buildPhases = (
+				666610AD1B82C88F00CB2B63 /* Sources */,
+				666610AE1B82C88F00CB2B63 /* Frameworks */,
+				666610AF1B82C88F00CB2B63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				666610B31B82C88F00CB2B63 /* PBXTargetDependency */,
+			);
+			name = MuniMenuBarTests;
+			productName = MuniMenuBarTests;
+			productReference = 666610B11B82C88F00CB2B63 /* MuniMenuBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		666610971B82C88F00CB2B63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Adam Boyd";
+				TargetAttributes = {
+					6666109E1B82C88F00CB2B63 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					666610B01B82C88F00CB2B63 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 6666109E1B82C88F00CB2B63;
+					};
+				};
+			};
+			buildConfigurationList = 6666109A1B82C88F00CB2B63 /* Build configuration list for PBXProject "MuniMenuBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 666610961B82C88F00CB2B63;
+			productRefGroup = 666610A01B82C88F00CB2B63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6666109E1B82C88F00CB2B63 /* MuniMenuBar */,
+				666610B01B82C88F00CB2B63 /* MuniMenuBarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6666109D1B82C88F00CB2B63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666610A91B82C88F00CB2B63 /* Images.xcassets in Resources */,
+				666610AC1B82C88F00CB2B63 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		666610AF1B82C88F00CB2B63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6666109B1B82C88F00CB2B63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666610A71B82C88F00CB2B63 /* ViewController.swift in Sources */,
+				666610A51B82C88F00CB2B63 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		666610AD1B82C88F00CB2B63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666610B81B82C88F00CB2B63 /* MuniMenuBarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		666610B31B82C88F00CB2B63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6666109E1B82C88F00CB2B63 /* MuniMenuBar */;
+			targetProxy = 666610B21B82C88F00CB2B63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		666610AA1B82C88F00CB2B63 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				666610AB1B82C88F00CB2B63 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		666610B91B82C88F00CB2B63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		666610BA1B82C88F00CB2B63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		666610BC1B82C88F00CB2B63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MuniMenuBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		666610BD1B82C88F00CB2B63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MuniMenuBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		666610BF1B82C88F00CB2B63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MuniMenuBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuniMenuBar.app/Contents/MacOS/MuniMenuBar";
+			};
+			name = Debug;
+		};
+		666610C01B82C88F00CB2B63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MuniMenuBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuniMenuBar.app/Contents/MacOS/MuniMenuBar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6666109A1B82C88F00CB2B63 /* Build configuration list for PBXProject "MuniMenuBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				666610B91B82C88F00CB2B63 /* Debug */,
+				666610BA1B82C88F00CB2B63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		666610BB1B82C88F00CB2B63 /* Build configuration list for PBXNativeTarget "MuniMenuBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				666610BC1B82C88F00CB2B63 /* Debug */,
+				666610BD1B82C88F00CB2B63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		666610BE1B82C88F00CB2B63 /* Build configuration list for PBXNativeTarget "MuniMenuBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				666610BF1B82C88F00CB2B63 /* Debug */,
+				666610C01B82C88F00CB2B63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 666610971B82C88F00CB2B63 /* Project object */;
+}
