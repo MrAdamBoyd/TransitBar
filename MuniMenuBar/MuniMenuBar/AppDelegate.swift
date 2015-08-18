@@ -13,9 +13,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        
+        statusItem.title = "Hello"
+        
+        let menu = NSMenu()
+        
+        menu.addItem(NSMenuItem(title: "Settings", action: Selector("openSettings"), keyEquivalent: ","))
+        menu.addItem(NSMenuItem.separatorItem())
+        menu.addItem(NSMenuItem(title: "Quit", action: Selector("terminate:"), keyEquivalent: "q"))
+        
+        statusItem.menu = menu
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
