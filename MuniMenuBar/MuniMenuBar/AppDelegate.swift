@@ -15,6 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
 
+    @IBOutlet weak var settingsWindow: NSWindow!
+    
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
         
@@ -29,6 +31,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.menu = menu
     }
 
+    func openSettings() {
+        settingsWindow.makeKeyAndOrderFront(self)
+    }
+    
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
