@@ -12,6 +12,8 @@
 		660489F21B83B3BA00E55412 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660489F01B83B3BA00E55412 /* MainMenu.xib */; };
 		660489FE1B83B3BA00E55412 /* MuniMenuBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660489FD1B83B3BA00E55412 /* MuniMenuBarTests.swift */; };
 		66048A081B83FB5700E55412 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66048A071B83FB5700E55412 /* PreferencesWindow.swift */; };
+		66048A0A1B83FE0A00E55412 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66048A091B83FE0A00E55412 /* UserSettings.swift */; };
+		66048A0C1B83FF1200E55412 /* MMBDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66048A0B1B83FF1200E55412 /* MMBDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		660489FC1B83B3BA00E55412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		660489FD1B83B3BA00E55412 /* MuniMenuBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuniMenuBarTests.swift; sourceTree = "<group>"; };
 		66048A071B83FB5700E55412 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
+		66048A091B83FE0A00E55412 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		66048A0B1B83FF1200E55412 /* MMBDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +79,11 @@
 		660489E91B83B3BA00E55412 /* MuniMenuBar */ = {
 			isa = PBXGroup;
 			children = (
-				660489EC1B83B3BA00E55412 /* AppDelegate.swift */,
 				660489EE1B83B3BA00E55412 /* Images.xcassets */,
 				660489F01B83B3BA00E55412 /* MainMenu.xib */,
+				660489EC1B83B3BA00E55412 /* AppDelegate.swift */,
+				66048A0B1B83FF1200E55412 /* MMBDataController.swift */,
+				66048A091B83FE0A00E55412 /* UserSettings.swift */,
 				66048A071B83FB5700E55412 /* PreferencesWindow.swift */,
 				660489EA1B83B3BA00E55412 /* Supporting Files */,
 			);
@@ -208,7 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66048A0C1B83FF1200E55412 /* MMBDataController.swift in Sources */,
 				66048A081B83FB5700E55412 /* PreferencesWindow.swift in Sources */,
+				66048A0A1B83FE0A00E55412 /* UserSettings.swift in Sources */,
 				660489ED1B83B3BA00E55412 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
