@@ -11,20 +11,6 @@ import Cocoa
 
 private let storedSettingsKey = "kMMBStoredSettings"
 
-//Direction for each line
-enum LineDirection {
-    case NoDirection
-    case Inbound
-    case Outbound
-}
-
-//Stored stop identifiers to get the data from
-class stopIdentifier:NSObject {
-    var lineNumber:Int = 0
-    var stopNumber:Int = 0
-    var direction:LineDirection = .NoDirection
-}
-
 class MMBDataController {
     private var settings = UserSettings()
     
