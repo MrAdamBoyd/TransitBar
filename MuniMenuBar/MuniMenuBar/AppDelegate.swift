@@ -13,14 +13,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
 
     @IBOutlet weak var settingsWindow: NSWindow!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
         
-        statusItem.title = "Hello"
+        statusItem.title = "Loading..."
         
         let menu = NSMenu()
         
