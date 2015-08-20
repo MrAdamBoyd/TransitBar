@@ -24,13 +24,13 @@ class UserSettings: NSObject, NSCoding {
     //Dealing with the different settings the user might have
     
     //User can have up to 2 stops displaying at all times
-    var defaultStop1:stopIdentifier?
-    var defaultStop2:stopIdentifier?
+    var defaultStop1:TransitStop?
+    var defaultStop2:TransitStop?
     
     //User has choice of enabling different lines showing up at different times of the day
     var differentLinesForDay:Bool = false
-    var optionalStop1:stopIdentifier?
-    var optionalStop2:stopIdentifier?
+    var optionalStop1:TransitStop?
+    var optionalStop2:TransitStop?
     
     override init() {
         super.init()
@@ -45,12 +45,12 @@ class UserSettings: NSObject, NSCoding {
     required init(coder aDecoder: NSCoder) {
         mostRecentVersion = aDecoder.decodeDoubleForKey(kMostRecentVersionEncoderString)
         firstTimeUsingApp = aDecoder.decodeBoolForKey(kFirstTimeUsingAppEncoderString)
-        defaultStop1 = aDecoder.decodeObjectForKey(kDefaultStop1EncoderString) as? stopIdentifier
-        defaultStop2 = aDecoder.decodeObjectForKey(kDefaultStop2EncoderString) as? stopIdentifier
+        defaultStop1 = aDecoder.decodeObjectForKey(kDefaultStop1EncoderString) as? TransitStop
+        defaultStop2 = aDecoder.decodeObjectForKey(kDefaultStop2EncoderString) as? TransitStop
         
         differentLinesForDay = aDecoder.decodeBoolForKey(kdifferentLinesForDayEncoderString)
-        optionalStop1 = aDecoder.decodeObjectForKey(kOptionalStop1EncoderString) as? stopIdentifier
-        optionalStop2 = aDecoder.decodeObjectForKey(kOptionalStop2EncoderString) as? stopIdentifier
+        optionalStop1 = aDecoder.decodeObjectForKey(kOptionalStop1EncoderString) as? TransitStop
+        optionalStop2 = aDecoder.decodeObjectForKey(kOptionalStop2EncoderString) as? TransitStop
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
