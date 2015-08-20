@@ -29,6 +29,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem(title: "Quit", action: Selector("terminate:"), keyEquivalent: "q"))
         
         statusItem.menu = menu
+        
+        if MMBDataController.sharedController.anyStopsSaved() {
+            //User has stops saved, download the data and start the timer
+            
+        } else {
+            //User doesn't have any stops, open settings menu
+            settingsWindow.makeKeyAndOrderFront(self)
+            
+            //http://webservices.nextbus.com/service/publicXMLFeed?command=routeList&a=sf-muni
+        }
+        
     }
 
     func openSettings() {

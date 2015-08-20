@@ -24,16 +24,38 @@ class MMBDataController {
         self.saveSettings()
     }
     
-    //mostRecentVersion
-    
-    func getMostRecentVersion() -> Double {
-        return settings.mostRecentVersion
+    //Any saved stops to load data from
+    func anyStopsSaved() -> Bool {
+        return (settings.defaultStop1 != nil || settings.defaultStop2 != nil)
+        //No need to check for optional stops being nil, they
     }
+    
+    //differentLinesForDay
+    
+    func setDifferentLinesForDay(status:Bool) {
+        settings.differentLinesForDay = status
+        if !settings.differentLinesForDay {
+            //Erase settings for the optional stops if the user turns off the different lines for the different parts of the day
+            settings.optionalStop1 = nil
+            settings.optionalStop2 = nil
+        }
+    }
+    
+    func getDifferentLinesForDay() -> Bool {
+        return settings.differentLinesForDay
+    }
+    
+    
+    //mostRecentVersion
     
     func setMostRecentVersion(version: Double) {
         settings.mostRecentVersion = version
         self.saveSettings()
         
+    }
+    
+    func getMostRecentVersion() -> Double {
+        return settings.mostRecentVersion
     }
     
     //Saves the settings for the user to disk, should be used after setting any variable for the settings
