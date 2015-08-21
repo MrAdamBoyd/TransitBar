@@ -9,7 +9,7 @@
 import Foundation
 import Cocoa
 
-class PreferencesWindow:NSWindow {
+class PreferencesWindow:NSWindow, MMBXmlParserDelegate {
     
     //Optionally show different lines at different times
     @IBOutlet weak var differentLinesCheckmark: NSButton!
@@ -36,13 +36,19 @@ class PreferencesWindow:NSWindow {
     override init(contentRect: NSRect, styleMask aStyle: Int, backing bufferingType: NSBackingStoreType, defer flag: Bool) {
         super.init(contentRect: contentRect, styleMask: aStyle, backing: bufferingType, defer: flag)
         
-        println("TEST")
+        MMBXmlParser.sharedParser.delegate = self
+
+        addTimesToPopUpButtons()
+        
     }
     
     required init?(coder: NSCoder) {
        super.init(coder: coder)
     }
     
+    func addTimesToPopUpButtons() {
+        
+    }
     
     @IBAction func checkboxHit(sender: AnyObject) {
         if let button = sender as? NSButton {
@@ -55,4 +61,16 @@ class PreferencesWindow:NSWindow {
         startTimePopup.enabled = enabledOrDisabled
         endTimePopup.enabled = enabledOrDisabled
     }
+    
+    //MARK: MMBXmlParserProtocol
+    
+    func allLinesDataFinishedLoading() {
+        let titleArray = MMBDataController.sharedController.getAllLinesToString()
+        
+        line1.addItemsWithTitles(titleArray)
+        line2.addItemsWithTitles(titleArray)
+        line3.addItemsWithTitles(titleArray)
+        line4.addItemsWithTitles(titleArray)
+    }
+    
 }

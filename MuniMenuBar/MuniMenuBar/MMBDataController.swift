@@ -40,6 +40,15 @@ class MMBDataController {
         return settings.lineDefinitionArray
     }
     
+    //Returns the string title of all lines
+    func getAllLinesToString() -> [NSString] {
+        var stringArray:[NSString] = []
+        for item in settings.lineDefinitionArray {
+            stringArray.append(item.routeTitle)
+        }
+        return stringArray
+    }
+    
     //differentLinesForDay
     
     func setDifferentLinesForDay(status:Bool) {

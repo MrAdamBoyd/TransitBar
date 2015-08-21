@@ -19,6 +19,8 @@ enum RequestType {
 class MMBXmlParser: NSObject, NSXMLParserDelegate, NSURLConnectionDataDelegate {
     static let sharedParser = MMBXmlParser()
     
+    var delegate: MMBXmlParserDelegate?
+    
     private var currentRequestType:RequestType = .NoRequest
     private var connection:NSURLConnection?
     var xmlData:NSMutableData?
@@ -84,6 +86,15 @@ class MMBXmlParser: NSObject, NSXMLParserDelegate, NSURLConnectionDataDelegate {
     
     func parserDidEndDocument(parser: NSXMLParser) {
         //TODO: Parse all the data
+        
+        switch currentRequestType {
+        case .AllLines:
+            if let currentDelegate = self.delegate {
+                currentDelegate.allLinesDataFinishedLoading()
+            }
+        default:
+            println("Nothing")
+        }
         
         clearXMLParsingData()
     }
