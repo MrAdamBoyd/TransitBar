@@ -703,6 +703,9 @@
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="checkboxHit:" target="QvC-M9-y7g" id="maZ-MP-4bD"/>
+                        </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zbv-Ad-92y">
                         <rect key="frame" x="325" y="105" width="28" height="17"/>

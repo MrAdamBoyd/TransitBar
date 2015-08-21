@@ -34,7 +34,6 @@ class PreferencesWindow:NSWindow {
     
     
     override init(contentRect: NSRect, styleMask aStyle: Int, backing bufferingType: NSBackingStoreType, defer flag: Bool) {
-        
         super.init(contentRect: contentRect, styleMask: aStyle, backing: bufferingType, defer: flag)
         
         println("TEST")
@@ -42,5 +41,18 @@ class PreferencesWindow:NSWindow {
     
     required init?(coder: NSCoder) {
        super.init(coder: coder)
+    }
+    
+    
+    @IBAction func checkboxHit(sender: AnyObject) {
+        if let button = sender as? NSButton {
+            enableOrDisableTimes(button.state == NSOnState)
+        }
+    }
+    
+    //Enables or disables the PopUpButtons for the time
+    func enableOrDisableTimes(enabledOrDisabled:Bool) {
+        startTimePopup.enabled = enabledOrDisabled
+        endTimePopup.enabled = enabledOrDisabled
     }
 }
