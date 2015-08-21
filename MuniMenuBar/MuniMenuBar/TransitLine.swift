@@ -27,6 +27,10 @@ class TransitLine: NSObject, NSCoding {
         self.stopsOnLine = stopsOnLine
     }
     
+    //MARK: NSCoding
+    
+    //TODO
+    
     required init(coder aDecoder: NSCoder) {
     }
     

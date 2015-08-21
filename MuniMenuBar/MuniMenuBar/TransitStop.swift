@@ -44,6 +44,8 @@ class TransitStop:NSObject, NSCoding {
     
     //MARK: NSCoding
     
+    //TODO
+    
     required init(coder aDecoder: NSCoder) {
     }
     

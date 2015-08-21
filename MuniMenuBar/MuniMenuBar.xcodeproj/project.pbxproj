@@ -16,6 +16,8 @@
 		66048A0C1B83FF1200E55412 /* MMBDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66048A0B1B83FF1200E55412 /* MMBDataController.swift */; };
 		6639FB811B85116500D0D8B0 /* TransitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639FB801B85116500D0D8B0 /* TransitStop.swift */; };
 		66BEED771B86306300BD86FC /* TransitLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEED761B86306300BD86FC /* TransitLine.swift */; };
+		66F7B80C1B86D203009EE63C /* MMBXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7B80B1B86D203009EE63C /* MMBXmlParser.swift */; };
+		66F7B80E1B86D4C7009EE63C /* RequestURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7B80D1B86D4C7009EE63C /* RequestURLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		66048A0B1B83FF1200E55412 /* MMBDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBDataController.swift; sourceTree = "<group>"; };
 		6639FB801B85116500D0D8B0 /* TransitStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStop.swift; sourceTree = "<group>"; };
 		66BEED761B86306300BD86FC /* TransitLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitLine.swift; sourceTree = "<group>"; };
+		66F7B80B1B86D203009EE63C /* MMBXmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBXmlParser.swift; sourceTree = "<group>"; };
+		66F7B80D1B86D4C7009EE63C /* RequestURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestURLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +91,12 @@
 				660489F01B83B3BA00E55412 /* MainMenu.xib */,
 				660489EC1B83B3BA00E55412 /* AppDelegate.swift */,
 				66048A0B1B83FF1200E55412 /* MMBDataController.swift */,
+				66F7B80B1B86D203009EE63C /* MMBXmlParser.swift */,
 				66048A091B83FE0A00E55412 /* UserSettings.swift */,
 				66048A071B83FB5700E55412 /* PreferencesWindow.swift */,
 				6639FB801B85116500D0D8B0 /* TransitStop.swift */,
 				66BEED761B86306300BD86FC /* TransitLine.swift */,
+				66F7B80D1B86D4C7009EE63C /* RequestURLs.swift */,
 				660489EA1B83B3BA00E55412 /* Supporting Files */,
 			);
 			path = MuniMenuBar;
@@ -220,8 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F7B80C1B86D203009EE63C /* MMBXmlParser.swift in Sources */,
 				66048A0C1B83FF1200E55412 /* MMBDataController.swift in Sources */,
 				66048A081B83FB5700E55412 /* PreferencesWindow.swift in Sources */,
+				66F7B80E1B86D4C7009EE63C /* RequestURLs.swift in Sources */,
 				66048A0A1B83FE0A00E55412 /* UserSettings.swift in Sources */,
 				66BEED771B86306300BD86FC /* TransitLine.swift in Sources */,
 				6639FB811B85116500D0D8B0 /* TransitStop.swift in Sources */,
