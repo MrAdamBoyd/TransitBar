@@ -14,8 +14,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
 
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
-
-    @IBOutlet weak var settingsWindow: NSWindow!
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
@@ -35,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
         } else {
             //User doesn't have any stops, open settings menu
-            settingsWindow.makeKeyAndOrderFront(self)
+            window.makeKeyAndOrderFront(self)
             
             //http://webservices.nextbus.com/service/publicXMLFeed?command=routeList&a=sf-muni
         }
@@ -43,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func openSettings() {
-        settingsWindow.makeKeyAndOrderFront(self)
+        window.makeKeyAndOrderFront(self)
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {
