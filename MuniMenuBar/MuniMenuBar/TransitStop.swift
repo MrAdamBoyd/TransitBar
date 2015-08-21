@@ -9,11 +9,15 @@
 import Foundation
 import Cocoa
 
+private let kRouteTagEncoderString = "kRouteTagEncoder"
+private let kRouteTitleEncoderString = "kRouteTitleEncoder"
+private let kStopTagEncoderString = "kStopTagEncoder"
+private let kDirectionEncoderString = "kDirectionEncoder"
+private let kPredictionsEncoderString = "kPredictionsEncoder"
+
 //Direction for each line
-enum LineDirection {
-    case NoDirection
-    case Inbound
-    case Outbound
+enum LineDirection:Int {
+    case NoDirection = 0, Inbound, Outbound
 }
 
 //Stored stop identifiers to get the data from
@@ -44,11 +48,20 @@ class TransitStop:NSObject, NSCoding {
     
     //MARK: NSCoding
     
-    //TODO
-    
     required init(coder aDecoder: NSCoder) {
+        routeTag = aDecoder.decodeIntegerForKey(kRouteTagEncoderString)
+        routeTitle = aDecoder.decodeObjectForKey(kRouteTitleEncoderString) as! String
+        stopTag = aDecoder.decodeIntegerForKey(kStopTagEncoderString)
+        direction = aDecoder.decodeObjectForKey(kDirectionEncoderString) as! LineDirection
+        direction = LineDirection(rawValue:(aDecoder.decodeIntegerForKey(kDirectionEncoderString))) ?? .NoDirection
+        predictions = aDecoder.decodeObjectForKey(kPredictionsEncoderString) as! [Int]
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeInteger(routeTag, forKey: kRouteTagEncoderString)
+        aCoder.encodeObject(routeTitle, forKey: kRouteTitleEncoderString)
+        aCoder.encodeInteger(stopTag, forKey: kStopTagEncoderString)
+        aCoder.encodeObject(direction.rawValue, forKey: kDirectionEncoderString)
+        aCoder.encodeObject(predictions, forKey: kPredictionsEncoderString)
     }
 }

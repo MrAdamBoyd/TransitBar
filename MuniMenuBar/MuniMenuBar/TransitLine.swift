@@ -8,6 +8,10 @@
 
 import Foundation
 
+private let kRouteTagEncoderString = "kRouteTagEncoder"
+private let kRouteTitleEncoderString = "kRouteTitleEncoder"
+private let kStopsOnLineEncoderString = "kStopsOnLineEncoder"
+
 class TransitLine: NSObject, NSCoding {
     
     var routeTag:Int = 0
@@ -29,11 +33,15 @@ class TransitLine: NSObject, NSCoding {
     
     //MARK: NSCoding
     
-    //TODO
-    
     required init(coder aDecoder: NSCoder) {
+        routeTag = aDecoder.decodeIntegerForKey(kRouteTagEncoderString)
+        routeTitle = aDecoder.decodeObjectForKey(kRouteTitleEncoderString) as! String
+        stopsOnLine = aDecoder.decodeObjectForKey(kStopsOnLineEncoderString) as! [TransitStop]
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeInteger(routeTag, forKey: kRouteTagEncoderString)
+        aCoder.encodeObject(routeTitle, forKey: kRouteTitleEncoderString)
+        aCoder.encodeObject(stopsOnLine, forKey: kStopsOnLineEncoderString)
     }
 }
