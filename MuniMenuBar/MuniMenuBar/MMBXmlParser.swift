@@ -10,6 +10,7 @@ import Foundation
 import Cocoa
 
 enum RequestType {
+    case NoRequest
     case AllLines
     case LineDefinition
     case StopPredictions
@@ -18,7 +19,7 @@ enum RequestType {
 class MMBXmlParser: NSObject, NSXMLParserDelegate, NSURLConnectionDataDelegate {
     static let sharedParser = MMBXmlParser()
     
-    private var currentRequestType:RequestType?
+    private var currentRequestType:RequestType = .NoRequest
     private var connection:NSURLConnection?
     var xmlData:NSMutableData?
     
@@ -30,15 +31,14 @@ class MMBXmlParser: NSObject, NSXMLParserDelegate, NSURLConnectionDataDelegate {
         xmlData = NSMutableData()
         currentRequestType = .AllLines
         
-        var allLinesURL = NSURL(string: kMMBAllLinesURL)!
-        var allLinesURLRequest = NSURLRequest(URL: allLinesURL)
-        
+        var allLinesURL = NSURL(string: kMMBAllLinesURL.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+        var allLinesURLRequest = NSURLRequest(URL: allLinesURL!)
         connection = NSURLConnection(request: allLinesURLRequest, delegate: self, startImmediately: true)
     }
     
     //Clears all data after making a request
     func clearXMLParsingData() {
-        currentRequestType = nil
+        currentRequestType = .NoRequest
         connection = nil
         xmlData = nil
     }
@@ -61,10 +61,25 @@ class MMBXmlParser: NSObject, NSXMLParserDelegate, NSURLConnectionDataDelegate {
     }
     
     
-    //MARK: NSXMLParserDelegatee
+    //MARK: NSXMLParserDelegate
     
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
         //TODO: Parse the document based on the current request type
+        switch currentRequestType {
+        case .AllLines:
+            if elementName == "route" {
+                if let tag = attributeDict["tag"] as? String, title = attributeDict["title"] as? String{
+                    MMBDataController.sharedController.addLine(TransitLine(lineNumber: tag, lineTitle: title))
+                }
+            }
+        case .LineDefinition:
+            println("Line def")
+        case .StopPredictions:
+            println("Line prediction")
+        default:
+            println("Nothing to see here, move along")
+        }
+
     }
     
     func parserDidEndDocument(parser: NSXMLParser) {

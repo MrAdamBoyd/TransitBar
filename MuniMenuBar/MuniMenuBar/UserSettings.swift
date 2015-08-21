@@ -21,6 +21,8 @@ class UserSettings: NSObject, NSCoding {
     var mostRecentVersion:Double = 1.0
     var firstTimeUsingApp:Bool = false
     
+    var lineDefinitionArray:[TransitLine] = []
+    
     //Dealing with the different settings the user might have
     
     //User can have up to 2 stops displaying at all times

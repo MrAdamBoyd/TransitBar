@@ -14,18 +14,18 @@ private let kStopsOnLineEncoderString = "kStopsOnLineEncoder"
 
 class TransitLine: NSObject, NSCoding {
     
-    var routeTag:Int = 0
+    var routeTag:String = ""
     var routeTitle:String = ""
     var stopsOnLine:[TransitStop] = []
     
     //Init without stops
-    init(lineNumber routeTag:Int, lineTitle routeTitle:String) {
+    init(lineNumber routeTag:String, lineTitle routeTitle:String) {
         self.routeTag = routeTag
         self.routeTitle = routeTitle
     }
     
     //Init with stops
-    init(lineNumber routeTag:Int, lineTitle routeTitle:String, withStops stopsOnLine:[TransitStop]) {
+    init(lineNumber routeTag:String, lineTitle routeTitle:String, withStops stopsOnLine:[TransitStop]) {
         self.routeTag = routeTag
         self.routeTitle = routeTitle
         self.stopsOnLine = stopsOnLine
@@ -34,13 +34,13 @@ class TransitLine: NSObject, NSCoding {
     //MARK: NSCoding
     
     required init(coder aDecoder: NSCoder) {
-        routeTag = aDecoder.decodeIntegerForKey(kRouteTagEncoderString)
+        routeTag = aDecoder.decodeObjectForKey(kRouteTagEncoderString) as! String
         routeTitle = aDecoder.decodeObjectForKey(kRouteTitleEncoderString) as! String
         stopsOnLine = aDecoder.decodeObjectForKey(kStopsOnLineEncoderString) as! [TransitStop]
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeInteger(routeTag, forKey: kRouteTagEncoderString)
+        aCoder.encodeObject(routeTag, forKey: kRouteTagEncoderString)
         aCoder.encodeObject(routeTitle, forKey: kRouteTitleEncoderString)
         aCoder.encodeObject(stopsOnLine, forKey: kStopsOnLineEncoderString)
     }

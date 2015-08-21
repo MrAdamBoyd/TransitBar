@@ -8,4 +8,4 @@
 
 import Foundation
 
-let kMMBAllLinesURL = "http://webservices.nextbus.com/service/publicXMLFeed?command=routeList& a=sf-muni"
+let kMMBAllLinesURL = "http://webservices.nextbus.com/service/publicXMLFeed?command=routeList&a=sf-muni"

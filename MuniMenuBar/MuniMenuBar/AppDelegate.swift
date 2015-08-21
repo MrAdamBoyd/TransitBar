@@ -35,6 +35,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             //User doesn't have any stops, open settings menu
             window.makeKeyAndOrderFront(self)
             
+            MMBXmlParser.sharedParser.requestAllLineData()
+            
             //http://webservices.nextbus.com/service/publicXMLFeed?command=routeList&a=sf-muni
         }
         

@@ -30,6 +30,16 @@ class MMBDataController {
         //No need to check for optional stops being nil, they
     }
     
+    //TransitLines
+    
+    func addLine(line:TransitLine) {
+        settings.lineDefinitionArray.append(line)
+    }
+
+    func getAllLines() -> [TransitLine] {
+        return settings.lineDefinitionArray
+    }
+    
     //differentLinesForDay
     
     func setDifferentLinesForDay(status:Bool) {
