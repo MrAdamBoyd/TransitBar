@@ -28,6 +28,7 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     var xmlString:String = ""
     var indexOfLine:Int?
     var sender:AnyObject?
+    var transitStop:TransitStop?
     
     //Private init for singleton
     //private init() { }
@@ -55,11 +56,12 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         
     }
     
-    func requestStopPredictionData(line:String, stopTag:String) {
+    func requestStopPredictionData(stop:TransitStop) {
         xmlData = NSMutableData()
         currentRequestType = .StopPredictions
+        transitStop = stop
         
-        var completeLinePredictionURL = kMMBLinePredictionURL1 + line + kMMBLinePredictionURL2 + stopTag
+        var completeLinePredictionURL = kMMBLinePredictionURL1 + stop.routeTag + kMMBLinePredictionURL2 + stop.stopTag
         var linePredictionURL = NSURL(string: completeLinePredictionURL.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
         var linePredictionRequest = NSURLRequest(URL: linePredictionURL!)
         connection = NSURLConnection(request: linePredictionRequest, delegate: self, startImmediately: true)
@@ -127,7 +129,7 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         //Going through the stops and creating TransitStop objects
         for stop in stops {
             if let title = stop.element!.attributes["title"], tag = stop.element!.attributes["tag"] {
-                let transitStop = TransitStop(stopNamed: title, stopNumber: tag.toInt()!, goingDirection: .NoDirection)
+                let transitStop = TransitStop(stopNamed: title, stopNumber: tag, goingDirection: .NoDirection)
                 
                 stopDictionary[tag] = transitStop
             }
@@ -157,8 +159,23 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         
     }
     
+    //Parsing the information for stop predictions
     func parseStopPredictions(xml:XMLIndexer) {
+        var predictions = xml["body"]["predictions"]["direction"]
+        var predictionArray:[Int] = []
         
+        //Getting all predictions, only if we're using 3
+        for prediction in predictions.children {
+            var predictionString:String = prediction.element!.attributes["minutes"]!
+            if let predictionInt = predictionString.toInt() {
+                predictionArray.append(predictionInt)
+            }
+        }
+        
+        transitStop!.predictions = predictionArray
+        
+        let appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.predictionAdded(transitStop!)
     }
     
     //MARK: NSURLConnectionDelegate

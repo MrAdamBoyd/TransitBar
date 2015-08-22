@@ -172,7 +172,7 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             
             //Updating the label for the app delegate
             let appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate
-            appDelegate.updateLabel()
+            appDelegate.loadData()
         }
     }
     

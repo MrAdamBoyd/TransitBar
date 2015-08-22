@@ -24,19 +24,19 @@ enum LineDirection:Int {
 class TransitStop:NSObject, NSCoding {
     var routeTag:String = ""
     var stopTitle:String = ""
-    var stopTag:Int = 0
+    var stopTag:String = ""
     var direction:LineDirection = .NoDirection
     var predictions:[Int] = []
     
     //Init without line info
-    init(stopNamed stopTitle:String, stopNumber stopTag:Int, goingDirection direction:LineDirection) {
+    init(stopNamed stopTitle:String, stopNumber stopTag:String, goingDirection direction:LineDirection) {
         self.stopTitle = stopTitle
         self.stopTag = stopTag
         self.direction = direction
     }
     
     //Init without predictions
-    init(lineNumber routeTag:String, lineTitle routeTitle:String, atStop stopTag:Int, goingDirection direction:LineDirection) {
+    init(lineNumber routeTag:String, lineTitle routeTitle:String, atStop stopTag:String, goingDirection direction:LineDirection) {
         self.routeTag = routeTag
         self.stopTitle = routeTitle
         self.stopTag = stopTag
@@ -44,7 +44,7 @@ class TransitStop:NSObject, NSCoding {
     }
     
     //Init with predictions
-    init(lineNumber routeTag:String, stopNamed stopTitle:String, atStop stopTag:Int, goingDirection direction:LineDirection, withPredictions predictions:[Int]) {
+    init(lineNumber routeTag:String, stopNamed stopTitle:String, atStop stopTag:String, goingDirection direction:LineDirection, withPredictions predictions:[Int]) {
         self.routeTag = routeTag
         self.stopTitle = stopTitle
         self.stopTag = stopTag
@@ -57,7 +57,7 @@ class TransitStop:NSObject, NSCoding {
     required init(coder aDecoder: NSCoder) {
         routeTag = aDecoder.decodeObjectForKey(kRouteTagEncoderString) as! String
         stopTitle = aDecoder.decodeObjectForKey(kStopTitleEncoderString) as! String
-        stopTag = aDecoder.decodeIntegerForKey(kStopTagEncoderString)
+        stopTag = aDecoder.decodeObjectForKey(kStopTagEncoderString) as! String
         direction = aDecoder.decodeObjectForKey(kDirectionEncoderString) as! LineDirection
         direction = LineDirection(rawValue:(aDecoder.decodeIntegerForKey(kDirectionEncoderString))) ?? .NoDirection
         predictions = aDecoder.decodeObjectForKey(kPredictionsEncoderString) as! [Int]
@@ -66,7 +66,7 @@ class TransitStop:NSObject, NSCoding {
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(routeTag, forKey: kRouteTagEncoderString)
         aCoder.encodeObject(stopTitle, forKey: kStopTitleEncoderString)
-        aCoder.encodeInteger(stopTag, forKey: kStopTagEncoderString)
+        aCoder.encodeObject(stopTag, forKey: kStopTagEncoderString)
         aCoder.encodeObject(direction.rawValue, forKey: kDirectionEncoderString)
         aCoder.encodeObject(predictions, forKey: kPredictionsEncoderString)
     }

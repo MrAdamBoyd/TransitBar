@@ -30,7 +30,7 @@ class MMBDataController {
         //No need to check for optional stops being nil, they
     }
     
-    func getCurrentSavedStops() -> [TransitStop] {
+    func getCurrentActiveStops() -> [TransitStop] {
         //TODO: Deal with other time
         var savedStops:[TransitStop] = []
         

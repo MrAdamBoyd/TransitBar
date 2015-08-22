@@ -40,19 +40,81 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         //Timer that updates the label runs every 60 seconds
-        minuteTimer = NSTimer.scheduledTimerWithTimeInterval(60.0, target: self, selector: Selector("updateLabel"), userInfo: nil, repeats: true)
+        minuteTimer = NSTimer.scheduledTimerWithTimeInterval(60.0, target: self, selector: Selector("loadData"), userInfo: nil, repeats: true)
         
-        updateLabel()
+        loadData()
     }
     
-    func updateLabel() {
+    func loadData() {
         if MMBDataController.sharedController.anyStopsSaved() {
-            var stopsToCheck:[TransitStop] = MMBDataController.sharedController.getCurrentSavedStops()
+            var stopsToCheck:[TransitStop] = MMBDataController.sharedController.getCurrentActiveStops()
             
+            for stop in stopsToCheck {
+                MMBXmlParser.sharedParser.requestStopPredictionData(stop)
+            }
             
         } else {
             statusItem.title = "No Stops"
         }
+    }
+    
+    //This function determines if we are done loading data, and if we are, we can update the label
+    func predictionAdded(stop:TransitStop) {
+        var allStops = MMBDataController.sharedController.getCurrentActiveStops()
+        
+        if allStops.count == 1 {
+            //We're done, update label
+            updateLabel()
+        } else {
+            //If this is the second element, we're done
+            if stop == allStops[1] {
+                //We're done, update label
+                updateLabel()
+            }
+        }
+    }
+    
+    //We have all the information, update label
+    func updateLabel() {
+        var allStops = MMBDataController.sharedController.getCurrentActiveStops()
+        var stop1String = ""
+        var stop2String = ""
+        
+        //Building string for first stop
+        if allStops.count == 1 {
+            stop1String = buildStopString(allStops[0])
+        }
+        
+        if allStops.count == 2 {
+            stop2String = "; " + buildStopString(allStops[1])
+        }
+        
+        statusItem.title = stop1String
+    }
+    
+    
+    //Building the string for the stop
+    func buildStopString(stop:TransitStop) -> String {
+        var stopString = ""
+        var directionString:String = " IB: "
+        if stop.direction == .Outbound {
+            directionString = " OB: "
+        }
+        
+        var predictionString:String = ""
+        
+        //Takes first 3 predictions
+        for index in 0...3 {
+            predictionString += String(stop.predictions[index])
+            if index != 3 {
+                predictionString += ", "
+            }
+        }
+        
+        stopString = stop.routeTag + directionString + predictionString
+        
+        return stopString
+        
     }
 
     func openSettings() {
