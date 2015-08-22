@@ -10,11 +10,8 @@ import Foundation
 import Cocoa
 import SWXMLHash
 
-enum RequestType {
-    case NoRequest
-    case AllLines
-    case LineDefinition
-    case StopPredictions
+enum RequestType:Int {
+    case NoRequest = 0, AllLines, LineDefinition, StopPredictions
 }
 
 class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
@@ -57,6 +54,7 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     }
     
     func requestStopPredictionData(stop:TransitStop) {
+        
         xmlData = NSMutableData()
         currentRequestType = .StopPredictions
         transitStop = stop

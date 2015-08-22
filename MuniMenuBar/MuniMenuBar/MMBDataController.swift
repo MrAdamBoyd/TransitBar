@@ -31,15 +31,49 @@ class MMBDataController {
     }
     
     func getCurrentActiveStops() -> [TransitStop] {
-        //TODO: Deal with other time
         var savedStops:[TransitStop] = []
+        var needToUseOtherLine:Bool = false
         
-        if let stop1 = settings.defaultStop1 {
-            savedStops.append(stop1)
+        //User enabled different a different line for a different part of the day
+        if settings.differentLinesForDay {
+            
+            //I hate dealing with dates
+            var calendar:NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+            
+            var now = NSDate()
+            
+            var nowComponents:NSDateComponents = calendar.components(NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: now)
+            var startComponents:NSDateComponents = calendar.components(NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: settings.differentStartTime!)
+            var endComponents:NSDateComponents = calendar.components(NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: settings.differentEndTime!)
+
+            var startTime:NSDate = calendar.dateBySettingHour(startComponents.hour, minute: startComponents.minute, second: startComponents.second, ofDate: now, options: nil)!
+            var endTime:NSDate = calendar.dateBySettingHour(endComponents.hour, minute: endComponents.minute, second: endComponents.second, ofDate: now, options: nil)!
+            
+            //If we are in between the start time and the end time
+            if startTime.timeIntervalSince1970 < now.timeIntervalSince1970 && now.timeIntervalSince1970 < endTime.timeIntervalSince1970 {
+                needToUseOtherLine = true
+            }
+            
+            
         }
         
-        if let stop2 = settings.defaultStop2 {
-            savedStops.append(stop2)
+        //Using regular lines
+        if !needToUseOtherLine {
+            if let stop1 = settings.defaultStop1 {
+                savedStops.append(stop1)
+            }
+            
+            if let stop2 = settings.defaultStop2 {
+                savedStops.append(stop2)
+            }
+        } else {
+            if let stop1 = settings.optionalStop1 {
+                savedStops.append(stop1)
+            }
+            
+            if let stop2 = settings.optionalStop2 {
+                savedStops.append(stop2)
+            }
         }
         
         return savedStops

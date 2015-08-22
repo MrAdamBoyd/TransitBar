@@ -104,9 +104,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var predictionString:String = ""
         
         //Takes first 3 predictions
-        for index in 0...3 {
+        for index in 0...2 {
             predictionString += String(stop.predictions[index])
-            if index != 3 {
+            if index != 2 {
                 predictionString += ", "
             }
         }

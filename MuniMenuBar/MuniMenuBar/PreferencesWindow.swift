@@ -65,8 +65,10 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
     
     //Enables or disables the PopUpButtons for the time
     func enableOrDisableTimes(enabledOrDisabled:Bool) {
+        MMBDataController.sharedController.setDifferentLinesForDay(enabledOrDisabled)
         startDatePicker.enabled = enabledOrDisabled
         endDatePicker.enabled = enabledOrDisabled
+        line3.enabled = enabledOrDisabled
     }
     
     //One of the line popups was selected
@@ -96,20 +98,25 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             
             //The 0th index is "--" and the initializing LineDirection with 0 results in .NoDirection
             if direction != .NoDirection {
-                
-                stop1.removeAllItems()
-                stop1.addItemWithTitle("--")
-                
+
                 if popup == direction1 {
+                    stop1.removeAllItems()
+                    stop1.addItemWithTitle("--")
                     stop1.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: line1.indexOfSelectedItem - 1, goingDirection: direction))
                     stop1.enabled = true
                 } else if popup == direction2 {
+                    stop2.removeAllItems()
+                    stop2.addItemWithTitle("--")
                     stop2.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: line2.indexOfSelectedItem - 1, goingDirection: direction))
                     stop2.enabled = true
                 } else if popup == direction3 {
+                    stop3.removeAllItems()
+                    stop3.addItemWithTitle("--")
                     stop3.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: line3.indexOfSelectedItem - 1, goingDirection: direction))
                     stop3.enabled = true
                 } else if popup == direction4 {
+                    stop4.removeAllItems()
+                    stop4.addItemWithTitle("--")
                     stop4.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: line4.indexOfSelectedItem - 1, goingDirection: direction))
                     stop4.enabled = true
                 }
@@ -138,41 +145,54 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             var indexOfStop = popup.indexOfSelectedItem - 1
             var currentStop:TransitStop
             var stopToSave:Int
-            
-            //Getting the index of the line
-            if popup == stop1 {
-                indexOfLine = line1.indexOfSelectedItem - 1
-                direction = LineDirection(rawValue: direction1.indexOfSelectedItem)!
-                stopToSave = 0
-            } else if popup == stop2 {
-                indexOfLine = line2.indexOfSelectedItem - 1
-                direction = LineDirection(rawValue: direction2.indexOfSelectedItem)!
-                stopToSave = 1
-            } else if popup == stop3 {
-                indexOfLine = line3.indexOfSelectedItem - 1
-                direction = LineDirection(rawValue: direction3.indexOfSelectedItem)!
-                stopToSave = 2
-            } else {
-                //Stop 4
-                indexOfLine = line4.indexOfSelectedItem - 1
-                direction = LineDirection(rawValue: direction4.indexOfSelectedItem)!
-                stopToSave = 3
-            }
-            
-            //Getting the stop based on the direction
-            if direction == .Inbound {
-                currentStop = MMBDataController.sharedController.getAllLines()[indexOfLine].inboundStopsOnLine[indexOfStop]
-            } else {
-                currentStop = MMBDataController.sharedController.getAllLines()[indexOfLine].outboundStopsOnLine[indexOfStop]
-            }
 
-            currentStop.routeTag = MMBDataController.sharedController.getAllLines()[indexOfLine].routeTag
-            
-            MMBDataController.sharedController.saveStop(stopToSave, stop: currentStop)
-            
-            //Updating the label for the app delegate
-            let appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate
-            appDelegate.loadData()
+            //User selected stop, not just "--"
+            if indexOfStop > 0 {
+                //Getting the index of the line
+                if popup == stop1 {
+                    indexOfLine = line1.indexOfSelectedItem - 1
+                    direction = LineDirection(rawValue: direction1.indexOfSelectedItem)!
+                    stopToSave = 0
+                    line2.enabled = true
+                } else if popup == stop2 {
+                    indexOfLine = line2.indexOfSelectedItem - 1
+                    direction = LineDirection(rawValue: direction2.indexOfSelectedItem)!
+                    stopToSave = 1
+                } else if popup == stop3 {
+                    indexOfLine = line3.indexOfSelectedItem - 1
+                    direction = LineDirection(rawValue: direction3.indexOfSelectedItem)!
+                    stopToSave = 2
+                    line4.enabled = true
+                } else {
+                    //Stop 4
+                    indexOfLine = line4.indexOfSelectedItem - 1
+                    direction = LineDirection(rawValue: direction4.indexOfSelectedItem)!
+                    stopToSave = 3
+                }
+                
+                //Getting the stop based on the direction
+                if direction == .Inbound {
+                    currentStop = MMBDataController.sharedController.getAllLines()[indexOfLine].inboundStopsOnLine[indexOfStop]
+                } else {
+                    currentStop = MMBDataController.sharedController.getAllLines()[indexOfLine].outboundStopsOnLine[indexOfStop]
+                }
+
+                currentStop.routeTag = MMBDataController.sharedController.getAllLines()[indexOfLine].routeTag
+                
+                MMBDataController.sharedController.saveStop(stopToSave, stop: currentStop)
+                
+                //Updating the label for the app delegate
+                let appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate
+                appDelegate.loadData()
+                
+            } else {
+                //User selected "--", disable the next line
+                if popup == stop1 {
+                    line2.enabled = false
+                } else if popup == stop3 {
+                    line4.enabled = false
+                }
+            }
         }
     }
     
