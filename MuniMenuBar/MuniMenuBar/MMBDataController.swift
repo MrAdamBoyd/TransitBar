@@ -35,7 +35,7 @@ class MMBDataController {
         var needToUseOtherLine:Bool = false
         
         //User enabled different a different line for a different part of the day
-        if settings.differentLinesForDay {
+        if settings.differentLinesForDay && settings.optionalStop1 != nil {
             
             //I hate dealing with dates
             var calendar:NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
