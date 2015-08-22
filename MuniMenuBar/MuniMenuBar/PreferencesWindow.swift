@@ -71,8 +71,6 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
     
     //One of the line popups was selected
     @IBAction func lineSelected(sender: AnyObject) {
-        //TODO:
-        //Start downloading data for that line
         if let popup = sender as? NSPopUpButton {
             /*The direction is enabled by the index of the selected item being a bool
             The 0th item is "--", so all other values should result in it being enabled

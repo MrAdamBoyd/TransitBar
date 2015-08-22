@@ -138,6 +138,8 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         
         MMBDataController.sharedController.addStopsToLineAtIndex(indexOfLine!, inboundStops: inboundTransitStops, outboundStops: outboundTransitStops)
         
+        //TODO: Set up delegate to let the window know that the stops are done
+        
     }
     
     //MARK: NSURLConnectionDelegate
