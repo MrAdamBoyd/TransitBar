@@ -13,7 +13,9 @@ private let kMostRecentVersionEncoderString = "kMostRecentVersionEncoder"
 private let kFirstTimeUsingAppEncoderString = "kFirstTimeUseringAppEncoder"
 private let kDefaultStop1EncoderString = "kDefaultStop1Encoder"
 private let kDefaultStop2EncoderString = "kDefaultStop2Encoder"
-private let kdifferentLinesForDayEncoderString = "kdifferentLinesForDayEncoder"
+private let kDifferentLinesForDayEncoderString = "kdifferentLinesForDayEncoder"
+private let kDifferentStartTimeEncoderString = "kDifferentStartTimeEncoder"
+private let kDifferentEndTimeEncoderString = "kDifferentEndTimeEncoder"
 private let kOptionalStop1EncoderString = "kSecondaryStop1Encoder"
 private let kOptionalStop2EncoderString = "kSecondaryStop2Encoder"
 
@@ -31,6 +33,8 @@ class UserSettings: NSObject, NSCoding {
     
     //User has choice of enabling different lines showing up at different times of the day
     var differentLinesForDay:Bool = false
+    var differentStartTime:NSDate?
+    var differentEndTime:NSDate?
     var optionalStop1:TransitStop?
     var optionalStop2:TransitStop?
     
@@ -50,7 +54,9 @@ class UserSettings: NSObject, NSCoding {
         defaultStop1 = aDecoder.decodeObjectForKey(kDefaultStop1EncoderString) as? TransitStop
         defaultStop2 = aDecoder.decodeObjectForKey(kDefaultStop2EncoderString) as? TransitStop
         
-        differentLinesForDay = aDecoder.decodeBoolForKey(kdifferentLinesForDayEncoderString)
+        differentLinesForDay = aDecoder.decodeBoolForKey(kDifferentLinesForDayEncoderString)
+        differentStartTime = aDecoder.decodeObjectForKey(kDifferentStartTimeEncoderString) as? NSDate
+        differentEndTime = aDecoder.decodeObjectForKey(kDifferentEndTimeEncoderString) as? NSDate
         optionalStop1 = aDecoder.decodeObjectForKey(kOptionalStop1EncoderString) as? TransitStop
         optionalStop2 = aDecoder.decodeObjectForKey(kOptionalStop2EncoderString) as? TransitStop
     }
@@ -61,7 +67,9 @@ class UserSettings: NSObject, NSCoding {
         aCoder.encodeObject(defaultStop1, forKey: kDefaultStop1EncoderString)
         aCoder.encodeObject(defaultStop2, forKey: kDefaultStop2EncoderString)
         
-        aCoder.encodeBool(differentLinesForDay, forKey: kdifferentLinesForDayEncoderString)
+        aCoder.encodeBool(differentLinesForDay, forKey: kDifferentLinesForDayEncoderString)
+        aCoder.encodeObject(differentStartTime, forKey: kDifferentStartTimeEncoderString)
+        aCoder.encodeObject(differentEndTime, forKey: kDifferentEndTimeEncoderString)
         aCoder.encodeObject(optionalStop1, forKey: kOptionalStop1EncoderString)
         aCoder.encodeObject(optionalStop2, forKey: kOptionalStop2EncoderString)
     }

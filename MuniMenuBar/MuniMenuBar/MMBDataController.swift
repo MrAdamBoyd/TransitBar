@@ -65,6 +65,24 @@ class MMBDataController {
     }
     
     
+    //different start and end times
+    func getDifferentStartTime() -> NSDate? {
+        return settings.differentStartTime
+    }
+    
+    func setDifferentStartTime(date:NSDate) {
+        settings.differentStartTime = date
+    }
+    
+    func getDifferentEndTime() -> NSDate? {
+        return settings.differentEndTime
+    }
+    
+    func setDifferentEndTime(date:NSDate) {
+        settings.differentEndTime = date
+    }
+    
+    
     //mostRecentVersion
     
     func setMostRecentVersion(version: Double) {

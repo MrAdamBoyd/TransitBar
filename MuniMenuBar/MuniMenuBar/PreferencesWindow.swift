@@ -9,12 +9,12 @@
 import Foundation
 import Cocoa
 
-class PreferencesWindow:NSWindow, MMBXmlParserDelegate {
+class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
     
     //Optionally show different lines at different times
     @IBOutlet weak var differentLinesCheckmark: NSButton!
-    @IBOutlet weak var startTimePopup: NSPopUpButton!
-    @IBOutlet weak var endTimePopup: NSPopUpButton!
+    @IBOutlet weak var startDatePicker: NSDatePicker!
+    @IBOutlet weak var endDatePicker: NSDatePicker!
     
     //First line
     @IBOutlet weak var line1: NSPopUpButton!
@@ -37,8 +37,6 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate {
         super.init(contentRect: contentRect, styleMask: aStyle, backing: bufferingType, defer: flag)
         
         MMBXmlParser.sharedParser.delegate = self
-
-        addTimesToPopUpButtons()
         
     }
     
@@ -46,20 +44,25 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate {
        super.init(coder: coder)
     }
     
-    func addTimesToPopUpButtons() {
-        
-    }
-    
     @IBAction func checkboxHit(sender: AnyObject) {
         if let button = sender as? NSButton {
             enableOrDisableTimes(button.state == NSOnState)
         }
     }
+
+    @IBAction func startPickerDateChanged(sender: AnyObject) {
+        MMBDataController.sharedController.setDifferentStartTime(sender.dateValue!)
+    }
+    
+    @IBAction func endPickerDateChanged(sender: AnyObject) {
+        MMBDataController.sharedController.setDifferentEndTime(sender.dateValue!)
+    }
+    
     
     //Enables or disables the PopUpButtons for the time
     func enableOrDisableTimes(enabledOrDisabled:Bool) {
-        startTimePopup.enabled = enabledOrDisabled
-        endTimePopup.enabled = enabledOrDisabled
+        startDatePicker.enabled = enabledOrDisabled
+        endDatePicker.enabled = enabledOrDisabled
     }
     
     //MARK: MMBXmlParserProtocol
@@ -72,5 +75,4 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate {
         line3.addItemsWithTitles(titleArray)
         line4.addItemsWithTitles(titleArray)
     }
-    
 }
