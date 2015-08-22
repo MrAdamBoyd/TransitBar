@@ -28,6 +28,11 @@ class TransitStop:NSObject, NSCoding {
     var direction:LineDirection = .NoDirection
     var predictions:[Int] = []
     
+    //Init without line info
+    init(stopNumber stopTag:Int, goingDirection direction:LineDirection) {
+        self.stopTag = stopTag
+        self.direction = direction
+    }
     
     //Init without predictions
     init(lineNumber routeTag:Int, lineTitle routeTitle:String, atStop stopTag:Int, goingDirection direction:LineDirection) {

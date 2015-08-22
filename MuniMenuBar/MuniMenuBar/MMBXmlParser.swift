@@ -16,7 +16,7 @@ enum RequestType {
     case StopPredictions
 }
 
-class MMBXmlParser: NSObject, NSXMLParserDelegate, NSURLConnectionDataDelegate {
+class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     static let sharedParser = MMBXmlParser()
     
     var delegate: MMBXmlParserDelegate?
@@ -24,6 +24,7 @@ class MMBXmlParser: NSObject, NSXMLParserDelegate, NSURLConnectionDataDelegate {
     private var currentRequestType:RequestType = .NoRequest
     private var connection:NSURLConnection?
     var xmlData:NSMutableData?
+    var xmlString:String = ""
     
     //Private init for singleton
     //private init() { }
@@ -38,27 +39,49 @@ class MMBXmlParser: NSObject, NSXMLParserDelegate, NSURLConnectionDataDelegate {
         connection = NSURLConnection(request: allLinesURLRequest, delegate: self, startImmediately: true)
     }
     
+    func requestLineDefinitionData(line:String) {
+        xmlData = NSMutableData()
+        currentRequestType = .LineDefinition
+        
+        var completeLineDefinitionURL = kMMBLineDefinitionURL + line
+        var lineDefinitionURL = NSURL(string: completeLineDefinitionURL.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+        var lineDefinitionURLRequest = NSURLRequest(URL: lineDefinitionURL!)
+        connection = NSURLConnection(request: lineDefinitionURLRequest, delegate: self, startImmediately: true)
+        
+    }
+    
     //Clears all data after making a request
     func clearXMLParsingData() {
         currentRequestType = .NoRequest
         connection = nil
         xmlData = nil
+        xmlString = ""
     }
     
     //MARK: NSURLConnectionDelegate
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
-        var parser = NSXMLParser(data: xmlData!)
+        xmlString = NSString(data: xmlData!, encoding: NSUTF8StringEncoding) as! String
         
-        parser.delegate = self
         
-        parser.parse()
+        
+        switch currentRequestType {
+        case .AllLines:
+            if let currentDelegate = self.delegate {
+                currentDelegate.allLinesDataFinishedLoading()
+            }
+        default:
+            println("Nothing")
+        }
+        
+        clearXMLParsingData()
     }
     
     
     //MARK: NSURLConnectionDataDelegate
     
     func connection(connection: NSURLConnection, didReceiveData data: NSData) {
+        
         xmlData?.appendData(data)
     }
     
@@ -75,27 +98,12 @@ class MMBXmlParser: NSObject, NSXMLParserDelegate, NSURLConnectionDataDelegate {
                 }
             }
         case .LineDefinition:
-            println("Line def")
+            println("HI")//xmlString?.appendString(aksjdkla)
         case .StopPredictions:
             println("Line prediction")
         default:
             println("Nothing to see here, move along")
         }
 
-    }
-    
-    func parserDidEndDocument(parser: NSXMLParser) {
-        //TODO: Parse all the data
-        
-        switch currentRequestType {
-        case .AllLines:
-            if let currentDelegate = self.delegate {
-                currentDelegate.allLinesDataFinishedLoading()
-            }
-        default:
-            println("Nothing")
-        }
-        
-        clearXMLParsingData()
     }
 }

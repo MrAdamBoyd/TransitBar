@@ -79,6 +79,7 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             0 means false and all other selections will be true */
             if popup == line1 {
                 direction1.enabled = Bool(popup.indexOfSelectedItem)
+                MMBXmlParser.sharedParser.requestLineDefinitionData(MMBDataController.sharedController.getAllLines()[popup.indexOfSelectedItem - 1].routeTag)
             } else if popup == line2 {
                 direction2.enabled = Bool(popup.indexOfSelectedItem)
             } else if popup == line3 {
@@ -86,6 +87,8 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             } else if popup == line4 {
                 direction4.enabled = Bool(popup.indexOfSelectedItem)
             }
+            
+            
         }
     }
     //MARK: MMBXmlParserProtocol
