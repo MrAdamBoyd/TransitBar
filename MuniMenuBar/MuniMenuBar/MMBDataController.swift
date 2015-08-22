@@ -49,6 +49,28 @@ class MMBDataController {
         return stringArray
     }
     
+    //Returns a string array of all inbound or outbound stops
+    func getStopNames(forLine index:Int, goingDirection inboundOrOutbound:LineDirection) -> [NSString] {
+        var stringArray:[NSString] = []
+        var stopsInDirection:[TransitStop] = []
+        
+        //Determining which stops to look at
+        switch inboundOrOutbound {
+        case .Inbound:
+            stopsInDirection = settings.lineDefinitionArray[index].inboundStopsOnLine
+        case .Outbound:
+            stopsInDirection = settings.lineDefinitionArray[index].outboundStopsOnLine
+        default:
+            stopsInDirection = []
+        }
+        
+        for item in stopsInDirection {
+            stringArray.append(item.stopTitle)
+        }
+        
+        return stringArray
+    }
+    
     //differentLinesForDay
     
     func setDifferentLinesForDay(status:Bool) {
@@ -86,8 +108,6 @@ class MMBDataController {
     func addStopsToLineAtIndex(index:Int, inboundStops:[TransitStop], outboundStops:[TransitStop]) {
         settings.lineDefinitionArray[index].inboundStopsOnLine = inboundStops
         settings.lineDefinitionArray[index].outboundStopsOnLine = outboundStops
-        
-        
     }
     
     //mostRecentVersion

@@ -76,23 +76,74 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             The 0th item is "--", so all other values should result in it being enabled
             0 means false and all other selections will be true */
             var shouldStartLoading = Bool(popup.indexOfSelectedItem)
-            if popup == line1 {
-                direction1.enabled = shouldStartLoading
-            } else if popup == line2 {
-                direction2.enabled = shouldStartLoading
-            } else if popup == line3 {
-                direction3.enabled = shouldStartLoading
-            } else if popup == line4 {
-                direction4.enabled = shouldStartLoading
-            }
             
             if shouldStartLoading {
-                MMBXmlParser.sharedParser.requestLineDefinitionData(MMBDataController.sharedController.getAllLines()[popup.indexOfSelectedItem - 1].routeTag, indexOfLine: popup.indexOfSelectedItem - 1)
+                MMBXmlParser.sharedParser.requestLineDefinitionData(MMBDataController.sharedController.getAllLines()[popup.indexOfSelectedItem - 1].routeTag, indexOfLine: popup.indexOfSelectedItem - 1, sender: sender)
+            } else {
+                //We should disable the direction control if user selected "--"
+                //It will be enabled when it is done loading
+                enableOrDisableDirectionControls(popup, enableOrDisable: shouldStartLoading)
             }
             
             
         }
     }
+    
+    //Directional control selected
+    @IBAction func directionSelected(sender: AnyObject) {
+        if let popup = sender as? NSPopUpButton {
+            var direction:LineDirection = LineDirection(rawValue: popup.indexOfSelectedItem)!
+            
+            //The 0th index is "--" and the initializing LineDirection with 0 results in .NoDirection
+            if direction != .NoDirection {
+                
+                stop1.removeAllItems()
+                stop1.addItemWithTitle("--")
+                
+                if popup == direction1 {
+                    stop1.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: line1.indexOfSelectedItem - 1, goingDirection: direction))
+                    stop1.enabled = true
+                } else if popup == direction2 {
+                    stop2.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: line2.indexOfSelectedItem - 1, goingDirection: direction))
+                    stop2.enabled = true
+                } else if popup == direction3 {
+                    stop3.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: line3.indexOfSelectedItem - 1, goingDirection: direction))
+                    stop3.enabled = true
+                } else if popup == direction4 {
+                    stop4.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: line4.indexOfSelectedItem - 1, goingDirection: direction))
+                    stop4.enabled = true
+                }
+            } else {
+                //If user selected no direction
+                if popup == direction1 {
+                    stop1.enabled = false
+                } else if popup == direction2 {
+                    stop2.enabled = false
+                } else if popup == direction3 {
+                    stop3.enabled = false
+                } else if popup == direction4 {
+                    stop4.enabled = false
+                }
+            }
+        }
+    }
+    
+    
+    //Determining whether to enable or disable each direction control
+    func enableOrDisableDirectionControls(sender:AnyObject, enableOrDisable:Bool) {
+        if let popup = sender as? NSPopUpButton {
+            if popup == line1 {
+                direction1.enabled = enableOrDisable
+            } else if popup == line2 {
+                direction2.enabled = enableOrDisable
+            } else if popup == line3 {
+                direction3.enabled = enableOrDisable
+            } else if popup == line4 {
+                direction4.enabled = enableOrDisable
+            }
+        }
+    }
+    
     //MARK: MMBXmlParserProtocol
     
     func allLinesDataFinishedLoading() {
@@ -102,5 +153,23 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
         line2.addItemsWithTitles(titleArray)
         line3.addItemsWithTitles(titleArray)
         line4.addItemsWithTitles(titleArray)
+    }
+    
+    func lineDefinitionFinishedLoading(indexOfLine:Int, sender:AnyObject) {
+        enableOrDisableDirectionControls(sender, enableOrDisable: true)
+        if let popup = sender as? NSPopUpButton {
+            if popup == line1 {
+                stop1.removeAllItems()
+                stop1.addItemWithTitle("--")
+                stop1.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: indexOfLine, goingDirection: .Inbound))
+            } else if popup == line2 {
+                direction2.enabled = true
+            } else if popup == line3 {
+                direction3.enabled = true
+            } else if popup == line4 {
+                direction4.enabled = true
+            }
+        }
+        
     }
 }

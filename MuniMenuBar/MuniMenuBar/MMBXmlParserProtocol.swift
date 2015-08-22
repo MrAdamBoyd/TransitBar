@@ -10,4 +10,5 @@ import Foundation
 
 protocol MMBXmlParserDelegate {
     func allLinesDataFinishedLoading()
+    func lineDefinitionFinishedLoading(indexOfLine:Int, sender:AnyObject)
 }

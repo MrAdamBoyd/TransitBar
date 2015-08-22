@@ -27,6 +27,7 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     var xmlData:NSMutableData?
     var xmlString:String = ""
     var indexOfLine:Int?
+    var sender:AnyObject?
     
     //Private init for singleton
     //private init() { }
@@ -41,10 +42,11 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         connection = NSURLConnection(request: allLinesURLRequest, delegate: self, startImmediately: true)
     }
     
-    func requestLineDefinitionData(line:String, indexOfLine:Int) {
+    func requestLineDefinitionData(line:String, indexOfLine:Int, sender:AnyObject) {
         xmlData = NSMutableData()
         currentRequestType = .LineDefinition
         self.indexOfLine = indexOfLine
+        self.sender = sender
         
         var completeLineDefinitionURL = kMMBLineDefinitionURL + line
         var lineDefinitionURL = NSURL(string: completeLineDefinitionURL.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
@@ -60,6 +62,7 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         xmlData = nil
         xmlString = ""
         indexOfLine = nil
+        sender = nil
     }
     
     func parseAllLinesData(xml:XMLIndexer) {
@@ -138,7 +141,9 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         
         MMBDataController.sharedController.addStopsToLineAtIndex(indexOfLine!, inboundStops: inboundTransitStops, outboundStops: outboundTransitStops)
         
-        //TODO: Set up delegate to let the window know that the stops are done
+        if let currentDelegate = self.delegate {
+            currentDelegate.lineDefinitionFinishedLoading(indexOfLine!, sender: sender!)
+        }
         
     }
     

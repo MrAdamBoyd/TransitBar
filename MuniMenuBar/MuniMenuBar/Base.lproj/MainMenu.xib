@@ -838,6 +838,9 @@
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="directionSelected:" target="QvC-M9-y7g" id="WL1-dN-qJN"/>
+                        </connections>
                     </popUpButton>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JZt-kU-qhI">
                         <rect key="frame" x="202" y="145" width="63" height="17"/>
@@ -854,12 +857,15 @@
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" id="ncc-lL-Ho5">
                                 <items>
-                                    <menuItem title="--" state="on" id="dPN-FI-ATW"/>
+                                    <menuItem title="--" id="dPN-FI-ATW"/>
                                     <menuItem title="Inbound" id="rXx-up-VC1"/>
                                     <menuItem title="Outbound" id="EyB-G4-h6Z"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="directionSelected:" target="QvC-M9-y7g" id="kH1-LN-Rcr"/>
+                        </connections>
                     </popUpButton>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N2F-N5-oiS">
                         <rect key="frame" x="202" y="62" width="63" height="17"/>
@@ -876,12 +882,15 @@
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" id="cb2-s4-2eQ">
                                 <items>
-                                    <menuItem title="--" state="on" id="xq7-8G-duN"/>
+                                    <menuItem title="--" id="xq7-8G-duN"/>
                                     <menuItem title="Inbound" id="HPK-0t-b5p"/>
                                     <menuItem title="Outbound" id="UoP-3R-zmh"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="directionSelected:" target="QvC-M9-y7g" id="VFK-QF-D6K"/>
+                        </connections>
                     </popUpButton>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVp-om-nnJ">
                         <rect key="frame" x="202" y="22" width="63" height="17"/>
@@ -898,12 +907,15 @@
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" id="Wnw-GV-0Vd">
                                 <items>
-                                    <menuItem title="--" state="on" id="0NF-BV-X37"/>
+                                    <menuItem title="--" id="0NF-BV-X37"/>
                                     <menuItem title="Inbound" id="wZw-tr-7vs"/>
                                     <menuItem title="Outbound" id="u9j-fK-hhN"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="directionSelected:" target="QvC-M9-y7g" id="7Wv-Rl-NfE"/>
+                        </connections>
                     </popUpButton>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OF7-VN-eaI">
                         <rect key="frame" x="407" y="190" width="49" height="17"/>
