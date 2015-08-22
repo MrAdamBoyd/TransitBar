@@ -128,6 +128,42 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
         }
     }
     
+    //Stop selected
+    
+    @IBAction func stopSelected(sender: AnyObject) {
+        
+        if let popup = sender as? NSPopUpButton {
+            var direction:LineDirection = .NoDirection
+            var indexOfLine = -1
+            var indexOfStop = popup.indexOfSelectedItem - 1
+            var currentStop:TransitStop
+            
+            //Getting the index of the line
+            if popup == stop1 {
+                indexOfLine = line1.indexOfSelectedItem - 1
+                direction = LineDirection(rawValue: direction1.indexOfSelectedItem)!
+            } else if popup == stop2 {
+                indexOfLine = line2.indexOfSelectedItem - 1
+                direction = LineDirection(rawValue: direction2.indexOfSelectedItem)!
+            } else if popup == stop3 {
+                indexOfLine = line3.indexOfSelectedItem - 1
+                direction = LineDirection(rawValue: direction3.indexOfSelectedItem)!
+            } else if popup == stop4 {
+                indexOfLine = line4.indexOfSelectedItem - 1
+                direction = LineDirection(rawValue: direction4.indexOfSelectedItem)!
+            }
+            
+            //Getting the stop based on the direction
+            if direction == .Inbound {
+                currentStop = MMBDataController.sharedController.getAllLines()[indexOfLine].inboundStopsOnLine[indexOfStop]
+            } else {
+                currentStop = MMBDataController.sharedController.getAllLines()[indexOfLine].outboundStopsOnLine[indexOfStop]
+            }
+            
+            //TODO: Save the stop
+            
+        }
+    }
     
     //Determining whether to enable or disable each direction control
     func enableOrDisableDirectionControls(sender:AnyObject, enableOrDisable:Bool) {

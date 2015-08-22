@@ -936,6 +936,9 @@
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="stopSelected:" target="QvC-M9-y7g" id="rR9-wY-fJe"/>
+                        </connections>
                     </popUpButton>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dhi-Hq-w9Q">
                         <rect key="frame" x="407" y="148" width="49" height="17"/>
@@ -956,6 +959,9 @@
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="stopSelected:" target="QvC-M9-y7g" id="SdN-zA-o5X"/>
+                        </connections>
                     </popUpButton>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYE-3K-9cI">
                         <rect key="frame" x="407" y="64" width="49" height="17"/>
@@ -976,6 +982,9 @@
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="stopSelected:" target="QvC-M9-y7g" id="ASp-Rc-Cbv"/>
+                        </connections>
                     </popUpButton>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zh6-ky-DmD">
                         <rect key="frame" x="407" y="25" width="49" height="17"/>
@@ -996,6 +1005,9 @@
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="stopSelected:" target="QvC-M9-y7g" id="9TL-U6-yV0"/>
+                        </connections>
                     </popUpButton>
                 </subviews>
             </view>

@@ -30,6 +30,33 @@ class MMBDataController {
         //No need to check for optional stops being nil, they
     }
     
+    func getCurrentSavedStops() -> [TransitStop] {
+        //TODO: Deal with other time
+        var savedStops:[TransitStop] = []
+        
+        if let stop1 = settings.defaultStop1 {
+            savedStops.append(stop1)
+        }
+        
+        if let stop2 = settings.defaultStop2 {
+            savedStops.append(stop2)
+        }
+        
+        return savedStops
+    }
+    
+    func saveStop(index:Int, stop:TransitStop) {
+        if index == 0 {
+            settings.defaultStop1 = stop
+        } else if index == 1 {
+            settings.defaultStop2 = stop
+        } else if index == 2 {
+            settings.optionalStop1 = stop
+        } else if index == 3 {
+            settings.optionalStop2 = stop
+        }
+    }
+    
     //TransitLines
     
     func addLine(line:TransitLine) {
