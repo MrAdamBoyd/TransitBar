@@ -77,15 +77,19 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             /*The direction is enabled by the index of the selected item being a bool
             The 0th item is "--", so all other values should result in it being enabled
             0 means false and all other selections will be true */
+            var shouldStartLoading = Bool(popup.indexOfSelectedItem)
             if popup == line1 {
-                direction1.enabled = Bool(popup.indexOfSelectedItem)
-                MMBXmlParser.sharedParser.requestLineDefinitionData(MMBDataController.sharedController.getAllLines()[popup.indexOfSelectedItem - 1].routeTag)
+                direction1.enabled = shouldStartLoading
             } else if popup == line2 {
-                direction2.enabled = Bool(popup.indexOfSelectedItem)
+                direction2.enabled = shouldStartLoading
             } else if popup == line3 {
-                direction3.enabled = Bool(popup.indexOfSelectedItem)
+                direction3.enabled = shouldStartLoading
             } else if popup == line4 {
-                direction4.enabled = Bool(popup.indexOfSelectedItem)
+                direction4.enabled = shouldStartLoading
+            }
+            
+            if shouldStartLoading {
+                MMBXmlParser.sharedParser.requestLineDefinitionData(MMBDataController.sharedController.getAllLines()[popup.indexOfSelectedItem - 1].routeTag, indexOfLine: popup.indexOfSelectedItem - 1)
             }
             
             

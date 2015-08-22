@@ -26,6 +26,7 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     private var connection:NSURLConnection?
     var xmlData:NSMutableData?
     var xmlString:String = ""
+    var indexOfLine:Int?
     
     //Private init for singleton
     //private init() { }
@@ -40,9 +41,10 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         connection = NSURLConnection(request: allLinesURLRequest, delegate: self, startImmediately: true)
     }
     
-    func requestLineDefinitionData(line:String) {
+    func requestLineDefinitionData(line:String, indexOfLine:Int) {
         xmlData = NSMutableData()
         currentRequestType = .LineDefinition
+        self.indexOfLine = indexOfLine
         
         var completeLineDefinitionURL = kMMBLineDefinitionURL + line
         var lineDefinitionURL = NSURL(string: completeLineDefinitionURL.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
@@ -57,6 +59,85 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         connection = nil
         xmlData = nil
         xmlString = ""
+        indexOfLine = nil
+    }
+    
+    func parseAllLinesData(xml:XMLIndexer) {
+        //Going through all lines and saving them
+        for child in xml["body"].children {
+            if let tag = child.element!.attributes["tag"], title = child.element!.attributes["title"] {
+                MMBDataController.sharedController.addLine(TransitLine(lineNumber: tag, lineTitle: title))
+            }
+        }
+        
+        if let currentDelegate = self.delegate {
+            currentDelegate.allLinesDataFinishedLoading()
+        }
+    }
+    
+    //Parsing the line definition
+    func parseLineDefinition(xml:XMLIndexer) {
+        var outboundStops: [String] = []
+        var inboundStops: [String] = []
+        var stopDictionary: [String: TransitStop] = [:]
+        var inboundTransitStops: [TransitStop] = []
+        var outboundTransitStops: [TransitStop] = []
+        
+        var stopDirections = xml["body"]["route"]["direction"]
+        
+        //Getting the directions for each stop
+        for stopDirection in stopDirections {
+            //For each direction, inbound and outbound
+            if stopDirection.element!.attributes["name"] == "Inbound" {
+                //If we are looking at inbound
+                for child in stopDirection.children {
+                    //Go through and add the stop tags to the set of inbound tags
+                    if let tag:String = child.element!.attributes["tag"] {
+                        inboundStops.append(tag)
+                    }
+                }
+            } else {
+                //If we are looking at outbound
+                for child in stopDirection.children {
+                    //Go through and add the stop tags to the set of inbound tags
+                    if let tag:String = child.element!.attributes["tag"] {
+                        outboundStops.append(tag)
+                    }
+                }
+
+            }
+        }
+        
+        //Now we need to go through all the named stops, and add the proper direction to them
+        var stops = xml["body"]["route"]["stop"]
+        
+        //Going through the stops and creating TransitStop objects
+        for stop in stops {
+            if let title = stop.element!.attributes["title"], tag = stop.element!.attributes["tag"] {
+                let transitStop = TransitStop(stopNamed: title, stopNumber: tag.toInt()!, goingDirection: .NoDirection)
+                
+                stopDictionary[tag] = transitStop
+            }
+        }
+        
+        //Need to go through inbound and outbound stops IN ORDER and add them to an array of transit stops
+        
+        for stop in inboundStops {
+            if let transitStop = stopDictionary[stop] as TransitStop! {
+                transitStop.direction = .Inbound
+                inboundTransitStops.append(transitStop)
+            }
+        }
+        
+        for stop in outboundStops {
+            if let transitStop = stopDictionary[stop] as TransitStop! {
+                transitStop.direction = .Outbound
+                outboundTransitStops.append(transitStop)
+            }
+        }
+        
+        MMBDataController.sharedController.addStopsToLineAtIndex(indexOfLine!, inboundStops: inboundTransitStops, outboundStops: outboundTransitStops)
+        
     }
     
     //MARK: NSURLConnectionDelegate
@@ -67,16 +148,9 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         
         switch currentRequestType {
         case .AllLines:
-            //Going through all lines and saving them
-            for child in xml["body"].children {
-                if let tag = child.element!.attributes["tag"], title = child.element!.attributes["title"] {
-                    MMBDataController.sharedController.addLine(TransitLine(lineNumber: tag, lineTitle: title))
-                }
-            }
-            
-            if let currentDelegate = self.delegate {
-                currentDelegate.allLinesDataFinishedLoading()
-            }
+            parseAllLinesData(xml)
+        case .LineDefinition:
+            parseLineDefinition(xml)
         default:
             println("Nothing")
         }

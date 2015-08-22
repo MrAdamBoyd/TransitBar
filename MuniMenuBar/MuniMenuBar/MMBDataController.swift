@@ -82,6 +82,13 @@ class MMBDataController {
         settings.differentEndTime = date
     }
     
+    //Adding stops to line object
+    func addStopsToLineAtIndex(index:Int, inboundStops:[TransitStop], outboundStops:[TransitStop]) {
+        settings.lineDefinitionArray[index].inboundStopsOnLine = inboundStops
+        settings.lineDefinitionArray[index].outboundStopsOnLine = outboundStops
+        
+        
+    }
     
     //mostRecentVersion
     
