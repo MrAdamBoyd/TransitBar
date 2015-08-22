@@ -159,7 +159,8 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             } else {
                 currentStop = MMBDataController.sharedController.getAllLines()[indexOfLine].outboundStopsOnLine[indexOfStop]
             }
-            
+
+            currentStop.routeTag = MMBDataController.sharedController.getAllLines()[indexOfLine].routeTag.toInt()!
             //TODO: Save the stop
             
         }
