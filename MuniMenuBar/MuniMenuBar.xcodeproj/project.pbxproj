@@ -19,6 +19,7 @@
 		66BEED771B86306300BD86FC /* TransitLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEED761B86306300BD86FC /* TransitLine.swift */; };
 		66F7B80C1B86D203009EE63C /* MMBXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7B80B1B86D203009EE63C /* MMBXmlParser.swift */; };
 		66F7B80E1B86D4C7009EE63C /* RequestURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7B80D1B86D4C7009EE63C /* RequestURLs.swift */; };
+		A59C29CEC5EEB4A0B1E505AF /* Pods_MuniMenuBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD72EE83B9E2C622A59BA845 /* Pods_MuniMenuBar.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,9 @@
 		66BEED761B86306300BD86FC /* TransitLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitLine.swift; sourceTree = "<group>"; };
 		66F7B80B1B86D203009EE63C /* MMBXmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBXmlParser.swift; sourceTree = "<group>"; };
 		66F7B80D1B86D4C7009EE63C /* RequestURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestURLs.swift; sourceTree = "<group>"; };
+		97086B4BB3475AF846D51E47 /* Pods-MuniMenuBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuniMenuBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar.debug.xcconfig"; sourceTree = "<group>"; };
+		B3B79FA61A540F04410D4718 /* Pods-MuniMenuBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuniMenuBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar.release.xcconfig"; sourceTree = "<group>"; };
+		FD72EE83B9E2C622A59BA845 /* Pods_MuniMenuBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuniMenuBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A59C29CEC5EEB4A0B1E505AF /* Pods_MuniMenuBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,8 @@
 				660489E91B83B3BA00E55412 /* MuniMenuBar */,
 				660489FA1B83B3BA00E55412 /* MuniMenuBarTests */,
 				660489E81B83B3BA00E55412 /* Products */,
+				6DA64BB8471EA2ADFBCA0463 /* Pods */,
+				9D882CB9B8B1F8300F426738 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +161,23 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		6DA64BB8471EA2ADFBCA0463 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97086B4BB3475AF846D51E47 /* Pods-MuniMenuBar.debug.xcconfig */,
+				B3B79FA61A540F04410D4718 /* Pods-MuniMenuBar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D882CB9B8B1F8300F426738 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD72EE83B9E2C622A59BA845 /* Pods_MuniMenuBar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66048A011B83B3BA00E55412 /* Build configuration list for PBXNativeTarget "MuniMenuBar" */;
 			buildPhases = (
+				B07728334FDE9091EABD17FF /* Check Pods Manifest.lock */,
 				660489E31B83B3BA00E55412 /* Sources */,
 				660489E41B83B3BA00E55412 /* Frameworks */,
 				660489E51B83B3BA00E55412 /* Resources */,
+				74E267B674210424E05B860F /* Embed Pods Frameworks */,
+				EB376993562A2557CCBC31EB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,6 +274,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74E267B674210424E05B860F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B07728334FDE9091EABD17FF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EB376993562A2557CCBC31EB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		660489E31B83B3BA00E55412 /* Sources */ = {
@@ -377,6 +452,7 @@
 		};
 		66048A021B83B3BA00E55412 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97086B4BB3475AF846D51E47 /* Pods-MuniMenuBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -388,6 +464,7 @@
 		};
 		66048A031B83B3BA00E55412 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3B79FA61A540F04410D4718 /* Pods-MuniMenuBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;

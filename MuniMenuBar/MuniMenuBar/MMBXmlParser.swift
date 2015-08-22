@@ -8,6 +8,7 @@
 
 import Foundation
 import Cocoa
+import SWXMLHash
 
 enum RequestType {
     case NoRequest
@@ -62,11 +63,17 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
         xmlString = NSString(data: xmlData!, encoding: NSUTF8StringEncoding) as! String
-        
-        
+        let xml = SWXMLHash.parse(xmlString)
         
         switch currentRequestType {
         case .AllLines:
+            //Going through all lines and saving them
+            for child in xml["body"].children {
+                if let tag = child.element!.attributes["tag"], title = child.element!.attributes["title"] {
+                    MMBDataController.sharedController.addLine(TransitLine(lineNumber: tag, lineTitle: title))
+                }
+            }
+            
             if let currentDelegate = self.delegate {
                 currentDelegate.allLinesDataFinishedLoading()
             }
@@ -83,27 +90,5 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     func connection(connection: NSURLConnection, didReceiveData data: NSData) {
         
         xmlData?.appendData(data)
-    }
-    
-    
-    //MARK: NSXMLParserDelegate
-    
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
-        //TODO: Parse the document based on the current request type
-        switch currentRequestType {
-        case .AllLines:
-            if elementName == "route" {
-                if let tag = attributeDict["tag"] as? String, title = attributeDict["title"] as? String{
-                    MMBDataController.sharedController.addLine(TransitLine(lineNumber: tag, lineTitle: title))
-                }
-            }
-        case .LineDefinition:
-            println("HI")//xmlString?.appendString(aksjdkla)
-        case .StopPredictions:
-            println("Line prediction")
-        default:
-            println("Nothing to see here, move along")
-        }
-
     }
 }
