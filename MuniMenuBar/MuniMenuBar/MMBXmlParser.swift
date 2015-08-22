@@ -55,6 +55,16 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         
     }
     
+    func requestStopPredictionData(line:String, stopTag:String) {
+        xmlData = NSMutableData()
+        currentRequestType = .StopPredictions
+        
+        var completeLinePredictionURL = kMMBLinePredictionURL1 + line + kMMBLinePredictionURL2 + stopTag
+        var linePredictionURL = NSURL(string: completeLinePredictionURL.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
+        var linePredictionRequest = NSURLRequest(URL: linePredictionURL!)
+        connection = NSURLConnection(request: linePredictionRequest, delegate: self, startImmediately: true)
+    }
+    
     //Clears all data after making a request
     func clearXMLParsingData() {
         currentRequestType = .NoRequest
@@ -147,6 +157,10 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         
     }
     
+    func parseStopPredictions(xml:XMLIndexer) {
+        
+    }
+    
     //MARK: NSURLConnectionDelegate
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
@@ -158,6 +172,8 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
             parseAllLinesData(xml)
         case .LineDefinition:
             parseLineDefinition(xml)
+        case .StopPredictions:
+            parseStopPredictions(xml)
         default:
             println("Nothing")
         }

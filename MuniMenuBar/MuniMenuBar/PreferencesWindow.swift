@@ -134,23 +134,29 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
         
         if let popup = sender as? NSPopUpButton {
             var direction:LineDirection = .NoDirection
-            var indexOfLine = -1
+            var indexOfLine:Int
             var indexOfStop = popup.indexOfSelectedItem - 1
             var currentStop:TransitStop
+            var stopToSave:Int
             
             //Getting the index of the line
             if popup == stop1 {
                 indexOfLine = line1.indexOfSelectedItem - 1
                 direction = LineDirection(rawValue: direction1.indexOfSelectedItem)!
+                stopToSave = 0
             } else if popup == stop2 {
                 indexOfLine = line2.indexOfSelectedItem - 1
                 direction = LineDirection(rawValue: direction2.indexOfSelectedItem)!
+                stopToSave = 1
             } else if popup == stop3 {
                 indexOfLine = line3.indexOfSelectedItem - 1
                 direction = LineDirection(rawValue: direction3.indexOfSelectedItem)!
-            } else if popup == stop4 {
+                stopToSave = 2
+            } else {
+                //Stop 4
                 indexOfLine = line4.indexOfSelectedItem - 1
                 direction = LineDirection(rawValue: direction4.indexOfSelectedItem)!
+                stopToSave = 3
             }
             
             //Getting the stop based on the direction
@@ -160,9 +166,13 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
                 currentStop = MMBDataController.sharedController.getAllLines()[indexOfLine].outboundStopsOnLine[indexOfStop]
             }
 
-            currentStop.routeTag = MMBDataController.sharedController.getAllLines()[indexOfLine].routeTag.toInt()!
-            //TODO: Save the stop
+            currentStop.routeTag = MMBDataController.sharedController.getAllLines()[indexOfLine].routeTag
             
+            MMBDataController.sharedController.saveStop(stopToSave, stop: currentStop)
+            
+            //Updating the label for the app delegate
+            let appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.updateLabel()
         }
     }
     

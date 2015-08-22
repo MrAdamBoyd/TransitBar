@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MuniMenuBar/AppDelegate.swift"
-            timestampString = "461950238.278934"
+            filePath = "MuniMenuBar/MMBDataController.swift"
+            timestampString = "461955197.988203"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "updateLabel()"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getCurrentSavedStops()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
