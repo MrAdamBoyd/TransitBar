@@ -89,6 +89,8 @@ class MMBDataController {
         } else if index == 3 {
             settings.optionalStop2 = stop
         }
+        
+        saveSettings()
     }
     
     //TransitLines
@@ -141,6 +143,7 @@ class MMBDataController {
             settings.optionalStop1 = nil
             settings.optionalStop2 = nil
         }
+        saveSettings()
     }
     
     func getDifferentLinesForDay() -> Bool {
@@ -155,6 +158,7 @@ class MMBDataController {
     
     func setDifferentStartTime(date:NSDate) {
         settings.differentStartTime = date
+        saveSettings()
     }
     
     func getDifferentEndTime() -> NSDate? {
@@ -163,6 +167,7 @@ class MMBDataController {
     
     func setDifferentEndTime(date:NSDate) {
         settings.differentEndTime = date
+        saveSettings()
     }
     
     //Adding stops to line object

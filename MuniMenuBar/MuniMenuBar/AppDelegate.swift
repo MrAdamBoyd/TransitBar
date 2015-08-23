@@ -35,8 +35,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             window.makeKeyAndOrderFront(self)
             
             MMBXmlParser.sharedParser.requestAllLineData()
-            
-            //http://webservices.nextbus.com/service/publicXMLFeed?command=routeList&a=sf-muni
         }
         
         //Timer that updates the label runs every 60 seconds

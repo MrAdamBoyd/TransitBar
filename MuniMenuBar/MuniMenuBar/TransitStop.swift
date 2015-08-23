@@ -58,8 +58,7 @@ class TransitStop:NSObject, NSCoding {
         routeTag = aDecoder.decodeObjectForKey(kRouteTagEncoderString) as! String
         stopTitle = aDecoder.decodeObjectForKey(kStopTitleEncoderString) as! String
         stopTag = aDecoder.decodeObjectForKey(kStopTagEncoderString) as! String
-        direction = aDecoder.decodeObjectForKey(kDirectionEncoderString) as! LineDirection
-        direction = LineDirection(rawValue:(aDecoder.decodeIntegerForKey(kDirectionEncoderString))) ?? .NoDirection
+        direction = LineDirection(rawValue:(aDecoder.decodeIntegerForKey(kDirectionEncoderString) as Int)) ?? .NoDirection
         predictions = aDecoder.decodeObjectForKey(kPredictionsEncoderString) as! [Int]
     }
     
@@ -67,7 +66,7 @@ class TransitStop:NSObject, NSCoding {
         aCoder.encodeObject(routeTag, forKey: kRouteTagEncoderString)
         aCoder.encodeObject(stopTitle, forKey: kStopTitleEncoderString)
         aCoder.encodeObject(stopTag, forKey: kStopTagEncoderString)
-        aCoder.encodeObject(direction.rawValue, forKey: kDirectionEncoderString)
+        aCoder.encodeInteger(direction.rawValue, forKey: kDirectionEncoderString)
         aCoder.encodeObject(predictions, forKey: kPredictionsEncoderString)
     }
 }

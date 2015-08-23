@@ -12,9 +12,36 @@ import Cocoa
 class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
     
     //Optionally show different lines at different times
-    @IBOutlet weak var differentLinesCheckmark: NSButton!
-    @IBOutlet weak var startDatePicker: NSDatePicker!
-    @IBOutlet weak var endDatePicker: NSDatePicker!
+    @IBOutlet weak var differentLinesCheckmark: NSButton! {
+        didSet {
+            if MMBDataController.sharedController.getDifferentLinesForDay() {
+                differentLinesCheckmark.state = NSOnState
+            }
+        }
+    }
+    @IBOutlet var startDatePicker: NSDatePicker! {
+        didSet {
+            if let date = MMBDataController.sharedController.getDifferentStartTime() {
+                //If there is a date
+                startDatePicker.dateValue = date
+            } else {
+                //If there isn't a date
+                MMBDataController.sharedController.setDifferentStartTime(startDatePicker.dateValue)
+            }
+        }
+    }
+    
+    @IBOutlet var endDatePicker: NSDatePicker! {
+        didSet {
+            if let date = MMBDataController.sharedController.getDifferentEndTime() {
+                //If there is a date
+                endDatePicker.dateValue = date
+            } else {
+                //If there isn't a date
+                MMBDataController.sharedController.setDifferentEndTime(endDatePicker.dateValue)
+            }
+        }
+    }
     
     //First line
     @IBOutlet weak var line1: NSPopUpButton!
@@ -27,7 +54,11 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
     @IBOutlet weak var stop2: NSPopUpButton!
     
     //Third line, first optional line
-    @IBOutlet weak var line3: NSPopUpButton!
+    @IBOutlet weak var line3: NSPopUpButton! {
+        didSet {
+            line3.enabled = MMBDataController.sharedController.getDifferentLinesForDay()
+        }
+    }
     @IBOutlet weak var direction3: NSPopUpButton!
     @IBOutlet weak var stop3: NSPopUpButton!
     
@@ -46,6 +77,13 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
     
     required init?(coder: NSCoder) {
        super.init(coder: coder)
+    }
+    
+    //When
+    override func makeKeyAndOrderFront(sender: AnyObject?) {
+        super.makeKeyAndOrderFront(sender)
+        
+        MMBXmlParser.sharedParser.requestAllLineData()
     }
     
     @IBAction func checkboxHit(sender: AnyObject) {

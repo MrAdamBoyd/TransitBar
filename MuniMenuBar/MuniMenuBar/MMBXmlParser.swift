@@ -172,6 +172,8 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         
         transitStop!.predictions = predictionArray
         
+        clearXMLParsingData()
+        
         let appDelegate = NSApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.predictionAdded(transitStop!)
     }
@@ -179,18 +181,20 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     //MARK: NSURLConnectionDelegate
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
-        xmlString = NSString(data: xmlData!, encoding: NSUTF8StringEncoding) as! String
-        let xml = SWXMLHash.parse(xmlString)
-        
-        switch currentRequestType {
-        case .AllLines:
-            parseAllLinesData(xml)
-        case .LineDefinition:
-            parseLineDefinition(xml)
-        case .StopPredictions:
-            parseStopPredictions(xml)
-        default:
-            println("Nothing")
+        if let finishedXML = xmlData {
+            xmlString = NSString(data: finishedXML, encoding: NSUTF8StringEncoding) as! String
+            let xml = SWXMLHash.parse(xmlString)
+            
+            switch currentRequestType {
+            case .AllLines:
+                parseAllLinesData(xml)
+            case .LineDefinition:
+                parseLineDefinition(xml)
+            case .StopPredictions:
+                parseStopPredictions(xml)
+            default:
+                println("Nothing")
+            }
         }
         
         clearXMLParsingData()
