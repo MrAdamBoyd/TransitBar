@@ -126,10 +126,10 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         
         //Going through the stops and creating TransitStop objects
         for stop in stops {
-            if let title = stop.element!.attributes["title"], tag = stop.element!.attributes["tag"] {
-                let transitStop = TransitStop(stopNamed: title, stopNumber: tag, goingDirection: .NoDirection)
+            if let stopTitle = stop.element!.attributes["title"], stopTag = stop.element!.attributes["tag"] {
+                let transitStop = TransitStop(stopNamed: stopTitle, stopNumber: stopTag, goingDirection: .NoDirection)
                 
-                stopDictionary[tag] = transitStop
+                stopDictionary[stopTag] = transitStop
             }
         }
         
@@ -193,7 +193,7 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
             case .StopPredictions:
                 parseStopPredictions(xml)
             default:
-                println("Nothing")
+                clearXMLParsingData()
             }
         }
         

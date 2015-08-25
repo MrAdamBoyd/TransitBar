@@ -262,19 +262,5 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
     
     func lineDefinitionFinishedLoading(indexOfLine:Int, sender:AnyObject) {
         enableOrDisableDirectionControls(sender, enableOrDisable: true)
-        if let popup = sender as? NSPopUpButton {
-            if popup == line1 {
-                stop1.removeAllItems()
-                stop1.addItemWithTitle("--")
-                stop1.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: indexOfLine, goingDirection: .Inbound))
-            } else if popup == line2 {
-                direction2.enabled = true
-            } else if popup == line3 {
-                direction3.enabled = true
-            } else if popup == line4 {
-                direction4.enabled = true
-            }
-        }
-        
     }
 }
