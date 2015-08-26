@@ -130,10 +130,10 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         
         //Going through the stops and creating TransitStop objects
         for stop in stops {
-            if let stopTitle = stop.element!.attributes["title"], stopTag = stop.element!.attributes["tag"] {
-                let transitStop = TransitStop(stopNamed: stopTitle, stopNumber: stopTag, goingDirection: .NoDirection)
+            if let routeTitle = xml["body"]["route"].element!.attributes["title"], routeTag = xml["body"]["route"].element!.attributes["tag"], stopTitle = stop.element!.attributes["title"], stopTag = stop.element!.attributes["tag"] {
+                let stop = TransitStop(routeTitle: routeTitle, routeTag: routeTag, stopTitle: stopTitle, stopTag: stopTag)
                 
-                stopDictionary[stopTag] = transitStop
+                stopDictionary[stopTag] = stop
             }
         }
         

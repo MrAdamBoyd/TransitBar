@@ -79,7 +79,7 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
        super.init(coder: coder)
     }
     
-    //When
+    //When the window is opened
     override func makeKeyAndOrderFront(sender: AnyObject?) {
         super.makeKeyAndOrderFront(sender)
         
