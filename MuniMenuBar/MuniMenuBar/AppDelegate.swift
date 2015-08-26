@@ -92,21 +92,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     //Building the string for the stop
     func buildStopString(stop:TransitStop) -> String {
-        var stopString = ""
+        var stopString:String = ""
+        var predictionString:String = ""
         var directionString:String = " IB: "
         if stop.direction == .Outbound {
             directionString = " OB: "
         }
         
-        var predictionString:String = ""
-        
         //Takes first 3 predictions
-        for index in 0...2 {
-            predictionString += String(stop.predictions[index])
-            if index != 2 {
-                predictionString += ", "
+        let numberOfPredictionsToShow = stop.predictions.count > 2 ? 2 : stop.predictions.count
+        
+        if numberOfPredictionsToShow > 0 {
+            //If there are predictions, show them
+            for index in 0...numberOfPredictionsToShow {
+                predictionString += String(stop.predictions[index])
+                if index != numberOfPredictionsToShow {
+                    predictionString += ", "
+                }
             }
+        } else {
+            //If there are no predictions, show that line isn't running
+            predictionString = "--"
         }
+        
         
         stopString = stop.routeTag + directionString + predictionString
         
