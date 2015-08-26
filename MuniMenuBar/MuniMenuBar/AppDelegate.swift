@@ -46,10 +46,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func loadData() {
         if MMBDataController.sharedController.anyStopsSaved() {
             var stopsToCheck:[TransitStop] = MMBDataController.sharedController.getCurrentActiveStops()
-            
-            for stop in stopsToCheck {
-                MMBXmlParser.sharedParser.requestStopPredictionData(stop)
-            }
+
+            MMBXmlParser.sharedParser.requestStopPredictionData(stopsToCheck[0])
             
         } else {
             statusItem.title = "No Stops"
@@ -58,7 +56,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     //This function determines if we are done loading data, and if we are, we can update the label
     func predictionAdded(stop:TransitStop) {
-        var allStops = MMBDataController.sharedController.getCurrentActiveStops()
+        var allStops:[TransitStop] = MMBDataController.sharedController.getCurrentActiveStops()
         
         if allStops.count == 1 {
             //We're done, update label
@@ -68,6 +66,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if stop == allStops[1] {
                 //We're done, update label
                 updateLabel()
+            } else {
+                //Request data for second line
+                MMBXmlParser.sharedParser.requestStopPredictionData(allStops[1])
             }
         }
     }
@@ -79,15 +80,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var stop2String = ""
         
         //Building string for first stop
-        if allStops.count == 1 {
-            stop1String = buildStopString(allStops[0])
-        }
+        stop1String = buildStopString(allStops[0])
         
         if allStops.count == 2 {
             stop2String = "; " + buildStopString(allStops[1])
         }
         
-        statusItem.title = stop1String
+        statusItem.title = stop1String + stop2String
     }
     
     

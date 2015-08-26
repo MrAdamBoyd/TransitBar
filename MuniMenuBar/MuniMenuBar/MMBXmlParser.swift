@@ -26,6 +26,7 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     var indexOfLine:Int?
     var sender:AnyObject?
     var transitStop:TransitStop?
+    var LINE = ""
     
     //Private init for singleton
     //private init() { }
@@ -54,10 +55,10 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     }
     
     func requestStopPredictionData(stop:TransitStop) {
-        
         xmlData = NSMutableData()
         currentRequestType = .StopPredictions
         transitStop = stop
+        LINE = stop.routeTag
         
         var completeLinePredictionURL = kMMBLinePredictionURL1 + stop.routeTag + kMMBLinePredictionURL2 + stop.stopTag
         var linePredictionURL = NSURL(string: completeLinePredictionURL.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
@@ -73,6 +74,7 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         xmlString = ""
         indexOfLine = nil
         sender = nil
+        LINE = ""
     }
     
     func parseAllLinesData(xml:XMLIndexer) {
@@ -86,6 +88,8 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         if let currentDelegate = self.delegate {
             currentDelegate.allLinesDataFinishedLoading()
         }
+        
+        clearXMLParsingData()
     }
     
     //Parsing the line definition
@@ -155,6 +159,8 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
             currentDelegate.lineDefinitionFinishedLoading(indexOfLine!, sender: sender!)
         }
         
+        clearXMLParsingData()
+        
     }
     
     //Parsing the information for stop predictions
@@ -181,6 +187,7 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     //MARK: NSURLConnectionDelegate
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
+        
         if let finishedXML = xmlData {
             xmlString = NSString(data: finishedXML, encoding: NSUTF8StringEncoding) as! String
             let xml = SWXMLHash.parse(xmlString)
@@ -196,8 +203,6 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
                 clearXMLParsingData()
             }
         }
-        
-        clearXMLParsingData()
     }
     
     
