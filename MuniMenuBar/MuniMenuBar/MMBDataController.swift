@@ -79,6 +79,7 @@ class MMBDataController {
         return savedStops
     }
     
+    //Saving a stop
     func saveStop(index:Int, stop:TransitStop) {
         if index == 0 {
             settings.defaultStop1 = stop
@@ -91,6 +92,21 @@ class MMBDataController {
         }
         
         saveSettings()
+    }
+    
+    //Getting a stop
+    func getStop(index:Int) -> TransitStop? {
+        if index == 0 {
+            return settings.defaultStop1
+        } else if index == 1 {
+            return settings.defaultStop2
+        } else if index == 2 {
+            return settings.optionalStop1
+        } else if index == 3 {
+            return settings.optionalStop2
+        }
+        
+        return nil
     }
     
     //TransitLines

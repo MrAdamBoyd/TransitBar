@@ -24,6 +24,7 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             if let date = MMBDataController.sharedController.getDifferentStartTime() {
                 //If there is a date
                 startDatePicker.dateValue = date
+                startDatePicker.enabled = true
             } else {
                 //If there isn't a date
                 MMBDataController.sharedController.setDifferentStartTime(startDatePicker.dateValue)
@@ -36,6 +37,7 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             if let date = MMBDataController.sharedController.getDifferentEndTime() {
                 //If there is a date
                 endDatePicker.dateValue = date
+                endDatePicker.enabled = true
             } else {
                 //If there isn't a date
                 MMBDataController.sharedController.setDifferentEndTime(endDatePicker.dateValue)
@@ -125,7 +127,11 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
                 enableOrDisableDirectionControls(popup, enableOrDisable: shouldStartLoading)
             }
             
-            
+            //We need to remove all stops from the corresponding stop popup
+            let correspondingButtons = getDirectionAndStopForCurrentLine(popup)
+            correspondingButtons.directionButton.selectItemAtIndex(0)
+            correspondingButtons.stopButton.removeAllItems()
+            correspondingButtons.stopButton.addItemWithTitle("--")
         }
     }
     
@@ -138,25 +144,17 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             if direction != .NoDirection {
 
                 if popup == direction1 {
-                    stop1.removeAllItems()
-                    stop1.addItemWithTitle("--")
-                    stop1.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: line1.indexOfSelectedItem - 1, goingDirection: direction))
-                    stop1.enabled = true
+                    addStopsToStopButton(stop1, lineButton: line1, direction: direction)
+                    
                 } else if popup == direction2 {
-                    stop2.removeAllItems()
-                    stop2.addItemWithTitle("--")
-                    stop2.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: line2.indexOfSelectedItem - 1, goingDirection: direction))
-                    stop2.enabled = true
+                    addStopsToStopButton(stop2, lineButton: line2, direction: direction)
+                
                 } else if popup == direction3 {
-                    stop3.removeAllItems()
-                    stop3.addItemWithTitle("--")
-                    stop3.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: line3.indexOfSelectedItem - 1, goingDirection: direction))
-                    stop3.enabled = true
+                    addStopsToStopButton(stop3, lineButton: line3, direction: direction)
+                
                 } else if popup == direction4 {
-                    stop4.removeAllItems()
-                    stop4.addItemWithTitle("--")
-                    stop4.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: line4.indexOfSelectedItem - 1, goingDirection: direction))
-                    stop4.enabled = true
+                    addStopsToStopButton(stop4, lineButton: line4, direction: direction)
+                
                 }
             } else {
                 //If user selected no direction
@@ -171,6 +169,14 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
                 }
             }
         }
+    }
+    
+    //Adding the correct stops to the stop button
+    func addStopsToStopButton(stopButton: NSPopUpButton, lineButton: NSPopUpButton, direction: LineDirection) {
+        stopButton.removeAllItems()
+        stopButton.addItemWithTitle("--")
+        stopButton.addItemsWithTitles(MMBDataController.sharedController.getStopNames(forLine: lineButton.indexOfSelectedItem - 1, goingDirection: direction))
+        stopButton.enabled = true
     }
     
     //Stop selected
@@ -237,15 +243,24 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
     //Determining whether to enable or disable each direction control
     func enableOrDisableDirectionControls(sender:AnyObject, enableOrDisable:Bool) {
         if let popup = sender as? NSPopUpButton {
-            if popup == line1 {
-                direction1.enabled = enableOrDisable
-            } else if popup == line2 {
-                direction2.enabled = enableOrDisable
-            } else if popup == line3 {
-                direction3.enabled = enableOrDisable
-            } else if popup == line4 {
-                direction4.enabled = enableOrDisable
-            }
+            getDirectionAndStopForCurrentLine(popup).directionButton.enabled = enableOrDisable
+        }
+    }
+    
+    //Returns a tuple of the stop and direction popup buttons
+    func getDirectionAndStopForCurrentLine(lineButton:NSPopUpButton) -> (directionButton: NSPopUpButton, stopButton:NSPopUpButton){
+        if lineButton == line1 {
+            return (direction1, stop1)
+            
+        } else if lineButton == line2 {
+            return (direction2, stop2)
+            
+        } else if lineButton == line3 {
+            return (direction3, stop3)
+            
+        } else {
+            //Line 4
+            return (direction4, stop4)
         }
     }
     
@@ -258,6 +273,34 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
         line2.addItemsWithTitles(titleArray)
         line3.addItemsWithTitles(titleArray)
         line4.addItemsWithTitles(titleArray)
+        
+        //Restoring the window to the stop that is saved, can't use indexes because lines could be added and removed
+        if let transitStop1 = MMBDataController.sharedController.getStop(0) {
+            restoreSavedLineToWindow(line1, directionButton: direction1, stopButton: stop1, savedStop: transitStop1)
+        }
+
+        if let transitStop2 = MMBDataController.sharedController.getStop(1) {
+            restoreSavedLineToWindow(line2, directionButton: direction2, stopButton: stop2, savedStop: transitStop2)
+        }
+
+        if let transitStop3 = MMBDataController.sharedController.getStop(2) {
+            restoreSavedLineToWindow(line3, directionButton: direction3, stopButton: stop3, savedStop: transitStop3)
+        }
+        
+        if let transitStop4 = MMBDataController.sharedController.getStop(3) {
+            restoreSavedLineToWindow(line4, directionButton: direction4, stopButton: stop4, savedStop: transitStop4)
+        }
+    }
+    
+    //Select the right bus, direction, and stop for the open preferences window
+    func restoreSavedLineToWindow(lineButton:NSPopUpButton, directionButton:NSPopUpButton, stopButton:NSPopUpButton, savedStop:TransitStop) {
+        lineButton.enabled = true
+        directionButton.enabled = true
+        stopButton.enabled = true
+        lineButton.selectItemAtIndex(lineButton.indexOfItemWithTitle(savedStop.routeTitle))
+        directionButton.selectItemAtIndex(savedStop.direction == .Inbound ? 1 : 2)
+        stopButton.addItemWithTitle(savedStop.stopTitle)
+        stopButton.selectItemAtIndex(1)
     }
     
     func lineDefinitionFinishedLoading(indexOfLine:Int, sender:AnyObject) {
