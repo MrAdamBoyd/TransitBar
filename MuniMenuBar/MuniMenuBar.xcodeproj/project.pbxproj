@@ -230,6 +230,7 @@
 				TargetAttributes = {
 					6611A3C41B8FBFF5005F1AC9 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 6GHQ7P7EHA;
 					};
 					6611A3D41B8FBFF5005F1AC9 = {
 						CreatedOnToolsVersion = 6.4;
@@ -444,6 +445,7 @@
 			baseConfigurationReference = D60615BBB3C1513D86916983 /* Pods-MuniMenuBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MuniMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -456,6 +458,7 @@
 			baseConfigurationReference = D40CA3A63773F0FA00F55A46 /* Pods-MuniMenuBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MuniMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

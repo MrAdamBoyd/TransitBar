@@ -743,10 +743,9 @@
                         <rect key="frame" x="226" y="92" width="107" height="27"/>
                         <datePickerCell key="cell" enabled="NO" borderStyle="bezel" alignment="left" datePickerMode="range" id="Cfi-x4-AS4">
                             <font key="font" metaFont="system"/>
-                            <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--1982-02-12 16:00:00 +0000-->
-                                <timeZone key="timeZone" name="US/Pacific"/>
-                            </calendarDate>
+                            <date key="date" timeIntervalSinceReferenceDate="-595915200">
+                                <!--1982-02-12 20:00:00 +0000-->
+                            </date>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <datePickerElements key="datePickerElements" hour="YES" minute="YES" second="YES"/>
@@ -759,10 +758,9 @@
                         <rect key="frame" x="370" y="92" width="107" height="27"/>
                         <datePickerCell key="cell" enabled="NO" borderStyle="bezel" alignment="left" datePickerMode="range" id="Lv0-oI-XyK">
                             <font key="font" metaFont="system"/>
-                            <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
-                                <!--1982-02-12 16:00:00 +0000-->
-                                <timeZone key="timeZone" name="US/Pacific"/>
-                            </calendarDate>
+                            <date key="date" timeIntervalSinceReferenceDate="-595900800">
+                                <!--1982-02-13 00:00:00 +0000-->
+                            </date>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <datePickerElements key="datePickerElements" hour="YES" minute="YES" second="YES"/>
