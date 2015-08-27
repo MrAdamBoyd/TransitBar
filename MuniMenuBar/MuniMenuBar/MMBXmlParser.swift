@@ -26,7 +26,6 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     var indexOfLine:Int?
     var sender:AnyObject?
     var transitStop:TransitStop?
-    var LINE = ""
     
     //Private init for singleton
     //private init() { }
@@ -58,7 +57,6 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         xmlData = NSMutableData()
         currentRequestType = .StopPredictions
         transitStop = stop
-        LINE = stop.routeTag
         
         var completeLinePredictionURL = kMMBLinePredictionURL1 + stop.routeTag + kMMBLinePredictionURL2 + stop.stopTag
         var linePredictionURL = NSURL(string: completeLinePredictionURL.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
@@ -74,7 +72,6 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         xmlString = ""
         indexOfLine = nil
         sender = nil
-        LINE = ""
     }
     
     func parseAllLinesData(xml:XMLIndexer) {

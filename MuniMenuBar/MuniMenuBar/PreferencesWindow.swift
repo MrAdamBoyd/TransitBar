@@ -109,6 +109,15 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
         startDatePicker.enabled = enabledOrDisabled
         endDatePicker.enabled = enabledOrDisabled
         line3.enabled = enabledOrDisabled
+        
+        if !enabledOrDisabled {
+            //Disabling everything else if they aren't enabled
+            direction3.enabled = enabledOrDisabled
+            stop3.enabled = enabledOrDisabled
+            line4.enabled = enabledOrDisabled
+            direction4.enabled = enabledOrDisabled
+            stop4.enabled = enabledOrDisabled
+        }
     }
     
     //One of the line popups was selected
