@@ -10,11 +10,11 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
     @IBOutlet weak var window: NSWindow!
     
     var minuteTimer:NSTimer = NSTimer()
-
+    
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
@@ -46,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func loadData() {
         if MMBDataController.sharedController.anyStopsSaved() {
             var stopsToCheck:[TransitStop] = MMBDataController.sharedController.getCurrentActiveStops()
-
+            
             MMBXmlParser.sharedParser.requestStopPredictionData(stopsToCheck[0])
             
         } else {
@@ -121,7 +121,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return stopString
         
     }
-
+    
     func openSettings() {
         window.makeKeyAndOrderFront(self)
     }
@@ -129,7 +129,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
-
+    
     func startRefreshingData() {
         
     }

@@ -2,8 +2,8 @@
 //  MuniMenuBarTests.swift
 //  MuniMenuBarTests
 //
-//  Created by Adam on 2015-08-18.
-//  Copyright (c) 2015 Adam Boyd. All rights reserved.
+//  Created by Adam on 2015-08-27.
+//  Copyright (c) 2015 Adam. All rights reserved.
 //
 
 import Cocoa

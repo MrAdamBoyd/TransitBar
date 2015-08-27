@@ -7,63 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		660489ED1B83B3BA00E55412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660489EC1B83B3BA00E55412 /* AppDelegate.swift */; };
-		660489EF1B83B3BA00E55412 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660489EE1B83B3BA00E55412 /* Images.xcassets */; };
-		660489F21B83B3BA00E55412 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660489F01B83B3BA00E55412 /* MainMenu.xib */; };
-		660489FE1B83B3BA00E55412 /* MuniMenuBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660489FD1B83B3BA00E55412 /* MuniMenuBarTests.swift */; };
-		66048A081B83FB5700E55412 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66048A071B83FB5700E55412 /* PreferencesWindow.swift */; };
-		66048A0A1B83FE0A00E55412 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66048A091B83FE0A00E55412 /* UserSettings.swift */; };
-		66048A0C1B83FF1200E55412 /* MMBDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66048A0B1B83FF1200E55412 /* MMBDataController.swift */; };
-		660CDEE31B87E06E00435942 /* MMBXmlParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660CDEE21B87E06E00435942 /* MMBXmlParserProtocol.swift */; };
-		6639FB811B85116500D0D8B0 /* TransitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639FB801B85116500D0D8B0 /* TransitStop.swift */; };
-		66BEED771B86306300BD86FC /* TransitLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEED761B86306300BD86FC /* TransitLine.swift */; };
-		66F7B80C1B86D203009EE63C /* MMBXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7B80B1B86D203009EE63C /* MMBXmlParser.swift */; };
-		66F7B80E1B86D4C7009EE63C /* RequestURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F7B80D1B86D4C7009EE63C /* RequestURLs.swift */; };
-		A59C29CEC5EEB4A0B1E505AF /* Pods_MuniMenuBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD72EE83B9E2C622A59BA845 /* Pods_MuniMenuBar.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		6611A3CB1B8FBFF5005F1AC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3CA1B8FBFF5005F1AC9 /* AppDelegate.swift */; };
+		6611A3DC1B8FBFF5005F1AC9 /* MuniMenuBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3DB1B8FBFF5005F1AC9 /* MuniMenuBarTests.swift */; };
+		6611A3E61B8FC136005F1AC9 /* RequestURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3E51B8FC136005F1AC9 /* RequestURLs.swift */; };
+		6611A3E81B8FC13F005F1AC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6611A3E71B8FC13F005F1AC9 /* Images.xcassets */; };
+		6611A3EA1B8FC15D005F1AC9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6611A3E91B8FC15D005F1AC9 /* MainMenu.xib */; };
+		6611A3F11B8FC198005F1AC9 /* TransitLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3EE1B8FC198005F1AC9 /* TransitLine.swift */; };
+		6611A3F21B8FC198005F1AC9 /* TransitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3EF1B8FC198005F1AC9 /* TransitStop.swift */; };
+		6611A3F31B8FC198005F1AC9 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3F01B8FC198005F1AC9 /* UserSettings.swift */; };
+		6611A3F71B8FC19F005F1AC9 /* MMBDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3F41B8FC19F005F1AC9 /* MMBDataController.swift */; };
+		6611A3F81B8FC19F005F1AC9 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3F51B8FC19F005F1AC9 /* PreferencesWindow.swift */; };
+		6611A3F91B8FC19F005F1AC9 /* MMBXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3F61B8FC19F005F1AC9 /* MMBXmlParser.swift */; };
+		6611A3FB1B8FC1A3005F1AC9 /* MMBXmlParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3FA1B8FC1A3005F1AC9 /* MMBXmlParserProtocol.swift */; };
+		9501FFB06C34EEB0E249ED5E /* Pods_MuniMenuBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4869D384546AEA1AA2DF2E /* Pods_MuniMenuBar.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		660489F81B83B3BA00E55412 /* PBXContainerItemProxy */ = {
+		6611A3D61B8FBFF5005F1AC9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 660489DF1B83B3BA00E55412 /* Project object */;
+			containerPortal = 6611A3BD1B8FBFF5005F1AC9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 660489E61B83B3BA00E55412;
+			remoteGlobalIDString = 6611A3C41B8FBFF5005F1AC9;
 			remoteInfo = MuniMenuBar;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		660489E71B83B3BA00E55412 /* MuniMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuniMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		660489EB1B83B3BA00E55412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		660489EC1B83B3BA00E55412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		660489EE1B83B3BA00E55412 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		660489F11B83B3BA00E55412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		660489F71B83B3BA00E55412 /* MuniMenuBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuniMenuBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		660489FC1B83B3BA00E55412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		660489FD1B83B3BA00E55412 /* MuniMenuBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuniMenuBarTests.swift; sourceTree = "<group>"; };
-		66048A071B83FB5700E55412 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
-		66048A091B83FE0A00E55412 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
-		66048A0B1B83FF1200E55412 /* MMBDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBDataController.swift; sourceTree = "<group>"; };
-		660CDEE21B87E06E00435942 /* MMBXmlParserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBXmlParserProtocol.swift; sourceTree = "<group>"; };
-		6639FB801B85116500D0D8B0 /* TransitStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStop.swift; sourceTree = "<group>"; };
-		66BEED761B86306300BD86FC /* TransitLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitLine.swift; sourceTree = "<group>"; };
-		66F7B80B1B86D203009EE63C /* MMBXmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBXmlParser.swift; sourceTree = "<group>"; };
-		66F7B80D1B86D4C7009EE63C /* RequestURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestURLs.swift; sourceTree = "<group>"; };
-		97086B4BB3475AF846D51E47 /* Pods-MuniMenuBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuniMenuBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar.debug.xcconfig"; sourceTree = "<group>"; };
-		B3B79FA61A540F04410D4718 /* Pods-MuniMenuBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuniMenuBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar.release.xcconfig"; sourceTree = "<group>"; };
-		FD72EE83B9E2C622A59BA845 /* Pods_MuniMenuBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuniMenuBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6611A3C51B8FBFF5005F1AC9 /* MuniMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuniMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6611A3C91B8FBFF5005F1AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6611A3CA1B8FBFF5005F1AC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6611A3D51B8FBFF5005F1AC9 /* MuniMenuBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuniMenuBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6611A3DA1B8FBFF5005F1AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6611A3DB1B8FBFF5005F1AC9 /* MuniMenuBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuniMenuBarTests.swift; sourceTree = "<group>"; };
+		6611A3E51B8FC136005F1AC9 /* RequestURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestURLs.swift; sourceTree = "<group>"; };
+		6611A3E71B8FC13F005F1AC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6611A3E91B8FC15D005F1AC9 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		6611A3EE1B8FC198005F1AC9 /* TransitLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitLine.swift; sourceTree = "<group>"; };
+		6611A3EF1B8FC198005F1AC9 /* TransitStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitStop.swift; sourceTree = "<group>"; };
+		6611A3F01B8FC198005F1AC9 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		6611A3F41B8FC19F005F1AC9 /* MMBDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBDataController.swift; sourceTree = "<group>"; };
+		6611A3F51B8FC19F005F1AC9 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
+		6611A3F61B8FC19F005F1AC9 /* MMBXmlParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBXmlParser.swift; sourceTree = "<group>"; };
+		6611A3FA1B8FC1A3005F1AC9 /* MMBXmlParserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBXmlParserProtocol.swift; sourceTree = "<group>"; };
+		9F4869D384546AEA1AA2DF2E /* Pods_MuniMenuBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuniMenuBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D40CA3A63773F0FA00F55A46 /* Pods-MuniMenuBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuniMenuBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar.release.xcconfig"; sourceTree = "<group>"; };
+		D60615BBB3C1513D86916983 /* Pods-MuniMenuBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuniMenuBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		660489E41B83B3BA00E55412 /* Frameworks */ = {
+		6611A3C21B8FBFF5005F1AC9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A59C29CEC5EEB4A0B1E505AF /* Pods_MuniMenuBar.framework in Frameworks */,
+				9501FFB06C34EEB0E249ED5E /* Pods_MuniMenuBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		660489F41B83B3BA00E55412 /* Frameworks */ = {
+		6611A3D21B8FBFF5005F1AC9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -73,124 +73,124 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		660489DE1B83B3BA00E55412 = {
+		4CB572AE40754E7AFF0D279F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				660489E91B83B3BA00E55412 /* MuniMenuBar */,
-				660489FA1B83B3BA00E55412 /* MuniMenuBarTests */,
-				660489E81B83B3BA00E55412 /* Products */,
-				6DA64BB8471EA2ADFBCA0463 /* Pods */,
-				9D882CB9B8B1F8300F426738 /* Frameworks */,
+				9F4869D384546AEA1AA2DF2E /* Pods_MuniMenuBar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6611A3BC1B8FBFF5005F1AC9 = {
+			isa = PBXGroup;
+			children = (
+				6611A3C71B8FBFF5005F1AC9 /* MuniMenuBar */,
+				6611A3D81B8FBFF5005F1AC9 /* MuniMenuBarTests */,
+				6611A3C61B8FBFF5005F1AC9 /* Products */,
+				7F3BA85FEF6DF607AF57E020 /* Pods */,
+				4CB572AE40754E7AFF0D279F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		660489E81B83B3BA00E55412 /* Products */ = {
+		6611A3C61B8FBFF5005F1AC9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				660489E71B83B3BA00E55412 /* MuniMenuBar.app */,
-				660489F71B83B3BA00E55412 /* MuniMenuBarTests.xctest */,
+				6611A3C51B8FBFF5005F1AC9 /* MuniMenuBar.app */,
+				6611A3D51B8FBFF5005F1AC9 /* MuniMenuBarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		660489E91B83B3BA00E55412 /* MuniMenuBar */ = {
+		6611A3C71B8FBFF5005F1AC9 /* MuniMenuBar */ = {
 			isa = PBXGroup;
 			children = (
-				660489EE1B83B3BA00E55412 /* Images.xcassets */,
-				660489F01B83B3BA00E55412 /* MainMenu.xib */,
-				66F7B80D1B86D4C7009EE63C /* RequestURLs.swift */,
-				660489EC1B83B3BA00E55412 /* AppDelegate.swift */,
-				660CDEE11B87E03D00435942 /* Objects */,
-				660CDEE01B87E02200435942 /* Controllers */,
-				660CDEE41B87E07200435942 /* Protocols */,
-				660489EA1B83B3BA00E55412 /* Supporting Files */,
+				6611A3E71B8FC13F005F1AC9 /* Images.xcassets */,
+				6611A3E91B8FC15D005F1AC9 /* MainMenu.xib */,
+				6611A3E51B8FC136005F1AC9 /* RequestURLs.swift */,
+				6611A3CA1B8FBFF5005F1AC9 /* AppDelegate.swift */,
+				6611A3EB1B8FC172005F1AC9 /* Objects */,
+				6611A3EC1B8FC17B005F1AC9 /* Controllers */,
+				6611A3ED1B8FC186005F1AC9 /* Protocols */,
+				6611A3C81B8FBFF5005F1AC9 /* Supporting Files */,
 			);
 			path = MuniMenuBar;
 			sourceTree = "<group>";
 		};
-		660489EA1B83B3BA00E55412 /* Supporting Files */ = {
+		6611A3C81B8FBFF5005F1AC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				660489EB1B83B3BA00E55412 /* Info.plist */,
+				6611A3C91B8FBFF5005F1AC9 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		660489FA1B83B3BA00E55412 /* MuniMenuBarTests */ = {
+		6611A3D81B8FBFF5005F1AC9 /* MuniMenuBarTests */ = {
 			isa = PBXGroup;
 			children = (
-				660489FD1B83B3BA00E55412 /* MuniMenuBarTests.swift */,
-				660489FB1B83B3BA00E55412 /* Supporting Files */,
+				6611A3DB1B8FBFF5005F1AC9 /* MuniMenuBarTests.swift */,
+				6611A3D91B8FBFF5005F1AC9 /* Supporting Files */,
 			);
 			path = MuniMenuBarTests;
 			sourceTree = "<group>";
 		};
-		660489FB1B83B3BA00E55412 /* Supporting Files */ = {
+		6611A3D91B8FBFF5005F1AC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				660489FC1B83B3BA00E55412 /* Info.plist */,
+				6611A3DA1B8FBFF5005F1AC9 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		660CDEE01B87E02200435942 /* Controllers */ = {
+		6611A3EB1B8FC172005F1AC9 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				66048A0B1B83FF1200E55412 /* MMBDataController.swift */,
-				66048A071B83FB5700E55412 /* PreferencesWindow.swift */,
-				66F7B80B1B86D203009EE63C /* MMBXmlParser.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		660CDEE11B87E03D00435942 /* Objects */ = {
-			isa = PBXGroup;
-			children = (
-				66BEED761B86306300BD86FC /* TransitLine.swift */,
-				6639FB801B85116500D0D8B0 /* TransitStop.swift */,
-				66048A091B83FE0A00E55412 /* UserSettings.swift */,
+				6611A3EE1B8FC198005F1AC9 /* TransitLine.swift */,
+				6611A3EF1B8FC198005F1AC9 /* TransitStop.swift */,
+				6611A3F01B8FC198005F1AC9 /* UserSettings.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
 		};
-		660CDEE41B87E07200435942 /* Protocols */ = {
+		6611A3EC1B8FC17B005F1AC9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				660CDEE21B87E06E00435942 /* MMBXmlParserProtocol.swift */,
+				6611A3F41B8FC19F005F1AC9 /* MMBDataController.swift */,
+				6611A3F51B8FC19F005F1AC9 /* PreferencesWindow.swift */,
+				6611A3F61B8FC19F005F1AC9 /* MMBXmlParser.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6611A3ED1B8FC186005F1AC9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6611A3FA1B8FC1A3005F1AC9 /* MMBXmlParserProtocol.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
 		};
-		6DA64BB8471EA2ADFBCA0463 /* Pods */ = {
+		7F3BA85FEF6DF607AF57E020 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				97086B4BB3475AF846D51E47 /* Pods-MuniMenuBar.debug.xcconfig */,
-				B3B79FA61A540F04410D4718 /* Pods-MuniMenuBar.release.xcconfig */,
+				D60615BBB3C1513D86916983 /* Pods-MuniMenuBar.debug.xcconfig */,
+				D40CA3A63773F0FA00F55A46 /* Pods-MuniMenuBar.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		9D882CB9B8B1F8300F426738 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FD72EE83B9E2C622A59BA845 /* Pods_MuniMenuBar.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		660489E61B83B3BA00E55412 /* MuniMenuBar */ = {
+		6611A3C41B8FBFF5005F1AC9 /* MuniMenuBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66048A011B83B3BA00E55412 /* Build configuration list for PBXNativeTarget "MuniMenuBar" */;
+			buildConfigurationList = 6611A3DF1B8FBFF5005F1AC9 /* Build configuration list for PBXNativeTarget "MuniMenuBar" */;
 			buildPhases = (
-				B07728334FDE9091EABD17FF /* Check Pods Manifest.lock */,
-				660489E31B83B3BA00E55412 /* Sources */,
-				660489E41B83B3BA00E55412 /* Frameworks */,
-				660489E51B83B3BA00E55412 /* Resources */,
-				74E267B674210424E05B860F /* Embed Pods Frameworks */,
-				EB376993562A2557CCBC31EB /* Copy Pods Resources */,
+				0606D499EFB2A1D5A99F8C15 /* Check Pods Manifest.lock */,
+				6611A3C11B8FBFF5005F1AC9 /* Sources */,
+				6611A3C21B8FBFF5005F1AC9 /* Frameworks */,
+				6611A3C31B8FBFF5005F1AC9 /* Resources */,
+				ECE9999968248958337B8C84 /* Embed Pods Frameworks */,
+				8F6B3B06A6E7127EE3723757 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,47 +198,46 @@
 			);
 			name = MuniMenuBar;
 			productName = MuniMenuBar;
-			productReference = 660489E71B83B3BA00E55412 /* MuniMenuBar.app */;
+			productReference = 6611A3C51B8FBFF5005F1AC9 /* MuniMenuBar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		660489F61B83B3BA00E55412 /* MuniMenuBarTests */ = {
+		6611A3D41B8FBFF5005F1AC9 /* MuniMenuBarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66048A041B83B3BA00E55412 /* Build configuration list for PBXNativeTarget "MuniMenuBarTests" */;
+			buildConfigurationList = 6611A3E21B8FBFF5005F1AC9 /* Build configuration list for PBXNativeTarget "MuniMenuBarTests" */;
 			buildPhases = (
-				660489F31B83B3BA00E55412 /* Sources */,
-				660489F41B83B3BA00E55412 /* Frameworks */,
-				660489F51B83B3BA00E55412 /* Resources */,
+				6611A3D11B8FBFF5005F1AC9 /* Sources */,
+				6611A3D21B8FBFF5005F1AC9 /* Frameworks */,
+				6611A3D31B8FBFF5005F1AC9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				660489F91B83B3BA00E55412 /* PBXTargetDependency */,
+				6611A3D71B8FBFF5005F1AC9 /* PBXTargetDependency */,
 			);
 			name = MuniMenuBarTests;
 			productName = MuniMenuBarTests;
-			productReference = 660489F71B83B3BA00E55412 /* MuniMenuBarTests.xctest */;
+			productReference = 6611A3D51B8FBFF5005F1AC9 /* MuniMenuBarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		660489DF1B83B3BA00E55412 /* Project object */ = {
+		6611A3BD1B8FBFF5005F1AC9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
-				ORGANIZATIONNAME = "Adam Boyd";
+				ORGANIZATIONNAME = Adam;
 				TargetAttributes = {
-					660489E61B83B3BA00E55412 = {
+					6611A3C41B8FBFF5005F1AC9 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 6GHQ7P7EHA;
 					};
-					660489F61B83B3BA00E55412 = {
+					6611A3D41B8FBFF5005F1AC9 = {
 						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 660489E61B83B3BA00E55412;
+						TestTargetID = 6611A3C41B8FBFF5005F1AC9;
 					};
 				};
 			};
-			buildConfigurationList = 660489E21B83B3BA00E55412 /* Build configuration list for PBXProject "MuniMenuBar" */;
+			buildConfigurationList = 6611A3C01B8FBFF5005F1AC9 /* Build configuration list for PBXProject "MuniMenuBar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -246,28 +245,28 @@
 				en,
 				Base,
 			);
-			mainGroup = 660489DE1B83B3BA00E55412;
-			productRefGroup = 660489E81B83B3BA00E55412 /* Products */;
+			mainGroup = 6611A3BC1B8FBFF5005F1AC9;
+			productRefGroup = 6611A3C61B8FBFF5005F1AC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				660489E61B83B3BA00E55412 /* MuniMenuBar */,
-				660489F61B83B3BA00E55412 /* MuniMenuBarTests */,
+				6611A3C41B8FBFF5005F1AC9 /* MuniMenuBar */,
+				6611A3D41B8FBFF5005F1AC9 /* MuniMenuBarTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		660489E51B83B3BA00E55412 /* Resources */ = {
+		6611A3C31B8FBFF5005F1AC9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				660489EF1B83B3BA00E55412 /* Images.xcassets in Resources */,
-				660489F21B83B3BA00E55412 /* MainMenu.xib in Resources */,
+				6611A3E81B8FC13F005F1AC9 /* Images.xcassets in Resources */,
+				6611A3EA1B8FC15D005F1AC9 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		660489F51B83B3BA00E55412 /* Resources */ = {
+		6611A3D31B8FBFF5005F1AC9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,22 +276,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		74E267B674210424E05B860F /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B07728334FDE9091EABD17FF /* Check Pods Manifest.lock */ = {
+		0606D499EFB2A1D5A99F8C15 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,7 +291,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EB376993562A2557CCBC31EB /* Copy Pods Resources */ = {
+		8F6B3B06A6E7127EE3723757 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,56 +306,60 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ECE9999968248958337B8C84 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		660489E31B83B3BA00E55412 /* Sources */ = {
+		6611A3C11B8FBFF5005F1AC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66F7B80C1B86D203009EE63C /* MMBXmlParser.swift in Sources */,
-				66048A0C1B83FF1200E55412 /* MMBDataController.swift in Sources */,
-				66048A081B83FB5700E55412 /* PreferencesWindow.swift in Sources */,
-				66F7B80E1B86D4C7009EE63C /* RequestURLs.swift in Sources */,
-				660CDEE31B87E06E00435942 /* MMBXmlParserProtocol.swift in Sources */,
-				66048A0A1B83FE0A00E55412 /* UserSettings.swift in Sources */,
-				66BEED771B86306300BD86FC /* TransitLine.swift in Sources */,
-				6639FB811B85116500D0D8B0 /* TransitStop.swift in Sources */,
-				660489ED1B83B3BA00E55412 /* AppDelegate.swift in Sources */,
+				6611A3F71B8FC19F005F1AC9 /* MMBDataController.swift in Sources */,
+				6611A3F11B8FC198005F1AC9 /* TransitLine.swift in Sources */,
+				6611A3CB1B8FBFF5005F1AC9 /* AppDelegate.swift in Sources */,
+				6611A3E61B8FC136005F1AC9 /* RequestURLs.swift in Sources */,
+				6611A3FB1B8FC1A3005F1AC9 /* MMBXmlParserProtocol.swift in Sources */,
+				6611A3F31B8FC198005F1AC9 /* UserSettings.swift in Sources */,
+				6611A3F81B8FC19F005F1AC9 /* PreferencesWindow.swift in Sources */,
+				6611A3F21B8FC198005F1AC9 /* TransitStop.swift in Sources */,
+				6611A3F91B8FC19F005F1AC9 /* MMBXmlParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		660489F31B83B3BA00E55412 /* Sources */ = {
+		6611A3D11B8FBFF5005F1AC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				660489FE1B83B3BA00E55412 /* MuniMenuBarTests.swift in Sources */,
+				6611A3DC1B8FBFF5005F1AC9 /* MuniMenuBarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		660489F91B83B3BA00E55412 /* PBXTargetDependency */ = {
+		6611A3D71B8FBFF5005F1AC9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 660489E61B83B3BA00E55412 /* MuniMenuBar */;
-			targetProxy = 660489F81B83B3BA00E55412 /* PBXContainerItemProxy */;
+			target = 6611A3C41B8FBFF5005F1AC9 /* MuniMenuBar */;
+			targetProxy = 6611A3D61B8FBFF5005F1AC9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		660489F01B83B3BA00E55412 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				660489F11B83B3BA00E55412 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		660489FF1B83B3BA00E55412 /* Debug */ = {
+		6611A3DD1B8FBFF5005F1AC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -415,7 +403,7 @@
 			};
 			name = Debug;
 		};
-		66048A001B83B3BA00E55412 /* Release */ = {
+		6611A3DE1B8FBFF5005F1AC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -451,39 +439,31 @@
 			};
 			name = Release;
 		};
-		66048A021B83B3BA00E55412 /* Debug */ = {
+		6611A3E01B8FBFF5005F1AC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97086B4BB3475AF846D51E47 /* Pods-MuniMenuBar.debug.xcconfig */;
+			baseConfigurationReference = D60615BBB3C1513D86916983 /* Pods-MuniMenuBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MuniMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
-		66048A031B83B3BA00E55412 /* Release */ = {
+		6611A3E11B8FBFF5005F1AC9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3B79FA61A540F04410D4718 /* Pods-MuniMenuBar.release.xcconfig */;
+			baseConfigurationReference = D40CA3A63773F0FA00F55A46 /* Pods-MuniMenuBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MuniMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
-		66048A051B83B3BA00E55412 /* Debug */ = {
+		6611A3E31B8FBFF5005F1AC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -503,7 +483,7 @@
 			};
 			name = Debug;
 		};
-		66048A061B83B3BA00E55412 /* Release */ = {
+		6611A3E41B8FBFF5005F1AC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -522,34 +502,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		660489E21B83B3BA00E55412 /* Build configuration list for PBXProject "MuniMenuBar" */ = {
+		6611A3C01B8FBFF5005F1AC9 /* Build configuration list for PBXProject "MuniMenuBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				660489FF1B83B3BA00E55412 /* Debug */,
-				66048A001B83B3BA00E55412 /* Release */,
+				6611A3DD1B8FBFF5005F1AC9 /* Debug */,
+				6611A3DE1B8FBFF5005F1AC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66048A011B83B3BA00E55412 /* Build configuration list for PBXNativeTarget "MuniMenuBar" */ = {
+		6611A3DF1B8FBFF5005F1AC9 /* Build configuration list for PBXNativeTarget "MuniMenuBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				66048A021B83B3BA00E55412 /* Debug */,
-				66048A031B83B3BA00E55412 /* Release */,
+				6611A3E01B8FBFF5005F1AC9 /* Debug */,
+				6611A3E11B8FBFF5005F1AC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66048A041B83B3BA00E55412 /* Build configuration list for PBXNativeTarget "MuniMenuBarTests" */ = {
+		6611A3E21B8FBFF5005F1AC9 /* Build configuration list for PBXNativeTarget "MuniMenuBarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				66048A051B83B3BA00E55412 /* Debug */,
-				66048A061B83B3BA00E55412 /* Release */,
+				6611A3E31B8FBFF5005F1AC9 /* Debug */,
+				6611A3E41B8FBFF5005F1AC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 660489DF1B83B3BA00E55412 /* Project object */;
+	rootObject = 6611A3BD1B8FBFF5005F1AC9 /* Project object */;
 }
