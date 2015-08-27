@@ -100,13 +100,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         //Takes first 3 predictions
-        let numberOfPredictionsToShow = stop.predictions.count > 2 ? 2 : stop.predictions.count
+        let numberOfPredictionsToShow = stop.predictions.count > 3 ? 3 : stop.predictions.count
         
         if numberOfPredictionsToShow > 0 {
             //If there are predictions, show them
-            for index in 0...numberOfPredictionsToShow {
+            for index in 0...numberOfPredictionsToShow - 1 {
                 predictionString += String(stop.predictions[index])
-                if index != numberOfPredictionsToShow {
+                if index != numberOfPredictionsToShow - 1 {
                     predictionString += ", "
                 }
             }

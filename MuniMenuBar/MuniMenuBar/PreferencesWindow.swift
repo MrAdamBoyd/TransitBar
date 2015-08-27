@@ -117,6 +117,20 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             line4.enabled = enabledOrDisabled
             direction4.enabled = enabledOrDisabled
             stop4.enabled = enabledOrDisabled
+            
+        } else {
+            //If the optional stops exist, enable everything else
+            if MMBDataController.sharedController.getStop(2) != nil {
+                line3.enabled = true
+                direction3.enabled = true
+                stop3.enabled = true
+            }
+            
+            if MMBDataController.sharedController.getStop(3) != nil {
+                line4.enabled = true
+                direction4.enabled = true
+                stop4.enabled = true
+            }
         }
     }
     
