@@ -6,5 +6,7 @@ You can view the website and download the app [here](http://mradamboyd.github.io
 ###Contact
 Your best bet to contact me is on Twitter. [@MrAdamBoyd](https://twitter.com/MrAdamBoyd)
 
+My website is [adamjboyd.com](http://www.adamjboyd.com).
+
 ###License
 MIT
