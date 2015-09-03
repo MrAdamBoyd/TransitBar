@@ -70,8 +70,8 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
     @IBOutlet weak var stop4: NSPopUpButton!
     
     
-    override init(contentRect: NSRect, styleMask aStyle: Int, backing bufferingType: NSBackingStoreType, defer flag: Bool) {
-        super.init(contentRect: contentRect, styleMask: aStyle, backing: bufferingType, defer: flag)
+    override init(contentRect: NSRect, styleMask aStyle: Int, backing bufferingType: NSBackingStoreType, `defer` flag: Bool) {
+        super.init(contentRect: contentRect, styleMask: aStyle, backing: bufferingType, `defer`: flag)
         
         MMBXmlParser.sharedParser.delegate = self
         
@@ -95,11 +95,15 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
     }
 
     @IBAction func startPickerDateChanged(sender: AnyObject) {
-        MMBDataController.sharedController.setDifferentStartTime(sender.dateValue!)
+        if let datePicker = sender as? NSDatePicker {
+            MMBDataController.sharedController.setDifferentStartTime(datePicker.dateValue)
+        }
     }
     
     @IBAction func endPickerDateChanged(sender: AnyObject) {
-        MMBDataController.sharedController.setDifferentEndTime(sender.dateValue!)
+        if let datePicker = sender as? NSDatePicker {
+            MMBDataController.sharedController.setDifferentEndTime(datePicker.dateValue)
+        }
     }
     
     
@@ -140,7 +144,7 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
             /*The direction is enabled by the index of the selected item being a bool
             The 0th item is "--", so all other values should result in it being enabled
             0 means false and all other selections will be true */
-            var shouldStartLoading = Bool(popup.indexOfSelectedItem)
+            let shouldStartLoading = Bool(popup.indexOfSelectedItem)
             
             if shouldStartLoading {
                 MMBXmlParser.sharedParser.requestLineDefinitionData(MMBDataController.sharedController.getAllLines()[popup.indexOfSelectedItem - 1].routeTag, indexOfLine: popup.indexOfSelectedItem - 1, sender: sender)
@@ -161,7 +165,7 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
     //Directional control selected
     @IBAction func directionSelected(sender: AnyObject) {
         if let popup = sender as? NSPopUpButton {
-            var direction:LineDirection = LineDirection(rawValue: popup.indexOfSelectedItem)!
+            let direction:LineDirection = LineDirection(rawValue: popup.indexOfSelectedItem)!
             
             //The 0th index is "--" and the initializing LineDirection with 0 results in .NoDirection
             if direction != .NoDirection {
@@ -209,7 +213,7 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
         if let popup = sender as? NSPopUpButton {
             var direction:LineDirection = .NoDirection
             var indexOfLine:Int
-            var indexOfStop = popup.indexOfSelectedItem - 1
+            let indexOfStop = popup.indexOfSelectedItem - 1
             var currentStop:TransitStop
             var stopToSave:Int
 

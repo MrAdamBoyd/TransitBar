@@ -36,7 +36,7 @@ class TransitLine: NSObject, NSCoding {
     
     //MARK: NSCoding
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         routeTag = aDecoder.decodeObjectForKey(kRouteTagEncoderString) as! String
         routeTitle = aDecoder.decodeObjectForKey(kRouteTitleEncoderString) as! String
         inboundStopsOnLine = aDecoder.decodeObjectForKey(kInboundStopsOnLineEncoderString) as! [TransitStop]

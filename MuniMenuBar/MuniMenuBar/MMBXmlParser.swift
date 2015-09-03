@@ -34,9 +34,9 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     func requestAllLineData() {
         xmlData = NSMutableData()
         currentRequestType = .AllLines
+        let allLinesURL = NSURL(string: kMMBAllLinesURL)
         
-        var allLinesURL = NSURL(string: kMMBAllLinesURL.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
-        var allLinesURLRequest = NSURLRequest(URL: allLinesURL!)
+        let allLinesURLRequest = NSURLRequest(URL: allLinesURL!)
         connection = NSURLConnection(request: allLinesURLRequest, delegate: self, startImmediately: true)
     }
     
@@ -46,9 +46,9 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         self.indexOfLine = indexOfLine
         self.sender = sender
         
-        var completeLineDefinitionURL = kMMBLineDefinitionURL + line
-        var lineDefinitionURL = NSURL(string: completeLineDefinitionURL.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
-        var lineDefinitionURLRequest = NSURLRequest(URL: lineDefinitionURL!)
+        let completeLineDefinitionURL = kMMBLineDefinitionURL + line
+        let lineDefinitionURL = NSURL(string: completeLineDefinitionURL)
+        let lineDefinitionURLRequest = NSURLRequest(URL: lineDefinitionURL!)
         connection = NSURLConnection(request: lineDefinitionURLRequest, delegate: self, startImmediately: true)
         
     }
@@ -58,9 +58,9 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         currentRequestType = .StopPredictions
         transitStop = stop
         
-        var completeLinePredictionURL = kMMBLinePredictionURL1 + stop.routeTag + kMMBLinePredictionURL2 + stop.stopTag
-        var linePredictionURL = NSURL(string: completeLinePredictionURL.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)
-        var linePredictionRequest = NSURLRequest(URL: linePredictionURL!)
+        let completeLinePredictionURL = kMMBLinePredictionURL1 + stop.routeTag + kMMBLinePredictionURL2 + stop.stopTag
+        let linePredictionURL = NSURL(string: completeLinePredictionURL)
+        let linePredictionRequest = NSURLRequest(URL: linePredictionURL!)
         connection = NSURLConnection(request: linePredictionRequest, delegate: self, startImmediately: true)
     }
     
@@ -97,7 +97,7 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         var inboundTransitStops: [TransitStop] = []
         var outboundTransitStops: [TransitStop] = []
         
-        var stopDirections = xml["body"]["route"]["direction"]
+        let stopDirections = xml["body"]["route"]["direction"]
         
         //Getting the directions for each stop
         for stopDirection in stopDirections {
@@ -123,7 +123,7 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
         }
         
         //Now we need to go through all the named stops, and add the proper direction to them
-        var stops = xml["body"]["route"]["stop"]
+        let stops = xml["body"]["route"]["stop"]
         
         //Going through the stops and creating TransitStop objects
         for stop in stops {
@@ -162,13 +162,13 @@ class MMBXmlParser: NSObject, NSURLConnectionDataDelegate {
     
     //Parsing the information for stop predictions
     func parseStopPredictions(xml:XMLIndexer) {
-        var predictions = xml["body"]["predictions"]["direction"]
+        let predictions = xml["body"]["predictions"]["direction"]
         var predictionArray:[Int] = []
         
         //Getting all predictions, only if we're using 3
         for prediction in predictions.children {
-            var predictionString:String = prediction.element!.attributes["minutes"]!
-            if let predictionInt = predictionString.toInt() {
+            let predictionString:String = prediction.element!.attributes["minutes"]!
+            if let predictionInt = Int(predictionString) {
                 predictionArray.append(predictionInt)
             }
         }

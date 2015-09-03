@@ -38,16 +38,15 @@ class MMBDataController {
         if settings.differentLinesForDay && settings.optionalStop1 != nil {
             
             //I hate dealing with dates
-            var calendar:NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+            let calendar:NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
             
-            var now = NSDate()
+            let now = NSDate()
             
-            var nowComponents:NSDateComponents = calendar.components(NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: now)
-            var startComponents:NSDateComponents = calendar.components(NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: settings.differentStartTime!)
-            var endComponents:NSDateComponents = calendar.components(NSCalendarUnit.CalendarUnitHour | NSCalendarUnit.CalendarUnitMinute | NSCalendarUnit.CalendarUnitSecond, fromDate: settings.differentEndTime!)
+            let startComponents:NSDateComponents = calendar.components([NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: settings.differentStartTime!)
+            let endComponents:NSDateComponents = calendar.components([NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second], fromDate: settings.differentEndTime!)
 
-            var startTime:NSDate = calendar.dateBySettingHour(startComponents.hour, minute: startComponents.minute, second: startComponents.second, ofDate: now, options: nil)!
-            var endTime:NSDate = calendar.dateBySettingHour(endComponents.hour, minute: endComponents.minute, second: endComponents.second, ofDate: now, options: nil)!
+            let startTime:NSDate = calendar.dateBySettingHour(startComponents.hour, minute: startComponents.minute, second: startComponents.second, ofDate: now, options: [])!
+            let endTime:NSDate = calendar.dateBySettingHour(endComponents.hour, minute: endComponents.minute, second: endComponents.second, ofDate: now, options: [])!
             
             //If we are in between the start time and the end time
             if startTime.timeIntervalSince1970 < now.timeIntervalSince1970 && now.timeIntervalSince1970 < endTime.timeIntervalSince1970 {
@@ -120,8 +119,8 @@ class MMBDataController {
     }
     
     //Returns the string title of all lines
-    func getAllLinesToString() -> [NSString] {
-        var stringArray:[NSString] = []
+    func getAllLinesToString() -> [String] {
+        var stringArray:[String] = []
         for item in settings.lineDefinitionArray {
             stringArray.append(item.routeTitle)
         }
@@ -129,8 +128,8 @@ class MMBDataController {
     }
     
     //Returns a string array of all inbound or outbound stops
-    func getStopNames(forLine index:Int, goingDirection inboundOrOutbound:LineDirection) -> [NSString] {
-        var stringArray:[NSString] = []
+    func getStopNames(forLine index:Int, goingDirection inboundOrOutbound:LineDirection) -> [String] {
+        var stringArray:[String] = []
         var stopsInDirection:[TransitStop] = []
         
         //Determining which stops to look at

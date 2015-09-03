@@ -59,7 +59,7 @@ class TransitStop:NSObject, NSCoding {
     
     //MARK: NSCoding
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         routeTitle = aDecoder.decodeObjectForKey(kRouteTitleEncoderString) as! String
         routeTag = aDecoder.decodeObjectForKey(kRouteTagEncoderString) as! String
         stopTitle = aDecoder.decodeObjectForKey(kStopTitleEncoderString) as! String

@@ -48,7 +48,7 @@ class UserSettings: NSObject, NSCoding {
     
     //MARK: NSCoding
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         mostRecentVersion = aDecoder.decodeDoubleForKey(kMostRecentVersionEncoderString)
         firstTimeUsingApp = aDecoder.decodeBoolForKey(kFirstTimeUsingAppEncoderString)
         defaultStop1 = aDecoder.decodeObjectForKey(kDefaultStop1EncoderString) as? TransitStop
