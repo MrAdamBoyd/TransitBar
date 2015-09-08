@@ -12,6 +12,8 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var window: NSWindow!
+
+    @IBOutlet weak var aboutWindow: NSWindow!
     
     var minuteTimer:NSTimer = NSTimer()
     
@@ -24,8 +26,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let menu = NSMenu()
         
-        menu.addItem(NSMenuItem(title: "Settings", action: Selector("openSettings"), keyEquivalent: ","))
+        menu.addItem(NSMenuItem(title: "About MuniMenuBar", action: Selector("openAbout"), keyEquivalent: ""))
         menu.addItem(NSMenuItem.separatorItem())
+        menu.addItem(NSMenuItem(title: "Settings", action: Selector("openSettings"), keyEquivalent: ","))
         menu.addItem(NSMenuItem(title: "Quit", action: Selector("terminate:"), keyEquivalent: "q"))
         
         statusItem.menu = menu
@@ -120,6 +123,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         return stopString
         
+    }
+    
+    func openAbout() {
+        aboutWindow.makeKeyAndOrderFront(self)
     }
     
     func openSettings() {
