@@ -51,12 +51,13 @@
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "Logo.png",
+      "filename" : "Logo512.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "mac",
       "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "Logo512@2x.png",
       "scale" : "2x"
     }
   ],
