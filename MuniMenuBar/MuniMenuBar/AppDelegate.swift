@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         menu.addItem(NSMenuItem(title: "About MuniMenuBar", action: Selector("openAbout"), keyEquivalent: ""))
         menu.addItem(NSMenuItem.separatorItem())
-        menu.addItem(NSMenuItem(title: "Settings", action: Selector("openSettings"), keyEquivalent: ","))
+        menu.addItem(NSMenuItem(title: "Preferences...", action: Selector("openSettings"), keyEquivalent: ","))
         menu.addItem(NSMenuItem(title: "Quit", action: Selector("terminate:"), keyEquivalent: "q"))
         
         statusItem.menu = menu
