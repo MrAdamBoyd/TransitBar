@@ -6,11 +6,15 @@
 	<dict>
 		<key>Resources/AppIcon.icns</key>
 		<data>
-		jK0MJnsIHMEr6HgwuijzAl/7CFM=
+		ymg48V2/N1ojBr81QLB+Amw4JEk=
+		</data>
+		<key>Resources/Logo256@2x.png</key>
+		<data>
+		3pxYYGOFJptMnWMztUjPPndSupw=
 		</data>
 		<key>Resources/MainMenu.nib</key>
 		<data>
-		F3+2STB4nOnGQUQeZTMA0Cnuprc=
+		xNufl88uqTxPo8sv0YY+0ooKfog=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -19,7 +23,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			H1G35sDjxNgJ0auLB0U04IoDHhA=
+			xNhaxk2Rtz8h0ajZ8yDcPHRPDhU=
 			</data>
 			<key>requirement</key>
 			<string>anchor apple generic and identifier "org.cocoapods.SWXMLHash" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6GHQ7P7EHA")</string>
@@ -28,7 +32,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			UYPnzq+bGkGN1lxNXhLVww4Xqso=
+			OsDnAlwBhn6oJYUvSsfFYrYLU9s=
 			</data>
 			<key>requirement</key>
 			<string>anchor apple generic and identifier "com.apple.dt.runtime.swiftAppKit" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6GHQ7P7EHA")</string>
@@ -37,25 +41,43 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			bY9TQ2m91S7cIWc5H9aFFvzQQVs=
+			d/NJfS2lWgxEQNtHJmlM7aAS8M8=
 			</data>
 			<key>requirement</key>
 			<string>anchor apple generic and identifier "com.apple.dt.runtime.swiftCore" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6GHQ7P7EHA")</string>
+		</dict>
+		<key>Frameworks/libswiftCoreData.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			kEovVSb7X08G6r4BtcM7fFRmOM4=
+			</data>
+			<key>requirement</key>
+			<string>anchor apple generic and identifier "com.apple.dt.runtime.swiftCoreData" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6GHQ7P7EHA")</string>
 		</dict>
 		<key>Frameworks/libswiftCoreGraphics.dylib</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			ZicqSzADqZyPERzaI/HLp40myfw=
+			6TIt7j5XOc2PB2Bacjnzfe2Ja2U=
 			</data>
 			<key>requirement</key>
 			<string>anchor apple generic and identifier "com.apple.dt.runtime.swiftCoreGraphics" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6GHQ7P7EHA")</string>
+		</dict>
+		<key>Frameworks/libswiftCoreImage.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			EvhD7y2u9dWeQ44Sb1T7k24t5+c=
+			</data>
+			<key>requirement</key>
+			<string>anchor apple generic and identifier "com.apple.dt.runtime.swiftCoreImage" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6GHQ7P7EHA")</string>
 		</dict>
 		<key>Frameworks/libswiftDarwin.dylib</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			Ii0g2MJZAQNguHCX+iugZgYFXEI=
+			aSmW/DKmDcqkg2O9gzm/l/JzNCg=
 			</data>
 			<key>requirement</key>
 			<string>anchor apple generic and identifier "com.apple.dt.runtime.swiftDarwin" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6GHQ7P7EHA")</string>
@@ -64,7 +86,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			IvbGH2Aj/Rp6KGyG9gsJMmOzMME=
+			RjZJdJWkf9Hk6I9UVI1O+hnFpL8=
 			</data>
 			<key>requirement</key>
 			<string>anchor apple generic and identifier "com.apple.dt.runtime.swiftDispatch" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6GHQ7P7EHA")</string>
@@ -73,7 +95,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			qsqfkQ0M9+CbGwIAWeqfTBA67Zk=
+			nEpTF++Aa/ep/zGVtyy0raUw1wU=
 			</data>
 			<key>requirement</key>
 			<string>anchor apple generic and identifier "com.apple.dt.runtime.swiftFoundation" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6GHQ7P7EHA")</string>
@@ -82,36 +104,22 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			hvyxLymn2VFyGRkmpQkzqAPzcFw=
+			fNhW+ibs78Wv5dkOvz+MqjY3sA8=
 			</data>
 			<key>requirement</key>
 			<string>anchor apple generic and identifier "com.apple.dt.runtime.swiftObjectiveC" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6GHQ7P7EHA")</string>
 		</dict>
-		<key>Frameworks/libswiftQuartzCore.dylib</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			ljprNYclWro7GND6NuwwRvFh4Yg=
-			</data>
-			<key>requirement</key>
-			<string>anchor apple generic and identifier "com.apple.dt.runtime.swiftQuartzCore" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6GHQ7P7EHA")</string>
-		</dict>
-		<key>Frameworks/libswiftSecurity.dylib</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			Tuum1D5+tSjkF1oPExUvh49ggTs=
-			</data>
-			<key>requirement</key>
-			<string>anchor apple generic and identifier "com.apple.dt.runtime.swiftSecurity" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "6GHQ7P7EHA")</string>
-		</dict>
 		<key>Resources/AppIcon.icns</key>
 		<data>
-		jK0MJnsIHMEr6HgwuijzAl/7CFM=
+		ymg48V2/N1ojBr81QLB+Amw4JEk=
+		</data>
+		<key>Resources/Logo256@2x.png</key>
+		<data>
+		3pxYYGOFJptMnWMztUjPPndSupw=
 		</data>
 		<key>Resources/MainMenu.nib</key>
 		<data>
-		F3+2STB4nOnGQUQeZTMA0Cnuprc=
+		xNufl88uqTxPo8sv0YY+0ooKfog=
 		</data>
 	</dict>
 	<key>rules</key>
