@@ -197,6 +197,7 @@
 				6611A3C31B8FBFF5005F1AC9 /* Resources */,
 				ECE9999968248958337B8C84 /* Embed Pods Frameworks */,
 				8F6B3B06A6E7127EE3723757 /* Copy Pods Resources */,
+				663DD4F71BAA2F3E00DA570B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -300,6 +301,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		663DD4F71BAA2F3E00DA570B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LOCATION=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\n# Usually set by Xcode\nCODE_SIGN_IDENTITY=\"Developer ID Application: Adam Boyd\"\n\ncodesign --verbose --force --sign \"$CODE_SIGN_IDENTITY\" \"$LOCATION/Sparkle.framework/Versions/A\"";
 		};
 		8F6B3B06A6E7127EE3723757 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

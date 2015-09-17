@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Sparkle
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -26,7 +27,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let menu = NSMenu()
         
-        menu.addItem(NSMenuItem(title: "About MuniMenuBar", action: Selector("openAbout"), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "About Muni Menu Bar", action: Selector("openAbout"), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Check for Updates...", action: Selector("checkForUpdates"), keyEquivalent: ""))
         menu.addItem(NSMenuItem.separatorItem())
         menu.addItem(NSMenuItem(title: "Preferences...", action: Selector("openSettings"), keyEquivalent: ","))
         menu.addItem(NSMenuItem(title: "Quit", action: Selector("terminate:"), keyEquivalent: "q"))
@@ -42,6 +44,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //Timer that updates the label runs every 60 seconds
         minuteTimer = NSTimer.scheduledTimerWithTimeInterval(60.0, target: self, selector: Selector("loadData"), userInfo: nil, repeats: true)
+        
+        SUUpdater.sharedUpdater().automaticallyChecksForUpdates = true
         
         loadData()
     }
@@ -123,6 +127,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         return stopString
         
+    }
+    
+    //Called by the "Check for updates" menu button being clicked
+    func checkForUpdates() {
+        SUUpdater.sharedUpdater().checkForUpdates(self)
     }
     
     func openAbout() {
