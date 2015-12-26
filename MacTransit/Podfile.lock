@@ -1,0 +1,13 @@
+PODS:
+  - SwiftBus (1.2):
+    - SWXMLHash (~> 2.0.0)
+  - SWXMLHash (2.0.2)
+
+DEPENDENCIES:
+  - SwiftBus
+
+SPEC CHECKSUMS:
+  SwiftBus: 1bf3002e187595c1265a9cc574127bc0da0f272a
+  SWXMLHash: 9e6bd7db2e8275eaf3d2082265623d6e749e169d
+
+COCOAPODS: 0.39.0

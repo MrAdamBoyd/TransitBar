@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A83A0D0038FF449783F9F7D /* Pods_MacTransit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F327C803721D7F8E4D231 /* Pods_MacTransit.framework */; };
 		6667ABBD1C2E271000C65E78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667ABBC1C2E271000C65E78 /* AppDelegate.swift */; };
 		6667ABBF1C2E271000C65E78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667ABBE1C2E271000C65E78 /* ViewController.swift */; };
 		6667ABC11C2E271000C65E78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6667ABC01C2E271000C65E78 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		280F327C803721D7F8E4D231 /* Pods_MacTransit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6667ABB91C2E271000C65E78 /* MacTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6667ABBC1C2E271000C65E78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6667ABBE1C2E271000C65E78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		6667ABD51C2E271000C65E78 /* MacTransitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacTransitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6667ABD91C2E271000C65E78 /* MacTransitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacTransitUITests.swift; sourceTree = "<group>"; };
 		6667ABDB1C2E271000C65E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F7F68124A1D7E6C5CAF897A /* Pods-MacTransit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.debug.xcconfig"; sourceTree = "<group>"; };
+		B629612D6CD72DBA88AB88F0 /* Pods-MacTransit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A83A0D0038FF449783F9F7D /* Pods_MacTransit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56E10C1A2D90F5BACACD4D98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				280F327C803721D7F8E4D231 /* Pods_MacTransit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6667ABB01C2E271000C65E78 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +92,8 @@
 				6667ABCD1C2E271000C65E78 /* MacTransitTests */,
 				6667ABD81C2E271000C65E78 /* MacTransitUITests */,
 				6667ABBA1C2E271000C65E78 /* Products */,
+				BEADFC64CCA2AC08C28DF43C /* Pods */,
+				56E10C1A2D90F5BACACD4D98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +137,15 @@
 			path = MacTransitUITests;
 			sourceTree = "<group>";
 		};
+		BEADFC64CCA2AC08C28DF43C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F7F68124A1D7E6C5CAF897A /* Pods-MacTransit.debug.xcconfig */,
+				B629612D6CD72DBA88AB88F0 /* Pods-MacTransit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6667ABDE1C2E271000C65E78 /* Build configuration list for PBXNativeTarget "MacTransit" */;
 			buildPhases = (
+				20A6403ADA6CFA187C9285A2 /* Check Pods Manifest.lock */,
 				6667ABB51C2E271000C65E78 /* Sources */,
 				6667ABB61C2E271000C65E78 /* Frameworks */,
 				6667ABB71C2E271000C65E78 /* Resources */,
+				29D19EB799F579413ACD3E5C /* Embed Pods Frameworks */,
+				8BDAB3A6B3DE4245F0A6570C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +273,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20A6403ADA6CFA187C9285A2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		29D19EB799F579413ACD3E5C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BDAB3A6B3DE4245F0A6570C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6667ABB51C2E271000C65E78 /* Sources */ = {
@@ -382,6 +457,7 @@
 		};
 		6667ABDF1C2E271000C65E78 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F7F68124A1D7E6C5CAF897A /* Pods-MacTransit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -394,6 +470,7 @@
 		};
 		6667ABE01C2E271000C65E78 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B629612D6CD72DBA88AB88F0 /* Pods-MacTransit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -475,6 +552,7 @@
 				6667ABE01C2E271000C65E78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6667ABE11C2E271000C65E78 /* Build configuration list for PBXNativeTarget "MacTransitTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +561,7 @@
 				6667ABE31C2E271000C65E78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6667ABE41C2E271000C65E78 /* Build configuration list for PBXNativeTarget "MacTransitUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +570,7 @@
 				6667ABE61C2E271000C65E78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
