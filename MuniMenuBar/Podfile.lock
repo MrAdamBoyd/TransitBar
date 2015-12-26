@@ -1,5 +1,5 @@
 PODS:
-  - Sparkle (1.11.0)
+  - Sparkle (1.11.1)
   - SWXMLHash (2.0.0)
 
 DEPENDENCIES:
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - SWXMLHash (~> 2.0.0)
 
 SPEC CHECKSUMS:
-  Sparkle: cf10103ef35fd89caa35373bfd772c5d6f9c7d73
+  Sparkle: 80198c37a54f8c29af89e5b9f985e730536ebfd5
   SWXMLHash: b92213e98aebac80583ee58c2298c5533c7e2a7b
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

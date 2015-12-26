@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6611A3C41B8FBFF5005F1AC9"
-               BuildableName = "MuniMenuBar.app"
-               BlueprintName = "MuniMenuBar"
-               ReferencedContainer = "container:MuniMenuBar.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6611A3D41B8FBFF5005F1AC9"
-               BuildableName = "MuniMenuBarTests.xctest"
-               BlueprintName = "MuniMenuBarTests"
-               ReferencedContainer = "container:MuniMenuBar.xcodeproj">
+               BlueprintIdentifier = "6667ABB81C2E271000C65E78"
+               BuildableName = "MacTransit.app"
+               BlueprintName = "MacTransit"
+               ReferencedContainer = "container:MacTransit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6611A3D41B8FBFF5005F1AC9"
-               BuildableName = "MuniMenuBarTests.xctest"
-               BlueprintName = "MuniMenuBarTests"
-               ReferencedContainer = "container:MuniMenuBar.xcodeproj">
+               BlueprintIdentifier = "6667ABC91C2E271000C65E78"
+               BuildableName = "MacTransitTests.xctest"
+               BlueprintName = "MacTransitTests"
+               ReferencedContainer = "container:MacTransit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6667ABD41C2E271000C65E78"
+               BuildableName = "MacTransitUITests.xctest"
+               BlueprintName = "MacTransitUITests"
+               ReferencedContainer = "container:MacTransit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6611A3C41B8FBFF5005F1AC9"
-            BuildableName = "MuniMenuBar.app"
-            BlueprintName = "MuniMenuBar"
-            ReferencedContainer = "container:MuniMenuBar.xcodeproj">
+            BlueprintIdentifier = "6667ABB81C2E271000C65E78"
+            BuildableName = "MacTransit.app"
+            BlueprintName = "MacTransit"
+            ReferencedContainer = "container:MacTransit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6611A3C41B8FBFF5005F1AC9"
-            BuildableName = "MuniMenuBar.app"
-            BlueprintName = "MuniMenuBar"
-            ReferencedContainer = "container:MuniMenuBar.xcodeproj">
+            BlueprintIdentifier = "6667ABB81C2E271000C65E78"
+            BuildableName = "MacTransit.app"
+            BlueprintName = "MacTransit"
+            ReferencedContainer = "container:MacTransit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -98,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6611A3C41B8FBFF5005F1AC9"
-            BuildableName = "MuniMenuBar.app"
-            BlueprintName = "MuniMenuBar"
-            ReferencedContainer = "container:MuniMenuBar.xcodeproj">
+            BlueprintIdentifier = "6667ABB81C2E271000C65E78"
+            BuildableName = "MacTransit.app"
+            BlueprintName = "MacTransit"
+            ReferencedContainer = "container:MacTransit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

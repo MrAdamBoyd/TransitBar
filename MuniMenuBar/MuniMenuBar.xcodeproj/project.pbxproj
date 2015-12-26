@@ -19,9 +19,9 @@
 		6611A3F81B8FC19F005F1AC9 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3F51B8FC19F005F1AC9 /* PreferencesWindow.swift */; };
 		6611A3F91B8FC19F005F1AC9 /* MMBXmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3F61B8FC19F005F1AC9 /* MMBXmlParser.swift */; };
 		6611A3FB1B8FC1A3005F1AC9 /* MMBXmlParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6611A3FA1B8FC1A3005F1AC9 /* MMBXmlParserProtocol.swift */; };
-		66E8B7471B9F9BFF00809D35 /* Logo256@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66E8B7461B9F9BFF00809D35 /* Logo256@2x.png */; settings = {ASSET_TAGS = (); }; };
-		66E8B7491B9F9D0700809D35 /* AboutWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E8B7481B9F9D0700809D35 /* AboutWindow.swift */; settings = {ASSET_TAGS = (); }; };
-		9501FFB06C34EEB0E249ED5E /* Pods_MuniMenuBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4869D384546AEA1AA2DF2E /* Pods_MuniMenuBar.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		66E8B7471B9F9BFF00809D35 /* Logo256@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66E8B7461B9F9BFF00809D35 /* Logo256@2x.png */; };
+		66E8B7491B9F9D0700809D35 /* AboutWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E8B7481B9F9D0700809D35 /* AboutWindow.swift */; };
+		9501FFB06C34EEB0E249ED5E /* Pods_MuniMenuBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4869D384546AEA1AA2DF2E /* Pods_MuniMenuBar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +53,7 @@
 		6611A3FA1B8FC1A3005F1AC9 /* MMBXmlParserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBXmlParserProtocol.swift; sourceTree = "<group>"; };
 		66E8B7461B9F9BFF00809D35 /* Logo256@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Logo256@2x.png"; path = "Images.xcassets/AppIcon.appiconset/Logo256@2x.png"; sourceTree = "<group>"; };
 		66E8B7481B9F9D0700809D35 /* AboutWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindow.swift; sourceTree = "<group>"; };
+		66EECE431C2E22F900117528 /* MuniMenuBar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MuniMenuBar-Bridging-Header.h"; sourceTree = "<group>"; };
 		9F4869D384546AEA1AA2DF2E /* Pods_MuniMenuBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuniMenuBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40CA3A63773F0FA00F55A46 /* Pods-MuniMenuBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuniMenuBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar.release.xcconfig"; sourceTree = "<group>"; };
 		D60615BBB3C1513D86916983 /* Pods-MuniMenuBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuniMenuBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MuniMenuBar/Pods-MuniMenuBar.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 				6611A3E71B8FC13F005F1AC9 /* Images.xcassets */,
 				6611A3E91B8FC15D005F1AC9 /* MainMenu.xib */,
 				6611A3E51B8FC136005F1AC9 /* RequestURLs.swift */,
+				66EECE431C2E22F900117528 /* MuniMenuBar-Bridging-Header.h */,
 				6611A3CA1B8FBFF5005F1AC9 /* AppDelegate.swift */,
 				6611A3EB1B8FC172005F1AC9 /* Objects */,
 				6611A3EC1B8FC17B005F1AC9 /* Controllers */,
