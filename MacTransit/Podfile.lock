@@ -1,13 +1,22 @@
 PODS:
+  - Sparkle (1.14.0)
   - SwiftBus (1.2):
     - SWXMLHash (~> 2.0.0)
   - SWXMLHash (2.0.2)
 
 DEPENDENCIES:
-  - SwiftBus
+  - Sparkle
+  - SwiftBus (from `./SwiftBus`)
+
+EXTERNAL SOURCES:
+  SwiftBus:
+    :path: ./SwiftBus
 
 SPEC CHECKSUMS:
+  Sparkle: ccd95233b12a3e3d4eeb55ff01dd4c8bb8188b07
   SwiftBus: 1bf3002e187595c1265a9cc574127bc0da0f272a
   SWXMLHash: 9e6bd7db2e8275eaf3d2082265623d6e749e169d
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: fb4375df98990c164dab3eccdc518ba8ceca156e
+
+COCOAPODS: 1.0.1

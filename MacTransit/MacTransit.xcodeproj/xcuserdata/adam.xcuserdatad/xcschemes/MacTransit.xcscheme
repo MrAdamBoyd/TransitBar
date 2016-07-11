@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6667ABB81C2E271000C65E78"
+               BlueprintIdentifier = "663777741D332DF0009DC04B"
                BuildableName = "MacTransit.app"
                BlueprintName = "MacTransit"
                ReferencedContainer = "container:MacTransit.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6667ABC91C2E271000C65E78"
+               BlueprintIdentifier = "663777831D332DF0009DC04B"
                BuildableName = "MacTransitTests.xctest"
                BlueprintName = "MacTransitTests"
                ReferencedContainer = "container:MacTransit.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6667ABD41C2E271000C65E78"
+               BlueprintIdentifier = "6637778E1D332DF0009DC04B"
                BuildableName = "MacTransitUITests.xctest"
                BlueprintName = "MacTransitUITests"
                ReferencedContainer = "container:MacTransit.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6667ABB81C2E271000C65E78"
+            BlueprintIdentifier = "663777741D332DF0009DC04B"
             BuildableName = "MacTransit.app"
             BlueprintName = "MacTransit"
             ReferencedContainer = "container:MacTransit.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6667ABB81C2E271000C65E78"
+            BlueprintIdentifier = "663777741D332DF0009DC04B"
             BuildableName = "MacTransit.app"
             BlueprintName = "MacTransit"
             ReferencedContainer = "container:MacTransit.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6667ABB81C2E271000C65E78"
+            BlueprintIdentifier = "663777741D332DF0009DC04B"
             BuildableName = "MacTransit.app"
             BlueprintName = "MacTransit"
             ReferencedContainer = "container:MacTransit.xcodeproj">

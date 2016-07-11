@@ -2,8 +2,8 @@
 //  MacTransitUITests.swift
 //  MacTransitUITests
 //
-//  Created by Adam Boyd on 2015-12-25.
-//  Copyright © 2015 Adam Boyd. All rights reserved.
+//  Created by Adam Boyd on 2016-07-10.
+//  Copyright © 2016 Adam. All rights reserved.
 //
 
 import XCTest

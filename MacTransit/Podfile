@@ -4,7 +4,8 @@
 use_frameworks!
 
 target 'MacTransit' do
-  pod "SwiftBus"
+  pod 'SwiftBus', :path => './SwiftBus'
+  pod 'Sparkle'
 end
 
 target 'MacTransitTests' do

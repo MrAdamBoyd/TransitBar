@@ -7,141 +7,154 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A83A0D0038FF449783F9F7D /* Pods_MacTransit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F327C803721D7F8E4D231 /* Pods_MacTransit.framework */; };
-		6667ABBD1C2E271000C65E78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667ABBC1C2E271000C65E78 /* AppDelegate.swift */; };
-		6667ABBF1C2E271000C65E78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667ABBE1C2E271000C65E78 /* ViewController.swift */; };
-		6667ABC11C2E271000C65E78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6667ABC01C2E271000C65E78 /* Assets.xcassets */; };
-		6667ABC41C2E271000C65E78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6667ABC21C2E271000C65E78 /* Main.storyboard */; };
-		6667ABCF1C2E271000C65E78 /* MacTransitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667ABCE1C2E271000C65E78 /* MacTransitTests.swift */; };
-		6667ABDA1C2E271000C65E78 /* MacTransitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667ABD91C2E271000C65E78 /* MacTransitUITests.swift */; };
+		436981A023DE0BEE4230F1D6 /* Pods_MacTransitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28F7401158714B8A91915AC /* Pods_MacTransitTests.framework */; };
+		663777791D332DF0009DC04B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663777781D332DF0009DC04B /* AppDelegate.swift */; };
+		6637777B1D332DF0009DC04B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6637777A1D332DF0009DC04B /* Assets.xcassets */; };
+		6637777E1D332DF0009DC04B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6637777C1D332DF0009DC04B /* MainMenu.xib */; };
+		663777891D332DF0009DC04B /* MacTransitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663777881D332DF0009DC04B /* MacTransitTests.swift */; };
+		663777941D332DF0009DC04B /* MacTransitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663777931D332DF0009DC04B /* MacTransitUITests.swift */; };
+		7CAEC0954EAF0560FED964C2 /* Pods_MacTransitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB712B15528B6C1467CE4AF7 /* Pods_MacTransitUITests.framework */; };
+		8C3300463054DCB364E09518 /* Pods_MacTransit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6FD277A7597FDD8325F5A4 /* Pods_MacTransit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6667ABCB1C2E271000C65E78 /* PBXContainerItemProxy */ = {
+		663777851D332DF0009DC04B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6667ABB11C2E271000C65E78 /* Project object */;
+			containerPortal = 6637776D1D332DF0009DC04B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6667ABB81C2E271000C65E78;
+			remoteGlobalIDString = 663777741D332DF0009DC04B;
 			remoteInfo = MacTransit;
 		};
-		6667ABD61C2E271000C65E78 /* PBXContainerItemProxy */ = {
+		663777901D332DF0009DC04B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6667ABB11C2E271000C65E78 /* Project object */;
+			containerPortal = 6637776D1D332DF0009DC04B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6667ABB81C2E271000C65E78;
+			remoteGlobalIDString = 663777741D332DF0009DC04B;
 			remoteInfo = MacTransit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		280F327C803721D7F8E4D231 /* Pods_MacTransit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6667ABB91C2E271000C65E78 /* MacTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6667ABBC1C2E271000C65E78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6667ABBE1C2E271000C65E78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6667ABC01C2E271000C65E78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6667ABC31C2E271000C65E78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6667ABC51C2E271000C65E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6667ABCA1C2E271000C65E78 /* MacTransitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacTransitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6667ABCE1C2E271000C65E78 /* MacTransitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacTransitTests.swift; sourceTree = "<group>"; };
-		6667ABD01C2E271000C65E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6667ABD51C2E271000C65E78 /* MacTransitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacTransitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6667ABD91C2E271000C65E78 /* MacTransitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacTransitUITests.swift; sourceTree = "<group>"; };
-		6667ABDB1C2E271000C65E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F7F68124A1D7E6C5CAF897A /* Pods-MacTransit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.debug.xcconfig"; sourceTree = "<group>"; };
-		B629612D6CD72DBA88AB88F0 /* Pods-MacTransit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.release.xcconfig"; sourceTree = "<group>"; };
+		44AB0DD8167473AD2BFE2B17 /* Pods-MacTransit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.release.xcconfig"; sourceTree = "<group>"; };
+		5BB8E83CCE8441BA69E84B36 /* Pods-MacTransitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransitUITests/Pods-MacTransitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		608AB908ED0090F1066CFB58 /* Pods-MacTransitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransitTests/Pods-MacTransitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		663777751D332DF0009DC04B /* MacTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		663777781D332DF0009DC04B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6637777A1D332DF0009DC04B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6637777D1D332DF0009DC04B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6637777F1D332DF0009DC04B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		663777841D332DF0009DC04B /* MacTransitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacTransitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		663777881D332DF0009DC04B /* MacTransitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacTransitTests.swift; sourceTree = "<group>"; };
+		6637778A1D332DF0009DC04B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6637778F1D332DF0009DC04B /* MacTransitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacTransitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		663777931D332DF0009DC04B /* MacTransitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacTransitUITests.swift; sourceTree = "<group>"; };
+		663777951D332DF0009DC04B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C9CC8B7F22320EA317CD795 /* Pods-MacTransitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransitUITests/Pods-MacTransitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CF572C3C2FD93834C003A452 /* Pods-MacTransit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.debug.xcconfig"; sourceTree = "<group>"; };
+		D28F7401158714B8A91915AC /* Pods_MacTransitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6234212238D5CDF07C41F1B /* Pods-MacTransitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransitTests/Pods-MacTransitTests.release.xcconfig"; sourceTree = "<group>"; };
+		EB712B15528B6C1467CE4AF7 /* Pods_MacTransitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC6FD277A7597FDD8325F5A4 /* Pods_MacTransit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6667ABB61C2E271000C65E78 /* Frameworks */ = {
+		663777721D332DF0009DC04B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A83A0D0038FF449783F9F7D /* Pods_MacTransit.framework in Frameworks */,
+				8C3300463054DCB364E09518 /* Pods_MacTransit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6667ABC71C2E271000C65E78 /* Frameworks */ = {
+		663777811D332DF0009DC04B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436981A023DE0BEE4230F1D6 /* Pods_MacTransitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6667ABD21C2E271000C65E78 /* Frameworks */ = {
+		6637778C1D332DF0009DC04B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CAEC0954EAF0560FED964C2 /* Pods_MacTransitUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		56E10C1A2D90F5BACACD4D98 /* Frameworks */ = {
+		2CE8BAFA435F5D4E7F9963B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				280F327C803721D7F8E4D231 /* Pods_MacTransit.framework */,
+				FC6FD277A7597FDD8325F5A4 /* Pods_MacTransit.framework */,
+				D28F7401158714B8A91915AC /* Pods_MacTransitTests.framework */,
+				EB712B15528B6C1467CE4AF7 /* Pods_MacTransitUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6667ABB01C2E271000C65E78 = {
+		6637776C1D332DF0009DC04B = {
 			isa = PBXGroup;
 			children = (
-				6667ABBB1C2E271000C65E78 /* MacTransit */,
-				6667ABCD1C2E271000C65E78 /* MacTransitTests */,
-				6667ABD81C2E271000C65E78 /* MacTransitUITests */,
-				6667ABBA1C2E271000C65E78 /* Products */,
-				BEADFC64CCA2AC08C28DF43C /* Pods */,
-				56E10C1A2D90F5BACACD4D98 /* Frameworks */,
+				663777771D332DF0009DC04B /* MacTransit */,
+				663777871D332DF0009DC04B /* MacTransitTests */,
+				663777921D332DF0009DC04B /* MacTransitUITests */,
+				663777761D332DF0009DC04B /* Products */,
+				D9AA7CF5295B1B293FE406F1 /* Pods */,
+				2CE8BAFA435F5D4E7F9963B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		6667ABBA1C2E271000C65E78 /* Products */ = {
+		663777761D332DF0009DC04B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6667ABB91C2E271000C65E78 /* MacTransit.app */,
-				6667ABCA1C2E271000C65E78 /* MacTransitTests.xctest */,
-				6667ABD51C2E271000C65E78 /* MacTransitUITests.xctest */,
+				663777751D332DF0009DC04B /* MacTransit.app */,
+				663777841D332DF0009DC04B /* MacTransitTests.xctest */,
+				6637778F1D332DF0009DC04B /* MacTransitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6667ABBB1C2E271000C65E78 /* MacTransit */ = {
+		663777771D332DF0009DC04B /* MacTransit */ = {
 			isa = PBXGroup;
 			children = (
-				6667ABBC1C2E271000C65E78 /* AppDelegate.swift */,
-				6667ABBE1C2E271000C65E78 /* ViewController.swift */,
-				6667ABC01C2E271000C65E78 /* Assets.xcassets */,
-				6667ABC21C2E271000C65E78 /* Main.storyboard */,
-				6667ABC51C2E271000C65E78 /* Info.plist */,
+				663777781D332DF0009DC04B /* AppDelegate.swift */,
+				6637777A1D332DF0009DC04B /* Assets.xcassets */,
+				6637777C1D332DF0009DC04B /* MainMenu.xib */,
+				6637777F1D332DF0009DC04B /* Info.plist */,
 			);
 			path = MacTransit;
 			sourceTree = "<group>";
 		};
-		6667ABCD1C2E271000C65E78 /* MacTransitTests */ = {
+		663777871D332DF0009DC04B /* MacTransitTests */ = {
 			isa = PBXGroup;
 			children = (
-				6667ABCE1C2E271000C65E78 /* MacTransitTests.swift */,
-				6667ABD01C2E271000C65E78 /* Info.plist */,
+				663777881D332DF0009DC04B /* MacTransitTests.swift */,
+				6637778A1D332DF0009DC04B /* Info.plist */,
 			);
 			path = MacTransitTests;
 			sourceTree = "<group>";
 		};
-		6667ABD81C2E271000C65E78 /* MacTransitUITests */ = {
+		663777921D332DF0009DC04B /* MacTransitUITests */ = {
 			isa = PBXGroup;
 			children = (
-				6667ABD91C2E271000C65E78 /* MacTransitUITests.swift */,
-				6667ABDB1C2E271000C65E78 /* Info.plist */,
+				663777931D332DF0009DC04B /* MacTransitUITests.swift */,
+				663777951D332DF0009DC04B /* Info.plist */,
 			);
 			path = MacTransitUITests;
 			sourceTree = "<group>";
 		};
-		BEADFC64CCA2AC08C28DF43C /* Pods */ = {
+		D9AA7CF5295B1B293FE406F1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8F7F68124A1D7E6C5CAF897A /* Pods-MacTransit.debug.xcconfig */,
-				B629612D6CD72DBA88AB88F0 /* Pods-MacTransit.release.xcconfig */,
+				CF572C3C2FD93834C003A452 /* Pods-MacTransit.debug.xcconfig */,
+				44AB0DD8167473AD2BFE2B17 /* Pods-MacTransit.release.xcconfig */,
+				608AB908ED0090F1066CFB58 /* Pods-MacTransitTests.debug.xcconfig */,
+				D6234212238D5CDF07C41F1B /* Pods-MacTransitTests.release.xcconfig */,
+				5BB8E83CCE8441BA69E84B36 /* Pods-MacTransitUITests.debug.xcconfig */,
+				9C9CC8B7F22320EA317CD795 /* Pods-MacTransitUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -149,16 +162,17 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6667ABB81C2E271000C65E78 /* MacTransit */ = {
+		663777741D332DF0009DC04B /* MacTransit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6667ABDE1C2E271000C65E78 /* Build configuration list for PBXNativeTarget "MacTransit" */;
+			buildConfigurationList = 663777981D332DF0009DC04B /* Build configuration list for PBXNativeTarget "MacTransit" */;
 			buildPhases = (
-				20A6403ADA6CFA187C9285A2 /* Check Pods Manifest.lock */,
-				6667ABB51C2E271000C65E78 /* Sources */,
-				6667ABB61C2E271000C65E78 /* Frameworks */,
-				6667ABB71C2E271000C65E78 /* Resources */,
-				29D19EB799F579413ACD3E5C /* Embed Pods Frameworks */,
-				8BDAB3A6B3DE4245F0A6570C /* Copy Pods Resources */,
+				F69E167CFFA32C9F528B5C2C /* [CP] Check Pods Manifest.lock */,
+				663777711D332DF0009DC04B /* Sources */,
+				663777721D332DF0009DC04B /* Frameworks */,
+				663777731D332DF0009DC04B /* Resources */,
+				117D89153ABA1D273A8FFCF2 /* [CP] Embed Pods Frameworks */,
+				2B701EDE62E1D392034FD5A4 /* [CP] Copy Pods Resources */,
+				663777A11D332F31009DC04B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -166,69 +180,74 @@
 			);
 			name = MacTransit;
 			productName = MacTransit;
-			productReference = 6667ABB91C2E271000C65E78 /* MacTransit.app */;
+			productReference = 663777751D332DF0009DC04B /* MacTransit.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6667ABC91C2E271000C65E78 /* MacTransitTests */ = {
+		663777831D332DF0009DC04B /* MacTransitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6667ABE11C2E271000C65E78 /* Build configuration list for PBXNativeTarget "MacTransitTests" */;
+			buildConfigurationList = 6637779B1D332DF0009DC04B /* Build configuration list for PBXNativeTarget "MacTransitTests" */;
 			buildPhases = (
-				6667ABC61C2E271000C65E78 /* Sources */,
-				6667ABC71C2E271000C65E78 /* Frameworks */,
-				6667ABC81C2E271000C65E78 /* Resources */,
+				7AD888E1A2ADEFBA7F4B9123 /* [CP] Check Pods Manifest.lock */,
+				663777801D332DF0009DC04B /* Sources */,
+				663777811D332DF0009DC04B /* Frameworks */,
+				663777821D332DF0009DC04B /* Resources */,
+				A4F4C427FC5AEDCEFC65199A /* [CP] Embed Pods Frameworks */,
+				48118BE17CFEB850062323AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6667ABCC1C2E271000C65E78 /* PBXTargetDependency */,
+				663777861D332DF0009DC04B /* PBXTargetDependency */,
 			);
 			name = MacTransitTests;
 			productName = MacTransitTests;
-			productReference = 6667ABCA1C2E271000C65E78 /* MacTransitTests.xctest */;
+			productReference = 663777841D332DF0009DC04B /* MacTransitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6667ABD41C2E271000C65E78 /* MacTransitUITests */ = {
+		6637778E1D332DF0009DC04B /* MacTransitUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6667ABE41C2E271000C65E78 /* Build configuration list for PBXNativeTarget "MacTransitUITests" */;
+			buildConfigurationList = 6637779E1D332DF0009DC04B /* Build configuration list for PBXNativeTarget "MacTransitUITests" */;
 			buildPhases = (
-				6667ABD11C2E271000C65E78 /* Sources */,
-				6667ABD21C2E271000C65E78 /* Frameworks */,
-				6667ABD31C2E271000C65E78 /* Resources */,
+				5C34FC13893EC106B83E1A08 /* [CP] Check Pods Manifest.lock */,
+				6637778B1D332DF0009DC04B /* Sources */,
+				6637778C1D332DF0009DC04B /* Frameworks */,
+				6637778D1D332DF0009DC04B /* Resources */,
+				9BF2C335F27EF1B0E0121DE5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6667ABD71C2E271000C65E78 /* PBXTargetDependency */,
+				663777911D332DF0009DC04B /* PBXTargetDependency */,
 			);
 			name = MacTransitUITests;
 			productName = MacTransitUITests;
-			productReference = 6667ABD51C2E271000C65E78 /* MacTransitUITests.xctest */;
+			productReference = 6637778F1D332DF0009DC04B /* MacTransitUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6667ABB11C2E271000C65E78 /* Project object */ = {
+		6637776D1D332DF0009DC04B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Adam Boyd";
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Adam;
 				TargetAttributes = {
-					6667ABB81C2E271000C65E78 = {
-						CreatedOnToolsVersion = 7.2;
+					663777741D332DF0009DC04B = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
-					6667ABC91C2E271000C65E78 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 6667ABB81C2E271000C65E78;
+					663777831D332DF0009DC04B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 663777741D332DF0009DC04B;
 					};
-					6667ABD41C2E271000C65E78 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 6667ABB81C2E271000C65E78;
+					6637778E1D332DF0009DC04B = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 663777741D332DF0009DC04B;
 					};
 				};
 			};
-			buildConfigurationList = 6667ABB41C2E271000C65E78 /* Build configuration list for PBXProject "MacTransit" */;
+			buildConfigurationList = 663777701D332DF0009DC04B /* Build configuration list for PBXProject "MacTransit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -236,36 +255,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 6667ABB01C2E271000C65E78;
-			productRefGroup = 6667ABBA1C2E271000C65E78 /* Products */;
+			mainGroup = 6637776C1D332DF0009DC04B;
+			productRefGroup = 663777761D332DF0009DC04B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6667ABB81C2E271000C65E78 /* MacTransit */,
-				6667ABC91C2E271000C65E78 /* MacTransitTests */,
-				6667ABD41C2E271000C65E78 /* MacTransitUITests */,
+				663777741D332DF0009DC04B /* MacTransit */,
+				663777831D332DF0009DC04B /* MacTransitTests */,
+				6637778E1D332DF0009DC04B /* MacTransitUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6667ABB71C2E271000C65E78 /* Resources */ = {
+		663777731D332DF0009DC04B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6667ABC11C2E271000C65E78 /* Assets.xcassets in Resources */,
-				6667ABC41C2E271000C65E78 /* Main.storyboard in Resources */,
+				6637777B1D332DF0009DC04B /* Assets.xcassets in Resources */,
+				6637777E1D332DF0009DC04B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6667ABC81C2E271000C65E78 /* Resources */ = {
+		663777821D332DF0009DC04B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6667ABD31C2E271000C65E78 /* Resources */ = {
+		6637778D1D332DF0009DC04B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,29 +294,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		20A6403ADA6CFA187C9285A2 /* Check Pods Manifest.lock */ = {
+		117D89153ABA1D273A8FFCF2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		29D19EB799F579413ACD3E5C /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,14 +309,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8BDAB3A6B3DE4245F0A6570C /* Copy Pods Resources */ = {
+		2B701EDE62E1D392034FD5A4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,65 +324,168 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		48118BE17CFEB850062323AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacTransitTests/Pods-MacTransitTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C34FC13893EC106B83E1A08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		663777A11D332F31009DC04B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		7AD888E1A2ADEFBA7F4B9123 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9BF2C335F27EF1B0E0121DE5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacTransitUITests/Pods-MacTransitUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4F4C427FC5AEDCEFC65199A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacTransitTests/Pods-MacTransitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F69E167CFFA32C9F528B5C2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6667ABB51C2E271000C65E78 /* Sources */ = {
+		663777711D332DF0009DC04B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6667ABBF1C2E271000C65E78 /* ViewController.swift in Sources */,
-				6667ABBD1C2E271000C65E78 /* AppDelegate.swift in Sources */,
+				663777791D332DF0009DC04B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6667ABC61C2E271000C65E78 /* Sources */ = {
+		663777801D332DF0009DC04B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6667ABCF1C2E271000C65E78 /* MacTransitTests.swift in Sources */,
+				663777891D332DF0009DC04B /* MacTransitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6667ABD11C2E271000C65E78 /* Sources */ = {
+		6637778B1D332DF0009DC04B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6667ABDA1C2E271000C65E78 /* MacTransitUITests.swift in Sources */,
+				663777941D332DF0009DC04B /* MacTransitUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6667ABCC1C2E271000C65E78 /* PBXTargetDependency */ = {
+		663777861D332DF0009DC04B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6667ABB81C2E271000C65E78 /* MacTransit */;
-			targetProxy = 6667ABCB1C2E271000C65E78 /* PBXContainerItemProxy */;
+			target = 663777741D332DF0009DC04B /* MacTransit */;
+			targetProxy = 663777851D332DF0009DC04B /* PBXContainerItemProxy */;
 		};
-		6667ABD71C2E271000C65E78 /* PBXTargetDependency */ = {
+		663777911D332DF0009DC04B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6667ABB81C2E271000C65E78 /* MacTransit */;
-			targetProxy = 6667ABD61C2E271000C65E78 /* PBXContainerItemProxy */;
+			target = 663777741D332DF0009DC04B /* MacTransit */;
+			targetProxy = 663777901D332DF0009DC04B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6667ABC21C2E271000C65E78 /* Main.storyboard */ = {
+		6637777C1D332DF0009DC04B /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6667ABC31C2E271000C65E78 /* Base */,
+				6637777D1D332DF0009DC04B /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6667ABDC1C2E271000C65E78 /* Debug */ = {
+		663777961D332DF0009DC04B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -411,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -419,10 +526,11 @@
 			};
 			name = Debug;
 		};
-		6667ABDD1C2E271000C65E78 /* Release */ = {
+		663777971D332DF0009DC04B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -449,130 +557,138 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		6667ABDF1C2E271000C65E78 /* Debug */ = {
+		663777991D332DF0009DC04B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F7F68124A1D7E6C5CAF897A /* Pods-MacTransit.debug.xcconfig */;
+			baseConfigurationReference = CF572C3C2FD93834C003A452 /* Pods-MacTransit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MacTransit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		6667ABE01C2E271000C65E78 /* Release */ = {
+		6637779A1D332DF0009DC04B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B629612D6CD72DBA88AB88F0 /* Pods-MacTransit.release.xcconfig */;
+			baseConfigurationReference = 44AB0DD8167473AD2BFE2B17 /* Pods-MacTransit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MacTransit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		6667ABE21C2E271000C65E78 /* Debug */ = {
+		6637779C1D332DF0009DC04B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 608AB908ED0090F1066CFB58 /* Pods-MacTransitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MacTransitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacTransit.app/Contents/MacOS/MacTransit";
 			};
 			name = Debug;
 		};
-		6667ABE31C2E271000C65E78 /* Release */ = {
+		6637779D1D332DF0009DC04B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6234212238D5CDF07C41F1B /* Pods-MacTransitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MacTransitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacTransit.app/Contents/MacOS/MacTransit";
 			};
 			name = Release;
 		};
-		6667ABE51C2E271000C65E78 /* Debug */ = {
+		6637779F1D332DF0009DC04B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BB8E83CCE8441BA69E84B36 /* Pods-MacTransitUITests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MacTransitUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = MacTransit;
-				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
 		};
-		6667ABE61C2E271000C65E78 /* Release */ = {
+		663777A01D332DF0009DC04B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C9CC8B7F22320EA317CD795 /* Pods-MacTransitUITests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MacTransitUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = MacTransit;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6667ABB41C2E271000C65E78 /* Build configuration list for PBXProject "MacTransit" */ = {
+		663777701D332DF0009DC04B /* Build configuration list for PBXProject "MacTransit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6667ABDC1C2E271000C65E78 /* Debug */,
-				6667ABDD1C2E271000C65E78 /* Release */,
+				663777961D332DF0009DC04B /* Debug */,
+				663777971D332DF0009DC04B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6667ABDE1C2E271000C65E78 /* Build configuration list for PBXNativeTarget "MacTransit" */ = {
+		663777981D332DF0009DC04B /* Build configuration list for PBXNativeTarget "MacTransit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6667ABDF1C2E271000C65E78 /* Debug */,
-				6667ABE01C2E271000C65E78 /* Release */,
+				663777991D332DF0009DC04B /* Debug */,
+				6637779A1D332DF0009DC04B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6667ABE11C2E271000C65E78 /* Build configuration list for PBXNativeTarget "MacTransitTests" */ = {
+		6637779B1D332DF0009DC04B /* Build configuration list for PBXNativeTarget "MacTransitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6667ABE21C2E271000C65E78 /* Debug */,
-				6667ABE31C2E271000C65E78 /* Release */,
+				6637779C1D332DF0009DC04B /* Debug */,
+				6637779D1D332DF0009DC04B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6667ABE41C2E271000C65E78 /* Build configuration list for PBXNativeTarget "MacTransitUITests" */ = {
+		6637779E1D332DF0009DC04B /* Build configuration list for PBXNativeTarget "MacTransitUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6667ABE51C2E271000C65E78 /* Debug */,
-				6667ABE61C2E271000C65E78 /* Release */,
+				6637779F1D332DF0009DC04B /* Debug */,
+				663777A01D332DF0009DC04B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6667ABB11C2E271000C65E78 /* Project object */;
+	rootObject = 6637776D1D332DF0009DC04B /* Project object */;
 }

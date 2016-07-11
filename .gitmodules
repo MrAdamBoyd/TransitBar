@@ -1,0 +1,3 @@
+[submodule "MacTransit/SwiftBus"]
+	path = MacTransit/SwiftBus
+	url = https://github.com/MrAdamBoyd/SwiftBus
