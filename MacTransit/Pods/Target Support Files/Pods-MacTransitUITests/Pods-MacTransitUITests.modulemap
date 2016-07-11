@@ -1,0 +1,6 @@
+framework module Pods_MacTransitUITests {
+  umbrella header "Pods-MacTransitUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

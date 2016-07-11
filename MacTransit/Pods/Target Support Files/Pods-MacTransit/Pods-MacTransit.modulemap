@@ -1,0 +1,6 @@
+framework module Pods_MacTransit {
+  umbrella header "Pods-MacTransit-umbrella.h"
+
+  export *
+  module * { export * }
+}
