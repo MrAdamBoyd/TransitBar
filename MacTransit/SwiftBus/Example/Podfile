@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'SwiftBus_Example' do
+  pod "SwiftBus", :path => "../"
+end
+
+target 'SwiftBus_Tests' do
+  pod "SwiftBus", :path => "../"
+
+  
+end

@@ -1,0 +1,19 @@
+PODS:
+  - SwiftBus (1.3.1):
+    - SWXMLHash (~> 3.0.0)
+  - SWXMLHash (3.0.2)
+
+DEPENDENCIES:
+  - SwiftBus (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftBus:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SwiftBus: 88c85cbbfd8e567750525b96f79f854d4a8eb342
+  SWXMLHash: e0f6935971f01b06fb228cf435510d998ecde647
+
+PODFILE CHECKSUM: 81903590ae61b1f32c41878bce768c8bbe032993
+
+COCOAPODS: 1.0.1

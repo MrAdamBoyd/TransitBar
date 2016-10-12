@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "78493A860FEAAFEB1B1894D485F37DB4059ACA21",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "78493A860FEAAFEB1B1894D485F37DB4059ACA21" : 9223372036854775807,
+    "FD58DAEEDE96CBDFA261ED2665D34788419CF614" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A9AF3D4F-57DD-4773-8D8B-F281753951FC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "78493A860FEAAFEB1B1894D485F37DB4059ACA21" : "SwiftBus\/",
+    "FD58DAEEDE96CBDFA261ED2665D34788419CF614" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftBus",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/SwiftBus.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MrAdamBoyd\/SwiftBus.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "78493A860FEAAFEB1B1894D485F37DB4059ACA21"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MrAdamBoyd\/CatchTheBus.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FD58DAEEDE96CBDFA261ED2665D34788419CF614"
+    }
+  ]
+}
