@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FD70B00D91FB021C4C8A71441BE6BF889DC6F70B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FD70B00D91FB021C4C8A71441BE6BF889DC6F70B" : 9223372036854775807,
+    "78493A860FEAAFEB1B1894D485F37DB4059ACA21" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "78C2DE3B-E527-4889-930A-B91BAF9F8D38",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FD70B00D91FB021C4C8A71441BE6BF889DC6F70B" : "MacTransit\/",
+    "78493A860FEAAFEB1B1894D485F37DB4059ACA21" : "MacTransit\/MacTransit\/MacTransit\/SwiftBus\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MacTransit",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MacTransit\/MacTransit\/MacTransit.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MrAdamBoyd\/SwiftBus.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "78493A860FEAAFEB1B1894D485F37DB4059ACA21"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MrAdamBoyd\/Muni-Menu-Bar.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FD70B00D91FB021C4C8A71441BE6BF889DC6F70B"
+    }
+  ]
+}
