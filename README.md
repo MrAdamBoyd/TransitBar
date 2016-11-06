@@ -3,6 +3,9 @@ This is the repository for my small tool that I use every day, Muni Menu Bar. It
 
 You can view the website and download the app [here](http://mradamboyd.github.io/MuniMenuBar/).
 
+### MacTransit
+MacTransit is the next version of MuniMenuBar and is active development.
+
 ###Contact
 Your best bet to contact me is on Twitter. [@MrAdamBoyd](https://twitter.com/MrAdamBoyd)
 
