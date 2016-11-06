@@ -70,15 +70,11 @@ class PreferencesWindow:NSWindow, MMBXmlParserDelegate, NSTextFieldDelegate {
     @IBOutlet weak var stop4: NSPopUpButton!
     
     
-    override init(contentRect: NSRect, styleMask aStyle: Int, backing bufferingType: NSBackingStoreType, `defer` flag: Bool) {
-        super.init(contentRect: contentRect, styleMask: aStyle, backing: bufferingType, `defer`: flag)
+    override init(contentRect: NSRect, styleMask aStyle: NSWindowStyleMask, backing bufferingType: NSBackingStoreType, `defer` flag: Bool) {
+        super.init(contentRect: contentRect, styleMask: aStyle, backing: bufferingType, defer: flag)
         
         MMBXmlParser.sharedParser.delegate = self
         
-    }
-    
-    required init?(coder: NSCoder) {
-       super.init(coder: coder)
     }
     
     //When the window is opened

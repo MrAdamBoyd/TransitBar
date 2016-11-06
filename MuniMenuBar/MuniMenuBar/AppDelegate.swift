@@ -27,11 +27,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let menu = NSMenu()
         
-        menu.addItem(NSMenuItem(title: "About Muni Menu Bar", action: Selector("openAbout"), keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: "Check for Updates...", action: Selector("checkForUpdates"), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "About Muni Menu Bar", action: #selector(self.openAbout), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Check for Updates...", action: #selector(self.checkForUpdates), keyEquivalent: ""))
         menu.addItem(NSMenuItem.separatorItem())
-        menu.addItem(NSMenuItem(title: "Preferences...", action: Selector("openSettings"), keyEquivalent: ","))
-        menu.addItem(NSMenuItem(title: "Quit", action: Selector("terminate:"), keyEquivalent: "q"))
+        menu.addItem(NSMenuItem(title: "Preferences...", action: #selector(self.openSettings), keyEquivalent: ","))
+        menu.addItem(NSMenuItem(title: "Quit", action: #selector(self.quitApp), keyEquivalent: "q"))
         
         statusItem.menu = menu
         
@@ -43,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         //Timer that updates the label runs every 60 seconds
-        minuteTimer = NSTimer.scheduledTimerWithTimeInterval(60.0, target: self, selector: Selector("loadData"), userInfo: nil, repeats: true)
+        minuteTimer = NSTimer.scheduledTimerWithTimeInterval(60.0, target: self, selector: #selector(self.loadData), userInfo: nil, repeats: true)
         
         SUUpdater.sharedUpdater().automaticallyChecksForUpdates = true
         
@@ -129,6 +129,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     
+    func quitApp() {
+        NSApplication.sharedApplication().terminate(self)
+    }
+    
     //Called by the "Check for updates" menu button being clicked
     func checkForUpdates() {
         SUUpdater.sharedUpdater().checkForUpdates(self)
@@ -144,10 +148,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
-    }
-    
-    func startRefreshingData() {
-        
     }
     
 }

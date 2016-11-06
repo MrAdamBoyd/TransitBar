@@ -4,7 +4,7 @@
 use_frameworks!
 target 'MuniMenuBar' do
   pod 'SWXMLHash', '~> 2.0.0'
-  pod 'Sparkle', '~> 1.10'
+  pod 'Sparkle'
 end
 
 target 'MuniMenuBarTests' do
