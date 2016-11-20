@@ -76,7 +76,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.shared().terminate(self)
     }
 
-
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: Foundation.URL = {
@@ -106,7 +105,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 failureReason = "Expected a folder to store application data, found a file \(self.applicationDocumentsDirectory.path)."
                 shouldFail = true
             }
-        } catch  {
+        } catch {
             let nserror = error as NSError
             if nserror.code == NSFileReadNoSuchFileError {
                 do {
@@ -200,12 +199,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let nserror = error as NSError
             // Customize this code block to include application-specific recovery steps.
             let result = sender.presentError(nserror)
-            if (result) {
+            if result {
                 return .terminateCancel
             }
             
             let question = NSLocalizedString("Could not save changes while quitting. Quit anyway?", comment: "Quit without saves error question message")
-            let info = NSLocalizedString("Quitting now will lose any changes you have made since the last successful save", comment: "Quit without saves error question info");
+            let info = NSLocalizedString("Quitting now will lose any changes you have made since the last successful save", comment: "Quit without saves error question info")
             let quitButton = NSLocalizedString("Quit anyway", comment: "Quit anyway button title")
             let cancelButton = NSLocalizedString("Cancel", comment: "Cancel button title")
             let alert = NSAlert()
@@ -224,4 +223,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
 }
-

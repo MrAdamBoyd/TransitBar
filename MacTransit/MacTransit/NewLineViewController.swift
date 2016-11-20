@@ -102,7 +102,6 @@ class NewLineViewController: NSViewController {
         }
     }
     
-    
     /// User selected a direction for the direction popup
     func directionSelectedAction() {
         self.stopPopUpButton.removeAllItems()
@@ -125,8 +124,7 @@ class NewLineViewController: NSViewController {
         
         //If the pickers are enabled, get the times
         if self.startTimeDatePicker.isEnabled && self.endTimeDatePicker.isEnabled {
-            times?.0 = self.startTimeDatePicker.dateValue
-            times?.1 = self.endTimeDatePicker.dateValue
+            times = (self.startTimeDatePicker.dateValue, self.endTimeDatePicker.dateValue)
         }
         
         let entry = TransitEntry(stop: stop, times: times)
