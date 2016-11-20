@@ -47,7 +47,7 @@ class ListViewController: NSViewController, NewStopDelegate {
     }
     
     // MARK: - NewStopDelegate
-    func newStopControllerDidAdd(newStop: TransitStop) {
+    func newStopControllerDidAdd(newEntry: TransitEntry) {
         print("Did select new stop")
     }
 

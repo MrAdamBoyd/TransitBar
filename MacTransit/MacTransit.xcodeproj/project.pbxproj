@@ -16,6 +16,7 @@
 		660F235F1DADF22900832EC6 /* MacTransitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F235E1DADF22900832EC6 /* MacTransitUITests.swift */; };
 		663636C61DE12A190067A79B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663636C51DE12A190067A79B /* Main.storyboard */; };
 		663636C81DE12DFA0067A79B /* NewLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663636C71DE12DFA0067A79B /* NewLineViewController.swift */; };
+		663636CA1DE161710067A79B /* TransitEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663636C91DE161710067A79B /* TransitEntry.swift */; };
 		959B3D9F234E04BAD7D49CFE /* Pods_MacTransit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D179A27A7C7A7872D8C1BA /* Pods_MacTransit.framework */; };
 		9D95A84EF9D1AE0EB83F4C76 /* Pods_MacTransitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD249FAE74E4DF53E0B57939 /* Pods_MacTransitUITests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		660F23601DADF22900832EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		663636C51DE12A190067A79B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		663636C71DE12DFA0067A79B /* NewLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLineViewController.swift; sourceTree = "<group>"; };
+		663636C91DE161710067A79B /* TransitEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitEntry.swift; sourceTree = "<group>"; };
 		6768C5EBE01BF50909EB722A /* Pods-MacTransitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransitUITests/Pods-MacTransitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		70B29E07A8B523C2124B88D7 /* Pods_MacTransitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7888A0BD9103E31404704729 /* Pods-MacTransit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				660F233E1DADF22900832EC6 /* AppDelegate.swift */,
 				660F23401DADF22900832EC6 /* ListViewController.swift */,
 				663636C71DE12DFA0067A79B /* NewLineViewController.swift */,
+				663636C91DE161710067A79B /* TransitEntry.swift */,
 				663636C51DE12A190067A79B /* Main.storyboard */,
 				660F23451DADF22900832EC6 /* Assets.xcassets */,
 				660F234A1DADF22900832EC6 /* Info.plist */,
@@ -438,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				663636CA1DE161710067A79B /* TransitEntry.swift in Sources */,
 				660F23441DADF22900832EC6 /* MacTransit.xcdatamodeld in Sources */,
 				660F23411DADF22900832EC6 /* ListViewController.swift in Sources */,
 				660F233F1DADF22900832EC6 /* AppDelegate.swift in Sources */,

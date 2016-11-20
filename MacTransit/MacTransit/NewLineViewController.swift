@@ -10,7 +10,7 @@ import Cocoa
 import SwiftBus
 
 protocol NewStopDelegate: class {
-    func newStopControllerDidAdd(newStop: TransitStop)
+    func newStopControllerDidAdd(newEntry: TransitEntry)
 }
 
 class NewLineViewController: NSViewController {
@@ -20,6 +20,9 @@ class NewLineViewController: NSViewController {
     @IBOutlet weak var directionPopUpButton: NSPopUpButton!
     @IBOutlet weak var stopPopUpButton: NSPopUpButton!
     @IBOutlet weak var addStopButton: NSButton!
+    @IBOutlet weak var allTimesCheckBox: NSButton!
+    @IBOutlet weak var startTimeDatePicker: NSDatePicker!
+    @IBOutlet weak var endTimeDatePicker: NSDatePicker!
     
     weak var delegate: NewStopDelegate?
     var agencies: [TransitAgency] = []
@@ -48,6 +51,11 @@ class NewLineViewController: NSViewController {
             self.agencies = inOrderAgencies
             self.agencyPopUpButton.addItems(withTitles: inOrderAgencies.map({ $0.agencyTitle }))
         }
+    }
+    
+    @IBAction func allTimesCheckboxClicked(_ sender: Any) {
+        self.startTimeDatePicker.isEnabled = !self.startTimeDatePicker.isEnabled
+        self.endTimeDatePicker.isEnabled = !self.endTimeDatePicker.isEnabled
     }
     
     // MARK: - Actions from the popup buttons
@@ -94,12 +102,15 @@ class NewLineViewController: NSViewController {
         }
     }
     
+    
+    /// User selected a direction for the direction popup
     func directionSelectedAction() {
         self.stopPopUpButton.removeAllItems()
         self.stops = []
         self.addStopButton.isEnabled = false
         
         if let title = self.directionPopUpButton.selectedItem?.title, let stops = self.selectedRoute?.stopsOnRoute[title] {
+            //Getting the stops for that direction. The direction is the key to the dictionary for the stops on that route
             self.stopPopUpButton.addItems(withTitles: stops.map({ $0.stopTitle }))
         }
     }
@@ -110,6 +121,15 @@ class NewLineViewController: NSViewController {
     
     @IBAction func addNewStop(_ sender: Any) {
         guard let stop = self.selectedStop else { return }
-        self.delegate?.newStopControllerDidAdd(newStop: stop)
+        var times: (Date, Date)? = nil
+        
+        //If the pickers are enabled, get the times
+        if self.startTimeDatePicker.isEnabled && self.endTimeDatePicker.isEnabled {
+            times?.0 = self.startTimeDatePicker.dateValue
+            times?.1 = self.endTimeDatePicker.dateValue
+        }
+        
+        let entry = TransitEntry(stop: stop, times: times)
+        self.delegate?.newStopControllerDidAdd(newEntry: entry)
     }
 }
