@@ -14,10 +14,10 @@ import SwiftBus
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     //Window that contains the settings
-    @IBOutlet weak var window: NSWindow!
+    @IBOutlet weak var mainWindow: NSWindow!
     
     //Window that contains information about the app
-    @IBOutlet weak var aboutWindow: NSWindow!
+    @IBOutlet weak var newLineWindow: NSWindow!
     
     //Timer that goes once a minute to update times in MenuBar
     var minuteTimer: Timer = Timer()
@@ -40,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.statusItem.menu = menu
         
         //Setting up the Sparkle updater
-        SUUpdater.shared().automaticallyChecksForUpdates = true
+//        SUUpdater.shared().automaticallyChecksForUpdates = true
         
     }
     
@@ -59,14 +59,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      Opens the settings window
      */
     func openSettingsWindow() {
-        self.window?.makeKeyAndOrderFront(self)
+        self.mainWindow?.makeKeyAndOrderFront(self)
     }
     
     /**
      Opens the about window
      */
     func openAboutWindow() {
-        self.aboutWindow?.makeKeyAndOrderFront(self)
+        self.newLineWindow?.makeKeyAndOrderFront(self)
     }
     
     /**
