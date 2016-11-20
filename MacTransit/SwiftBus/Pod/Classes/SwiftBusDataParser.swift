@@ -108,6 +108,7 @@ class SwiftBusDataParser: NSObject {
                 
                 stopDirectionDict[currentDirection] = []
                 currentRoute.directionTagToName[directionTag] = currentDirection
+                currentRoute.directionNameToTag[currentDirection] = directionTag
                 
                 for child in stopDirection.children {
                     //For each stop per direction

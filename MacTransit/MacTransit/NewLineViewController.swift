@@ -26,6 +26,8 @@ class NewLineViewController: NSViewController {
     var routes: [TransitRoute] = []
     var directions: [String] = []
     var stops: [TransitStop] = []
+    var selectedRoute: TransitRoute?
+    var selectedStop: TransitStop?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,22 +50,17 @@ class NewLineViewController: NSViewController {
         }
     }
     
-    
-    /// Makes sure that all popup buttons have valid selections and if they do, enables the add button
-    func checkIfValid() {
-        let valid = self.agencyPopUpButton.selectedItem != nil && self.routePopUpButton.selectedItem != nil && self.directionPopUpButton.selectedItem != nil && self.stopPopUpButton.selectedItem != nil
-        self.addStopButton.isEnabled = valid
-    }
-    
     // MARK: - Actions from the popup buttons
     
     func agencySelectedAction() {
         self.routePopUpButton.removeAllItems()
         self.routes = []
+        self.selectedRoute = nil
         self.directionPopUpButton.removeAllItems()
         self.directions = []
         self.stopPopUpButton.removeAllItems()
         self.stops = []
+        self.addStopButton.isEnabled = false
         
         let agency = self.agencies[self.agencyPopUpButton.indexOfSelectedItem]
         SwiftBus.shared.routes(forAgency: agency) { routes in
@@ -80,19 +77,39 @@ class NewLineViewController: NSViewController {
     }
     
     func routeSelectedAction() {
+        self.selectedRoute = nil
         self.directionPopUpButton.removeAllItems()
+        self.directions = []
         self.stopPopUpButton.removeAllItems()
+        self.stops = []
+        self.addStopButton.isEnabled = false
+        
+        let selectedRoute = self.routes[self.routePopUpButton.indexOfSelectedItem]
+        SwiftBus.shared.configuration(forRoute: selectedRoute) { route in
+            guard let route = route else { return }
+            
+            self.selectedRoute = route
+            //The keys to this array are all possible directions
+            self.directionPopUpButton.addItems(withTitles: Array(route.stopsOnRoute.keys))
+        }
     }
     
     func directionSelectedAction() {
         self.stopPopUpButton.removeAllItems()
+        self.stops = []
+        self.addStopButton.isEnabled = false
+        
+        if let title = self.directionPopUpButton.selectedItem?.title, let stops = self.selectedRoute?.stopsOnRoute[title] {
+            self.stopPopUpButton.addItems(withTitles: stops.map({ $0.stopTitle }))
+        }
     }
     
     func stopSelectedAction() {
-        self.checkIfValid()
+        self.addStopButton.isEnabled = true
     }
     
     @IBAction func addNewStop(_ sender: Any) {
-        self.delegate?.newStopControllerDidAdd(newStop: TransitStop(routeTitle: "temp", routeTag: "temp", stopTitle: "temp", stopTag: "temp"))
+        guard let stop = self.selectedStop else { return }
+        self.delegate?.newStopControllerDidAdd(newStop: stop)
     }
 }
