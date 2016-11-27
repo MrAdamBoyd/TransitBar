@@ -40,6 +40,7 @@ class NewLineViewController: NSViewController {
         self.directionPopUpButton.action = #selector(self.directionSelectedAction)
         self.stopPopUpButton.action = #selector(self.stopSelectedAction)
         
+        //Get the agencies when the window is opened
         SwiftBus.shared.transitAgencies() { agencies in
             var inOrderAgencies = Array(agencies.values)
             
@@ -47,6 +48,9 @@ class NewLineViewController: NSViewController {
             inOrderAgencies = inOrderAgencies.sorted {
                 $0.agencyTitle.localizedCaseInsensitiveCompare($1.agencyTitle) == ComparisonResult.orderedAscending
             }
+            
+            //Placeholder
+            self.agencyPopUpButton.addItem(withTitle: "--")
             
             self.agencies = inOrderAgencies
             self.agencyPopUpButton.addItems(withTitles: inOrderAgencies.map({ $0.agencyTitle }))
@@ -70,7 +74,7 @@ class NewLineViewController: NSViewController {
         self.stops = []
         self.addStopButton.isEnabled = false
         
-        let agency = self.agencies[self.agencyPopUpButton.indexOfSelectedItem]
+        let agency = self.agencies[self.agencyPopUpButton.indexOfSelectedItem - 1]
         SwiftBus.shared.routes(forAgency: agency) { routes in
             var inOrderRoutes = Array(routes.values)
             
@@ -78,6 +82,9 @@ class NewLineViewController: NSViewController {
             inOrderRoutes = inOrderRoutes.sorted {
                 $0.routeTitle.localizedCaseInsensitiveCompare($1.routeTitle) == ComparisonResult.orderedAscending
             }
+            
+            //Placeholder
+            self.routePopUpButton.addItem(withTitle: "--")
             
             self.routes = inOrderRoutes
             self.routePopUpButton.addItems(withTitles: inOrderRoutes.map({ $0.routeTitle }))
@@ -92,9 +99,12 @@ class NewLineViewController: NSViewController {
         self.stops = []
         self.addStopButton.isEnabled = false
         
-        let selectedRoute = self.routes[self.routePopUpButton.indexOfSelectedItem]
+        let selectedRoute = self.routes[self.routePopUpButton.indexOfSelectedItem - 1]
         SwiftBus.shared.configuration(forRoute: selectedRoute) { route in
             guard let route = route else { return }
+            
+            //Placeholder
+            self.directionPopUpButton.addItem(withTitle: "--")
             
             self.selectedRoute = route
             //The keys to this array are all possible directions
@@ -108,14 +118,25 @@ class NewLineViewController: NSViewController {
         self.stops = []
         self.addStopButton.isEnabled = false
         
+        //Don't do anything if the placeholder item is selected
+        guard self.directionPopUpButton.indexOfSelectedItem != 0 else { return }
+        
         if let title = self.directionPopUpButton.selectedItem?.title, let stops = self.selectedRoute?.stopsOnRoute[title] {
+            
+            //Placeholder
+            self.stopPopUpButton.addItem(withTitle: "--")
+            
             //Getting the stops for that direction. The direction is the key to the dictionary for the stops on that route
             self.stopPopUpButton.addItems(withTitles: stops.map({ $0.stopTitle }))
         }
     }
     
     func stopSelectedAction() {
+        //Only enable if placeholder item isn't there
+        guard self.stopPopUpButton.indexOfSelectedItem != 0 else { return }
+        
         self.addStopButton.isEnabled = true
+        self.selectedStop = self.stops[self.stopPopUpButton.indexOfSelectedItem - 1]
     }
     
     @IBAction func addNewStop(_ sender: Any) {

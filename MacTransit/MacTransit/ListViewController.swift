@@ -9,9 +9,10 @@
 import Cocoa
 import SwiftBus
 
-class ListViewController: NSViewController, NewStopDelegate {
+class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, NewStopDelegate {
 
     @IBOutlet weak var createNewLineButton: NSButton!
+    @IBOutlet weak var tableView: NSTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,4 +52,19 @@ class ListViewController: NSViewController, NewStopDelegate {
         print("Did select new stop")
     }
 
+    // MARK: - NSTableView
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        
+        if tableView.tableColumns[0] == tableColumn {
+            return "1st column"
+        } else {
+            return "other column"
+        }
+    }
+    
 }
