@@ -126,6 +126,7 @@ class NewLineViewController: NSViewController {
             //Placeholder
             self.stopPopUpButton.addItem(withTitle: "--")
             
+            self.stops = stops
             //Getting the stops for that direction. The direction is the key to the dictionary for the stops on that route
             self.stopPopUpButton.addItems(withTitles: stops.map({ $0.stopTitle }))
         }

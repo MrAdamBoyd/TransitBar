@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
@@ -12,11 +12,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Ballast" id="1Xt-HY-uBw">
+                            <menuItem title="MacTransit" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Ballast" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="MacTransit" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Ballast" id="5kV-Vb-QxS">
+                                        <menuItem title="About MacTransit" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -30,7 +30,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Ballast" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide MacTransit" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -48,7 +48,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Ballast" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit MacTransit" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -641,7 +641,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="Ballast Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="MacTransit Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -663,12 +663,12 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="mainWindow" id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="MacTransit" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="241" width="493" height="362"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -677,6 +677,96 @@
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="81.5" y="279"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="NDu-Fa-GPK">
+            <objects>
+                <windowController id="Hrf-ru-gnk" sceneMemberID="viewController">
+                    <window key="window" title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="utS-8x-2ee">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="250" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+                    </window>
+                    <connections>
+                        <segue destination="nAH-hN-dn3" kind="relationship" relationship="window.shadowedContentViewController" id="gv4-VV-T85"/>
+                    </connections>
+                </windowController>
+                <customObject id="G5U-c9-DqY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="731" y="135"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="ASn-Z9-Tva">
+            <objects>
+                <viewController id="nAH-hN-dn3" customClass="AboutViewController" customModule="MacTransit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="AH5-Wu-q8F">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xwT-05-128">
+                                <rect key="frame" x="75" y="150" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7zc-uN-swR"/>
+                                    <constraint firstAttribute="height" constant="100" id="HT1-Fn-t4r"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AboutWindow" id="dkx-az-t0f"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VIw-Ku-KLk">
+                                <rect key="frame" x="90" y="123" width="71" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="MacTransit" id="jdI-os-EX3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LJ4-Ie-MZb">
+                                <rect key="frame" x="61" y="67" width="129" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Made by Adam Boyd" id="kge-fN-dpp">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.11372549019607843" green="0.80000000000000004" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dBT-bU-jJB">
+                                <rect key="frame" x="62" y="29" width="126" height="32"/>
+                                <buttonCell key="cell" type="push" title="Go to Website" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bwC-UV-lOz">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="goToWebsiteButton:" target="nAH-hN-dn3" id="Cj9-21-bfg"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lbu-D6-S5C">
+                                <rect key="frame" x="95" y="104" width="61" height="14"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version ?.?" id="mHG-Jl-1ni">
+                                    <font key="font" metaFont="system" size="11"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="xwT-05-128" firstAttribute="centerX" secondItem="AH5-Wu-q8F" secondAttribute="centerX" id="DIg-as-sHX"/>
+                            <constraint firstItem="Lbu-D6-S5C" firstAttribute="top" secondItem="VIw-Ku-KLk" secondAttribute="bottom" constant="5" id="MXK-Q7-Wdx"/>
+                            <constraint firstItem="Lbu-D6-S5C" firstAttribute="centerX" secondItem="AH5-Wu-q8F" secondAttribute="centerX" id="f8s-AK-BGr"/>
+                            <constraint firstItem="dBT-bU-jJB" firstAttribute="top" secondItem="LJ4-Ie-MZb" secondAttribute="bottom" constant="10" id="ijd-iV-CVy"/>
+                            <constraint firstItem="VIw-Ku-KLk" firstAttribute="centerX" secondItem="AH5-Wu-q8F" secondAttribute="centerX" id="lYW-81-CmW"/>
+                            <constraint firstItem="xwT-05-128" firstAttribute="top" secondItem="AH5-Wu-q8F" secondAttribute="top" constant="20" id="lhn-aR-VGP"/>
+                            <constraint firstItem="dBT-bU-jJB" firstAttribute="centerX" secondItem="AH5-Wu-q8F" secondAttribute="centerX" id="mkU-g6-421"/>
+                            <constraint firstItem="LJ4-Ie-MZb" firstAttribute="top" secondItem="Lbu-D6-S5C" secondAttribute="bottom" constant="20" id="va8-0W-XQi"/>
+                            <constraint firstItem="LJ4-Ie-MZb" firstAttribute="centerX" secondItem="AH5-Wu-q8F" secondAttribute="centerX" id="xUx-di-eSm"/>
+                            <constraint firstItem="VIw-Ku-KLk" firstAttribute="top" secondItem="xwT-05-128" secondAttribute="bottom" constant="10" id="zi9-Mh-ADd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="versionTextField" destination="Lbu-D6-S5C" id="82u-2G-F5p"/>
+                    </connections>
+                </viewController>
+                <customObject id="IX9-Tf-NhQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="127"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="Yky-8u-mNo">
@@ -694,7 +784,7 @@
                 </windowController>
                 <customObject id="r40-PQ-LdX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="464"/>
+            <point key="canvasLocation" x="855" y="683"/>
         </scene>
         <!--New Line View Controller-->
         <scene sceneID="y76-2U-EOz">
@@ -893,7 +983,7 @@
                 </viewController>
                 <customObject id="alO-Hl-Xsb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770.5" y="979"/>
+            <point key="canvasLocation" x="855" y="1216"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -929,19 +1019,6 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="116" minWidth="40" maxWidth="1000" id="F6H-PG-lF9">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Operator">
-                                                        <font key="font" metaFont="smallSystem"/>
-                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
-                                                    </tableHeaderCell>
-                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="ADp-eC-Rhq">
-                                                        <font key="font" metaFont="system"/>
-                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    </textFieldCell>
-                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                                </tableColumn>
                                                 <tableColumn width="106" minWidth="40" maxWidth="1000" id="Ozh-rv-gaB">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Route">
                                                         <font key="font" metaFont="smallSystem"/>
@@ -1029,6 +1106,7 @@
                         <outlet property="createNewLineButton" destination="h7P-PM-teG" id="dm1-cr-633"/>
                         <outlet property="tableView" destination="ew1-Ib-gCC" id="6jV-Gd-NpT"/>
                         <segue destination="7q5-sU-bEe" kind="show" identifier="showNewLine" id="LhK-YU-JCU"/>
+                        <segue destination="Hrf-ru-gnk" kind="show" identifier="showAbout" id="Q5a-Sb-5ym"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1036,4 +1114,7 @@
             <point key="canvasLocation" x="81" y="806"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AboutWindow" width="170.5" height="170.5"/>
+    </resources>
 </document>

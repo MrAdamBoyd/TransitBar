@@ -13,17 +13,17 @@ import SwiftBus
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    //Window that contains the settings
-    @IBOutlet weak var mainWindow: NSWindow!
-    
-    //Window that contains information about the app
-    @IBOutlet weak var newLineWindow: NSWindow!
-    
     //Timer that goes once a minute to update times in MenuBar
     var minuteTimer: Timer = Timer()
     
     //Item that lives in the status bar
     let statusItem = NSStatusBar.system().statusItem(withLength: -1)
+    
+    var savedEntries: [TransitEntry] = [] {
+        didSet {
+            print("HELLO!")
+        }
+    }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
@@ -40,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.statusItem.menu = menu
         
         //Setting up the Sparkle updater
-//        SUUpdater.shared().automaticallyChecksForUpdates = true
+        SUUpdater.shared().automaticallyChecksForUpdates = true
         
     }
     
@@ -59,14 +59,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      Opens the settings window
      */
     func openSettingsWindow() {
-        self.mainWindow?.makeKeyAndOrderFront(self)
+//        self.mainWindow?.makeKeyAndOrderFront(self)
     }
     
     /**
      Opens the about window
      */
     func openAboutWindow() {
-        self.newLineWindow?.makeKeyAndOrderFront(self)
+//        self.aboutWindow?.makeKeyAndOrderFront(self)
     }
     
     /**
