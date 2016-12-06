@@ -151,5 +151,7 @@ class NewLineViewController: NSViewController {
         
         let entry = TransitEntry(stop: stop, times: times)
         self.delegate?.newStopControllerDidAdd(newEntry: entry)
+        
+        self.view.window?.close()
     }
 }

@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import Sparkle
+//import Sparkle
 import SwiftBus
 
 @NSApplicationMain
@@ -40,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.statusItem.menu = menu
         
         //Setting up the Sparkle updater
-        SUUpdater.shared().automaticallyChecksForUpdates = true
+//        SUUpdater.shared().automaticallyChecksForUpdates = true
         
     }
     
@@ -52,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      Checks Sparkle to see if there are any updates
      */
     func checkForUpdates() {
-        SUUpdater.shared().checkForUpdates(self)
+//        SUUpdater.shared().checkForUpdates(self)
     }
     
     /**

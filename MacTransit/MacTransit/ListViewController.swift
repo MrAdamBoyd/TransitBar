@@ -67,6 +67,30 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
         viewController.delegate = self
     }
     
+    override func keyDown(with event: NSEvent) {
+        
+        guard let key = event.charactersIgnoringModifiers?.characters.first else { return }
+        
+        guard key == Character(UnicodeScalar(NSDeleteCharacter)!) else {
+            super.keyDown(with: event)
+            return
+        }
+        
+        guard self.tableView.selectedRowIndexes.count != 0 else {
+            super.keyDown(with: event)
+            return
+        }
+        
+        //Continue if the key is the delete key
+        
+        //Need to go in reverse because we could be deleting multiple rows
+        for index in self.tableView.selectedRowIndexes.reversed() {
+            self.savedStops.remove(at: index)
+        }
+        
+        self.tableView.reloadData()
+    }
+    
     // MARK: - Actions
     
     @IBAction func createNewLineAction(_ sender: Any) {
