@@ -10,7 +10,6 @@
 		02DB4B192DADEC893A1CCFEB /* Pods_MacTransitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B29E07A8B523C2124B88D7 /* Pods_MacTransitTests.framework */; };
 		660F233F1DADF22900832EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F233E1DADF22900832EC6 /* AppDelegate.swift */; };
 		660F23411DADF22900832EC6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F23401DADF22900832EC6 /* ListViewController.swift */; };
-		660F23441DADF22900832EC6 /* MacTransit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 660F23421DADF22900832EC6 /* MacTransit.xcdatamodeld */; };
 		660F23461DADF22900832EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660F23451DADF22900832EC6 /* Assets.xcassets */; };
 		660F23541DADF22900832EC6 /* MacTransitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F23531DADF22900832EC6 /* MacTransitTests.swift */; };
 		660F235F1DADF22900832EC6 /* MacTransitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F235E1DADF22900832EC6 /* MacTransitUITests.swift */; };
@@ -48,7 +47,6 @@
 		660F233B1DADF22900832EC6 /* MacTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		660F233E1DADF22900832EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		660F23401DADF22900832EC6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		660F23431DADF22900832EC6 /* MacTransit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MacTransit.xcdatamodel; sourceTree = "<group>"; };
 		660F23451DADF22900832EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		660F234A1DADF22900832EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		660F234F1DADF22900832EC6 /* MacTransitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacTransitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,7 +132,6 @@
 				663636C51DE12A190067A79B /* Main.storyboard */,
 				660F23451DADF22900832EC6 /* Assets.xcassets */,
 				660F234A1DADF22900832EC6 /* Info.plist */,
-				660F23421DADF22900832EC6 /* MacTransit.xcdatamodeld */,
 			);
 			path = MacTransit;
 			sourceTree = "<group>";
@@ -465,7 +462,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				663636CA1DE161710067A79B /* TransitEntry.swift in Sources */,
-				660F23441DADF22900832EC6 /* MacTransit.xcdatamodeld in Sources */,
 				665B079A1DEBB55000AF2332 /* AboutViewController.swift in Sources */,
 				660F23411DADF22900832EC6 /* ListViewController.swift in Sources */,
 				66A6072D1DF675D4003C9DD6 /* Constants.swift in Sources */,
@@ -741,19 +737,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		660F23421DADF22900832EC6 /* MacTransit.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				660F23431DADF22900832EC6 /* MacTransit.xcdatamodel */,
-			);
-			currentVersion = 660F23431DADF22900832EC6 /* MacTransit.xcdatamodel */;
-			path = MacTransit.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 660F23331DADF22900832EC6 /* Project object */;
 }
