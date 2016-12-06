@@ -10,40 +10,17 @@ import Cocoa
 import SwiftBus
 
 protocol MainAppViewController {
-    var savedStops: [TransitEntry] { get set }
+    var savedEntries: [TransitEntry] { get set }
     func showAbout()
 }
-
-fileprivate let entryArrayKey = "entryArrayKey"
 
 class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, NewStopDelegate {
 
     @IBOutlet weak var createNewLineButton: NSButton!
     @IBOutlet weak var tableView: NSTableView!
     
-    var savedStops: [TransitEntry] = [] {
-        didSet {
-            self.tableView.reloadData()
-            
-            //Convert array to Data first, then UserDefaults can save it
-            let archievedObject = NSKeyedArchiver.archivedData(withRootObject: self.savedStops)
-            UserDefaults.standard.set(archievedObject, forKey: entryArrayKey)
-            UserDefaults.standard.synchronize()
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //Get data from user defaults and then convert from data to array of entries
-        if let unarchivedObject = UserDefaults.standard.object(forKey: entryArrayKey) as? Data {
-            self.savedStops = NSKeyedUnarchiver.unarchiveObject(with: unarchivedObject) as! [TransitEntry]
-        }
-        
-        //Getting the stops from the user defaults
-        if let stops = UserDefaults.standard.array(forKey: entryArrayKey) as? [TransitEntry] {
-            self.savedStops = stops
-        }
     }
 
     override var representedObject: Any? {
@@ -85,7 +62,8 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
         
         //Need to go in reverse because we could be deleting multiple rows
         for index in self.tableView.selectedRowIndexes.reversed() {
-            self.savedStops.remove(at: index)
+            print("Removing entry at index \(index)")
+            DataController.shared.savedEntries.remove(at: index)
         }
         
         self.tableView.reloadData()
@@ -104,20 +82,21 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     // MARK: - NewStopDelegate
     func newStopControllerDidAdd(newEntry: TransitEntry) {
         print("Did select new stop")
-        self.savedStops.append(newEntry)
+        DataController.shared.savedEntries.append(newEntry)
+        self.tableView.reloadData()
     }
 
     // MARK: - NSTableView
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return self.savedStops.count
+        return DataController.shared.savedEntries.count
     }
     
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         
         guard let title = tableColumn?.title else { return nil }
         
-        let entry = self.savedStops[row]
+        let entry = DataController.shared.savedEntries[row]
         
         switch title {
         case "Route":

@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-//import Sparkle
+import Sparkle
 import SwiftBus
 
 @NSApplicationMain
@@ -19,11 +19,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     //Item that lives in the status bar
     let statusItem = NSStatusBar.system().statusItem(withLength: -1)
     
-    var savedEntries: [TransitEntry] = [] {
-        didSet {
-            print("HELLO!")
-        }
-    }
+    let storyboard = NSStoryboard(name: "Main", bundle: nil)
+    var listWindowController: NSWindowController?
+    var aboutWindowController: NSWindowController?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
@@ -40,7 +38,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.statusItem.menu = menu
         
         //Setting up the Sparkle updater
-//        SUUpdater.shared().automaticallyChecksForUpdates = true
+        SUUpdater.shared().automaticallyChecksForUpdates = true
+        
+        if DataController.shared.savedEntries.count == 0 {
+            self.openSettingsWindow()
+        }
         
     }
     
@@ -52,21 +54,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      Checks Sparkle to see if there are any updates
      */
     func checkForUpdates() {
-//        SUUpdater.shared().checkForUpdates(self)
+        SUUpdater.shared().checkForUpdates(self)
     }
     
     /**
      Opens the settings window
      */
     func openSettingsWindow() {
-//        self.mainWindow?.makeKeyAndOrderFront(self)
+        guard let windowController = self.storyboard.instantiateController(withIdentifier: "mainWindow") as? NSWindowController else { return }
+        self.listWindowController = windowController
+        self.listWindowController?.window?.makeKeyAndOrderFront(self)
     }
     
     /**
      Opens the about window
      */
     func openAboutWindow() {
-//        self.aboutWindow?.makeKeyAndOrderFront(self)
+        guard let windowController = self.storyboard.instantiateController(withIdentifier: "aboutWindow") as? NSWindowController else { return }
+        self.aboutWindowController = windowController
+        self.aboutWindowController?.window?.makeKeyAndOrderFront(self)
     }
     
     /**

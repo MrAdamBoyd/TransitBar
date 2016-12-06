@@ -41,5 +41,7 @@
 	<string>dsa_public.pem</string>
 	<key>SUFeedURL</key>
 	<string>http://adamjboyd.com/mactransitappcast.xml</string>
+	<key>LSUIElement</key>
+	<true/>
 </dict>
 </plist>
