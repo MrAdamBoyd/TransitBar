@@ -29,6 +29,8 @@ class DataController {
             let archievedObject = NSKeyedArchiver.archivedData(withRootObject: self.savedEntries)
             UserDefaults.standard.set(archievedObject, forKey: Constants.entryArrayKey)
             UserDefaults.standard.synchronize()
+            
+            NotificationCenter.default.post(name: .entriesChanged, object: nil)
         }
     }
 }

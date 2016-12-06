@@ -10,4 +10,9 @@ import Foundation
 
 struct Constants {
     static let entryArrayKey = "entryArrayKey"
+    static let entriesChangedNotification = "entriesChangedNotification"
+}
+
+extension Notification.Name {
+    static let entriesChanged = Notification.Name(Constants.entriesChangedNotification)
 }

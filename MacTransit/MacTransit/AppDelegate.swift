@@ -28,17 +28,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Setting up the status bar menu and the actions from that
         self.statusItem.title = "Loading..."
         
-        let menu = NSMenu()
-        menu.addItem(NSMenuItem(title: "About MacTransit", action: #selector(self.openAboutWindow), keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: "Check for Updates...", action: #selector(self.checkForUpdates), keyEquivalent: ""))
-        menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Preferences...", action: #selector(self.openSettingsWindow), keyEquivalent: ","))
-        menu.addItem(NSMenuItem(title: "Quit", action: #selector(self.terminate), keyEquivalent: "q"))
-        
-        self.statusItem.menu = menu
+        self.recreateMenuItems()
         
         //Setting up the Sparkle updater
         SUUpdater.shared().automaticallyChecksForUpdates = true
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.recreateMenuItems), name: .entriesChanged, object: nil)
         
         if DataController.shared.savedEntries.count == 0 {
             self.openSettingsWindow()
@@ -48,6 +43,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationWillTerminate(_ aNotification: Notification) {
         
+    }
+    
+    /// Creates the menu items for preferences/about/etc and also for all the transit entries
+    func recreateMenuItems() {
+        if self.statusItem.menu == nil {
+            self.statusItem.menu = NSMenu()
+        }
+        
+        self.statusItem.menu?.removeAllItems()
+        
+        for entry in DataController.shared.savedEntries {
+            let title = "\(entry.stop.routeTitle) -> \(entry.stop.direction): predictions"
+            self.statusItem.menu?.addItem(NSMenuItem(title: title, action: nil, keyEquivalent: ""))
+        }
+        
+        self.statusItem.menu?.addItem(NSMenuItem(title: "About MacTransit", action: #selector(self.openAboutWindow), keyEquivalent: ""))
+        self.statusItem.menu?.addItem(NSMenuItem(title: "Check for Updates...", action: #selector(self.checkForUpdates), keyEquivalent: ""))
+        self.statusItem.menu?.addItem(NSMenuItem.separator())
+        self.statusItem.menu?.addItem(NSMenuItem(title: "Preferences...", action: #selector(self.openSettingsWindow), keyEquivalent: ","))
+        self.statusItem.menu?.addItem(NSMenuItem(title: "Quit", action: #selector(self.terminate), keyEquivalent: "q"))
     }
     
     /**
@@ -80,6 +95,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     func terminate() {
         NSApplication.shared().terminate(self)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
     // MARK: - Core Data stack
