@@ -98,14 +98,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var menuText = ""
         
         for (index, entry) in DataController.shared.savedEntries.enumerated() {
+            
+            //Creating the text that will be shown when you click on this item
             var title = "\(entry.stop.routeTitle) -> \(entry.stop.direction)"
+            var addingText = ": "
             
             if let predictions = entry.stop.predictions[entry.stop.direction] {
                 
-                //Creating the text that will be for this stop
+                //Creating the text that will be for this stop in the menubar
                 var menuTextForThisPrediction = entry.stop.routeTag + ": "
                 
-                var addingText = ": "
                 for (index, prediction) in predictions.enumerated() {
                     
                     if index < 3 {
@@ -116,28 +118,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     addingText.append("\(prediction.predictionInMinutes), ")
                 }
                 
-                //Only show it in the menubar text if there is a prediction to add
-                if predictions.count != 0 && entry.shouldBeShownInMenuBar {
+                //Only show it in the menubar if it should be shown based on current time
+                if entry.shouldBeShownInMenuBar {
                     menuTextForThisPrediction = String(menuTextForThisPrediction.characters.dropLast(2)) + "; " //Remove last comma and space and add semicolon
                     menuText.append(menuTextForThisPrediction)
                 }
                 
-                //Menu items are always shown
-                if predictions.count == 0 {
-                    //No predictions, just add dash
-                    addingText.append("-")
-                } else {
-                    //Remove comma and space
-                    addingText = String(addingText.characters.dropLast(2))
-                }
-                title.append(addingText)
+                //Remove comma and space
+                addingText = String(addingText.characters.dropLast(2))
             }
+            
+            //If there are no predictions, add a dash
+            if addingText == ": " {
+                addingText.append("--")
+            }
+            
+            title.append(addingText)
             
             self.statusItem.menu?.items[index].title = title
         }
         
         if menuText == "" {
-            menuText = "No Predictions"
+            menuText = "--"
         }
         
         self.statusItem.title = String(menuText.characters.dropLast(2)) //Remove final ; and space
