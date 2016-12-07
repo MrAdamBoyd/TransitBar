@@ -74,6 +74,8 @@ class NewLineViewController: NSViewController {
         self.stops = []
         self.addStopButton.isEnabled = false
         
+        guard self.agencyPopUpButton.indexOfSelectedItem != 0 else { return }
+        
         let agency = self.agencies[self.agencyPopUpButton.indexOfSelectedItem - 1]
         SwiftBus.shared.routes(forAgency: agency) { routes in
             var inOrderRoutes = Array(routes.values)
@@ -98,6 +100,8 @@ class NewLineViewController: NSViewController {
         self.stopPopUpButton.removeAllItems()
         self.stops = []
         self.addStopButton.isEnabled = false
+        
+        guard self.routePopUpButton.indexOfSelectedItem != 0 else { return }
         
         let selectedRoute = self.routes[self.routePopUpButton.indexOfSelectedItem - 1]
         SwiftBus.shared.configuration(forRoute: selectedRoute) { route in

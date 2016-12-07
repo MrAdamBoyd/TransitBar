@@ -99,8 +99,8 @@ open class TransitStop:NSObject, NSCoding {
         self.direction = aDecoder.decodeObject(forKey: directionEncoderString) as! String
         self.lat = aDecoder.decodeDouble(forKey: latEncoderString)
         self.lon = aDecoder.decodeDouble(forKey: lonEncoderString)
-        self.predictions = aDecoder.decodeObject(forKey: predictionsEncoderString) as! [String : [TransitPrediction]]
-        self.messages = aDecoder.decodeObject(forKey: messagesEncoderString) as! [String]
+//        self.predictions = aDecoder.decodeObject(forKey: predictionsEncoderString) as! [String : [TransitPrediction]]
+//        self.messages = aDecoder.decodeObject(forKey: messagesEncoderString) as! [String]
     }
     
     open func encode(with aCoder: NSCoder) {
@@ -112,7 +112,7 @@ open class TransitStop:NSObject, NSCoding {
         aCoder.encode(self.direction, forKey: directionEncoderString)
         aCoder.encode(self.lat, forKey: latEncoderString)
         aCoder.encode(self.lon, forKey: lonEncoderString)
-        aCoder.encode(self.predictions, forKey: predictionsEncoderString)
-        aCoder.encode(self.messages, forKey: messagesEncoderString)
+//        aCoder.encode(self.predictions, forKey: predictionsEncoderString)
+//        aCoder.encode(self.messages, forKey: messagesEncoderString)
     }
 }

@@ -26,8 +26,8 @@ class DataController {
     var savedEntries: [TransitEntry] = [] {
         didSet {
             //Convert array to Data first, then UserDefaults can save it
-            let archievedObject = NSKeyedArchiver.archivedData(withRootObject: self.savedEntries)
-            UserDefaults.standard.set(archievedObject, forKey: Constants.entryArrayKey)
+            let archivedObject = NSKeyedArchiver.archivedData(withRootObject: self.savedEntries)
+            UserDefaults.standard.set(archivedObject, forKey: Constants.entryArrayKey)
             UserDefaults.standard.synchronize()
             
             NotificationCenter.default.post(name: .entriesChanged, object: nil)
