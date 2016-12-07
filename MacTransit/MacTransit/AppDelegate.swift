@@ -138,11 +138,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.statusItem.menu?.items[index].title = title
         }
         
+        //If there is no menubar text, add two dashes
         if menuText == "" {
-            menuText = "--"
+            self.statusItem.title = "--"
+        } else {
+            self.statusItem.title = String(menuText.characters.dropLast(2)) //Remove final ; and space
         }
-        
-        self.statusItem.title = String(menuText.characters.dropLast(2)) //Remove final ; and space
     }
     
     // MARK: - Actions

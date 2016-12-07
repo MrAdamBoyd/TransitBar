@@ -1,6 +1,0 @@
-framework module Pods_MuniMenuBar {
-  umbrella header "Pods-MuniMenuBar-umbrella.h"
-
-  export *
-  module * { export * }
-}

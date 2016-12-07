@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1019,7 +1018,7 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="106" minWidth="40" maxWidth="1000" id="Ozh-rv-gaB">
+                                                <tableColumn width="131" minWidth="40" maxWidth="1000" id="Ozh-rv-gaB">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Route">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -1032,7 +1031,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                 </tableColumn>
-                                                <tableColumn identifier="" width="89" minWidth="10" maxWidth="3.4028234663852886e+38" id="ini-8Y-Hh6">
+                                                <tableColumn identifier="" width="136" minWidth="10" maxWidth="3.4028234663852886e+38" id="ini-8Y-Hh6">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Stop">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -1045,7 +1044,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                 </tableColumn>
-                                                <tableColumn identifier="" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="j2N-HG-IOl">
+                                                <tableColumn identifier="" width="109" minWidth="10" maxWidth="3.4028234663852886e+38" id="j2N-HG-IOl">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Direction">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -1058,7 +1057,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                 </tableColumn>
-                                                <tableColumn identifier="" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="gCc-zL-GTb">
+                                                <tableColumn identifier="" width="86" minWidth="10" maxWidth="3.4028234663852886e+38" id="gCc-zL-GTb">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Time">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -1115,6 +1114,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AboutWindow" width="170.5" height="170.5"/>
+        <image name="AboutWindow" width="171" height="171"/>
     </resources>
 </document>
