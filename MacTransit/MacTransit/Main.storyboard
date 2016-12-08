@@ -1114,6 +1114,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AboutWindow" width="171" height="171"/>
+        <image name="AboutWindow" width="170.5" height="170.5"/>
     </resources>
 </document>

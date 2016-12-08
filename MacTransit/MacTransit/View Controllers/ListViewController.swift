@@ -92,6 +92,10 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
         return DataController.shared.savedEntries.count
     }
     
+    func tableView(_ tableView: NSTableView, shouldEdit tableColumn: NSTableColumn?, row: Int) -> Bool {
+        return false
+    }
+    
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         
         guard let title = tableColumn?.title else { return nil }

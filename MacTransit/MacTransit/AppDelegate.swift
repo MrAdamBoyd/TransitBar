@@ -100,7 +100,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         for (index, entry) in DataController.shared.savedEntries.enumerated() {
             
             //Creating the text that will be shown when you click on this item
-            var title = "\(entry.stop.routeTitle) -> \(entry.stop.direction)"
+            var title = "\(entry.stop.routeTitle) @ \(entry.stop.stopTitle) -> \(entry.stop.direction)"
             var addingText = ": "
             
             if let predictions = entry.stop.predictions[entry.stop.direction] {
