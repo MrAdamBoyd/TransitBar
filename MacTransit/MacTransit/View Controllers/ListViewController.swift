@@ -112,19 +112,19 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
         default:
             if let times = entry.times {
                 
+                guard let earlier = times.0, let later = times.1 else {
+                    return "Never"
+                }
+                
                 //Date formatter for just the hours and minutes
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "hh:mm"
                 
                 //Formats time "xx:xx - yy:yy"
-                if times.0 < times.1 {
-                    return "\(dateFormatter.string(from: times.0)) - \(dateFormatter.string(from: times.1))"
-                } else {
-                    return "\(dateFormatter.string(from: times.1)) - \(dateFormatter.string(from: times.0))"
-                }
+                return "From \(dateFormatter.string(from: earlier)) to \(dateFormatter.string(from: later))"
                 
             } else {
-                return "Always shown"
+                return "Always"
             }
         }
     }

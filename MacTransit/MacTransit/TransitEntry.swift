@@ -15,9 +15,9 @@ fileprivate let timeKey1 = "entryTimesKey1"
 
 class TransitEntry: NSObject, NSCoding {
     var stop: TransitStop!
-    var times: (Date, Date)? //Nil if should always be shown
+    var times: (Date?, Date?)? //Nil if should always be shown
 
-    init(stop: TransitStop, times: (Date, Date)?) {
+    init(stop: TransitStop, times: (Date?, Date?)?) {
         self.stop = stop
         self.times = times
     }
@@ -30,13 +30,18 @@ class TransitEntry: NSObject, NSCoding {
             return true
         }
         
+        //If the tuple exists but is nil, should neve rbe shown
+        guard let earlier = times.0, let later = times.1 else {
+            return false
+        }
+        
         let calendar = Calendar(identifier: .gregorian)
         
         let now = Date()
         
         //Getting the hour, minute, and second from the earlier and later times
-        let startComponents = calendar.dateComponents([.hour, .minute, .second], from: times.0)
-        let endComponents = calendar.dateComponents([.hour, .minute, .second], from: times.1)
+        let startComponents = calendar.dateComponents([.hour, .minute, .second], from: earlier)
+        let endComponents = calendar.dateComponents([.hour, .minute, .second], from: later)
         
         //Creating new Date objects that have the hour, minute, and second from the previous times BUT the day is today
         let startTime = calendar.date(bySettingHour: startComponents.hour!, minute: startComponents.minute!, second: startComponents.second!, of: now)!

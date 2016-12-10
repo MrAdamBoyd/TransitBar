@@ -20,9 +20,11 @@ class NewLineViewController: NSViewController {
     @IBOutlet weak var directionPopUpButton: NSPopUpButton!
     @IBOutlet weak var stopPopUpButton: NSPopUpButton!
     @IBOutlet weak var addStopButton: NSButton!
-    @IBOutlet weak var allTimesCheckBox: NSButton!
+    @IBOutlet weak var allTimesRadioButton: NSButton!
     @IBOutlet weak var startTimeDatePicker: NSDatePicker!
     @IBOutlet weak var endTimeDatePicker: NSDatePicker!
+    @IBOutlet weak var neverRadioButton: NSButton!
+    @IBOutlet weak var betweenTimesRadioButton: NSButton!
     
     weak var delegate: NewStopDelegate?
     var agencies: [TransitAgency] = []
@@ -56,10 +58,12 @@ class NewLineViewController: NSViewController {
             self.agencyPopUpButton.addItems(withTitles: inOrderAgencies.map({ $0.agencyTitle }))
         }
     }
-    
-    @IBAction func allTimesCheckboxClicked(_ sender: Any) {
-        self.startTimeDatePicker.isEnabled = !self.startTimeDatePicker.isEnabled
-        self.endTimeDatePicker.isEnabled = !self.endTimeDatePicker.isEnabled
+
+    @IBAction func radioButtonTapped(_ sender: Any) {
+        print("Radio button tapped")
+        let enabled = self.betweenTimesRadioButton.state == 1
+        self.startTimeDatePicker.isEnabled = enabled
+        self.endTimeDatePicker.isEnabled = enabled
     }
     
     // MARK: - Actions from the popup buttons
@@ -146,11 +150,22 @@ class NewLineViewController: NSViewController {
     
     @IBAction func addNewStop(_ sender: Any) {
         guard let stop = self.selectedStop else { return }
-        var times: (Date, Date)? = nil
+        var times: (Date?, Date?)? = nil
         
-        //If the pickers are enabled, get the times
-        if self.startTimeDatePicker.isEnabled && self.endTimeDatePicker.isEnabled {
-            times = (self.startTimeDatePicker.dateValue, self.endTimeDatePicker.dateValue)
+        if self.betweenTimesRadioButton.state == 1 {
+            
+            //Only show the times between two times
+            
+            //Order the dates so that the 0th date is always earlier than the second one
+            if self.startTimeDatePicker.dateValue < self.endTimeDatePicker.dateValue {
+                times = (self.startTimeDatePicker.dateValue, self.endTimeDatePicker.dateValue)
+            } else {
+                times = (self.endTimeDatePicker.dateValue, self.startTimeDatePicker.dateValue)
+            }
+            
+        } else if self.neverRadioButton.state == 1 {
+            //The tuple exists but has nil values for never being shown
+            times = (nil, nil)
         }
         
         let entry = TransitEntry(stop: stop, times: times)
