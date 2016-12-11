@@ -12,6 +12,7 @@ import SwiftBus
 fileprivate let stopKey = "entryStopKey"
 fileprivate let timeKey0 = "entryTimesKey0"
 fileprivate let timeKey1 = "entryTimesKey1"
+fileprivate let timeKeyNever = "entryTimesKeyNever"
 
 class TransitEntry: NSObject, NSCoding {
     var stop: TransitStop!
@@ -57,7 +58,11 @@ class TransitEntry: NSObject, NSCoding {
         }
         
         if let date1 = aDecoder.decodeObject(forKey: timeKey0) as? Date, let date2 = aDecoder.decodeObject(forKey: timeKey1) as? Date {
+            //Shown in menu bar between certain times
             self.times = (date1, date2)
+        } else if let _ = aDecoder.decodeObject(forKey: timeKeyNever) {
+            //Never shown in menu bar
+            self.times = (nil, nil)
         }
     }
     
@@ -67,8 +72,14 @@ class TransitEntry: NSObject, NSCoding {
         aCoder.encode(archivedStop, forKey: stopKey)
         
         if let times = self.times {
-            aCoder.encode(times.0, forKey: timeKey0)
-            aCoder.encode(times.1, forKey: timeKey1)
+            if let earlier = times.0, let later = times.1 {
+                //Shown in menu bar between certain times
+                aCoder.encode(earlier, forKey: timeKey0)
+                aCoder.encode(later, forKey: timeKey1)
+            } else {
+                //Never shown in menu bar
+                aCoder.encode("never", forKey: timeKeyNever)
+            }
         }
     }
 }
