@@ -10,39 +10,39 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		f/TQKy+nhgcXGR9mFutX8pkD2AA=
+		4+HK0AugQRPBwxVDjyQECmwil6s=
 		</data>
 		<key>Resources/Main.storyboardc/Info.plist</key>
 		<data>
-		F3snyuUVH806YGOFFlpMPaqJUGM=
+		LAOUdmK0QQkE8GgDfufhEpwIm3k=
 		</data>
 		<key>Resources/Main.storyboardc/MainMenu.nib</key>
 		<data>
-		sVjn+uMYZv42l9j5Ew6D7i9Jrmw=
+		D6cTBvIQSHVdRi2GoMgdCP2Tdw0=
 		</data>
 		<key>Resources/Main.storyboardc/RfJ-oZ-InH-view-eqC-dz-JVY.nib</key>
 		<data>
-		Dlyq57guddNLlL7jlS1siCXCQok=
+		f7DAApIN7ZwbBZ4V+/36rJZMiyw=
 		</data>
 		<key>Resources/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<data>
-		0SEMbS4PUD21lILQ/OFkUhv0tRQ=
+		sEh61pe5xvDZdBhtFMcltyT0z8A=
 		</data>
 		<key>Resources/Main.storyboardc/aboutWindow.nib</key>
 		<data>
-		qGgJplp5GRc9YqJUDoHjh+BPMN8=
+		vkCv89JNOqd4q9sY/kS3+KlpnZM=
 		</data>
 		<key>Resources/Main.storyboardc/mainWindow.nib</key>
 		<data>
-		/CS4ZgHbOh/6VtaR0HUUWhD5q6c=
+		TNc08PQoW/I1yJpIq/kmYaWh1CU=
 		</data>
 		<key>Resources/Main.storyboardc/nAH-hN-dn3-view-AH5-Wu-q8F.nib</key>
 		<data>
-		lXZY+zcL1fINqYXAxe4KusRW0Jg=
+		tIgj7QLz+LOiUXWzvOCNyFkXOQI=
 		</data>
 		<key>Resources/Main.storyboardc/newLine.nib</key>
 		<data>
-		ggqlbyvxu3nQmMmmeEu5dcPEDOQ=
+		x8QGROnUuRDf0H44+3rJtQjBLJI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			92CAO7bCDFfDq1n14EnLUC13UmE=
+			f8YH7CqVJoPDAtc+S8bJ6/bJFMg=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.cocoapods.SWXMLHash" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -60,7 +60,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			qIxXNDLgmVKClueLTIgCYzzlpu8=
+			Tn+yF4yg7mWp7I4l5mgSMXjCIeE=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.sparkle-project.Sparkle" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -69,7 +69,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			2Tj4dLxSxmUMHMCn5xVIEpMOWVQ=
+			pzxLjp2AY8WZUL7wbBia6rCpUiU=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.cocoapods.SwiftBus" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -197,99 +197,99 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			f/TQKy+nhgcXGR9mFutX8pkD2AA=
+			4+HK0AugQRPBwxVDjyQECmwil6s=
 			</data>
 			<key>hash2</key>
 			<data>
-			5G2+4s+ponliHO3GThDv87hbQiFxZ1LI72ztl6/N9Rw=
+			FTnCIKchF1e9afBNZ5n0n41UlDmhhKKuK6dCN51gsp8=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			F3snyuUVH806YGOFFlpMPaqJUGM=
+			LAOUdmK0QQkE8GgDfufhEpwIm3k=
 			</data>
 			<key>hash2</key>
 			<data>
-			5GOueHed/nuRR9/cTVsbaLQY189aO3krMV6PGHgY17c=
+			YxDMVZQ0rSY/MVB7r4Y8RZNzxSqmKJqlKWH7p1MfIhU=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/MainMenu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sVjn+uMYZv42l9j5Ew6D7i9Jrmw=
+			D6cTBvIQSHVdRi2GoMgdCP2Tdw0=
 			</data>
 			<key>hash2</key>
 			<data>
-			uxgjaK2hG1cOJw5xaxbbKX4TiCTdcrF3ld5HjxKQv5w=
+			30x9ZV51uc6hYF39S7qe0TlUr8nTrCjXVqCHbU/miZY=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/RfJ-oZ-InH-view-eqC-dz-JVY.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Dlyq57guddNLlL7jlS1siCXCQok=
+			f7DAApIN7ZwbBZ4V+/36rJZMiyw=
 			</data>
 			<key>hash2</key>
 			<data>
-			7pm7BGLOEW92z4oNVKLIEq7S51imy5g5/o0IYCgJsVE=
+			JTj1byzbqcK6AN39RaORzCOhqI/XbMFZcVy6bLwBn+Y=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0SEMbS4PUD21lILQ/OFkUhv0tRQ=
+			sEh61pe5xvDZdBhtFMcltyT0z8A=
 			</data>
 			<key>hash2</key>
 			<data>
-			zBjh7u9IBv26A+9FmBTxo/gPul6xGIlKPCDQXxzVdQE=
+			8K9qia+JuRkAcZVTPqXjFRYXfudLOX++ROwXCLhuE0g=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/aboutWindow.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qGgJplp5GRc9YqJUDoHjh+BPMN8=
+			vkCv89JNOqd4q9sY/kS3+KlpnZM=
 			</data>
 			<key>hash2</key>
 			<data>
-			SWXErJylx0pd7u3LQi2+LZjfjXloJmVSoe/9J+9/09M=
+			cOA82MnAFetzxvu75FAaMtle/5+DFjsyuecpPP78jo8=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/mainWindow.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/CS4ZgHbOh/6VtaR0HUUWhD5q6c=
+			TNc08PQoW/I1yJpIq/kmYaWh1CU=
 			</data>
 			<key>hash2</key>
 			<data>
-			EWtl9U+Hte74827nSuTvt51F1UgUZ7fl7z3/S5DCMv8=
+			lXpdgJUjZ4DU6+QHH/cRs2r3gUOqhtjCuvfPq48U1+Q=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/nAH-hN-dn3-view-AH5-Wu-q8F.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lXZY+zcL1fINqYXAxe4KusRW0Jg=
+			tIgj7QLz+LOiUXWzvOCNyFkXOQI=
 			</data>
 			<key>hash2</key>
 			<data>
-			JUc+99PM/9q/PwqHRRfDmh5Rv99vUNxbWHb+LhZQry4=
+			UUWYjbIihdPBw/khgC1gVDOMRIc4I+R5xJWMEooevDw=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/newLine.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ggqlbyvxu3nQmMmmeEu5dcPEDOQ=
+			x8QGROnUuRDf0H44+3rJtQjBLJI=
 			</data>
 			<key>hash2</key>
 			<data>
-			SYfJcAWcSGX0eBstZc/xSbK92PkWRnPJA/wBGwKRLSo=
+			L80gPmaJ9CB5Q1GbaD/xNHAh9ty9otvhcduJpR5nLvQ=
 			</data>
 		</dict>
 		<key>embedded.provisionprofile</key>
