@@ -8,7 +8,7 @@
 
 import Cocoa
 import SwiftBus
-#if !APPSTORE
+#if SPARKLE
 import Sparkle
 #endif
 
@@ -31,7 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         self.createMenuItems()
         
-        #if !APPSTORE
+        #if SPARKLE
             //Setting up the Sparkle updater
             SUUpdater.shared().automaticallyChecksForUpdates = true
         #endif
@@ -88,7 +88,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         self.statusItem.menu?.addItem(NSMenuItem(title: "About MacTransit", action: #selector(self.openAboutWindow), keyEquivalent: ""))
-        #if !APPSTORE
+        #if SPARKLE
             self.statusItem.menu?.addItem(NSMenuItem(title: "Check for Updates...", action: #selector(self.checkForUpdates), keyEquivalent: ""))
         #endif
         self.statusItem.menu?.addItem(NSMenuItem.separator())
@@ -154,12 +154,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // MARK: - Actions
     
+    #if SPARKLE
     /**
      Checks Sparkle to see if there are any updates
      */
     func checkForUpdates() {
         SUUpdater.shared().checkForUpdates(self)
     }
+    #endif
     
     /**
      Opens the settings window

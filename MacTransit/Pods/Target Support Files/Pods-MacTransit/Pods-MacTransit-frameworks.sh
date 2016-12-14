@@ -88,7 +88,17 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_ROOT}/Sparkle/Sparkle.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftBus/SwiftBus.framework"
 fi
+if [[ "$CONFIGURATION" == "Debug AppStore" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/SWXMLHash/SWXMLHash.framework"
+  install_framework "${PODS_ROOT}/Sparkle/Sparkle.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftBus/SwiftBus.framework"
+fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/SWXMLHash/SWXMLHash.framework"
+  install_framework "${PODS_ROOT}/Sparkle/Sparkle.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftBus/SwiftBus.framework"
+fi
+if [[ "$CONFIGURATION" == "Release AppStore" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/SWXMLHash/SWXMLHash.framework"
   install_framework "${PODS_ROOT}/Sparkle/Sparkle.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftBus/SwiftBus.framework"

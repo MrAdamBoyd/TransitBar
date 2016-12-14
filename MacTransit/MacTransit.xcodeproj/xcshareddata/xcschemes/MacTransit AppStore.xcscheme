@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "660F233A1DADF22900832EC6"
-               BuildableName = "MacTransit.app"
-               BlueprintName = "MacTransit"
+               BlueprintIdentifier = "663F9E461E00F050009116D9"
+               BuildableName = "MacTransit AppStore.app"
+               BlueprintName = "MacTransit AppStore"
                ReferencedContainer = "container:MacTransit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,33 +28,13 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "660F234E1DADF22900832EC6"
-               BuildableName = "MacTransitTests.xctest"
-               BlueprintName = "MacTransitTests"
-               ReferencedContainer = "container:MacTransit.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "660F23591DADF22900832EC6"
-               BuildableName = "MacTransitUITests.xctest"
-               BlueprintName = "MacTransitUITests"
-               ReferencedContainer = "container:MacTransit.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "660F233A1DADF22900832EC6"
-            BuildableName = "MacTransit.app"
-            BlueprintName = "MacTransit"
+            BlueprintIdentifier = "663F9E461E00F050009116D9"
+            BuildableName = "MacTransit AppStore.app"
+            BlueprintName = "MacTransit AppStore"
             ReferencedContainer = "container:MacTransit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "660F233A1DADF22900832EC6"
-            BuildableName = "MacTransit.app"
-            BlueprintName = "MacTransit"
+            BlueprintIdentifier = "663F9E461E00F050009116D9"
+            BuildableName = "MacTransit AppStore.app"
+            BlueprintName = "MacTransit AppStore"
             ReferencedContainer = "container:MacTransit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -94,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "660F233A1DADF22900832EC6"
-            BuildableName = "MacTransit.app"
-            BlueprintName = "MacTransit"
+            BlueprintIdentifier = "663F9E461E00F050009116D9"
+            BuildableName = "MacTransit AppStore.app"
+            BlueprintName = "MacTransit AppStore"
             ReferencedContainer = "container:MacTransit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

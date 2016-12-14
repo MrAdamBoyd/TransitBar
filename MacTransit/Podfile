@@ -7,3 +7,7 @@ target 'MacTransit' do
   pod 'SwiftBus', :path => './SwiftBus'
 end
 
+target 'MacTransit AppStore' do
+  pod 'SwiftBus', :path => './SwiftBus'
+end
+

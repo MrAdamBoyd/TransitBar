@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02DB4B192DADEC893A1CCFEB /* Pods_MacTransitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B29E07A8B523C2124B88D7 /* Pods_MacTransitTests.framework */; };
+		1A23B9BA8BF44E74E747800D /* Pods_MacTransit_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1041BA7E3CACCEF1A71E74DD /* Pods_MacTransit_AppStore.framework */; };
 		660F233F1DADF22900832EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F233E1DADF22900832EC6 /* AppDelegate.swift */; };
 		660F23411DADF22900832EC6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F23401DADF22900832EC6 /* ListViewController.swift */; };
 		660F23461DADF22900832EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660F23451DADF22900832EC6 /* Assets.xcassets */; };
@@ -16,11 +16,20 @@
 		663636C61DE12A190067A79B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663636C51DE12A190067A79B /* Main.storyboard */; };
 		663636C81DE12DFA0067A79B /* NewLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663636C71DE12DFA0067A79B /* NewLineViewController.swift */; };
 		663636CA1DE161710067A79B /* TransitEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663636C91DE161710067A79B /* TransitEntry.swift */; };
+		663F9E491E00F050009116D9 /* TransitEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663636C91DE161710067A79B /* TransitEntry.swift */; };
+		663F9E4A1E00F050009116D9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665B07991DEBB55000AF2332 /* AboutViewController.swift */; };
+		663F9E4B1E00F050009116D9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F23401DADF22900832EC6 /* ListViewController.swift */; };
+		663F9E4C1E00F050009116D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6072C1DF675D4003C9DD6 /* Constants.swift */; };
+		663F9E4D1E00F050009116D9 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6072E1DF67640003C9DD6 /* DataController.swift */; };
+		663F9E4E1E00F050009116D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F233E1DADF22900832EC6 /* AppDelegate.swift */; };
+		663F9E4F1E00F050009116D9 /* NewLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663636C71DE12DFA0067A79B /* NewLineViewController.swift */; };
+		663F9E511E00F050009116D9 /* Pods_MacTransit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D179A27A7C7A7872D8C1BA /* Pods_MacTransit.framework */; };
+		663F9E531E00F050009116D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660F23451DADF22900832EC6 /* Assets.xcassets */; };
+		663F9E541E00F050009116D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663636C51DE12A190067A79B /* Main.storyboard */; };
 		665B079A1DEBB55000AF2332 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665B07991DEBB55000AF2332 /* AboutViewController.swift */; };
 		66A6072D1DF675D4003C9DD6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6072C1DF675D4003C9DD6 /* Constants.swift */; };
 		66A6072F1DF67640003C9DD6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6072E1DF67640003C9DD6 /* DataController.swift */; };
 		959B3D9F234E04BAD7D49CFE /* Pods_MacTransit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D179A27A7C7A7872D8C1BA /* Pods_MacTransit.framework */; };
-		9D95A84EF9D1AE0EB83F4C76 /* Pods_MacTransitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD249FAE74E4DF53E0B57939 /* Pods_MacTransitUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,14 +50,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1041BA7E3CACCEF1A71E74DD /* Pods_MacTransit_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransit_AppStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53E7732FDE4A43FE181F12F9 /* Pods-MacTransit.debug appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.debug appstore.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.debug appstore.xcconfig"; sourceTree = "<group>"; };
 		56E7B7DC2C28FC26CC3553AB /* Pods-MacTransit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.debug.xcconfig"; sourceTree = "<group>"; };
-		58DAB0DF9B5F287008827BBD /* Pods-MacTransitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransitTests/Pods-MacTransitTests.release.xcconfig"; sourceTree = "<group>"; };
-		5D184F20CF67528F4B86F691 /* Pods-MacTransitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransitTests/Pods-MacTransitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		595601ADBCCBDE6126163105 /* Pods-MacTransit AppStore.release appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit AppStore.release appstore.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore.release appstore.xcconfig"; sourceTree = "<group>"; };
 		660F233B1DADF22900832EC6 /* MacTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		660F233E1DADF22900832EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		660F23401DADF22900832EC6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		660F23451DADF22900832EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		660F234A1DADF22900832EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		660F234A1DADF22900832EC6 /* MacTransit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacTransit-Info.plist"; sourceTree = "<group>"; };
 		660F234F1DADF22900832EC6 /* MacTransitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacTransitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		660F23531DADF22900832EC6 /* MacTransitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacTransitTests.swift; sourceTree = "<group>"; };
 		660F23551DADF22900832EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,17 +68,21 @@
 		663636C51DE12A190067A79B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		663636C71DE12DFA0067A79B /* NewLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLineViewController.swift; sourceTree = "<group>"; };
 		663636C91DE161710067A79B /* TransitEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitEntry.swift; sourceTree = "<group>"; };
+		663F9E2C1E00EA7B009116D9 /* MacTransit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacTransit.entitlements; sourceTree = "<group>"; };
+		663F9E5D1E00F050009116D9 /* MacTransit copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "MacTransit copy.app"; path = "MacTransit AppStore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		664AB2F21E00DC220065385F /* SwiftBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftBus.framework; path = "../../../../../../../../Developer/Xcode/DerivedData/MacTransit-dbegpihfjenydbglgoruwhgktnbs/Build/Products/Release/SwiftBus/SwiftBus.framework"; sourceTree = "<group>"; };
 		665B07991DEBB55000AF2332 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		66A6072C1DF675D4003C9DD6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		66A6072E1DF67640003C9DD6 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		66C923E81E00C8EF00FE067E /* MacTransit copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MacTransit copy-Info.plist"; path = "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Other/Important/Developer/TransitTraffic/MacTransit/MacTransit/MacTransit copy-Info.plist"; sourceTree = "<absolute>"; };
-		6768C5EBE01BF50909EB722A /* Pods-MacTransitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransitUITests/Pods-MacTransitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		66C923E81E00C8EF00FE067E /* MacTransit-AppStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MacTransit-AppStore-Info.plist"; path = "/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Other/Important/Developer/TransitTraffic/MacTransit/MacTransit/MacTransit-AppStore-Info.plist"; sourceTree = "<absolute>"; };
 		70B29E07A8B523C2124B88D7 /* Pods_MacTransitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7888A0BD9103E31404704729 /* Pods-MacTransit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.release.xcconfig"; sourceTree = "<group>"; };
+		8831FA90BE3889B49E9F293A /* Pods-MacTransit AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit AppStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore.release.xcconfig"; sourceTree = "<group>"; };
 		92D179A27A7C7A7872D8C1BA /* Pods_MacTransit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E9C21CB785E2E13A7D5EACC /* Pods-MacTransit.release appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.release appstore.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.release appstore.xcconfig"; sourceTree = "<group>"; };
+		A9CAAB9BF76D430753A6F037 /* Pods-MacTransit AppStore.debug appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit AppStore.debug appstore.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore.debug appstore.xcconfig"; sourceTree = "<group>"; };
 		BD249FAE74E4DF53E0B57939 /* Pods_MacTransitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC91FBE4A152F67EE8B05E4B /* Pods-MacTransitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransitUITests/Pods-MacTransitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D3B18295A3573ABDBF513930 /* Pods-MacTransit AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit AppStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02DB4B192DADEC893A1CCFEB /* Pods_MacTransitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +105,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D95A84EF9D1AE0EB83F4C76 /* Pods_MacTransitUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663F9E501E00F050009116D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663F9E511E00F050009116D9 /* Pods_MacTransit.framework in Frameworks */,
+				1A23B9BA8BF44E74E747800D /* Pods_MacTransit_AppStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +129,6 @@
 				660F235D1DADF22900832EC6 /* MacTransitUITests */,
 				D55360D75DC09E02508D9406 /* Pods */,
 				660F233C1DADF22900832EC6 /* Products */,
-				66C923E81E00C8EF00FE067E /* MacTransit copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +138,7 @@
 				660F233B1DADF22900832EC6 /* MacTransit.app */,
 				660F234F1DADF22900832EC6 /* MacTransitTests.xctest */,
 				660F235A1DADF22900832EC6 /* MacTransitUITests.xctest */,
+				663F9E5D1E00F050009116D9 /* MacTransit copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,7 +151,9 @@
 				66A6072C1DF675D4003C9DD6 /* Constants.swift */,
 				66A6072E1DF67640003C9DD6 /* DataController.swift */,
 				663636C91DE161710067A79B /* TransitEntry.swift */,
-				660F234A1DADF22900832EC6 /* Info.plist */,
+				660F234A1DADF22900832EC6 /* MacTransit-Info.plist */,
+				66C923E81E00C8EF00FE067E /* MacTransit-AppStore-Info.plist */,
+				663F9E2C1E00EA7B009116D9 /* MacTransit.entitlements */,
 				663636C51DE12A190067A79B /* Main.storyboard */,
 				660F23451DADF22900832EC6 /* Assets.xcassets */,
 			);
@@ -172,6 +195,7 @@
 				92D179A27A7C7A7872D8C1BA /* Pods_MacTransit.framework */,
 				70B29E07A8B523C2124B88D7 /* Pods_MacTransitTests.framework */,
 				BD249FAE74E4DF53E0B57939 /* Pods_MacTransitUITests.framework */,
+				1041BA7E3CACCEF1A71E74DD /* Pods_MacTransit_AppStore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -181,10 +205,12 @@
 			children = (
 				56E7B7DC2C28FC26CC3553AB /* Pods-MacTransit.debug.xcconfig */,
 				7888A0BD9103E31404704729 /* Pods-MacTransit.release.xcconfig */,
-				5D184F20CF67528F4B86F691 /* Pods-MacTransitTests.debug.xcconfig */,
-				58DAB0DF9B5F287008827BBD /* Pods-MacTransitTests.release.xcconfig */,
-				6768C5EBE01BF50909EB722A /* Pods-MacTransitUITests.debug.xcconfig */,
-				EC91FBE4A152F67EE8B05E4B /* Pods-MacTransitUITests.release.xcconfig */,
+				53E7732FDE4A43FE181F12F9 /* Pods-MacTransit.debug appstore.xcconfig */,
+				9E9C21CB785E2E13A7D5EACC /* Pods-MacTransit.release appstore.xcconfig */,
+				D3B18295A3573ABDBF513930 /* Pods-MacTransit AppStore.debug.xcconfig */,
+				A9CAAB9BF76D430753A6F037 /* Pods-MacTransit AppStore.debug appstore.xcconfig */,
+				8831FA90BE3889B49E9F293A /* Pods-MacTransit AppStore.release.xcconfig */,
+				595601ADBCCBDE6126163105 /* Pods-MacTransit AppStore.release appstore.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -254,6 +280,27 @@
 			productReference = 660F235A1DADF22900832EC6 /* MacTransitUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		663F9E461E00F050009116D9 /* MacTransit AppStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 663F9E581E00F050009116D9 /* Build configuration list for PBXNativeTarget "MacTransit AppStore" */;
+			buildPhases = (
+				663F9E471E00F050009116D9 /* [CP] Check Pods Manifest.lock */,
+				663F9E481E00F050009116D9 /* Sources */,
+				663F9E501E00F050009116D9 /* Frameworks */,
+				663F9E521E00F050009116D9 /* Resources */,
+				663F9E551E00F050009116D9 /* [CP] Embed Pods Frameworks */,
+				663F9E561E00F050009116D9 /* [CP] Copy Pods Resources */,
+				663F9E571E00F050009116D9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MacTransit AppStore";
+			productName = MacTransit;
+			productReference = 663F9E5D1E00F050009116D9 /* MacTransit copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -269,6 +316,11 @@
 						DevelopmentTeam = 6GHQ7P7EHA;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					660F234E1DADF22900832EC6 = {
 						CreatedOnToolsVersion = 8.0;
@@ -283,6 +335,9 @@
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 660F233A1DADF22900832EC6;
+					};
+					663F9E461E00F050009116D9 = {
+						DevelopmentTeam = 6GHQ7P7EHA;
 					};
 				};
 			};
@@ -300,6 +355,7 @@
 			projectRoot = "";
 			targets = (
 				660F233A1DADF22900832EC6 /* MacTransit */,
+				663F9E461E00F050009116D9 /* MacTransit AppStore */,
 				660F234E1DADF22900832EC6 /* MacTransitTests */,
 				660F23591DADF22900832EC6 /* MacTransitUITests */,
 			);
@@ -327,6 +383,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		663F9E521E00F050009116D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663F9E531E00F050009116D9 /* Assets.xcassets in Resources */,
+				663F9E541E00F050009116D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +444,64 @@
 			showEnvVarsInLog = 0;
 		};
 		663636CB1DE233660067A79B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		663F9E471E00F050009116D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		663F9E551E00F050009116D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		663F9E561E00F050009116D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		663F9E571E00F050009116D9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -499,6 +622,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		663F9E481E00F050009116D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663F9E491E00F050009116D9 /* TransitEntry.swift in Sources */,
+				663F9E4A1E00F050009116D9 /* AboutViewController.swift in Sources */,
+				663F9E4B1E00F050009116D9 /* ListViewController.swift in Sources */,
+				663F9E4C1E00F050009116D9 /* Constants.swift in Sources */,
+				663F9E4D1E00F050009116D9 /* DataController.swift in Sources */,
+				663F9E4E1E00F050009116D9 /* AppDelegate.swift in Sources */,
+				663F9E4F1E00F050009116D9 /* NewLineViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -613,12 +750,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacTransit/MacTransit.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
-				INFOPLIST_FILE = MacTransit/Info.plist;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MacTransit/MacTransit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"SPARKLE\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -631,12 +774,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacTransit/MacTransit.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
-				INFOPLIST_FILE = MacTransit/Info.plist;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MacTransit/MacTransit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"SPARKLE\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -645,7 +794,6 @@
 		};
 		660F23671DADF22900832EC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D184F20CF67528F4B86F691 /* Pods-MacTransitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -662,7 +810,6 @@
 		};
 		660F23681DADF22900832EC6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58DAB0DF9B5F287008827BBD /* Pods-MacTransitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -679,7 +826,6 @@
 		};
 		660F236A1DADF22900832EC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6768C5EBE01BF50909EB722A /* Pods-MacTransitUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -695,7 +841,6 @@
 		};
 		660F236B1DADF22900832EC6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC91FBE4A152F67EE8B05E4B /* Pods-MacTransitUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -708,6 +853,100 @@
 				TEST_TARGET_NAME = MacTransit;
 			};
 			name = Release;
+		};
+		663F9E591E00F050009116D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3B18295A3573ABDBF513930 /* Pods-MacTransit AppStore.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacTransit/MacTransit.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MacTransit-AppStore-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"SPARKLE\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		663F9E5A1E00F050009116D9 /* Debug AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9CAAB9BF76D430753A6F037 /* Pods-MacTransit AppStore.debug appstore.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacTransit/MacTransit.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MacTransit-AppStore-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = "Debug AppStore";
+		};
+		663F9E5B1E00F050009116D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8831FA90BE3889B49E9F293A /* Pods-MacTransit AppStore.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacTransit/MacTransit.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MacTransit-AppStore-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"SPARKLE\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		663F9E5C1E00F050009116D9 /* Release AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 595601ADBCCBDE6126163105 /* Pods-MacTransit AppStore.release appstore.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacTransit/MacTransit.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/MacTransit-AppStore-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = "Release AppStore";
 		};
 		66C923E91E00D5C200FE067E /* Debug AppStore */ = {
 			isa = XCBuildConfiguration;
@@ -761,19 +1000,19 @@
 		};
 		66C923EA1E00D5C200FE067E /* Debug AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56E7B7DC2C28FC26CC3553AB /* Pods-MacTransit.debug.xcconfig */;
+			baseConfigurationReference = 53E7732FDE4A43FE181F12F9 /* Pods-MacTransit.debug appstore.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacTransit/MacTransit.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"APPSTORE=1",
 				);
-				INFOPLIST_FILE = MacTransit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MacTransit/MacTransit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
@@ -784,7 +1023,6 @@
 		};
 		66C923EC1E00D5C200FE067E /* Debug AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D184F20CF67528F4B86F691 /* Pods-MacTransitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -801,7 +1039,6 @@
 		};
 		66C923ED1E00D5C200FE067E /* Debug AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6768C5EBE01BF50909EB722A /* Pods-MacTransitUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -859,19 +1096,19 @@
 		};
 		66C923EF1E00D5C800FE067E /* Release AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7888A0BD9103E31404704729 /* Pods-MacTransit.release.xcconfig */;
+			baseConfigurationReference = 9E9C21CB785E2E13A7D5EACC /* Pods-MacTransit.release appstore.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacTransit/MacTransit.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
-					"APPSTORE=1",
 				);
-				INFOPLIST_FILE = MacTransit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MacTransit/MacTransit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
@@ -882,7 +1119,6 @@
 		};
 		66C923F11E00D5C800FE067E /* Release AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58DAB0DF9B5F287008827BBD /* Pods-MacTransitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -899,7 +1135,6 @@
 		};
 		66C923F21E00D5C800FE067E /* Release AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC91FBE4A152F67EE8B05E4B /* Pods-MacTransitUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -956,6 +1191,17 @@
 				66C923ED1E00D5C200FE067E /* Debug AppStore */,
 				660F236B1DADF22900832EC6 /* Release */,
 				66C923F21E00D5C800FE067E /* Release AppStore */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		663F9E581E00F050009116D9 /* Build configuration list for PBXNativeTarget "MacTransit AppStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				663F9E591E00F050009116D9 /* Debug */,
+				663F9E5A1E00F050009116D9 /* Debug AppStore */,
+				663F9E5B1E00F050009116D9 /* Release */,
+				663F9E5C1E00F050009116D9 /* Release AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

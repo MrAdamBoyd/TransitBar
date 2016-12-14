@@ -12,6 +12,13 @@ struct Constants {
     static let numberOfPredictionsKey = "numberOfPredictionsKey"
     static let entryArrayKey = "entryArrayKey"
     static let entriesChangedNotification = "entriesChangedNotification"
+    static var userDefaultsName: String {
+        #if SPARKLE
+            return "MacTransit"
+        #else
+            return "MacTransitAppStore"
+        #endif
+    }
 }
 
 extension Notification.Name {
