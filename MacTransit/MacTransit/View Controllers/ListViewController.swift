@@ -14,13 +14,16 @@ protocol MainAppViewController {
     func showAbout()
 }
 
-class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, NewStopDelegate {
+class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate, NewStopDelegate {
 
     @IBOutlet weak var createNewLineButton: NSButton!
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var numberOfItemsToShowTextField: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.numberOfItemsToShowTextField.delegate = self
     }
 
     override var representedObject: Any? {
@@ -74,16 +77,31 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     @IBAction func createNewLineAction(_ sender: Any) {
         self.performSegue(withIdentifier: "showNewLine", sender: self)
     }
-    
+
     func showAbout() {
         self.performSegue(withIdentifier: "showAbout", sender: self)
     }
     
     // MARK: - NewStopDelegate
+    
     func newStopControllerDidAdd(newEntry: TransitEntry) {
         print("Did select new stop")
         DataController.shared.savedEntries.append(newEntry)
         self.tableView.reloadData()
+    }
+    
+    // MARK: - NSTextFieldDelegate
+    func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool {
+        
+        if let entered = self.numberOfItemsToShowTextField?.intValue, entered > 0, entered < 10 {
+        
+            //Only allow values of above 0 and less than 10
+            DataController.shared.numberOfPredictionsToShow = Int(entered)
+            return true
+        
+        }
+        
+        return false
     }
 
     // MARK: - NSTableView

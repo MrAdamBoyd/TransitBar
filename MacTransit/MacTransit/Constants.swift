@@ -9,6 +9,7 @@
 import Foundation
 
 struct Constants {
+    static let numberOfPredictionsKey = "numberOfPredictionsKey"
     static let entryArrayKey = "entryArrayKey"
     static let entriesChangedNotification = "entriesChangedNotification"
 }

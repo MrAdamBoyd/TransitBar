@@ -7,8 +7,10 @@
 //
 
 import Cocoa
-import Sparkle
 import SwiftBus
+#if !APPSTORE
+import Sparkle
+#endif
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -25,12 +27,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
         //Setting up the status bar menu and the actions from that
-        self.statusItem.title = "Loading..."
+        self.statusItem.title = "MT"
         
         self.createMenuItems()
         
-        //Setting up the Sparkle updater
-        SUUpdater.shared().automaticallyChecksForUpdates = true
+        #if !APPSTORE
+            //Setting up the Sparkle updater
+            SUUpdater.shared().automaticallyChecksForUpdates = true
+        #endif
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.createMenuItems), name: .entriesChanged, object: nil)
         
@@ -84,7 +88,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         self.statusItem.menu?.addItem(NSMenuItem(title: "About MacTransit", action: #selector(self.openAboutWindow), keyEquivalent: ""))
-        self.statusItem.menu?.addItem(NSMenuItem(title: "Check for Updates...", action: #selector(self.checkForUpdates), keyEquivalent: ""))
+        #if !APPSTORE
+            self.statusItem.menu?.addItem(NSMenuItem(title: "Check for Updates...", action: #selector(self.checkForUpdates), keyEquivalent: ""))
+        #endif
         self.statusItem.menu?.addItem(NSMenuItem.separator())
         self.statusItem.menu?.addItem(NSMenuItem(title: "Preferences...", action: #selector(self.openSettingsWindow), keyEquivalent: ","))
         self.statusItem.menu?.addItem(NSMenuItem(title: "Quit", action: #selector(self.terminate), keyEquivalent: "q"))
@@ -110,8 +116,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 
                 for (index, prediction) in predictions.enumerated() {
                     
-                    if index < 3 {
-                        //Only add the first 3 predictions to the menubar item
+                    if index < DataController.shared.numberOfPredictionsToShow {
+                        //Only add however many predictions the user wants
                         menuTextForThisPrediction.append("\(prediction.predictionInMinutes), ")
                     }
                     
@@ -140,7 +146,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //If there is no menubar text, add two dashes
         if menuText == "" {
-            self.statusItem.title = "--"
+            self.statusItem.title = "MT"
         } else {
             self.statusItem.title = String(menuText.characters.dropLast(2)) //Remove final ; and space
         }

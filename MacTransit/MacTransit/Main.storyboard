@@ -1117,18 +1117,43 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FpD-Qg-nYD">
+                                <rect key="frame" x="8" y="331" width="195" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Number of predictions to show:" id="VR1-EB-nPg">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eEF-2e-TBS">
+                                <rect key="frame" x="206" y="329" width="40" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="uNx-ox-VOv"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" title="3" drawsBackground="YES" id="28p-UA-t0W">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Vjg-Cr-GNT"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="eEF-2e-TBS" firstAttribute="leading" secondItem="FpD-Qg-nYD" secondAttribute="trailing" constant="5" id="0sy-Y1-3np"/>
+                            <constraint firstItem="FpD-Qg-nYD" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="1sL-GW-X1k"/>
+                            <constraint firstItem="FpD-Qg-nYD" firstAttribute="centerY" secondItem="h7P-PM-teG" secondAttribute="centerY" id="ASG-C7-EAU"/>
                             <constraint firstItem="oNd-02-vkS" firstAttribute="top" secondItem="h7P-PM-teG" secondAttribute="bottom" constant="10" id="Izb-6p-EQ4"/>
                             <constraint firstItem="oNd-02-vkS" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Qql-vP-jAd"/>
                             <constraint firstAttribute="bottom" secondItem="oNd-02-vkS" secondAttribute="bottom" id="WAh-ej-qFq"/>
                             <constraint firstAttribute="trailing" secondItem="oNd-02-vkS" secondAttribute="trailing" id="ZK9-ue-YZb"/>
                             <constraint firstItem="h7P-PM-teG" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="bmh-wr-bGk"/>
                             <constraint firstAttribute="trailing" secondItem="h7P-PM-teG" secondAttribute="trailing" constant="20" id="dZE-v6-Zou"/>
+                            <constraint firstItem="eEF-2e-TBS" firstAttribute="centerY" secondItem="FpD-Qg-nYD" secondAttribute="centerY" id="mZd-jX-MGb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="createNewLineButton" destination="h7P-PM-teG" id="dm1-cr-633"/>
+                        <outlet property="numberOfItemsToShowTextField" destination="eEF-2e-TBS" id="y81-Ur-rYT"/>
                         <outlet property="tableView" destination="ew1-Ib-gCC" id="6jV-Gd-NpT"/>
                         <segue destination="7q5-sU-bEe" kind="show" identifier="showNewLine" id="LhK-YU-JCU"/>
                         <segue destination="Hrf-ru-gnk" kind="show" identifier="showAbout" id="Q5a-Sb-5ym"/>
@@ -1140,6 +1165,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AboutWindow" width="170.5" height="170.5"/>
+        <image name="AboutWindow" width="256" height="256"/>
     </resources>
 </document>
