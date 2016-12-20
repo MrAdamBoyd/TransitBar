@@ -69,7 +69,7 @@
 		663636C71DE12DFA0067A79B /* NewLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLineViewController.swift; sourceTree = "<group>"; };
 		663636C91DE161710067A79B /* TransitEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitEntry.swift; sourceTree = "<group>"; };
 		663F9E2C1E00EA7B009116D9 /* MacTransit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacTransit.entitlements; sourceTree = "<group>"; };
-		663F9E5D1E00F050009116D9 /* MacTransit copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "MacTransit copy.app"; path = "MacTransit AppStore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		663F9E5D1E00F050009116D9 /* MacTransit copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "MacTransit copy.app"; path = MacTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		664AB2F21E00DC220065385F /* SwiftBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftBus.framework; path = "../../../../../../../../Developer/Xcode/DerivedData/MacTransit-dbegpihfjenydbglgoruwhgktnbs/Build/Products/Release/SwiftBus/SwiftBus.framework"; sourceTree = "<group>"; };
 		665B07991DEBB55000AF2332 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		66A6072C1DF675D4003C9DD6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };

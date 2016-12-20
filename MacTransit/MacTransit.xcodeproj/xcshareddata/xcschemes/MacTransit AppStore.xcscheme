@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "663F9E461E00F050009116D9"
-               BuildableName = "MacTransit AppStore.app"
+               BuildableName = "MacTransit.app"
                BlueprintName = "MacTransit AppStore"
                ReferencedContainer = "container:MacTransit.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "663F9E461E00F050009116D9"
-            BuildableName = "MacTransit AppStore.app"
+            BuildableName = "MacTransit.app"
             BlueprintName = "MacTransit AppStore"
             ReferencedContainer = "container:MacTransit.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "663F9E461E00F050009116D9"
-            BuildableName = "MacTransit AppStore.app"
+            BuildableName = "MacTransit.app"
             BlueprintName = "MacTransit AppStore"
             ReferencedContainer = "container:MacTransit.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "663F9E461E00F050009116D9"
-            BuildableName = "MacTransit AppStore.app"
+            BuildableName = "MacTransit.app"
             BlueprintName = "MacTransit AppStore"
             ReferencedContainer = "container:MacTransit.xcodeproj">
          </BuildableReference>
