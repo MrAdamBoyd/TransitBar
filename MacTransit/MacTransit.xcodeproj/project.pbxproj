@@ -308,7 +308,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = adam;
 				TargetAttributes = {
 					660F233A1DADF22900832EC6 = {
@@ -873,7 +873,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"SPARKLE\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MacTransit;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -896,7 +896,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MacTransit;
 				SWIFT_VERSION = 3.0;
 			};
 			name = "Debug AppStore";
@@ -920,7 +920,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"SPARKLE\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MacTransit;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -943,7 +943,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MacTransit;
 				SWIFT_VERSION = 3.0;
 			};
 			name = "Release AppStore";
