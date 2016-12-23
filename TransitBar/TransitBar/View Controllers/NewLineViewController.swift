@@ -1,6 +1,6 @@
 //
 //  NewLineViewController.swift
-//  MacTransit
+//  TransitBar
 //
 //  Created by Adam Boyd on 2016-11-19.
 //  Copyright © 2016 adam. All rights reserved.

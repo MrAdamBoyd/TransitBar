@@ -1,6 +1,6 @@
 //
-//  MacTransitTests.swift
-//  MacTransitTests
+//  TransitBarTests.swift
+//  TransitBarTests
 //
 //  Created by Adam Boyd on 2016-10-11.
 //  Copyright © 2016 adam. All rights reserved.

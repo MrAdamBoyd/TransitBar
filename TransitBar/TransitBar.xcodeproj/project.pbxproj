@@ -125,10 +125,10 @@
 			children = (
 				660F233D1DADF22900832EC6 /* TransitBar */,
 				6B953C806CA79452AE1D44D5 /* Frameworks */,
-				660F23521DADF22900832EC6 /* MacTransitTests */,
-				660F235D1DADF22900832EC6 /* MacTransitUITests */,
 				D55360D75DC09E02508D9406 /* Pods */,
 				660F233C1DADF22900832EC6 /* Products */,
+				660F23521DADF22900832EC6 /* TransitBarTests */,
+				660F235D1DADF22900832EC6 /* TransitBarUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,31 +151,31 @@
 				66A6072C1DF675D4003C9DD6 /* Constants.swift */,
 				66A6072E1DF67640003C9DD6 /* DataController.swift */,
 				663636C91DE161710067A79B /* TransitEntry.swift */,
+				660F23451DADF22900832EC6 /* Assets.xcassets */,
 				663636C51DE12A190067A79B /* Main.storyboard */,
-				663F9E2C1E00EA7B009116D9 /* TransitBar.entitlements */,
 				66C923E81E00C8EF00FE067E /* TransitBar-AppStore-Info.plist */,
 				660F234A1DADF22900832EC6 /* TransitBar-Info.plist */,
-				660F23451DADF22900832EC6 /* Assets.xcassets */,
+				663F9E2C1E00EA7B009116D9 /* TransitBar.entitlements */,
 			);
 			path = TransitBar;
 			sourceTree = "<group>";
 		};
-		660F23521DADF22900832EC6 /* MacTransitTests */ = {
+		660F23521DADF22900832EC6 /* TransitBarTests */ = {
 			isa = PBXGroup;
 			children = (
 				660F23551DADF22900832EC6 /* Info.plist */,
 				660F23531DADF22900832EC6 /* MacTransitTests.swift */,
 			);
-			path = MacTransitTests;
+			path = TransitBarTests;
 			sourceTree = "<group>";
 		};
-		660F235D1DADF22900832EC6 /* MacTransitUITests */ = {
+		660F235D1DADF22900832EC6 /* TransitBarUITests */ = {
 			isa = PBXGroup;
 			children = (
 				660F23601DADF22900832EC6 /* Info.plist */,
 				660F235E1DADF22900832EC6 /* MacTransitUITests.swift */,
 			);
-			path = MacTransitUITests;
+			path = TransitBarUITests;
 			sourceTree = "<group>";
 		};
 		66AA34DC1DF7AF84002C13FD /* View Controllers */ = {
@@ -799,7 +799,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
-				INFOPLIST_FILE = MacTransitTests/Info.plist;
+				INFOPLIST_FILE = TransitBarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -815,7 +815,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
-				INFOPLIST_FILE = MacTransitTests/Info.plist;
+				INFOPLIST_FILE = TransitBarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -830,7 +830,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
-				INFOPLIST_FILE = MacTransitUITests/Info.plist;
+				INFOPLIST_FILE = TransitBarUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -845,7 +845,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
-				INFOPLIST_FILE = MacTransitUITests/Info.plist;
+				INFOPLIST_FILE = TransitBarUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1028,7 +1028,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
-				INFOPLIST_FILE = MacTransitTests/Info.plist;
+				INFOPLIST_FILE = TransitBarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1043,7 +1043,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
-				INFOPLIST_FILE = MacTransitUITests/Info.plist;
+				INFOPLIST_FILE = TransitBarUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1124,7 +1124,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
-				INFOPLIST_FILE = MacTransitTests/Info.plist;
+				INFOPLIST_FILE = TransitBarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1139,7 +1139,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
-				INFOPLIST_FILE = MacTransitUITests/Info.plist;
+				INFOPLIST_FILE = TransitBarUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
