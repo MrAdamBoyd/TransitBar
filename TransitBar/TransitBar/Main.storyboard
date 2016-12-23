@@ -29,7 +29,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide MacTransit" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide TransitBar" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -640,7 +640,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="MacTransit Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="TransitBar Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -1035,10 +1035,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="319"/>
                                 <clipView key="contentView" id="bIu-pw-pCL">
                                     <rect key="frame" x="1" y="0.0" width="478" height="318"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" autosaveColumns="NO" headerView="faB-K1-ac6" id="ew1-Ib-gCC">
-                                            <rect key="frame" x="0.0" y="0.0" width="481.5" height="295"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="482" height="295"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1113,7 +1113,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="faB-K1-ac6">
-                                    <rect key="frame" x="0.0" y="0.0" width="481.5" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="482" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MacTransit.xcodeproj">
+      location = "group:/Users/adam/Library/Mobile Documents/com~apple~CloudDocs/Other/Important/Developer/TransitTraffic/TransitBar/TransitBar/TransitBar.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

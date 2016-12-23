@@ -2,12 +2,12 @@
 # platform :ios, '9.0'
 use_frameworks!
 
-target 'MacTransit' do
+target 'TransitBar' do
   pod 'Sparkle'
   pod 'SwiftBus', :path => './SwiftBus'
 end
 
-target 'MacTransit AppStore' do
+target 'TransitBar AppStore' do
   pod 'SwiftBus', :path => './SwiftBus'
 end
 
