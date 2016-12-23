@@ -1,0 +1,8 @@
+title: Muni Menu Bar
+description: See when your next bus is coming, right in your menu bar.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions

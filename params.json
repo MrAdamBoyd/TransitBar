@@ -1,7 +1,0 @@
-{
-  "name": "Muni Menu Bar",
-  "tagline": "See when your next bus is coming, right in your menu bar.",
-  "body": "#Muni Menu Bar\r\nThis is the repository for my small tool that I use every day, MacTransit. It just lives in the menu bar of your computer and tells you when the next bus or train is coming.\r\n\r\nApp Store link incoming!\r\n\r\n![MacTransit](https://raw.githubusercontent.com/MrAdamBoyd/MacTransit/master/Images/Example.png)\r\n\r\n#Contact\r\nYour best bet to contact me is on Twitter. @MrAdamBoyd",
-  "google": "",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
