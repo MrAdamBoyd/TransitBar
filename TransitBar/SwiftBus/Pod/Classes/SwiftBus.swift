@@ -192,7 +192,7 @@ open class SwiftBus {
                 if let transitRoute = route as TransitRoute! {
                     
                     //Applying agencyTag to all TransitStop subelements
-                    for routeDirection in transitRoute.stopsOnRoute.values {
+                    for routeDirection in transitRoute.stops.values {
                         for stop in routeDirection {
                             stop.agencyTag = agencyTag
                         }
@@ -236,7 +236,7 @@ open class SwiftBus {
      */
     open func configurations(forMultipleRouteTags routeTags: [String], withAgencyTag agencyTag: String, completion: ((_ routes: [String: TransitRoute]) -> Void)?) {
         var agencies: [String] = []
-        for route in routeTags {
+        for _ in routeTags {
             agencies.append(agencyTag)
         }
         
@@ -381,6 +381,56 @@ open class SwiftBus {
             }
             
         }
+    }
+    
+    
+    /// Gets predictions for an array of stops. MUST BE IN THE SAME AGENCY
+    ///
+    /// - Parameter stops: stops to get predictions for
+    open func stopPredictions(forStops stops: [TransitStop], completion: ((_ stops: [TransitStop]) -> Void)?) {
+        let stopTags = stops.map({ $0.stopTag })
+        let routeTags = stops.map({ $0.routeTag })
+        let agencyTag = stops[0].agencyTag
+        
+        self.stopPredictions(forStopTags: stopTags, routeTags: routeTags, inAgency: agencyTag, completion: completion)
+    }
+    
+    
+    /// Gets predictions for multiple stops with multiple routes. MUST BE IN THE SAME AGENCY
+    ///
+    /// - Parameters:
+    ///   - stopTags: array of stops
+    ///   - routeTags: corresponding array of routes
+    ///   - agencyTag: agency where all routes/stops are
+    open func stopPredictions(forStopTags stopTags: [String], routeTags: [String], inAgency agencyTag: String, completion: ((_ stops: [TransitStop]) -> Void)?) {
+        
+        guard stopTags.count == routeTags.count && stopTags.count != 0 else {
+            completion?([])
+            return
+        }
+        
+        self.configurations(forMultipleRouteTags: routeTags, withAgencyTag: agencyTag) { routes in
+                
+            let connectionHandler = SwiftBusConnectionHandler()
+            connectionHandler.requestMultipleStopPredictionData(stopTags, forRoutes: routeTags, withAgency: agencyTag) { predictions in
+                
+                var finalRoutes: [TransitStop] = []
+                
+                for (index, route) in Array(routes.values).enumerated() {
+                    
+                    //If the stop exists, add the predictions and add it to the array which will be passed back to user
+                    if let stop = route.stop(forTag: stopTags[index]) {
+                        stop.predictions = predictions[route.routeTag] ?? [:]
+                        finalRoutes.append(stop)
+                    }
+                
+                }
+                
+                completion?(finalRoutes)
+                
+            }
+        }
+        
     }
     
     open func stopPredictions(forStop stop: TransitStop?, completion: ((_ stop: TransitStop?) -> Void)?) {

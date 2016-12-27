@@ -116,7 +116,7 @@ class NewLineViewController: NSViewController {
             
             self.selectedRoute = route
             //The keys to this array are all possible directions
-            self.directionPopUpButton.addItems(withTitles: Array(route.stopsOnRoute.keys))
+            self.directionPopUpButton.addItems(withTitles: Array(route.stops.keys))
         }
     }
     
@@ -129,7 +129,7 @@ class NewLineViewController: NSViewController {
         //Don't do anything if the placeholder item is selected
         guard self.directionPopUpButton.indexOfSelectedItem != 0 else { return }
         
-        if let title = self.directionPopUpButton.selectedItem?.title, let stops = self.selectedRoute?.stopsOnRoute[title] {
+        if let title = self.directionPopUpButton.selectedItem?.title, let stops = self.selectedRoute?.stops[title] {
             
             //Placeholder
             self.stopPopUpButton.addItem(withTitle: "--")

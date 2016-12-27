@@ -29,11 +29,15 @@ open class TransitRoute: NSObject, NSCoding {
     open var routeTag:String = ""
     open var routeTitle:String = ""
     open var agencyTag:String = ""
-    open var stopsOnRoute:[String : [TransitStop]] = [:] //[directionTag: [stop]]
-    open var directionTagToName:[String : String] = [:] //[directionTag: directionName]
-    open var directionNameToTag: [String: String] = [:] //[directionName: directionTag]
+    open var stops: [String: [TransitStop]] = [:]
+    open var directionTagToName: [String : String] = [:] //[directionTag : directionName]
     open var routeColor:String = ""
     open var oppositeColor:String = ""
+    
+    @available(*, deprecated: 1.4, obsoleted: 2.0, message: "Use variable `stops` instead")
+    open var stopsOnRoute: [String : [TransitStop]] {
+        return self.stops
+    }
     
     #if os(OSX)
     public var representedRouteColor = NSColor()
@@ -97,7 +101,7 @@ open class TransitRoute: NSObject, NSCoding {
     */
     open func vehicleLocations(_ completion: ((_ vehicles: [TransitVehicle]?) -> Void)?) {
         self.configuration() { route in
-            if let route = route {
+            if let _ = route {
                 let connectionHandler = SwiftBusConnectionHandler()
                 connectionHandler.requestVehicleLocationData(onRoute: self.routeTag, withAgency: self.agencyTag) { (locations:[String : [TransitVehicle]]) in
                         
@@ -142,7 +146,7 @@ open class TransitRoute: NSObject, NSCoding {
         }
         
         self.configuration() { route in
-            if let route = route {
+            if let _ = route {
                 //Everything should be fine
                 if let stop = self.stop(forTag: stopTag) {
                     
@@ -176,9 +180,9 @@ open class TransitRoute: NSObject, NSCoding {
     - returns: Optional TransitStop object for the tag provided
     */
     open func stop(forTag stopTag:String) -> TransitStop? {
-        for direction in stopsOnRoute.keys {
+        for direction in stops.keys {
             //For each direction
-            for directionStop in stopsOnRoute[direction]! {
+            for directionStop in stops[direction]! {
                 //For each stop in each direction
                 if directionStop.stopTag == stopTag {
                     //If the stop matches, set the value to true
@@ -215,7 +219,7 @@ open class TransitRoute: NSObject, NSCoding {
     //Used to update all the data after getting the route information
     fileprivate func updateData(_ newRoute:TransitRoute) {
         self.routeTitle = newRoute.routeTitle
-        self.stopsOnRoute = newRoute.stopsOnRoute
+        self.stops = newRoute.stops
         self.directionTagToName = newRoute.directionTagToName
         self.routeColor = newRoute.routeColor
         self.oppositeColor = newRoute.oppositeColor
@@ -234,7 +238,7 @@ open class TransitRoute: NSObject, NSCoding {
         self.routeTag = aDecoder.decodeObject(forKey: routeTagEncoderString) as! String
         self.routeTitle = aDecoder.decodeObject(forKey: routeTitleEncoderString) as! String
         self.agencyTag = aDecoder.decodeObject(forKey: agencyTagEncoderString) as! String
-        self.stopsOnRoute = aDecoder.decodeObject(forKey: stopsOnRouteEncoderString) as! [String : [TransitStop]]
+        self.stops = aDecoder.decodeObject(forKey: stopsOnRouteEncoderString) as! [String : [TransitStop]]
         self.directionTagToName = aDecoder.decodeObject(forKey: directionTagToNameEncoderString) as! [String : String]
         self.routeColor = aDecoder.decodeObject(forKey: routeColorEncoderString) as! String
         self.oppositeColor = aDecoder.decodeObject(forKey: oppositeColorEncoderString) as! String
@@ -256,7 +260,7 @@ open class TransitRoute: NSObject, NSCoding {
         aCoder.encode(self.routeTag, forKey: routeTagEncoderString)
         aCoder.encode(self.routeTitle, forKey: routeTitleEncoderString)
         aCoder.encode(self.agencyTag, forKey: agencyTagEncoderString)
-        aCoder.encode(self.stopsOnRoute, forKey: stopsOnRouteEncoderString)
+        aCoder.encode(self.stops, forKey: stopsOnRouteEncoderString)
         aCoder.encode(self.directionTagToName, forKey: directionTagToNameEncoderString)
         aCoder.encode(self.routeColor, forKey: routeColorEncoderString)
         aCoder.encode(self.oppositeColor, forKey: oppositeColorEncoderString)

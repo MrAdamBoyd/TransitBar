@@ -16,7 +16,3 @@ build/
 *.mode2v3
 .idea/
 *.xccheckout
-
-# cocoapods #
-#########
-Pods/
