@@ -44,6 +44,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         self.minuteTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.loadData), userInfo: nil, repeats: true)
         
+        //Loads data when computer wakes from sleep
+        NotificationCenter.default.addObserver(self, selector: #selector(self.loadData), name: Notification.Name.NSWorkspaceDidWake, object: nil)
+        
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -22,16 +22,16 @@ private let messagesEncoderString = "kMessagesEncoder"
 //A transit stop is a single stop which is tied to a single route
 open class TransitStop:NSObject, NSCoding {
     
-    open var routeTitle:String = ""
-    open var routeTag:String = ""
-    open var stopTitle:String = ""
-    open var stopTag:String = ""
-    open var agencyTag:String = ""
-    open var direction:String = ""
-    open var lat:Double = 0
-    open var lon:Double = 0
-    open var predictions:[String : [TransitPrediction]] = [:] //[direction : [prediction]]
-    open var messages:[String] = []
+    open var routeTitle: String = ""
+    open var routeTag: String = ""
+    open var stopTitle: String = ""
+    open var stopTag: String = ""
+    open var agencyTag: String = ""
+    open var direction: String = ""
+    open var lat: Double = 0
+    open var lon: Double = 0
+    open var predictions: [String: [TransitPrediction]] = [:] //[direction : [prediction]]
+    open var messages: [String] = []
     
     /**
      Returns a list of all the predictions from the different directions in order
@@ -96,16 +96,22 @@ open class TransitStop:NSObject, NSCoding {
     //MARK: NSCoding
     
     public required init?(coder aDecoder: NSCoder) {
-        self.routeTitle = aDecoder.decodeObject(forKey: routeTitleEncoderString) as! String
-        self.routeTag = aDecoder.decodeObject(forKey: routeTagEncoderString) as! String
-        self.stopTitle = aDecoder.decodeObject(forKey: stopTitleEncoderString) as! String
-        self.stopTag = aDecoder.decodeObject(forKey: stopTagEncoderString) as! String
-        self.agencyTag = aDecoder.decodeObject(forKey: agencyTagEncoderString) as! String
-        self.direction = aDecoder.decodeObject(forKey: directionEncoderString) as! String
+        guard let routeTitle = aDecoder.decodeObject(forKey: routeTitleEncoderString) as? String,
+            let routeTag = aDecoder.decodeObject(forKey: routeTagEncoderString) as? String,
+            let stopTitle = aDecoder.decodeObject(forKey: stopTitleEncoderString) as? String,
+            let stopTag = aDecoder.decodeObject(forKey: stopTagEncoderString) as? String else {
+            return
+        }
+        self.routeTitle = routeTitle
+        self.routeTag = routeTag
+        self.stopTitle = stopTitle
+        self.stopTag = stopTag
+        self.agencyTag = aDecoder.decodeObject(forKey: agencyTagEncoderString) as? String ?? ""
+        self.direction = aDecoder.decodeObject(forKey: directionEncoderString) as? String ?? ""
         self.lat = aDecoder.decodeDouble(forKey: latEncoderString)
         self.lon = aDecoder.decodeDouble(forKey: lonEncoderString)
-//        self.predictions = aDecoder.decodeObject(forKey: predictionsEncoderString) as! [String : [TransitPrediction]]
-//        self.messages = aDecoder.decodeObject(forKey: messagesEncoderString) as! [String]
+        self.predictions = aDecoder.decodeObject(forKey: predictionsEncoderString) as? [String: [TransitPrediction]] ?? [:]
+        self.messages = aDecoder.decodeObject(forKey: messagesEncoderString) as? [String] ?? []
     }
     
     open func encode(with aCoder: NSCoder) {
@@ -117,7 +123,7 @@ open class TransitStop:NSObject, NSCoding {
         aCoder.encode(self.direction, forKey: directionEncoderString)
         aCoder.encode(self.lat, forKey: latEncoderString)
         aCoder.encode(self.lon, forKey: lonEncoderString)
-//        aCoder.encode(self.predictions, forKey: predictionsEncoderString)
-//        aCoder.encode(self.messages, forKey: messagesEncoderString)
+        aCoder.encode(self.predictions, forKey: predictionsEncoderString)
+        aCoder.encode(self.messages, forKey: messagesEncoderString)
     }
 }

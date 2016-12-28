@@ -19,14 +19,14 @@ private let speedKmHEncoderString = "kSpeedKmHEncoder"
 
 open class TransitVehicle:NSObject, NSCoding {
     
-    open var vehicleId:Int = 0
-    open var directionTag:String = ""
-    open var lat:Double = 0
-    open var lon:Double = 0
-    open var secondsSinceReport:Int = 0
-    open var leadingVehicleId:Int = 0
-    open var heading:Int = 0
-    open var speedKmH:Int = 0
+    open var vehicleId: Int = 0
+    open var directionTag: String = ""
+    open var lat: Double = 0
+    open var lon: Double = 0
+    open var secondsSinceReport: Int = 0
+    open var leadingVehicleId: Int = 0
+    open var heading: Int = 0
+    open var speedKmH: Int = 0
     
     //Basic init
     public override init() { super.init() }
@@ -56,14 +56,14 @@ open class TransitVehicle:NSObject, NSCoding {
     //MARK : NSCoding
     
     public required init(coder aDecoder: NSCoder) {
-        vehicleId = aDecoder.decodeObject(forKey: vehicleIdEncoderString) as! Int
-        directionTag = aDecoder.decodeObject(forKey: directionTagEncoderString) as! String
-        lat = aDecoder.decodeDouble(forKey: latEncoderString)
-        lon = aDecoder.decodeDouble(forKey: lonEncoderString)
-        secondsSinceReport = aDecoder.decodeObject(forKey: secondsSinceReportEncoderString) as! Int
-        leadingVehicleId = aDecoder.decodeObject(forKey: leadingVehicleIdEncoderString) as! Int
-        heading = aDecoder.decodeObject(forKey: headingEncoderString) as! Int
-        speedKmH = aDecoder.decodeObject(forKey: speedKmHEncoderString) as! Int
+        self.vehicleId = aDecoder.decodeInteger(forKey: vehicleIdEncoderString)
+        self.directionTag = aDecoder.decodeObject(forKey: directionTagEncoderString) as? String ?? ""
+        self.lat = aDecoder.decodeDouble(forKey: latEncoderString)
+        self.lon = aDecoder.decodeDouble(forKey: lonEncoderString)
+        self.secondsSinceReport = aDecoder.decodeInteger(forKey: secondsSinceReportEncoderString)
+        self.leadingVehicleId = aDecoder.decodeInteger(forKey: leadingVehicleIdEncoderString)
+        self.heading = aDecoder.decodeInteger(forKey: headingEncoderString)
+        self.speedKmH = aDecoder.decodeInteger(forKey: speedKmHEncoderString)
     }
     
     open func encode(with aCoder: NSCoder) {

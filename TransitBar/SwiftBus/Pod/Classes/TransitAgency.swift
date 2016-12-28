@@ -16,11 +16,11 @@ private let agencyRoutesEncoderString = "kAgencyRoutesEncoder"
 
 open class TransitAgency: NSObject, NSCoding {
     
-    open var agencyTag:String = ""
-    open var agencyTitle:String = ""
-    open var agencyShortTitle:String = ""
-    open var agencyRegion:String = ""
-    open var agencyRoutes:[String : TransitRoute] = [:]
+    open var agencyTag: String = ""
+    open var agencyTitle: String = ""
+    open var agencyShortTitle: String = ""
+    open var agencyRegion: String = ""
+    open var agencyRoutes: [String : TransitRoute] = [:] //[routeTag: Route]
     
     //Convenvience
     public override init() { }
@@ -73,11 +73,16 @@ open class TransitAgency: NSObject, NSCoding {
     //MARK : NSCoding
     
     required public init(coder aDecoder: NSCoder) {
-        self.agencyTag = aDecoder.decodeObject(forKey: agencyTagEncoderString) as! String
-        self.agencyTitle = aDecoder.decodeObject(forKey: agencyTitleEncoderString) as! String
-        self.agencyShortTitle = aDecoder.decodeObject(forKey: agencyShortTitleEncoderString) as! String
-        self.agencyRegion = aDecoder.decodeObject(forKey: agencyRegionEncoderString) as! String
-        self.agencyRoutes = aDecoder.decodeObject(forKey: agencyRoutesEncoderString) as! [String : TransitRoute]
+        guard let tag = aDecoder.decodeObject(forKey: agencyTagEncoderString) as? String,
+            let title = aDecoder.decodeObject(forKey: agencyTitleEncoderString) as? String else {
+            //Make sure at least the tag and title exist
+            return
+        }
+        self.agencyTag = tag
+        self.agencyTitle = title
+        self.agencyShortTitle = aDecoder.decodeObject(forKey: agencyShortTitleEncoderString) as? String ?? ""
+        self.agencyRegion = aDecoder.decodeObject(forKey: agencyRegionEncoderString) as? String ?? ""
+        self.agencyRoutes = aDecoder.decodeObject(forKey: agencyRoutesEncoderString) as? [String : TransitRoute] ?? [:]
     }
     
     open func encode(with aCoder: NSCoder) {
