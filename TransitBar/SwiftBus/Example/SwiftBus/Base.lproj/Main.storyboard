@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,65 +18,72 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tw-mb-dl0">
-                                <rect key="frame" x="260" y="28" width="80" height="30"/>
+                                <rect key="frame" x="147.5" y="28" width="80" height="30"/>
                                 <state key="normal" title="Agency List">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="agencyListTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2aW-Bf-Hv4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZM-Sx-v6Z">
-                                <rect key="frame" x="237" y="66" width="126" height="30"/>
+                                <rect key="frame" x="124.5" y="66" width="126" height="30"/>
                                 <state key="normal" title="Routes for Agency">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="routesForAgencyTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="60d-CX-qsy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4m4-wx-oqH">
-                                <rect key="frame" x="240" y="142" width="120" height="30"/>
+                                <rect key="frame" x="127.5" y="142" width="120" height="30"/>
                                 <state key="normal" title="Vehicle Locations">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="vehicleLocationsTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ka8-Sb-RQc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3w6-02-wVH">
-                                <rect key="frame" x="235" y="180" width="130" height="30"/>
+                                <rect key="frame" x="122.5" y="180" width="130" height="30"/>
                                 <state key="normal" title="Station Predictions">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="stationPredictionsTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="b1c-u5-hdU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wo3-3M-nL9">
-                                <rect key="frame" x="231" y="104" width="138" height="30"/>
+                                <rect key="frame" x="118.5" y="104" width="138" height="30"/>
                                 <state key="normal" title="Route Configuration">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="routeConfigurationTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jJu-LZ-5ZH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WV-Oz-yDG">
-                                <rect key="frame" x="243" y="218" width="114" height="30"/>
+                                <rect key="frame" x="130.5" y="218" width="114" height="30"/>
                                 <state key="normal" title="Stop Predictions">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="stopPredictionsTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hdv-5I-dMb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwJ-vo-ada">
+                                <rect key="frame" x="112" y="256" width="151" height="30"/>
+                                <state key="normal" title="Multi Stop Predictions"/>
+                                <connections>
+                                    <action selector="multiPredictionsTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NcF-1D-UOe"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="5tw-mb-dl0" secondAttribute="centerX" id="0YZ-cf-32i"/>
                             <constraint firstItem="5tw-mb-dl0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="28" id="3oZ-pl-ngJ"/>
@@ -82,7 +93,9 @@
                             <constraint firstItem="6WV-Oz-yDG" firstAttribute="top" secondItem="3w6-02-wVH" secondAttribute="bottom" constant="8" id="Z8v-kc-1FU"/>
                             <constraint firstAttribute="centerX" secondItem="hZM-Sx-v6Z" secondAttribute="centerX" id="c9t-u9-cOv"/>
                             <constraint firstAttribute="centerX" secondItem="wo3-3M-nL9" secondAttribute="centerX" id="fyK-e9-Phy"/>
+                            <constraint firstItem="MwJ-vo-ada" firstAttribute="centerX" secondItem="6WV-Oz-yDG" secondAttribute="centerX" id="gTL-Xm-67Y"/>
                             <constraint firstAttribute="centerX" secondItem="3w6-02-wVH" secondAttribute="centerX" id="hVu-0f-Q33"/>
+                            <constraint firstItem="MwJ-vo-ada" firstAttribute="top" secondItem="6WV-Oz-yDG" secondAttribute="bottom" constant="8" id="kwA-ZQ-7dW"/>
                             <constraint firstItem="3w6-02-wVH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="180" id="oLB-uX-cNK"/>
                             <constraint firstItem="wo3-3M-nL9" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="104" id="ojg-PK-C6C"/>
                             <constraint firstItem="4m4-wx-oqH" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="142" id="uAK-OL-HCP"/>

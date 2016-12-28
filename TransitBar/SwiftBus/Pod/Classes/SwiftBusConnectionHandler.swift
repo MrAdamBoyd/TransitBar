@@ -83,6 +83,22 @@ class SwiftBusConnectionHandler: NSObject, NSURLConnectionDataDelegate {
         startConnection(stopPredictionsURL + agencyTag + routeURLSegment + routeTag + stopURLSegment + stopTag)
     }
     
+    func requestMultipleStopPredictionData(_ stopTags: [String], forRoutes routeTags: [String], withAgency agencyTag: String, completion: @escaping (_ predictions: [String : [String : [TransitPrediction]]]) -> Void) {
+        currentRequestType = .stationPredictions
+        
+        stationPredictionsCompletion = completion
+        
+        let smallestArrayCount = min(stopTags.count, routeTags.count)
+        
+        //Building the multi stop url
+        var multiplePredictionString = multiplePredictionsURL + agencyTag
+        for index in 0..<smallestArrayCount {
+            multiplePredictionString.append("&stops=\(routeTags[index])|\(stopTags[index])")
+        }
+        
+        startConnection(multiplePredictionString)
+    }
+    
     /**
     This is the method that all other request methods call in order to create the URL & start downloading data via an NSURLConnection
     

@@ -33,7 +33,7 @@ class SwiftBusTests: XCTestCase {
         stopOB.predictions["Outbound to Ocean Beach"] = [TransitPrediction(predictionInMinutes: 1), TransitPrediction(predictionInMinutes: 2), TransitPrediction(predictionInMinutes: 3)]
         stopOB.predictions["Outbound to Ocean Beach via Downtown"] = [TransitPrediction(predictionInMinutes: 4), TransitPrediction(predictionInMinutes: 5), TransitPrediction(predictionInMinutes: 6)]
         
-        route.stopsOnRoute["Outbound to Ocean Beach Via Downtown"] = [stopOB]
+        route.stops["Outbound to Ocean Beach Via Downtown"] = [stopOB]
         
     }
     
@@ -51,7 +51,7 @@ class SwiftBusTests: XCTestCase {
     }
     
     func testPredictionsInOrder() {
-        if stopOB.combinedPredictions()[0].predictionInSeconds < stopOB.combinedPredictions()[1].predictionInSeconds {
+        if stopOB.allPredictions[0].predictionInSeconds < stopOB.allPredictions[1].predictionInSeconds {
             XCTAssert(true, "Sorted predictions are in order")
         } else {
             XCTAssert(false, "Sorted predictions are not in order")

@@ -15,10 +15,10 @@ private let vehicleTagEncoderString = "kVehicleTagEncoder"
 
 open class TransitPrediction: NSObject, NSCoding {
     
-    open var numberOfVehicles:Int = 0
-    open var predictionInMinutes:Int = 0
-    open var predictionInSeconds:Int = 0
-    open var vehicleTag:Int = 0
+    open var numberOfVehicles: Int = 0
+    open var predictionInMinutes: Int = 0
+    open var predictionInSeconds: Int = 0
+    open var vehicleTag: Int = 0
     
     //Basic init
     public override init() { super.init() }
@@ -38,10 +38,10 @@ open class TransitPrediction: NSObject, NSCoding {
     
     //MARK : NSCoding
     public required init(coder aDecoder: NSCoder) {
-        self.numberOfVehicles = aDecoder.decodeObject(forKey: numberOfVehiclesEncoderString) as! Int
-        self.predictionInMinutes = aDecoder.decodeObject(forKey: predictionInMinutesEncoderString) as! Int
-        self.predictionInSeconds = aDecoder.decodeObject(forKey: predictionInSecondsEncoderString) as! Int
-        self.vehicleTag = aDecoder.decodeObject(forKey: vehicleTagEncoderString) as! Int
+        self.numberOfVehicles = aDecoder.decodeInteger(forKey: numberOfVehiclesEncoderString)
+        self.predictionInMinutes = aDecoder.decodeInteger(forKey: predictionInMinutesEncoderString)
+        self.predictionInSeconds = aDecoder.decodeInteger(forKey: predictionInSecondsEncoderString)
+        self.vehicleTag = aDecoder.decodeInteger(forKey: vehicleTagEncoderString)
     }
     
     open func encode(with aCoder: NSCoder) {

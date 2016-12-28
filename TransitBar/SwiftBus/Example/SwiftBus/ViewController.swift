@@ -13,12 +13,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
     }
     
     @IBAction func agencyListTouched(_ sender: AnyObject) {
-        SwiftBus.shared.transitAgencies({(agencies:[String : TransitAgency]) -> Void in
+        SwiftBus.shared.transitAgencies() { (agencies: [String: TransitAgency]) -> Void in
             let agenciesString = "Number of agencies loaded: \(agencies.count)"
             let agencyNamesString = agencies.map({_, agency in "\(agency.agencyTitle)"})
             
@@ -27,7 +25,7 @@ class ViewController: UIViewController {
             print(agencyNamesString)
             
             self.showAlertControllerWithTitle(agenciesString, message: "\(agencyNamesString)")
-        })
+        }
     }
 
     
@@ -58,7 +56,7 @@ class ViewController: UIViewController {
             
             let routeCongigMessage = "Route config for route \(route.routeTitle)"
             
-            let stops = Array(route.stopsOnRoute.values)
+            let stops = Array(route.stops.values)
             let numberOfStopsMessage = "Number of stops on route in one direction: \(stops[0].count)"
 
             print("\n-----")
@@ -95,7 +93,7 @@ class ViewController: UIViewController {
         SwiftBus.shared.stationPredictions(forStopTag: "5726", forRoutes: ["KT", "L", "M"], withAgencyTag: "sf-muni") { station in
             if let transitStation = station as TransitStation! {
                 let lineTitles = "Prediction for lines: \(transitStation.routesAtStation.map({"\($0.routeTitle)"}))"
-                let predictionStrings = "Predictions at stop \(transitStation.combinedPredictions().map({$0.predictionInMinutes}))"
+                let predictionStrings = "Predictions at stop \(transitStation.allPredictions.map({$0.predictionInMinutes}))"
                 
                 print("\n-----")
                 print("Station: \(transitStation.stopTitle)")
@@ -116,7 +114,7 @@ class ViewController: UIViewController {
             
             //If the stop and route exists
             if let transitStop = route as TransitStop! {
-                let predictionStrings:[Int] = transitStop.combinedPredictions().map({$0.predictionInMinutes})
+                let predictionStrings:[Int] = transitStop.allPredictions.map({$0.predictionInMinutes})
                 
                 print("\n-----")
                 print("Stop: \(transitStop.stopTitle)")
@@ -127,6 +125,20 @@ class ViewController: UIViewController {
             
         }
         
+    }
+    
+    @IBAction func multiPredictionsTouched(_ sender: Any) {
+        SwiftBus.shared.stopPredictions(forStopTags: ["7252", "6721"], routeTags: ["N", "31"], inAgency: "sf-muni") { stops in
+            var stopString = ""
+            for stop in stops {
+                stopString += "Stop \(stop.stopTitle) on route \(stop.routeTitle): \(stop.allPredictions.map({$0.predictionInMinutes}))\n"
+            }
+            
+            print("\n-----")
+            print("\(stopString)")
+            
+            self.showAlertControllerWithTitle("Multi Stop Predictions", message: "\(stopString)")
+        }
     }
     
     func showAlertControllerWithTitle(_ title: String, message: String) {
