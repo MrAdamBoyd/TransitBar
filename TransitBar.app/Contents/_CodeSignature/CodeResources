@@ -10,39 +10,43 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		zPMyd7HWQKzuiUTR7uJK2rlGNUg=
+		A/VboBmTQ5cie4YfNb7cDLooLj8=
 		</data>
 		<key>Resources/Main.storyboardc/Info.plist</key>
 		<data>
-		Icy8RiO1zEei1l+8xaHT+9+J0fY=
+		ZVgJ4/MD9t7v5Vo7x5/cxrdGUSM=
 		</data>
 		<key>Resources/Main.storyboardc/MainMenu.nib</key>
 		<data>
-		7SNtpGzy1iS7lul4MfWfxQOj3mY=
+		r0XHQ9NB9EefMLoNX/+nsOgEIAg=
 		</data>
 		<key>Resources/Main.storyboardc/RfJ-oZ-InH-view-eqC-dz-JVY.nib</key>
 		<data>
-		SXJntfEuX/d1xKdefCZYP6lsC9M=
+		jPnwxiZdn5G0qVcdxxLnGjZhip8=
 		</data>
 		<key>Resources/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<data>
-		BTYaurovtVc6v30BiWWt1yb3MJM=
+		9gpgIUDMA/Cbk1dz25GUgO4TABI=
 		</data>
 		<key>Resources/Main.storyboardc/aboutWindow.nib</key>
 		<data>
-		mtTZ4V1vTxpHAd65RpMG06Na8Tw=
+		VwhmBjrwXZaH4BD2H48luGMSuaA=
 		</data>
 		<key>Resources/Main.storyboardc/mainWindow.nib</key>
 		<data>
-		aHE7WmvnxNtzhDy7NP1NVumthNM=
+		pIN7U9aUzGj3+n4sH+PCzQux2K8=
 		</data>
 		<key>Resources/Main.storyboardc/nAH-hN-dn3-view-AH5-Wu-q8F.nib</key>
 		<data>
-		HS/bgM4dNmI4PyFc1Dacnd2LueE=
+		8/46+0LSrCq7060CxetVAOZ0fTM=
 		</data>
 		<key>Resources/Main.storyboardc/newLine.nib</key>
 		<data>
-		ayWRBRu7HJboxEoAP9BmKyhUFO8=
+		bp0a38RA00T3yyE1SObZVWfo+N0=
+		</data>
+		<key>Resources/archived-expanded-entitlements.xcent</key>
+		<data>
+		ZOZs95h356WYzHWKSVPCwWcVBrQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -51,7 +55,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			shLnMM/nptMTX8kAiNqoBTjGCW0=
+			pH282eBwsV2S001vbFGdF3NMKNQ=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.cocoapods.SWXMLHash" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -60,7 +64,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			C8Bthxz0dZ+EVXF3JeSuRPF/3XA=
+			qhtjBEehl3dZOxuxh7RwPt8108s=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.sparkle-project.Sparkle" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -69,7 +73,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			Pdu/WJMxXwRHXYBOBr+KgiFIB4k=
+			fwQNRMKLrnID9fuIu7FsgwHYv3c=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.cocoapods.SwiftBus" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -78,7 +82,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			3uAKneTiy6ewLNof8LEGNgo2cnU=
+			Wh8VA/Uim8M3NCneQsS0y//sXR0=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.apple.dt.runtime.swiftAppKit" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -87,7 +91,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			knFaga7WhbJYao6x3aihGsEevBY=
+			oyWig5H+k4OmPawjmhhYqSPhLSI=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.apple.dt.runtime.swiftCore" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -96,7 +100,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			FZ2ahOD5+uwcV0FHaRi9A64iyLg=
+			Wusgn82GzcyhBkb4B2su9WSQjF8=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.apple.dt.runtime.swiftCoreData" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -105,7 +109,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			rqMKfY8aDTb9apQ9NjXDVN0/Aiw=
+			udtVjXnxU2DojAsbGok8NmKPY9k=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.apple.dt.runtime.swiftCoreGraphics" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -114,7 +118,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			dl+IckopISaMjTmqQlCcE547uSQ=
+			QPipTVvALyENiBSWY5VNcrhyp14=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.apple.dt.runtime.swiftCoreImage" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -123,7 +127,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			gXS2sDmNTaz7JRcZWO1R153X/WM=
+			oQGYPhMyPVxzY0XkabER9QyFCG8=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.apple.dt.runtime.swiftDarwin" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -132,7 +136,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			F5oRsudU3FKmA8UCEGarWMAleWo=
+			Qepg0eKSVEoXZ3H6A1APL4mTAU0=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.apple.dt.runtime.swiftDispatch" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -141,7 +145,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			d7ut7hQtobkHdjbWaGyGv5BO/uk=
+			7VSDQtV3MG2hlXA2InXDKQUZtIg=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.apple.dt.runtime.swiftFoundation" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -150,7 +154,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			Xe+XdV1XirYLMhTYBc1knydAyQ4=
+			ce+jZpF1LRocGGBpaTIYH0NhYqM=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.apple.dt.runtime.swiftIOKit" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -159,7 +163,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			uir/xugf/jqKaSZ/tWWbid4p4G4=
+			VMRfbOWrBoFb2ZiNZ2p22tmQM9c=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.apple.dt.runtime.swiftObjectiveC" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -168,7 +172,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			L7qtHzQ8b6K1WLBtdzFDntP2IyA=
+			h+S5tJF1bVyroIgSYHNWRnUGh9Y=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.apple.dt.runtime.swiftQuartzCore" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -177,7 +181,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			L+Luh143TEORk1qynq12YZ3cFqw=
+			ZsmyKsSayepeq2l/5dbZ2Lw2S1o=
 			</data>
 			<key>requirement</key>
 			<string>identifier "com.apple.dt.runtime.swiftXPC" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -197,99 +201,110 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zPMyd7HWQKzuiUTR7uJK2rlGNUg=
+			A/VboBmTQ5cie4YfNb7cDLooLj8=
 			</data>
 			<key>hash2</key>
 			<data>
-			CiVAw02EswvJhuQ58KPd7vojzO1O6Cv4OKXdQC6S+D4=
+			3Oy1Kh7i7xxNqjX4TaH0fraEeKzC4w+a9ND9qzHAJW8=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Icy8RiO1zEei1l+8xaHT+9+J0fY=
+			ZVgJ4/MD9t7v5Vo7x5/cxrdGUSM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Y1/wAd798oZ6RwF41oJmuVa/Evlu5qfJ2V1GExywz/4=
+			Ku6faUgYqn25LGud/uqjS4qrJ6z9Lmn3pJRv3Chxh5w=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/MainMenu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7SNtpGzy1iS7lul4MfWfxQOj3mY=
+			r0XHQ9NB9EefMLoNX/+nsOgEIAg=
 			</data>
 			<key>hash2</key>
 			<data>
-			reXy0SkD+wL0GzZHWo5qAlykNOcpWFy+zxaolXbdT30=
+			55sY7pn5mcZt6kiNtk1BUMdr8+KdsGt+TiasV/ZAUlY=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/RfJ-oZ-InH-view-eqC-dz-JVY.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SXJntfEuX/d1xKdefCZYP6lsC9M=
+			jPnwxiZdn5G0qVcdxxLnGjZhip8=
 			</data>
 			<key>hash2</key>
 			<data>
-			VZvsRN5Y6XTW5rhEz1ElLzn9xNkmI1PlHM0NRxb/3nE=
+			6Y70/BJjBOAz2xp5Ui5juIU4XvRbF32pf4Vby8uBXoQ=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BTYaurovtVc6v30BiWWt1yb3MJM=
+			9gpgIUDMA/Cbk1dz25GUgO4TABI=
 			</data>
 			<key>hash2</key>
 			<data>
-			cQIexmZiOAbslOonp10q5hodyWzBrk1oxO/enW9jU/k=
+			nGPEzoWZKDimlvVj8Qi1Q64+b5jJ8NYsaKpn+iWPuAk=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/aboutWindow.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mtTZ4V1vTxpHAd65RpMG06Na8Tw=
+			VwhmBjrwXZaH4BD2H48luGMSuaA=
 			</data>
 			<key>hash2</key>
 			<data>
-			k5sboHMVnmsNYYJceFJeg/CJJIb+mytg/FecAdaGljs=
+			Kn+++5Ggsh3pgTk2TDZ7Xu7A27lXiV4xtV2HynEpQGI=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/mainWindow.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aHE7WmvnxNtzhDy7NP1NVumthNM=
+			pIN7U9aUzGj3+n4sH+PCzQux2K8=
 			</data>
 			<key>hash2</key>
 			<data>
-			ft9CZ9/VuQ7XYvyNXL7JAw9gWwuzkCoNxN9gRoPK+vo=
+			CCe6SugOVdNW5+ci3SlXOLfkqfPkl4T2DbvmpoxHLCE=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/nAH-hN-dn3-view-AH5-Wu-q8F.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HS/bgM4dNmI4PyFc1Dacnd2LueE=
+			8/46+0LSrCq7060CxetVAOZ0fTM=
 			</data>
 			<key>hash2</key>
 			<data>
-			VFXtR0kjXJZTSIqA/XyiSjuq7E5pTkZsaWETQ9rlT6Y=
+			L1mEscPEljfG6UPwSm7ywWgCVLPEx5VCOHvXBaHSi1o=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/newLine.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ayWRBRu7HJboxEoAP9BmKyhUFO8=
+			bp0a38RA00T3yyE1SObZVWfo+N0=
 			</data>
 			<key>hash2</key>
 			<data>
-			fxmqXrs/Y06jGUIAmr9Iwtdk2oKpVWJhJlpMomXm2Ug=
+			Nft0HIKpzPXhE7oBHXBNii9QOOHqm+cAP95zb/YgLSc=
+			</data>
+		</dict>
+		<key>Resources/archived-expanded-entitlements.xcent</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZOZs95h356WYzHWKSVPCwWcVBrQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			yLk6PVacl9Plt0hRqw10WdT8UPXqism272gUMoimK0g=
 			</data>
 		</dict>
 		<key>embedded.provisionprofile</key>

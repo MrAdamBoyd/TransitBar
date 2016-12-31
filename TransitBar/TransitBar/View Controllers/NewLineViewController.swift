@@ -42,6 +42,11 @@ class NewLineViewController: NSViewController {
         self.directionPopUpButton.action = #selector(self.directionSelectedAction)
         self.stopPopUpButton.action = #selector(self.stopSelectedAction)
         
+        self.agencyPopUpButton.menu?.autoenablesItems = true
+        self.routePopUpButton.menu?.autoenablesItems = true
+        self.directionPopUpButton.menu?.autoenablesItems = true
+        self.stopPopUpButton.menu?.autoenablesItems = true
+        
         //Get the agencies when the window is opened
         SwiftBus.shared.transitAgencies() { agencies in
             var inOrderAgencies = Array(agencies.values)

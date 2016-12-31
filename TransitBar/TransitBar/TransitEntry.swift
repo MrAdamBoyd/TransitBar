@@ -31,7 +31,7 @@ class TransitEntry: NSObject, NSCoding {
             return true
         }
         
-        //If the tuple exists but is nil, should neve rbe shown
+        //If the tuple exists but is nil, should never be shown
         guard let earlier = times.0, let later = times.1 else {
             return false
         }
