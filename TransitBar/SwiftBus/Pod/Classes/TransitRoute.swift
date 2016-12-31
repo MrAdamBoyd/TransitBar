@@ -151,7 +151,7 @@ open class TransitRoute: NSObject, NSCoding {
                 if let stop = self.stop(forTag: stopTag) {
                     
                     let connectionHandler = SwiftBusConnectionHandler()
-                    connectionHandler.requestStopPredictionData(stopTag, onRoute: self.routeTag, withAgency: self.agencyTag, completion: {(predictions:[String : [TransitPrediction]], messages:[String]) -> Void in
+                    connectionHandler.requestStopPredictionData(stopTag, onRoute: self.routeTag, withAgency: self.agencyTag, completion: {(predictions:[String : [TransitPrediction]], messages:[TransitMessage]) -> Void in
                         
                         //Saving the messages and predictions
                         stop.predictions = predictions

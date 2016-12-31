@@ -211,55 +211,55 @@ class SwiftBusDataParser: NSObject {
     - parameter xml:    XML gotten from NextBus's API
     - parameter completion:code that gets called when fetch of information is complete
     */
-    func parseStopPredictions(_ xml: XMLIndexer, completion:(_ predictions: [String: [TransitPrediction]], _ messages: [String]) -> Void) {
+    func parseStopPredictions(_ xml: XMLIndexer, completion:(_ predictions: [String: [TransitPrediction]], _ messages: [TransitMessage]) -> Void) {
         let predictions = xml["body"]["predictions"]
-        var messageArray:[String] = []
+        var messageArray: [TransitMessage] = []
         
-        let predictionDict:[String : [TransitPrediction]] = parsePredictions(predictions)
+        let predictionDict: [String: [TransitPrediction]] = parsePredictions(predictions)
         
         let messages = predictions["message"]
         
         for message in messages {
             //Going through the messages and adding them
-            if let messageTitle = message.element?.allAttributes["text"]?.text {
-                messageArray.append(messageTitle)
+            if let messageTitle = message.element?.allAttributes["text"]?.text, let priority = message.element?.allAttributes["priority"]?.text {
+                messageArray.append(TransitMessage(message: messageTitle, priority: TransitMessagePriority(priority)))
             }
         }
     
         completion(predictionDict, messageArray)
     }
-}
-
-//Parses the predictions for one line in all directions at the stop
-private func parsePredictions(_ predictionXML: XMLIndexer) -> [String: [TransitPrediction]] {
-    var predictions:[String : [TransitPrediction]] = [:]
     
-    //Getting all the predictions
-    for direction in predictionXML.children {
+    //Parses the predictions for one line in all directions at the stop
+    private func parsePredictions(_ predictionXML: XMLIndexer) -> [String: [TransitPrediction]] {
+        var predictions:[String : [TransitPrediction]] = [:]
         
-        //Getting the direction name
-        if let directionName = direction.element?.allAttributes["title"]?.text {
+        //Getting all the predictions
+        for direction in predictionXML.children {
             
-            predictions[directionName] = []
-            
-            for prediction in direction.children {
-                //Getting each individual prediction in minutes
+            //Getting the direction name
+            if let directionName = direction.element?.allAttributes["title"]?.text {
                 
-                if let predictionInMinutes = Int((prediction.element?.allAttributes["minutes"]!.text)!), let predictionInSeconds = Int((prediction.element?.allAttributes["seconds"]!.text)!), let vehicleTag = Int((prediction.element?.allAttributes["vehicle"]?.text)!) {
-                    //If all the elements exist
+                predictions[directionName] = []
+                
+                for prediction in direction.children {
+                    //Getting each individual prediction in minutes
                     
-                    let newPrediction = TransitPrediction(predictionInMinutes: predictionInMinutes, predictionInSeconds: predictionInSeconds, vehicleTag: vehicleTag)
-                    
-                    //Number of vehicles is optionally provided by the API
-                    if let numberOfVechiles = prediction.element?.allAttributes["vehiclesInConsist"]?.text {
-                        newPrediction.numberOfVehicles = Int(numberOfVechiles)!
+                    if let predictionInMinutes = Int((prediction.element?.allAttributes["minutes"]!.text)!), let predictionInSeconds = Int((prediction.element?.allAttributes["seconds"]!.text)!), let vehicleTag = Int((prediction.element?.allAttributes["vehicle"]?.text)!) {
+                        //If all the elements exist
+                        
+                        let newPrediction = TransitPrediction(predictionInMinutes: predictionInMinutes, predictionInSeconds: predictionInSeconds, vehicleTag: vehicleTag)
+                        
+                        //Number of vehicles is optionally provided by the API
+                        if let numberOfVechiles = prediction.element?.allAttributes["vehiclesInConsist"]?.text {
+                            newPrediction.numberOfVehicles = Int(numberOfVechiles)!
+                        }
+                        
+                        predictions[directionName]?.append(newPrediction)
                     }
-                    
-                    predictions[directionName]?.append(newPrediction)
                 }
             }
         }
+        
+        return predictions
     }
-    
-    return predictions
 }

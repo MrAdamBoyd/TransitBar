@@ -13,7 +13,7 @@ import Sparkle
 #endif
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate {
     
     //Item that lives in the status bar
     let statusItem = NSStatusBar.system().statusItem(withLength: -1)
@@ -47,6 +47,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Loads data when computer wakes from sleep
         NotificationCenter.default.addObserver(self, selector: #selector(self.loadData), name: Notification.Name.NSWorkspaceDidWake, object: nil)
         
+        NSUserNotificationCenter.default.delegate = self
+        
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -64,7 +66,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             SwiftBus.shared.stopPredictions(forStop: entry.stop) { stop in
                 
                 if let stop = stop {
+                    self.sendNotificationsToUser(with: stop.messages, differingFrom: entry.stop.messages, on: stop.routeTitle)
+                    
                     entry.stop.predictions = stop.predictions
+                    entry.stop.messages = stop.messages
                 }
                 
                 group.leave()
@@ -73,6 +78,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         group.notify(queue: DispatchQueue.main) {
             self.updateMenuItems()
+        }
+    }
+    
+    /// Sends notifications to the user. This method will send notifications to the user for all the new messages that are not contained in the old messages.
+    ///
+    /// - Parameters:
+    ///   - newMessages: messages from the most recent prediction
+    ///   - oldMessages: messages from the old prediction
+    ///   - route: title of the route for notification
+    func sendNotificationsToUser(with newMessages: [TransitMessage], differingFrom oldMessages: [TransitMessage], on route: String) {
+        
+        //Create sets of the message strings for transit messages that have a high priority. They are sets so it is easy to perform diffs.
+        let oldMessageSet = Set(oldMessages.filter({ $0.priority == .high }).map({ $0.text }))
+        let newMessageSet = Set(newMessages.filter({ $0.priority == .high }).map({ $0.text }))
+        
+        let messagesToNotify = newMessageSet.subtracting(oldMessageSet)
+        
+        //Go through each notification and send it
+        for message in messagesToNotify {
+            let notification = NSUserNotification()
+            notification.title = "\(route) Alert"
+            notification.informativeText = message
+            NSUserNotificationCenter.default.deliver(notification)
         }
     }
     
@@ -189,6 +217,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
      */
     func terminate() {
         NSApplication.shared().terminate(self)
+    }
+    
+    // MARK: - NSUserNotificationCenterDelegate
+    func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
+        //Always return true. Usually notifications are only delivered if application is key. However, this is a menubar application and will never be key.
+        return true
     }
     
     deinit {

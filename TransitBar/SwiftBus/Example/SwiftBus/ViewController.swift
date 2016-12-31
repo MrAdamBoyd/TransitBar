@@ -110,10 +110,10 @@ class ViewController: UIViewController {
         //Alternative:
         //var route = TransitRoute(routeTag: "N", agencyTag: "sf-muni")
         //route.getStopPredictionsForStop("3909", completion: {(success:Bool, predictions:[String : [TransitPrediction]]) -> Void in
-        SwiftBus.shared.stopPredictions(forStopTag: "3909", onRouteTag: "N", withAgencyTag: "sf-muni") { route in
+        SwiftBus.shared.stopPredictions(forStopTag: "3909", onRouteTag: "N", withAgencyTag: "sf-muni") { stop in
             
             //If the stop and route exists
-            if let transitStop = route as TransitStop! {
+            if let transitStop = stop as TransitStop! {
                 let predictionStrings:[Int] = transitStop.allPredictions.map({$0.predictionInMinutes})
                 
                 print("\n-----")

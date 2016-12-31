@@ -17,7 +17,7 @@ private let leadingVehicleIdEncoderString = "kKeadingVehicleIdEncoder"
 private let headingEncoderString = "kHeadingEncoder"
 private let speedKmHEncoderString = "kSpeedKmHEncoder"
 
-open class TransitVehicle:NSObject, NSCoding {
+open class TransitVehicle: NSObject, NSCoding {
     
     open var vehicleId: Int = 0
     open var directionTag: String = ""

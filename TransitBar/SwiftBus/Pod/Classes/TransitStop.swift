@@ -20,7 +20,7 @@ private let predictionsEncoderString = "kPredictionsEncoder"
 private let messagesEncoderString = "kMessagesEncoder"
 
 //A transit stop is a single stop which is tied to a single route
-open class TransitStop:NSObject, NSCoding {
+open class TransitStop: NSObject, NSCoding {
     
     open var routeTitle: String = ""
     open var routeTag: String = ""
@@ -31,7 +31,7 @@ open class TransitStop:NSObject, NSCoding {
     open var lat: Double = 0
     open var lon: Double = 0
     open var predictions: [String: [TransitPrediction]] = [:] //[direction : [prediction]]
-    open var messages: [String] = []
+    open var messages: [TransitMessage] = []
     
     /**
      Returns a list of all the predictions from the different directions in order
@@ -70,10 +70,10 @@ open class TransitStop:NSObject, NSCoding {
         - parameter predictions: The predictions, in all directions, for this stop
         - parameter messages:    The messages for this stop
     */
-    open func getPredictionsAndMessages(_ completion:@escaping (_ success:Bool, _ predictions:[String : [TransitPrediction]], _ messages:[String]) -> Void) {
+    open func getPredictionsAndMessages(_ completion:@escaping (_ success:Bool, _ predictions:[String : [TransitPrediction]], _ messages:[TransitMessage]) -> Void) {
         if agencyTag != "" {
             let connectionHandler = SwiftBusConnectionHandler()
-            connectionHandler.requestStopPredictionData(self.stopTag, onRoute: self.routeTag, withAgency: self.agencyTag, completion: {(predictions:[String : [TransitPrediction]], messages:[String]) -> Void in
+            connectionHandler.requestStopPredictionData(self.stopTag, onRoute: self.routeTag, withAgency: self.agencyTag, completion: {(predictions: [String: [TransitPrediction]], messages: [TransitMessage]) in
                 
                 self.predictions = predictions
                 self.messages = messages
@@ -111,7 +111,7 @@ open class TransitStop:NSObject, NSCoding {
         self.lat = aDecoder.decodeDouble(forKey: latEncoderString)
         self.lon = aDecoder.decodeDouble(forKey: lonEncoderString)
         self.predictions = aDecoder.decodeObject(forKey: predictionsEncoderString) as? [String: [TransitPrediction]] ?? [:]
-        self.messages = aDecoder.decodeObject(forKey: messagesEncoderString) as? [String] ?? []
+        self.messages = aDecoder.decodeObject(forKey: messagesEncoderString) as? [TransitMessage] ?? []
     }
     
     open func encode(with aCoder: NSCoder) {

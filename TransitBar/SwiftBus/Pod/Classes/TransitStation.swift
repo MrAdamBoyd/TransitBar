@@ -17,8 +17,8 @@ private let lonEncoderString = "lonEncoder"
 private let predictionsEncoderString = "predictionsEncoder"
 private let messagesEncoderString = "messagesEncoder"
 
-//A tranit station is a single station id tied to multiple transit routes
-open class TransitStation:NSObject, NSCoding {
+//A tranit station is a transit stop tied to multiple routes
+open class TransitStation: NSObject, NSCoding {
     open var routesAtStation: [TransitRoute] = []
     open var stopTitle: String = ""
     open var stopTag: String = ""

@@ -7,166 +7,168 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0611E7D05ADDEAC8464122E7A1FA16EC /* TransitRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27893820D20F411C2F844BBD2F4B536B /* TransitRoute.swift */; };
-		1023F7A851E779C475C978020B84C75F /* Pods-MacTransit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F597C6EBA3CBBC10A74B4DC742DE68D1 /* Pods-MacTransit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1260ADBBDD9F704DB9CAEC652044FA8D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245C77BFDFE1EA65BD8D3E13008F082C /* ColorExtension.swift */; };
-		17D6B8A02E5671B081F01C20B113F66E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E73CBF0DBF04F958E38FE4E34C848C /* Foundation.framework */; };
-		262326C308F6171A7CC2639D1B503547 /* Pods-MacTransit AppStore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32820BBE3B475106132F2340F522FBF9 /* Pods-MacTransit AppStore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B02058B0C5281B33AC83F851A701CAD /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188791171C97FFC82FA655EAA1DEED32 /* SWXMLHash.framework */; };
-		404851BD5433E91143D7FC7C6F36284A /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B88824F2972D0A22B21879972F2D7 /* SWXMLHash.swift */; };
-		421924DE48F6FDE7989C67BAAEE181B4 /* SwiftBus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB96C6B281F96C04BA7A294C06C5770D /* SwiftBus-dummy.m */; };
-		569B3CF125C6D69C3AF127E52EDF4A1C /* SWXMLHash+TypeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735842ECAF0F56434547995BD0775807 /* SWXMLHash+TypeConversion.swift */; };
-		5DB9768B715159FC74D1050DF474E9C5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF85627DEB0B66AD259FAC57A5712E44 /* Cocoa.framework */; };
-		6384707249F660F6DDCC76E199C785DF /* SwiftBusConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537841797BAEECF77362A4A6E1DF3016 /* SwiftBusConnectionHandler.swift */; };
-		6492CB0686D8A2F293B4319FF6E7FD7A /* TransitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02395E02633E3C88CEB7C9ADBFE1754C /* TransitStop.swift */; };
-		6FD7766D972DA49EEE435C7955C2DCB5 /* SWXMLHash-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 563328867477CB783F3ED70ED9738546 /* SWXMLHash-dummy.m */; };
-		72785C921F9E3F39878E8F1E6F9BE184 /* SwiftBusRequestURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A0F80B000282C7C627D36E0F1C0DAF /* SwiftBusRequestURLs.swift */; };
-		878544552D894A29F8B23963C6588EA9 /* SwiftBusDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B761EEF9476594BE1BC26FDAF74D151 /* SwiftBusDataParser.swift */; };
-		903305BB2D7B20E71CDA3D14CF00A7D9 /* Pods-MacTransit AppStore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AB19DC227A1B24789E01F9129CEF9E /* Pods-MacTransit AppStore-dummy.m */; };
-		928C7B44FA04AD5C886B7D33356FE578 /* SWXMLHash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98BEF3655ED088831E7B99B534123A8D /* SWXMLHash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F9D2D26121D666084107A4D74EC5B7F /* SwiftBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC3A187B534907D8F094CC50AA73C0 /* SwiftBus.swift */; };
-		B23F004A2AFB281C7EA88708A5EC0A21 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF85627DEB0B66AD259FAC57A5712E44 /* Cocoa.framework */; };
-		B766C8F59EA1FD4161C5C298648D91B4 /* SwiftBus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8141272179EF6EFAD799CD7A5DAACFCD /* SwiftBus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF6EB9D77AD130B30CA7E797CCB9F939 /* TransitAgency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B6CCABFBAD6AC76B1D12CF4503A165 /* TransitAgency.swift */; };
-		BFE5B8F4DC9EFA556D04468DFEC2AACE /* Pods-MacTransit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 319EC82885A34367A4DA3A6A71B50080 /* Pods-MacTransit-dummy.m */; };
-		C0149280B20CC186DC02E74119BF6AEA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF85627DEB0B66AD259FAC57A5712E44 /* Cocoa.framework */; };
-		E2B23F0A6A2F2E669519467951D4C631 /* TransitStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9430296F55969AED1939460CE1FFAE /* TransitStation.swift */; };
-		E3FCB5F1A55F44A1DC2E7C100C3C2231 /* TransitPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA7BE7845C17551EB191E68DDC2CCD /* TransitPrediction.swift */; };
-		F3015BA503BA15941D2A599403B4FA9B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF85627DEB0B66AD259FAC57A5712E44 /* Cocoa.framework */; };
-		FD842F86B14F2A216DF56E31DC9C3213 /* TransitVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD521AF3FD5852350EB4E4008E064628 /* TransitVehicle.swift */; };
+		16DB982707CE97720080E9E73B6D74A9 /* SwiftBusDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F16242B3B07A8E2A6D48F8FB915C4B /* SwiftBusDataParser.swift */; };
+		20BB1F45FE7D38E456E730449F019AFF /* TransitPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E582BEA7FCBA94B3AE4C0A82EFFFD /* TransitPrediction.swift */; };
+		2287387FF99770AAE0176891FFD8A443 /* Pods-TransitBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58921ED3B2328059BCD34127B16893FC /* Pods-TransitBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24C1BE803EA65E045DABDD48801D2CA1 /* Pods-TransitBar AppStore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD97E7481D8ACD0E43ACBE7542337B7 /* Pods-TransitBar AppStore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C872F16E6466AAF114C92EC5C281F76 /* SwiftBus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8141272179EF6EFAD799CD7A5DAACFCD /* SwiftBus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F7D0C18975CE2E36D696524A0B2D3A3 /* SWXMLHash+TypeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735842ECAF0F56434547995BD0775807 /* SWXMLHash+TypeConversion.swift */; };
+		4132B89A476998D6B4F407E5E0C1B3CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFA005859F9AC113582F591E73243D6 /* Foundation.framework */; };
+		44F2A5567BD85D290D4F3F81FA9DD295 /* Pods-TransitBar AppStore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C30C75396CB32EB7E72DDED2C09A16D /* Pods-TransitBar AppStore-dummy.m */; };
+		51A1EB5D9E2C3790810C37B54B011CAF /* SwiftBusConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81954E2E61E27B07D2A1B0688F5368 /* SwiftBusConnectionHandler.swift */; };
+		53D8013E6D5ECAC402424235E3DEB77A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */; };
+		54C0C2EC5D2C813D0602CBD6C95C1A26 /* TransitAgency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F42C5D99132F8D70929EC5FEEBD7881 /* TransitAgency.swift */; };
+		5EF71E713E930BD85DDFA356831E0FDC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */; };
+		5F0457C25E4E55E27186EDDF8D2C5DC9 /* TransitVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF71DC7DBF20E9710AEE98813B57DF4 /* TransitVehicle.swift */; };
+		6319B1F623DA0CB4CA256D4A1454D5A6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89B574466B828DE2C7033ABFEDF1EA3 /* ColorExtension.swift */; };
+		638A8A47A6A4FB160D431485AE4ABFC1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */; };
+		6A9E5419F9840C9C5CAD79BCF37C76F0 /* Pods-TransitBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F51AAFBA5A1912671B95C4E24C377FE /* Pods-TransitBar-dummy.m */; };
+		7C20B5DC170C535984B858AD4EAB49AE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */; };
+		93149A7EE426D478964824D2F023DAF6 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188791171C97FFC82FA655EAA1DEED32 /* SWXMLHash.framework */; };
+		9DC369319735B40F1E1096C6685C5F1B /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B88824F2972D0A22B21879972F2D7 /* SWXMLHash.swift */; };
+		A5E2AE7E8D9D1F9F074176D7B3D797CA /* TransitStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9891E2C9D31A92B508C1CFC619EA95 /* TransitStation.swift */; };
+		B01872DC6D3050CACA0C865F072CE669 /* TransitRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3929C2586A3B1DF2151DEAB39F719 /* TransitRoute.swift */; };
+		B169A68B1F3F11471E66FC6B4F6734F5 /* SWXMLHash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98BEF3655ED088831E7B99B534123A8D /* SWXMLHash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51EF597142909934620E39B23C51CDF /* SWXMLHash-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 563328867477CB783F3ED70ED9738546 /* SWXMLHash-dummy.m */; };
+		C587A27D94CFFF1945DF9E0B5D56DF1A /* TransitMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9CEEB1FBC8474206357259DF22901 /* TransitMessage.swift */; };
+		CD424FD057717AE09AF9517A94361920 /* SwiftBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07106A2A472876D984E47864490E9692 /* SwiftBus.swift */; };
+		E4DC8FDF749E8E35DBDEE3700B5EF56D /* SwiftBusRequestURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12004CAF2C2A462149A07805DC5C00 /* SwiftBusRequestURLs.swift */; };
+		E7A11CACCD0A3020E8474A1A9335559D /* TransitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F921039EBA478CA462E3B64EA719876 /* TransitStop.swift */; };
+		EBFB016DBFEA8D2773D614BEFDD07181 /* SwiftBus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB96C6B281F96C04BA7A294C06C5770D /* SwiftBus-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		04671309B9E0EC1E87AD1A6BE9B783E5 /* PBXContainerItemProxy */ = {
+		188DE4EB27045215BD5961BFAD023AB1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6E770CBFF9484BDE2CF7DB0254834FFD;
+			remoteGlobalIDString = EEA4B64420648C5A84C9A81F037E79EA;
 			remoteInfo = SwiftBus;
 		};
-		23DA902C487910FDFF0F95A11D69FC0C /* PBXContainerItemProxy */ = {
+		5796F3F700D12A2FB5077586DBBA0DA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6725F61AEF9D5199980044E085192810;
+			remoteGlobalIDString = 0340EFC2B39429ED31AE0B0AEF43F687;
 			remoteInfo = SWXMLHash;
 		};
-		813D087834872B5E7C94B0EAB9E907C4 /* PBXContainerItemProxy */ = {
+		7EB16405A9CA2055E649819529E632B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6725F61AEF9D5199980044E085192810;
+			remoteGlobalIDString = 0340EFC2B39429ED31AE0B0AEF43F687;
 			remoteInfo = SWXMLHash;
 		};
-		EC81DE3BDA79A434F55AA6E70B57B65A /* PBXContainerItemProxy */ = {
+		C47CE0B9C90E39BE9E1728D9DB665A37 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6E770CBFF9484BDE2CF7DB0254834FFD;
+			remoteGlobalIDString = 0340EFC2B39429ED31AE0B0AEF43F687;
+			remoteInfo = SWXMLHash;
+		};
+		C5164DAB8C49746EE8BBE5E7776B2DDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEA4B64420648C5A84C9A81F037E79EA;
 			remoteInfo = SwiftBus;
-		};
-		F39775BC99E0384BD68A722212C15FE5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6725F61AEF9D5199980044E085192810;
-			remoteInfo = SWXMLHash;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02395E02633E3C88CEB7C9ADBFE1754C /* TransitStop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitStop.swift; sourceTree = "<group>"; };
-		115B62A7800DC54B48D7D5E000AA4A33 /* Pods_MacTransit_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransit_AppStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		11E32B5B4E9E428291ED4108336A4352 /* SWXMLHash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SWXMLHash.modulemap; sourceTree = "<group>"; };
+		07106A2A472876D984E47864490E9692 /* SwiftBus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBus.swift; sourceTree = "<group>"; };
+		0BFA005859F9AC113582F591E73243D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		11E32B5B4E9E428291ED4108336A4352 /* SWXMLHash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SWXMLHash.modulemap; sourceTree = "<group>"; };
+		1818D4455625E845F21F133082AB2528 /* Pods-TransitBar AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar AppStore.debug.xcconfig"; sourceTree = "<group>"; };
 		188791171C97FFC82FA655EAA1DEED32 /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWXMLHash.xcconfig; sourceTree = "<group>"; };
-		1ABA7BE7845C17551EB191E68DDC2CCD /* TransitPrediction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitPrediction.swift; sourceTree = "<group>"; };
-		1E5BF4184180236F7C9E92ACA5BF25AC /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		245C77BFDFE1EA65BD8D3E13008F082C /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		27893820D20F411C2F844BBD2F4B536B /* TransitRoute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitRoute.swift; sourceTree = "<group>"; };
-		2EA617B1F690245AF8393315992F0E21 /* Pods-MacTransit AppStore.release appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MacTransit AppStore.release appstore.xcconfig"; sourceTree = "<group>"; };
-		30BD837A386E11E2CBE21816C47A2245 /* Pods-MacTransit AppStore.debug appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MacTransit AppStore.debug appstore.xcconfig"; sourceTree = "<group>"; };
-		319EC82885A34367A4DA3A6A71B50080 /* Pods-MacTransit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MacTransit-dummy.m"; sourceTree = "<group>"; };
-		32820BBE3B475106132F2340F522FBF9 /* Pods-MacTransit AppStore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MacTransit AppStore-umbrella.h"; sourceTree = "<group>"; };
-		33625F92F4F41AAE933ACCD69EB7BBB2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B761EEF9476594BE1BC26FDAF74D151 /* SwiftBusDataParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBusDataParser.swift; sourceTree = "<group>"; };
-		3F21441E8932A645E93A567D4D9FA7BB /* Pods-MacTransit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MacTransit-frameworks.sh"; sourceTree = "<group>"; };
-		453183968787456DF684DDC884CAF310 /* Pods-MacTransit AppStore-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MacTransit AppStore-resources.sh"; sourceTree = "<group>"; };
-		4D85D96CBF701A1D984C114D30CE9C71 /* Pods-MacTransit AppStore-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MacTransit AppStore-acknowledgements.markdown"; sourceTree = "<group>"; };
-		50330ADBD3AD5F64B143F86BD08FE6A6 /* Pods-MacTransit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MacTransit-resources.sh"; sourceTree = "<group>"; };
+		1D4EDE13B8869A0387351E01E6F953ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A8926880A7C12D4C6F8C2D2F85BFA97 /* Pods-TransitBar-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TransitBar-resources.sh"; sourceTree = "<group>"; };
+		2C30C75396CB32EB7E72DDED2C09A16D /* Pods-TransitBar AppStore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TransitBar AppStore-dummy.m"; sourceTree = "<group>"; };
+		2DCF7EBFE1CE5ABC4974B1B9DEF3DFD6 /* Pods-TransitBar AppStore-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TransitBar AppStore-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2DF71DC7DBF20E9710AEE98813B57DF4 /* TransitVehicle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitVehicle.swift; sourceTree = "<group>"; };
+		3169DB6C9809C7B7C27E85ED4EEB2179 /* Pods-TransitBar.debug appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar.debug appstore.xcconfig"; sourceTree = "<group>"; };
+		3C5CEE082811D632CA870DCB37C71773 /* Pods-TransitBar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TransitBar-acknowledgements.plist"; sourceTree = "<group>"; };
+		4B292E6942A21A967449009FF4C381AA /* Pods-TransitBar AppStore.release appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar AppStore.release appstore.xcconfig"; sourceTree = "<group>"; };
+		50F16242B3B07A8E2A6D48F8FB915C4B /* SwiftBusDataParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBusDataParser.swift; sourceTree = "<group>"; };
 		514C6E3853BA8A596910ED00D40F8C95 /* SwiftBus-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBus-prefix.pch"; sourceTree = "<group>"; };
 		51740EA3C0722DF0782A9B0FF8381A5A /* SWXMLHash-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-prefix.pch"; sourceTree = "<group>"; };
-		537841797BAEECF77362A4A6E1DF3016 /* SwiftBusConnectionHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBusConnectionHandler.swift; sourceTree = "<group>"; };
-		54A0F80B000282C7C627D36E0F1C0DAF /* SwiftBusRequestURLs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBusRequestURLs.swift; sourceTree = "<group>"; };
+		51D3929C2586A3B1DF2151DEAB39F719 /* TransitRoute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitRoute.swift; sourceTree = "<group>"; };
+		54C991AFD63305339CA4EF9948F7C57A /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWXMLHash.framework; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		563328867477CB783F3ED70ED9738546 /* SWXMLHash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWXMLHash-dummy.m"; sourceTree = "<group>"; };
-		5B4DF061F0C63182D869416828C37663 /* Pods-MacTransit AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MacTransit AppStore.release.xcconfig"; sourceTree = "<group>"; };
+		58921ED3B2328059BCD34127B16893FC /* Pods-TransitBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TransitBar-umbrella.h"; sourceTree = "<group>"; };
+		5A81954E2E61E27B07D2A1B0688F5368 /* SwiftBusConnectionHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBusConnectionHandler.swift; sourceTree = "<group>"; };
+		5B12004CAF2C2A462149A07805DC5C00 /* SwiftBusRequestURLs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBusRequestURLs.swift; sourceTree = "<group>"; };
+		5F394E029532D23C134365370ECB496D /* Pods-TransitBar AppStore-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TransitBar AppStore-frameworks.sh"; sourceTree = "<group>"; };
+		5F921039EBA478CA462E3B64EA719876 /* TransitStop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitStop.swift; sourceTree = "<group>"; };
 		61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftBus.xcconfig; sourceTree = "<group>"; };
-		6E8071AE529E6B9D44EB6C75EDC03D13 /* Pods-MacTransit AppStore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MacTransit AppStore.modulemap"; sourceTree = "<group>"; };
-		722AF78ED404512C5A2E9F86C26DF17C /* Pods-MacTransit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MacTransit.debug.xcconfig"; sourceTree = "<group>"; };
 		735842ECAF0F56434547995BD0775807 /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SWXMLHash+TypeConversion.swift"; path = "Source/SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
-		75B6CCABFBAD6AC76B1D12CF4503A165 /* TransitAgency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitAgency.swift; sourceTree = "<group>"; };
 		787B88824F2972D0A22B21879972F2D7 /* SWXMLHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SWXMLHash.swift; path = Source/SWXMLHash.swift; sourceTree = "<group>"; };
+		796AA2403C6CBB5E11FE71427D98A0F8 /* Pods-TransitBar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TransitBar-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7BFB764A70C9EDE42EC802405F073809 /* Pods_TransitBar_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TransitBar_AppStore.framework; path = "Pods-TransitBar AppStore.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E9891E2C9D31A92B508C1CFC619EA95 /* TransitStation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitStation.swift; sourceTree = "<group>"; };
 		8141272179EF6EFAD799CD7A5DAACFCD /* SwiftBus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBus-umbrella.h"; sourceTree = "<group>"; };
-		8FCC3A187B534907D8F094CC50AA73C0 /* SwiftBus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBus.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96BAA333808AD79574AAAFF2B73B9419 /* Pods-MacTransit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MacTransit-acknowledgements.plist"; sourceTree = "<group>"; };
+		846D55F1FAE5F1B0C41D1D97AD1C55CE /* Pods-TransitBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TransitBar.modulemap"; sourceTree = "<group>"; };
+		8F51AAFBA5A1912671B95C4E24C377FE /* Pods-TransitBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TransitBar-dummy.m"; sourceTree = "<group>"; };
+		922C4314A45AF3751796E9538CEEB593 /* Pods-TransitBar.release appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar.release appstore.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98BEF3655ED088831E7B99B534123A8D /* SWXMLHash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-umbrella.h"; sourceTree = "<group>"; };
-		A4AB19DC227A1B24789E01F9129CEF9E /* Pods-MacTransit AppStore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MacTransit AppStore-dummy.m"; sourceTree = "<group>"; };
-		A8C014F89AE7AB9E631680342A9B09C6 /* Pods-MacTransit AppStore-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MacTransit AppStore-acknowledgements.plist"; sourceTree = "<group>"; };
-		AA9430296F55969AED1939460CE1FFAE /* TransitStation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitStation.swift; sourceTree = "<group>"; };
-		B4E73CBF0DBF04F958E38FE4E34C848C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		B5B26A7C56557017B5FB33D14CB5C633 /* Pods-MacTransit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MacTransit.modulemap"; sourceTree = "<group>"; };
-		BA1033BC60C51AEA16F121B2CF07F480 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCF5322CA570D805685A9AF465AD14B1 /* Pods-MacTransit.debug appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MacTransit.debug appstore.xcconfig"; sourceTree = "<group>"; };
-		C935CC4F6072BD15BF07ACF6FBE14997 /* SwiftBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB21378E59F35E8AB5E756EBF716512F /* Pods-MacTransit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MacTransit.release.xcconfig"; sourceTree = "<group>"; };
-		D05BF2BFE7D6098836B472CE9B0A6818 /* Pods_MacTransit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		9E096967228462D361803D9C806F5A06 /* Pods-TransitBar AppStore.debug appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar AppStore.debug appstore.xcconfig"; sourceTree = "<group>"; };
+		9F42C5D99132F8D70929EC5FEEBD7881 /* TransitAgency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitAgency.swift; sourceTree = "<group>"; };
+		9F5CA3B4F52D6B532F6F1A840E541A62 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A42189235A9785557F802B26CC8D384D /* Pods_TransitBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TransitBar.framework; path = "Pods-TransitBar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6AAAEC0631660AF6395E880FE145177 /* Pods-TransitBar AppStore-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TransitBar AppStore-acknowledgements.plist"; sourceTree = "<group>"; };
+		AB40B771E990E9FA07943183D4691F4D /* Pods-TransitBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar.debug.xcconfig"; sourceTree = "<group>"; };
+		BAC53A43621475F039A8BEE5D41CA30E /* Pods-TransitBar AppStore-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TransitBar AppStore-resources.sh"; sourceTree = "<group>"; };
+		BFB1CAB54D7223162A7890A1EDAD2687 /* Pods-TransitBar AppStore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TransitBar AppStore.modulemap"; sourceTree = "<group>"; };
+		C8C9CEEB1FBC8474206357259DF22901 /* TransitMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitMessage.swift; sourceTree = "<group>"; };
+		CB60D1A32D9F5F87E7694B4372067579 /* Pods-TransitBar AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar AppStore.release.xcconfig"; sourceTree = "<group>"; };
 		D2F4364C0CB059528080E08FBA2D152A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D995384691856A13DAEAFF89DCE53B1E /* SwiftBus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftBus.modulemap; sourceTree = "<group>"; };
+		D995384691856A13DAEAFF89DCE53B1E /* SwiftBus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftBus.modulemap; sourceTree = "<group>"; };
 		DB96C6B281F96C04BA7A294C06C5770D /* SwiftBus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftBus-dummy.m"; sourceTree = "<group>"; };
-		DD521AF3FD5852350EB4E4008E064628 /* TransitVehicle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitVehicle.swift; sourceTree = "<group>"; };
-		DF85627DEB0B66AD259FAC57A5712E44 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		E18F72F54F2EB32011AF50ABA89BBAEF /* Pods-MacTransit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MacTransit-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E74597B1888601DCC3F2B9F64643CDC1 /* Pods-MacTransit AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MacTransit AppStore.debug.xcconfig"; sourceTree = "<group>"; };
 		E97700937AA94425B5E44533B934F39B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFA95E279308BF01CFBEB2E039CE7AB5 /* Pods-MacTransit.release appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MacTransit.release appstore.xcconfig"; sourceTree = "<group>"; };
-		F597C6EBA3CBBC10A74B4DC742DE68D1 /* Pods-MacTransit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MacTransit-umbrella.h"; sourceTree = "<group>"; };
-		FA1DBA0DB9901D5422C57F57472CE733 /* Pods-MacTransit AppStore-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MacTransit AppStore-frameworks.sh"; sourceTree = "<group>"; };
+		EB5D8B8268950D0E679D3B3954EB1F47 /* Pods-TransitBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar.release.xcconfig"; sourceTree = "<group>"; };
+		EFD97E7481D8ACD0E43ACBE7542337B7 /* Pods-TransitBar AppStore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TransitBar AppStore-umbrella.h"; sourceTree = "<group>"; };
+		F359F31474F4DD8301D14D6B17D53CC6 /* Pods-TransitBar-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TransitBar-frameworks.sh"; sourceTree = "<group>"; };
+		F75B36964ADAF9F177242A4315513D79 /* SwiftBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftBus.framework; path = SwiftBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F89B574466B828DE2C7033ABFEDF1EA3 /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		FF3E582BEA7FCBA94B3AE4C0A82EFFFD /* TransitPrediction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitPrediction.swift; sourceTree = "<group>"; };
 		FFC3424CB11CF338E06F4613D598DB35 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		392C2DB9AE1D14D99FDC19DA9E5B6417 /* Frameworks */ = {
+		00B409F7C716744DD20036B3239C8423 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DB9768B715159FC74D1050DF474E9C5 /* Cocoa.framework in Frameworks */,
+				53D8013E6D5ECAC402424235E3DEB77A /* Cocoa.framework in Frameworks */,
+				4132B89A476998D6B4F407E5E0C1B3CE /* Foundation.framework in Frameworks */,
+				93149A7EE426D478964824D2F023DAF6 /* SWXMLHash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		44816FE3793BB993F0AE72B887C2C44B /* Frameworks */ = {
+		10BD34895DAEEFBF2E53E207AD9AFDFE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0149280B20CC186DC02E74119BF6AEA /* Cocoa.framework in Frameworks */,
+				7C20B5DC170C535984B858AD4EAB49AE /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B651AFFA2D606AFACBCB3DB97D7A464 /* Frameworks */ = {
+		29AD1E9A4C4AE064D032EA1DF86CA6C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3015BA503BA15941D2A599403B4FA9B /* Cocoa.framework in Frameworks */,
+				5EF71E713E930BD85DDFA356831E0FDC /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		764C15CB23F809D19360FC3DEB0495D0 /* Frameworks */ = {
+		8EBC8877C9858D2BF5B2553508F6777E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B23F004A2AFB281C7EA88708A5EC0A21 /* Cocoa.framework in Frameworks */,
-				17D6B8A02E5671B081F01C20B113F66E /* Foundation.framework in Frameworks */,
-				2B02058B0C5281B33AC83F851A701CAD /* SWXMLHash.framework in Frameworks */,
+				638A8A47A6A4FB160D431485AE4ABFC1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,18 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				188791171C97FFC82FA655EAA1DEED32 /* SWXMLHash.framework */,
-				0B9780577DA4699FBBDCA97511C8E523 /* OS X */,
+				AFF044AE8734EBD6FD49C465E359996F /* OS X */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0B9780577DA4699FBBDCA97511C8E523 /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				DF85627DEB0B66AD259FAC57A5712E44 /* Cocoa.framework */,
-				B4E73CBF0DBF04F958E38FE4E34C848C /* Foundation.framework */,
-			);
-			name = "OS X";
 			sourceTree = "<group>";
 		};
 		18ADBA973033687B812A58854F0B1171 /* Sparkle */ = {
@@ -196,6 +189,7 @@
 			children = (
 				1DB8BF398D7636FCD270D566FA1B30DC /* Frameworks */,
 			);
+			name = Sparkle;
 			path = Sparkle;
 			sourceTree = "<group>";
 		};
@@ -207,10 +201,61 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		38DABD13BFBE3C02DADB722D29A643EF /* Pods-TransitBar AppStore */ = {
+			isa = PBXGroup;
+			children = (
+				1D4EDE13B8869A0387351E01E6F953ED /* Info.plist */,
+				BFB1CAB54D7223162A7890A1EDAD2687 /* Pods-TransitBar AppStore.modulemap */,
+				2DCF7EBFE1CE5ABC4974B1B9DEF3DFD6 /* Pods-TransitBar AppStore-acknowledgements.markdown */,
+				A6AAAEC0631660AF6395E880FE145177 /* Pods-TransitBar AppStore-acknowledgements.plist */,
+				2C30C75396CB32EB7E72DDED2C09A16D /* Pods-TransitBar AppStore-dummy.m */,
+				5F394E029532D23C134365370ECB496D /* Pods-TransitBar AppStore-frameworks.sh */,
+				BAC53A43621475F039A8BEE5D41CA30E /* Pods-TransitBar AppStore-resources.sh */,
+				EFD97E7481D8ACD0E43ACBE7542337B7 /* Pods-TransitBar AppStore-umbrella.h */,
+				1818D4455625E845F21F133082AB2528 /* Pods-TransitBar AppStore.debug.xcconfig */,
+				9E096967228462D361803D9C806F5A06 /* Pods-TransitBar AppStore.debug appstore.xcconfig */,
+				CB60D1A32D9F5F87E7694B4372067579 /* Pods-TransitBar AppStore.release.xcconfig */,
+				4B292E6942A21A967449009FF4C381AA /* Pods-TransitBar AppStore.release appstore.xcconfig */,
+			);
+			name = "Pods-TransitBar AppStore";
+			path = "Target Support Files/Pods-TransitBar AppStore";
+			sourceTree = "<group>";
+		};
+		54EE477BC10980C59D61899AA1A266B7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F89B574466B828DE2C7033ABFEDF1EA3 /* ColorExtension.swift */,
+				07106A2A472876D984E47864490E9692 /* SwiftBus.swift */,
+				5A81954E2E61E27B07D2A1B0688F5368 /* SwiftBusConnectionHandler.swift */,
+				50F16242B3B07A8E2A6D48F8FB915C4B /* SwiftBusDataParser.swift */,
+				5B12004CAF2C2A462149A07805DC5C00 /* SwiftBusRequestURLs.swift */,
+				9F42C5D99132F8D70929EC5FEEBD7881 /* TransitAgency.swift */,
+				C8C9CEEB1FBC8474206357259DF22901 /* TransitMessage.swift */,
+				FF3E582BEA7FCBA94B3AE4C0A82EFFFD /* TransitPrediction.swift */,
+				51D3929C2586A3B1DF2151DEAB39F719 /* TransitRoute.swift */,
+				7E9891E2C9D31A92B508C1CFC619EA95 /* TransitStation.swift */,
+				5F921039EBA478CA462E3B64EA719876 /* TransitStop.swift */,
+				2DF71DC7DBF20E9710AEE98813B57DF4 /* TransitVehicle.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		56F0AFA42D4CD1DDC8742D52B4F4406F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A42189235A9785557F802B26CC8D384D /* Pods_TransitBar.framework */,
+				7BFB764A70C9EDE42EC802405F073809 /* Pods_TransitBar_AppStore.framework */,
+				F75B36964ADAF9F177242A4315513D79 /* SwiftBus.framework */,
+				54C991AFD63305339CA4EF9948F7C57A /* SWXMLHash.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		59F940660870DBEC69521BC409A50676 /* SwiftBus */ = {
 			isa = PBXGroup;
 			children = (
-				709EF56B4F72ECEA72FE76933204572B /* Pod */,
+				E0A58FB0C6A340D99BDF3182E6D12707 /* Pod */,
 				C42B8BC5E0F35EE97A4C8082D509F332 /* Support Files */,
 			);
 			name = SwiftBus;
@@ -224,15 +269,8 @@
 				735842ECAF0F56434547995BD0775807 /* SWXMLHash+TypeConversion.swift */,
 				A492C2C04E6AEB847D04FD9FC951525E /* Support Files */,
 			);
+			name = SWXMLHash;
 			path = SWXMLHash;
-			sourceTree = "<group>";
-		};
-		709EF56B4F72ECEA72FE76933204572B /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				92DAAAA8088F924617B897D446921A4F /* Classes */,
-			);
-			path = Pod;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -242,38 +280,9 @@
 				F46A6978290CA780871CFA9A7A7EF11F /* Development Pods */,
 				06755EEF98FD941B1FC396AAD461821B /* Frameworks */,
 				C35CF77CFD932985B50437E4008A4D6E /* Pods */,
-				9C0EFD0E6FE966EDB999EF8022144E8E /* Products */,
-				B5D20859631726EDAD79AEF60224010C /* Targets Support Files */,
+				56F0AFA42D4CD1DDC8742D52B4F4406F /* Products */,
+				CCBFE64C8F236EAD4DF3F2C13017A8B9 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		92DAAAA8088F924617B897D446921A4F /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				245C77BFDFE1EA65BD8D3E13008F082C /* ColorExtension.swift */,
-				8FCC3A187B534907D8F094CC50AA73C0 /* SwiftBus.swift */,
-				537841797BAEECF77362A4A6E1DF3016 /* SwiftBusConnectionHandler.swift */,
-				3B761EEF9476594BE1BC26FDAF74D151 /* SwiftBusDataParser.swift */,
-				54A0F80B000282C7C627D36E0F1C0DAF /* SwiftBusRequestURLs.swift */,
-				75B6CCABFBAD6AC76B1D12CF4503A165 /* TransitAgency.swift */,
-				1ABA7BE7845C17551EB191E68DDC2CCD /* TransitPrediction.swift */,
-				27893820D20F411C2F844BBD2F4B536B /* TransitRoute.swift */,
-				AA9430296F55969AED1939460CE1FFAE /* TransitStation.swift */,
-				02395E02633E3C88CEB7C9ADBFE1754C /* TransitStop.swift */,
-				DD521AF3FD5852350EB4E4008E064628 /* TransitVehicle.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		9C0EFD0E6FE966EDB999EF8022144E8E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D05BF2BFE7D6098836B472CE9B0A6818 /* Pods_MacTransit.framework */,
-				115B62A7800DC54B48D7D5E000AA4A33 /* Pods_MacTransit_AppStore.framework */,
-				C935CC4F6072BD15BF07ACF6FBE14997 /* SwiftBus.framework */,
-				1E5BF4184180236F7C9E92ACA5BF25AC /* SWXMLHash.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A492C2C04E6AEB847D04FD9FC951525E /* Support Files */ = {
@@ -290,13 +299,33 @@
 			path = "../Target Support Files/SWXMLHash";
 			sourceTree = "<group>";
 		};
-		B5D20859631726EDAD79AEF60224010C /* Targets Support Files */ = {
+		AA0649A0F0CB664F72BD5338BF1BA2A2 /* Pods-TransitBar */ = {
 			isa = PBXGroup;
 			children = (
-				F2507BCD5EF700C1A8F155D5855DE8FE /* Pods-MacTransit */,
-				E41553B8BDF9C0CF70D1DCD52B49B219 /* Pods-MacTransit AppStore */,
+				9F5CA3B4F52D6B532F6F1A840E541A62 /* Info.plist */,
+				846D55F1FAE5F1B0C41D1D97AD1C55CE /* Pods-TransitBar.modulemap */,
+				796AA2403C6CBB5E11FE71427D98A0F8 /* Pods-TransitBar-acknowledgements.markdown */,
+				3C5CEE082811D632CA870DCB37C71773 /* Pods-TransitBar-acknowledgements.plist */,
+				8F51AAFBA5A1912671B95C4E24C377FE /* Pods-TransitBar-dummy.m */,
+				F359F31474F4DD8301D14D6B17D53CC6 /* Pods-TransitBar-frameworks.sh */,
+				2A8926880A7C12D4C6F8C2D2F85BFA97 /* Pods-TransitBar-resources.sh */,
+				58921ED3B2328059BCD34127B16893FC /* Pods-TransitBar-umbrella.h */,
+				AB40B771E990E9FA07943183D4691F4D /* Pods-TransitBar.debug.xcconfig */,
+				3169DB6C9809C7B7C27E85ED4EEB2179 /* Pods-TransitBar.debug appstore.xcconfig */,
+				EB5D8B8268950D0E679D3B3954EB1F47 /* Pods-TransitBar.release.xcconfig */,
+				922C4314A45AF3751796E9538CEEB593 /* Pods-TransitBar.release appstore.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-TransitBar";
+			path = "Target Support Files/Pods-TransitBar";
+			sourceTree = "<group>";
+		};
+		AFF044AE8734EBD6FD49C465E359996F /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */,
+				0BFA005859F9AC113582F591E73243D6 /* Foundation.framework */,
+			);
+			name = "OS X";
 			sourceTree = "<group>";
 		};
 		C35CF77CFD932985B50437E4008A4D6E /* Pods */ = {
@@ -322,44 +351,22 @@
 			path = "../Pods/Target Support Files/SwiftBus";
 			sourceTree = "<group>";
 		};
-		E41553B8BDF9C0CF70D1DCD52B49B219 /* Pods-MacTransit AppStore */ = {
+		CCBFE64C8F236EAD4DF3F2C13017A8B9 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BA1033BC60C51AEA16F121B2CF07F480 /* Info.plist */,
-				6E8071AE529E6B9D44EB6C75EDC03D13 /* Pods-MacTransit AppStore.modulemap */,
-				4D85D96CBF701A1D984C114D30CE9C71 /* Pods-MacTransit AppStore-acknowledgements.markdown */,
-				A8C014F89AE7AB9E631680342A9B09C6 /* Pods-MacTransit AppStore-acknowledgements.plist */,
-				A4AB19DC227A1B24789E01F9129CEF9E /* Pods-MacTransit AppStore-dummy.m */,
-				FA1DBA0DB9901D5422C57F57472CE733 /* Pods-MacTransit AppStore-frameworks.sh */,
-				453183968787456DF684DDC884CAF310 /* Pods-MacTransit AppStore-resources.sh */,
-				32820BBE3B475106132F2340F522FBF9 /* Pods-MacTransit AppStore-umbrella.h */,
-				E74597B1888601DCC3F2B9F64643CDC1 /* Pods-MacTransit AppStore.debug.xcconfig */,
-				30BD837A386E11E2CBE21816C47A2245 /* Pods-MacTransit AppStore.debug appstore.xcconfig */,
-				5B4DF061F0C63182D869416828C37663 /* Pods-MacTransit AppStore.release.xcconfig */,
-				2EA617B1F690245AF8393315992F0E21 /* Pods-MacTransit AppStore.release appstore.xcconfig */,
+				AA0649A0F0CB664F72BD5338BF1BA2A2 /* Pods-TransitBar */,
+				38DABD13BFBE3C02DADB722D29A643EF /* Pods-TransitBar AppStore */,
 			);
-			name = "Pods-MacTransit AppStore";
-			path = "Target Support Files/Pods-MacTransit AppStore";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F2507BCD5EF700C1A8F155D5855DE8FE /* Pods-MacTransit */ = {
+		E0A58FB0C6A340D99BDF3182E6D12707 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				33625F92F4F41AAE933ACCD69EB7BBB2 /* Info.plist */,
-				B5B26A7C56557017B5FB33D14CB5C633 /* Pods-MacTransit.modulemap */,
-				E18F72F54F2EB32011AF50ABA89BBAEF /* Pods-MacTransit-acknowledgements.markdown */,
-				96BAA333808AD79574AAAFF2B73B9419 /* Pods-MacTransit-acknowledgements.plist */,
-				319EC82885A34367A4DA3A6A71B50080 /* Pods-MacTransit-dummy.m */,
-				3F21441E8932A645E93A567D4D9FA7BB /* Pods-MacTransit-frameworks.sh */,
-				50330ADBD3AD5F64B143F86BD08FE6A6 /* Pods-MacTransit-resources.sh */,
-				F597C6EBA3CBBC10A74B4DC742DE68D1 /* Pods-MacTransit-umbrella.h */,
-				722AF78ED404512C5A2E9F86C26DF17C /* Pods-MacTransit.debug.xcconfig */,
-				BCF5322CA570D805685A9AF465AD14B1 /* Pods-MacTransit.debug appstore.xcconfig */,
-				CB21378E59F35E8AB5E756EBF716512F /* Pods-MacTransit.release.xcconfig */,
-				EFA95E279308BF01CFBEB2E039CE7AB5 /* Pods-MacTransit.release appstore.xcconfig */,
+				54EE477BC10980C59D61899AA1A266B7 /* Classes */,
 			);
-			name = "Pods-MacTransit";
-			path = "Target Support Files/Pods-MacTransit";
+			name = Pod;
+			path = Pod;
 			sourceTree = "<group>";
 		};
 		F46A6978290CA780871CFA9A7A7EF11F /* Development Pods */ = {
@@ -373,86 +380,48 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		12C6C345D9CC0E24C99FEA64938FE617 /* Headers */ = {
+		2EB7642BE0C53698DF58DF118874B070 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				928C7B44FA04AD5C886B7D33356FE578 /* SWXMLHash-umbrella.h in Headers */,
+				B169A68B1F3F11471E66FC6B4F6734F5 /* SWXMLHash-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E45D197683E2DB4F4860072915F7CE0 /* Headers */ = {
+		34CB4051E50ED1876660D9D488FDEA75 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				262326C308F6171A7CC2639D1B503547 /* Pods-MacTransit AppStore-umbrella.h in Headers */,
+				24C1BE803EA65E045DABDD48801D2CA1 /* Pods-TransitBar AppStore-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A071C62E2DF1001D263AB580295CBE0C /* Headers */ = {
+		3C400DEAF41E1FDD00196E2B64F386BC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B766C8F59EA1FD4161C5C298648D91B4 /* SwiftBus-umbrella.h in Headers */,
+				2287387FF99770AAE0176891FFD8A443 /* Pods-TransitBar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6D79976BCB6393A8215C1C0BE4F63C2 /* Headers */ = {
+		60655D53A02B6283B31C97E874C9DAE0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1023F7A851E779C475C978020B84C75F /* Pods-MacTransit-umbrella.h in Headers */,
+				2C872F16E6466AAF114C92EC5C281F76 /* SwiftBus-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0583BE30237B431EA14FB79775F81F83 /* Pods-MacTransit AppStore */ = {
+		0340EFC2B39429ED31AE0B0AEF43F687 /* SWXMLHash */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE86F39C67473DCD25F2B3009974D070 /* Build configuration list for PBXNativeTarget "Pods-MacTransit AppStore" */;
+			buildConfigurationList = 18F25234A346310451D175FFC97C1DF8 /* Build configuration list for PBXNativeTarget "SWXMLHash" */;
 			buildPhases = (
-				D2AC8E91DAEFDECF9169DB02EF7C02C5 /* Sources */,
-				44816FE3793BB993F0AE72B887C2C44B /* Frameworks */,
-				6E45D197683E2DB4F4860072915F7CE0 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9D573F1E6DC7D3022769491F9C8C3525 /* PBXTargetDependency */,
-				59D8C392552F0A932FF5F65D88A4DC41 /* PBXTargetDependency */,
-			);
-			name = "Pods-MacTransit AppStore";
-			productName = "Pods-MacTransit AppStore";
-			productReference = 115B62A7800DC54B48D7D5E000AA4A33 /* Pods_MacTransit_AppStore.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		6136267096B70386438C3942CDC68781 /* Pods-MacTransit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 63DE147629F5F63810503B68908C0DD8 /* Build configuration list for PBXNativeTarget "Pods-MacTransit" */;
-			buildPhases = (
-				5B775445574C9847254BB6C141499E78 /* Sources */,
-				4B651AFFA2D606AFACBCB3DB97D7A464 /* Frameworks */,
-				C6D79976BCB6393A8215C1C0BE4F63C2 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D6EAB5431E5A0BFD1716E808728D4C65 /* PBXTargetDependency */,
-				EB63962D389699288D55FC138B720297 /* PBXTargetDependency */,
-			);
-			name = "Pods-MacTransit";
-			productName = "Pods-MacTransit";
-			productReference = D05BF2BFE7D6098836B472CE9B0A6818 /* Pods_MacTransit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		6725F61AEF9D5199980044E085192810 /* SWXMLHash */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5BCE7927AF919085F360B19CD6608133 /* Build configuration list for PBXNativeTarget "SWXMLHash" */;
-			buildPhases = (
-				4B6800F30936652284832635D1BE7DA6 /* Sources */,
-				392C2DB9AE1D14D99FDC19DA9E5B6417 /* Frameworks */,
-				12C6C345D9CC0E24C99FEA64938FE617 /* Headers */,
+				70B3962A8CB5EDC50CCD336E4708EB43 /* Sources */,
+				8EBC8877C9858D2BF5B2553508F6777E /* Frameworks */,
+				2EB7642BE0C53698DF58DF118874B070 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -460,25 +429,63 @@
 			);
 			name = SWXMLHash;
 			productName = SWXMLHash;
-			productReference = 1E5BF4184180236F7C9E92ACA5BF25AC /* SWXMLHash.framework */;
+			productReference = 54C991AFD63305339CA4EF9948F7C57A /* SWXMLHash.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6E770CBFF9484BDE2CF7DB0254834FFD /* SwiftBus */ = {
+		904CA4EAF70A80EDE832E8E4B4B8CF1A /* Pods-TransitBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607936520F388597120872F9AEE7AE01 /* Build configuration list for PBXNativeTarget "SwiftBus" */;
+			buildConfigurationList = D483A8A093CF529598864E50B0BB6EE7 /* Build configuration list for PBXNativeTarget "Pods-TransitBar" */;
 			buildPhases = (
-				9DC8A591FF2A0C17D558AB89B184C6CA /* Sources */,
-				764C15CB23F809D19360FC3DEB0495D0 /* Frameworks */,
-				A071C62E2DF1001D263AB580295CBE0C /* Headers */,
+				3A709511E7A03539B390A86D5C2BF8E2 /* Sources */,
+				10BD34895DAEEFBF2E53E207AD9AFDFE /* Frameworks */,
+				3C400DEAF41E1FDD00196E2B64F386BC /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0E1B800E1CADB6FA07F48DB0D49604DF /* PBXTargetDependency */,
+				958D11BB08AD7190661449C7BCA1492E /* PBXTargetDependency */,
+				CA9B5A3E61B867B5DA2ED1A7D9F1CD5A /* PBXTargetDependency */,
+			);
+			name = "Pods-TransitBar";
+			productName = "Pods-TransitBar";
+			productReference = A42189235A9785557F802B26CC8D384D /* Pods_TransitBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C76E19FFBCE1B1908A883F12754F1A40 /* Pods-TransitBar AppStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73EB287A63788DFD2186071D56111C63 /* Build configuration list for PBXNativeTarget "Pods-TransitBar AppStore" */;
+			buildPhases = (
+				F1A8E3C68B4CDBA32A57660DBE03D168 /* Sources */,
+				29AD1E9A4C4AE064D032EA1DF86CA6C6 /* Frameworks */,
+				34CB4051E50ED1876660D9D488FDEA75 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3D4A6AEC348480F821599E82051EAA1 /* PBXTargetDependency */,
+				AC74B014C18D1457E0BA815101A7B1B9 /* PBXTargetDependency */,
+			);
+			name = "Pods-TransitBar AppStore";
+			productName = "Pods-TransitBar AppStore";
+			productReference = 7BFB764A70C9EDE42EC802405F073809 /* Pods_TransitBar_AppStore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EEA4B64420648C5A84C9A81F037E79EA /* SwiftBus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10A91B019FD341177886A64C0CB9572B /* Build configuration list for PBXNativeTarget "SwiftBus" */;
+			buildPhases = (
+				38F6644D6574910F0890AB8DC8EDB80C /* Sources */,
+				00B409F7C716744DD20036B3239C8423 /* Frameworks */,
+				60655D53A02B6283B31C97E874C9DAE0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				710881F7ABB112A456C02EAAF615D25B /* PBXTargetDependency */,
 			);
 			name = SwiftBus;
 			productName = SwiftBus;
-			productReference = C935CC4F6072BD15BF07ACF6FBE14997 /* SwiftBus.framework */;
+			productReference = F75B36964ADAF9F177242A4315513D79 /* SwiftBus.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -498,137 +505,109 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 9C0EFD0E6FE966EDB999EF8022144E8E /* Products */;
+			productRefGroup = 56F0AFA42D4CD1DDC8742D52B4F4406F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6136267096B70386438C3942CDC68781 /* Pods-MacTransit */,
-				0583BE30237B431EA14FB79775F81F83 /* Pods-MacTransit AppStore */,
-				6E770CBFF9484BDE2CF7DB0254834FFD /* SwiftBus */,
-				6725F61AEF9D5199980044E085192810 /* SWXMLHash */,
+				904CA4EAF70A80EDE832E8E4B4B8CF1A /* Pods-TransitBar */,
+				C76E19FFBCE1B1908A883F12754F1A40 /* Pods-TransitBar AppStore */,
+				EEA4B64420648C5A84C9A81F037E79EA /* SwiftBus */,
+				0340EFC2B39429ED31AE0B0AEF43F687 /* SWXMLHash */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4B6800F30936652284832635D1BE7DA6 /* Sources */ = {
+		38F6644D6574910F0890AB8DC8EDB80C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				569B3CF125C6D69C3AF127E52EDF4A1C /* SWXMLHash+TypeConversion.swift in Sources */,
-				6FD7766D972DA49EEE435C7955C2DCB5 /* SWXMLHash-dummy.m in Sources */,
-				404851BD5433E91143D7FC7C6F36284A /* SWXMLHash.swift in Sources */,
+				6319B1F623DA0CB4CA256D4A1454D5A6 /* ColorExtension.swift in Sources */,
+				EBFB016DBFEA8D2773D614BEFDD07181 /* SwiftBus-dummy.m in Sources */,
+				CD424FD057717AE09AF9517A94361920 /* SwiftBus.swift in Sources */,
+				51A1EB5D9E2C3790810C37B54B011CAF /* SwiftBusConnectionHandler.swift in Sources */,
+				16DB982707CE97720080E9E73B6D74A9 /* SwiftBusDataParser.swift in Sources */,
+				E4DC8FDF749E8E35DBDEE3700B5EF56D /* SwiftBusRequestURLs.swift in Sources */,
+				54C0C2EC5D2C813D0602CBD6C95C1A26 /* TransitAgency.swift in Sources */,
+				C587A27D94CFFF1945DF9E0B5D56DF1A /* TransitMessage.swift in Sources */,
+				20BB1F45FE7D38E456E730449F019AFF /* TransitPrediction.swift in Sources */,
+				B01872DC6D3050CACA0C865F072CE669 /* TransitRoute.swift in Sources */,
+				A5E2AE7E8D9D1F9F074176D7B3D797CA /* TransitStation.swift in Sources */,
+				E7A11CACCD0A3020E8474A1A9335559D /* TransitStop.swift in Sources */,
+				5F0457C25E4E55E27186EDDF8D2C5DC9 /* TransitVehicle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B775445574C9847254BB6C141499E78 /* Sources */ = {
+		3A709511E7A03539B390A86D5C2BF8E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFE5B8F4DC9EFA556D04468DFEC2AACE /* Pods-MacTransit-dummy.m in Sources */,
+				6A9E5419F9840C9C5CAD79BCF37C76F0 /* Pods-TransitBar-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9DC8A591FF2A0C17D558AB89B184C6CA /* Sources */ = {
+		70B3962A8CB5EDC50CCD336E4708EB43 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1260ADBBDD9F704DB9CAEC652044FA8D /* ColorExtension.swift in Sources */,
-				421924DE48F6FDE7989C67BAAEE181B4 /* SwiftBus-dummy.m in Sources */,
-				9F9D2D26121D666084107A4D74EC5B7F /* SwiftBus.swift in Sources */,
-				6384707249F660F6DDCC76E199C785DF /* SwiftBusConnectionHandler.swift in Sources */,
-				878544552D894A29F8B23963C6588EA9 /* SwiftBusDataParser.swift in Sources */,
-				72785C921F9E3F39878E8F1E6F9BE184 /* SwiftBusRequestURLs.swift in Sources */,
-				BF6EB9D77AD130B30CA7E797CCB9F939 /* TransitAgency.swift in Sources */,
-				E3FCB5F1A55F44A1DC2E7C100C3C2231 /* TransitPrediction.swift in Sources */,
-				0611E7D05ADDEAC8464122E7A1FA16EC /* TransitRoute.swift in Sources */,
-				E2B23F0A6A2F2E669519467951D4C631 /* TransitStation.swift in Sources */,
-				6492CB0686D8A2F293B4319FF6E7FD7A /* TransitStop.swift in Sources */,
-				FD842F86B14F2A216DF56E31DC9C3213 /* TransitVehicle.swift in Sources */,
+				2F7D0C18975CE2E36D696524A0B2D3A3 /* SWXMLHash+TypeConversion.swift in Sources */,
+				B51EF597142909934620E39B23C51CDF /* SWXMLHash-dummy.m in Sources */,
+				9DC369319735B40F1E1096C6685C5F1B /* SWXMLHash.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2AC8E91DAEFDECF9169DB02EF7C02C5 /* Sources */ = {
+		F1A8E3C68B4CDBA32A57660DBE03D168 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903305BB2D7B20E71CDA3D14CF00A7D9 /* Pods-MacTransit AppStore-dummy.m in Sources */,
+				44F2A5567BD85D290D4F3F81FA9DD295 /* Pods-TransitBar AppStore-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0E1B800E1CADB6FA07F48DB0D49604DF /* PBXTargetDependency */ = {
+		710881F7ABB112A456C02EAAF615D25B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SWXMLHash;
-			target = 6725F61AEF9D5199980044E085192810 /* SWXMLHash */;
-			targetProxy = 23DA902C487910FDFF0F95A11D69FC0C /* PBXContainerItemProxy */;
+			target = 0340EFC2B39429ED31AE0B0AEF43F687 /* SWXMLHash */;
+			targetProxy = C47CE0B9C90E39BE9E1728D9DB665A37 /* PBXContainerItemProxy */;
 		};
-		59D8C392552F0A932FF5F65D88A4DC41 /* PBXTargetDependency */ = {
+		958D11BB08AD7190661449C7BCA1492E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SWXMLHash;
+			target = 0340EFC2B39429ED31AE0B0AEF43F687 /* SWXMLHash */;
+			targetProxy = 7EB16405A9CA2055E649819529E632B2 /* PBXContainerItemProxy */;
+		};
+		AC74B014C18D1457E0BA815101A7B1B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftBus;
-			target = 6E770CBFF9484BDE2CF7DB0254834FFD /* SwiftBus */;
-			targetProxy = 04671309B9E0EC1E87AD1A6BE9B783E5 /* PBXContainerItemProxy */;
+			target = EEA4B64420648C5A84C9A81F037E79EA /* SwiftBus */;
+			targetProxy = 188DE4EB27045215BD5961BFAD023AB1 /* PBXContainerItemProxy */;
 		};
-		9D573F1E6DC7D3022769491F9C8C3525 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SWXMLHash;
-			target = 6725F61AEF9D5199980044E085192810 /* SWXMLHash */;
-			targetProxy = 813D087834872B5E7C94B0EAB9E907C4 /* PBXContainerItemProxy */;
-		};
-		D6EAB5431E5A0BFD1716E808728D4C65 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SWXMLHash;
-			target = 6725F61AEF9D5199980044E085192810 /* SWXMLHash */;
-			targetProxy = F39775BC99E0384BD68A722212C15FE5 /* PBXContainerItemProxy */;
-		};
-		EB63962D389699288D55FC138B720297 /* PBXTargetDependency */ = {
+		CA9B5A3E61B867B5DA2ED1A7D9F1CD5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftBus;
-			target = 6E770CBFF9484BDE2CF7DB0254834FFD /* SwiftBus */;
-			targetProxy = EC81DE3BDA79A434F55AA6E70B57B65A /* PBXContainerItemProxy */;
+			target = EEA4B64420648C5A84C9A81F037E79EA /* SwiftBus */;
+			targetProxy = C5164DAB8C49746EE8BBE5E7776B2DDF /* PBXContainerItemProxy */;
+		};
+		F3D4A6AEC348480F821599E82051EAA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SWXMLHash;
+			target = 0340EFC2B39429ED31AE0B0AEF43F687 /* SWXMLHash */;
+			targetProxy = 5796F3F700D12A2FB5077586DBBA0DA9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		04FA555941FAC566C2D11AA677D47289 /* Debug */ = {
+		0428B5DA8F98C40F017C824BB9B15F28 /* Debug AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */;
+			baseConfigurationReference = 3169DB6C9809C7B7C27E85ED4EEB2179 /* Pods-TransitBar.debug appstore.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftBus;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		08439383F6BAD86487193CCA510D30A3 /* Release AppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -639,315 +618,18 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SWXMLHash;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "Release AppStore";
-		};
-		25A6ED03CC2AAA0E22E1861D242C8929 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SWXMLHash;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		293C27E802F022234B22CFFFF7ECECE3 /* Debug AppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SWXMLHash;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "Debug AppStore";
-		};
-		424E12FFA14518988B47F696D7B2753E /* Release AppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftBus;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "Release AppStore";
-		};
-		42AE282CBA69C0B15C4B4643043DDE3D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E74597B1888601DCC3F2B9F64643CDC1 /* Pods-MacTransit AppStore.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MacTransit AppStore/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TransitBar/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MacTransit_AppStore;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4888EEFBEA04FABA2120470F4B676BBD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4AA88027E3321475C13770FDD5214009 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SWXMLHash;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5296BD9F09B31BABE75581A6BC0EBCE1 /* Release AppStore */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE_APP_STORE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				STRIP_INSTALLED_PRODUCT = NO;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = "Release AppStore";
-		};
-		736FBEC500C56014DD209AE92BAB36D0 /* Debug AppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftBus;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "Debug AppStore";
-		};
-		7D910617E2775584FF9733CF40482136 /* Debug AppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCF5322CA570D805685A9AF465AD14B1 /* Pods-MacTransit.debug appstore.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MacTransit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Pods-MacTransit/Pods-MacTransit.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-TransitBar/Pods-TransitBar.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MacTransit;
+				PRODUCT_NAME = Pods_TransitBar;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -955,7 +637,117 @@
 			};
 			name = "Debug AppStore";
 		};
-		8C1C39F56931A66F47FA109465D71DBB /* Debug AppStore */ = {
+		0EBA502A1CF9F4F8FDAB119854313D3E /* Release AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftBus;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Release AppStore";
+		};
+		13CA255F8C98150AE98BEFBCAD1F5EEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1818D4455625E845F21F133082AB2528 /* Pods-TransitBar AppStore.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TransitBar AppStore/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-TransitBar AppStore/Pods-TransitBar AppStore.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TransitBar_AppStore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		49732AAF474E87D0574750132476D2D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB40B771E990E9FA07943183D4691F4D /* Pods-TransitBar.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TransitBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-TransitBar/Pods-TransitBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TransitBar;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		61B1E4B962EF79FA35FCC580B51893F0 /* Debug AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -973,6 +765,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -987,51 +780,20 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = "Debug AppStore";
 		};
-		A287F60541188D8D3F2C9E0418983DD5 /* Debug */ = {
+		73571D3F403864949D7E16A2C7414F83 /* Debug AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 722AF78ED404512C5A2E9F86C26DF17C /* Pods-MacTransit.debug.xcconfig */;
+			baseConfigurationReference = 61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MacTransit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Pods-MacTransit/Pods-MacTransit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MacTransit;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A4DAB644DD511A7403065E4999E0358E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB21378E59F35E8AB5E756EBF716512F /* Pods-MacTransit.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1042,128 +804,162 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MacTransit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Pods-MacTransit/Pods-MacTransit.modulemap";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MacTransit;
+				PRODUCT_NAME = SwiftBus;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BEF9661B698483F2F3C25F98C652B858 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B4DF061F0C63182D869416828C37663 /* Pods-MacTransit AppStore.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MacTransit AppStore/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MacTransit_AppStore;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C9EA4A641EAA002C2ED6B1052D4C7AE9 /* Release AppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFA95E279308BF01CFBEB2E039CE7AB5 /* Pods-MacTransit.release appstore.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MacTransit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Pods-MacTransit/Pods-MacTransit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MacTransit;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "Release AppStore";
-		};
-		D6EF785056078EF1E1664F6EABEFFAAD /* Debug AppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30BD837A386E11E2CBE21816C47A2245 /* Pods-MacTransit AppStore.debug appstore.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MacTransit AppStore/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MacTransit_AppStore;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = "Debug AppStore";
 		};
-		DA2E206EB90DF75A25332AE4AA713F31 /* Debug */ = {
+		7C5EDEF9DE51A072654458B254EC0159 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SWXMLHash;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7CBA067BE4176214F593A7418204B620 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftBus;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		83D53850C002DAD164264F05E1FB4718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB5D8B8268950D0E679D3B3954EB1F47 /* Pods-TransitBar.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TransitBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-TransitBar/Pods-TransitBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TransitBar;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8D25F9377292A5EF29123C886392DB91 /* Release AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SWXMLHash;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Release AppStore";
+		};
+		9420A7205B8F85520AF134F4EE25F7CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1181,6 +977,301 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5E2C0C5EDC54A916D0332DA8DA25473 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB60D1A32D9F5F87E7694B4372067579 /* Pods-TransitBar AppStore.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TransitBar AppStore/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-TransitBar AppStore/Pods-TransitBar AppStore.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TransitBar_AppStore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B829E18DE7295F8DAFA96BF2F1C3BC62 /* Release AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE_APP_STORE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release AppStore";
+		};
+		C6E6C9FB6CD2AAA4C0C2F4A3352F4183 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftBus;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D12F822AB9B6C9132F1D3CFD69663F11 /* Release AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 922C4314A45AF3751796E9538CEEB593 /* Pods-TransitBar.release appstore.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TransitBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-TransitBar/Pods-TransitBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TransitBar;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Release AppStore";
+		};
+		DAB658393E3784508E17A0D7D1CAA90C /* Debug AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E096967228462D361803D9C806F5A06 /* Pods-TransitBar AppStore.debug appstore.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TransitBar AppStore/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-TransitBar AppStore/Pods-TransitBar AppStore.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TransitBar_AppStore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Debug AppStore";
+		};
+		F4F79B05EF2716C7A58B60FF5F9AD01A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SWXMLHash;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F609D5667BF398FC5506A302F702F631 /* Debug AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SWXMLHash;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Debug AppStore";
+		};
+		F653E316AB5F825D3AD0CAE700E37071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1200,16 +1291,20 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		DA5752B71072F755FB6E16B333194BCF /* Release AppStore */ = {
+		FB708297A54686E5E55BEF35A4A8F2C8 /* Release AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EA617B1F690245AF8393315992F0E21 /* Pods-MacTransit AppStore.release appstore.xcconfig */;
+			baseConfigurationReference = 4B292E6942A21A967449009FF4C381AA /* Pods-TransitBar AppStore.release appstore.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1220,18 +1315,18 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_VERSION = A;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MacTransit AppStore/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TransitBar AppStore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-TransitBar AppStore/Pods-TransitBar AppStore.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MacTransit_AppStore;
+				PRODUCT_NAME = Pods_TransitBar_AppStore;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1239,91 +1334,60 @@
 			};
 			name = "Release AppStore";
 		};
-		E1344C88631046ACF28766B472F5EDF9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftBus;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		10A91B019FD341177886A64C0CB9572B /* Build configuration list for PBXNativeTarget "SwiftBus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6E6C9FB6CD2AAA4C0C2F4A3352F4183 /* Debug */,
+				73571D3F403864949D7E16A2C7414F83 /* Debug AppStore */,
+				7CBA067BE4176214F593A7418204B620 /* Release */,
+				0EBA502A1CF9F4F8FDAB119854313D3E /* Release AppStore */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18F25234A346310451D175FFC97C1DF8 /* Build configuration list for PBXNativeTarget "SWXMLHash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4F79B05EF2716C7A58B60FF5F9AD01A /* Debug */,
+				F609D5667BF398FC5506A302F702F631 /* Debug AppStore */,
+				7C5EDEF9DE51A072654458B254EC0159 /* Release */,
+				8D25F9377292A5EF29123C886392DB91 /* Release AppStore */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA2E206EB90DF75A25332AE4AA713F31 /* Debug */,
-				8C1C39F56931A66F47FA109465D71DBB /* Debug AppStore */,
-				4888EEFBEA04FABA2120470F4B676BBD /* Release */,
-				5296BD9F09B31BABE75581A6BC0EBCE1 /* Release AppStore */,
+				F653E316AB5F825D3AD0CAE700E37071 /* Debug */,
+				61B1E4B962EF79FA35FCC580B51893F0 /* Debug AppStore */,
+				9420A7205B8F85520AF134F4EE25F7CC /* Release */,
+				B829E18DE7295F8DAFA96BF2F1C3BC62 /* Release AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5BCE7927AF919085F360B19CD6608133 /* Build configuration list for PBXNativeTarget "SWXMLHash" */ = {
+		73EB287A63788DFD2186071D56111C63 /* Build configuration list for PBXNativeTarget "Pods-TransitBar AppStore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				25A6ED03CC2AAA0E22E1861D242C8929 /* Debug */,
-				293C27E802F022234B22CFFFF7ECECE3 /* Debug AppStore */,
-				4AA88027E3321475C13770FDD5214009 /* Release */,
-				08439383F6BAD86487193CCA510D30A3 /* Release AppStore */,
+				13CA255F8C98150AE98BEFBCAD1F5EEB /* Debug */,
+				DAB658393E3784508E17A0D7D1CAA90C /* Debug AppStore */,
+				A5E2C0C5EDC54A916D0332DA8DA25473 /* Release */,
+				FB708297A54686E5E55BEF35A4A8F2C8 /* Release AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607936520F388597120872F9AEE7AE01 /* Build configuration list for PBXNativeTarget "SwiftBus" */ = {
+		D483A8A093CF529598864E50B0BB6EE7 /* Build configuration list for PBXNativeTarget "Pods-TransitBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04FA555941FAC566C2D11AA677D47289 /* Debug */,
-				736FBEC500C56014DD209AE92BAB36D0 /* Debug AppStore */,
-				E1344C88631046ACF28766B472F5EDF9 /* Release */,
-				424E12FFA14518988B47F696D7B2753E /* Release AppStore */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		63DE147629F5F63810503B68908C0DD8 /* Build configuration list for PBXNativeTarget "Pods-MacTransit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A287F60541188D8D3F2C9E0418983DD5 /* Debug */,
-				7D910617E2775584FF9733CF40482136 /* Debug AppStore */,
-				A4DAB644DD511A7403065E4999E0358E /* Release */,
-				C9EA4A641EAA002C2ED6B1052D4C7AE9 /* Release AppStore */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AE86F39C67473DCD25F2B3009974D070 /* Build configuration list for PBXNativeTarget "Pods-MacTransit AppStore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				42AE282CBA69C0B15C4B4643043DDE3D /* Debug */,
-				D6EF785056078EF1E1664F6EABEFFAAD /* Debug AppStore */,
-				BEF9661B698483F2F3C25F98C652B858 /* Release */,
-				DA5752B71072F755FB6E16B333194BCF /* Release AppStore */,
+				49732AAF474E87D0574750132476D2D1 /* Debug */,
+				0428B5DA8F98C40F017C824BB9B15F28 /* Debug AppStore */,
+				83D53850C002DAD164264F05E1FB4718 /* Release */,
+				D12F822AB9B6C9132F1D3CFD69663F11 /* Release AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
