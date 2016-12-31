@@ -16,9 +16,9 @@ public enum TransitMessagePriority: Int {
     
     init(_ priority: String) {
         switch priority {
+        case "Low":     self = .low
         case "Normal":  self = .medium
-        case "High":    self = .high
-        default:        self = .low
+        default:        self = .high
         }
     }
 }
