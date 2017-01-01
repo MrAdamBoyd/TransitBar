@@ -3,11 +3,13 @@
 use_frameworks!
 
 target 'TransitBar' do
+  pod 'Crashlytics'
   pod 'Sparkle'
   pod 'SwiftBus', :path => './SwiftBus'
 end
 
 target 'TransitBar AppStore' do
+  pod 'Crashlytics'
   pod 'SwiftBus', :path => './SwiftBus'
 end
 

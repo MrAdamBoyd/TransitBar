@@ -12,7 +12,7 @@
 		2287387FF99770AAE0176891FFD8A443 /* Pods-TransitBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58921ED3B2328059BCD34127B16893FC /* Pods-TransitBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24C1BE803EA65E045DABDD48801D2CA1 /* Pods-TransitBar AppStore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD97E7481D8ACD0E43ACBE7542337B7 /* Pods-TransitBar AppStore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C872F16E6466AAF114C92EC5C281F76 /* SwiftBus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8141272179EF6EFAD799CD7A5DAACFCD /* SwiftBus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F7D0C18975CE2E36D696524A0B2D3A3 /* SWXMLHash+TypeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735842ECAF0F56434547995BD0775807 /* SWXMLHash+TypeConversion.swift */; };
+		2F7D0C18975CE2E36D696524A0B2D3A3 /* SWXMLHash+TypeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9662AE27B50BC45C8B7BFD2F6F31C /* SWXMLHash+TypeConversion.swift */; };
 		4132B89A476998D6B4F407E5E0C1B3CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFA005859F9AC113582F591E73243D6 /* Foundation.framework */; };
 		44F2A5567BD85D290D4F3F81FA9DD295 /* Pods-TransitBar AppStore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C30C75396CB32EB7E72DDED2C09A16D /* Pods-TransitBar AppStore-dummy.m */; };
 		51A1EB5D9E2C3790810C37B54B011CAF /* SwiftBusConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81954E2E61E27B07D2A1B0688F5368 /* SwiftBusConnectionHandler.swift */; };
@@ -25,11 +25,11 @@
 		6A9E5419F9840C9C5CAD79BCF37C76F0 /* Pods-TransitBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F51AAFBA5A1912671B95C4E24C377FE /* Pods-TransitBar-dummy.m */; };
 		7C20B5DC170C535984B858AD4EAB49AE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */; };
 		93149A7EE426D478964824D2F023DAF6 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188791171C97FFC82FA655EAA1DEED32 /* SWXMLHash.framework */; };
-		9DC369319735B40F1E1096C6685C5F1B /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B88824F2972D0A22B21879972F2D7 /* SWXMLHash.swift */; };
+		9DC369319735B40F1E1096C6685C5F1B /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8782141B032F14929E1BA101344F4565 /* SWXMLHash.swift */; };
 		A5E2AE7E8D9D1F9F074176D7B3D797CA /* TransitStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9891E2C9D31A92B508C1CFC619EA95 /* TransitStation.swift */; };
 		B01872DC6D3050CACA0C865F072CE669 /* TransitRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3929C2586A3B1DF2151DEAB39F719 /* TransitRoute.swift */; };
-		B169A68B1F3F11471E66FC6B4F6734F5 /* SWXMLHash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98BEF3655ED088831E7B99B534123A8D /* SWXMLHash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B51EF597142909934620E39B23C51CDF /* SWXMLHash-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 563328867477CB783F3ED70ED9738546 /* SWXMLHash-dummy.m */; };
+		B169A68B1F3F11471E66FC6B4F6734F5 /* SWXMLHash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F03B93B67F824CCCE721FA597ECD87B7 /* SWXMLHash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B51EF597142909934620E39B23C51CDF /* SWXMLHash-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA25E75C9802F992AFBC1A856FF00B0 /* SWXMLHash-dummy.m */; };
 		C587A27D94CFFF1945DF9E0B5D56DF1A /* TransitMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9CEEB1FBC8474206357259DF22901 /* TransitMessage.swift */; };
 		CD424FD057717AE09AF9517A94361920 /* SwiftBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07106A2A472876D984E47864490E9692 /* SwiftBus.swift */; };
 		E4DC8FDF749E8E35DBDEE3700B5EF56D /* SwiftBusRequestURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12004CAF2C2A462149A07805DC5C00 /* SwiftBusRequestURLs.swift */; };
@@ -76,45 +76,53 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06A215B1877B0E89790F24643E233CD2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		07106A2A472876D984E47864490E9692 /* SwiftBus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBus.swift; sourceTree = "<group>"; };
 		0BFA005859F9AC113582F591E73243D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		11E32B5B4E9E428291ED4108336A4352 /* SWXMLHash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SWXMLHash.modulemap; sourceTree = "<group>"; };
 		1818D4455625E845F21F133082AB2528 /* Pods-TransitBar AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar AppStore.debug.xcconfig"; sourceTree = "<group>"; };
 		188791171C97FFC82FA655EAA1DEED32 /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWXMLHash.xcconfig; sourceTree = "<group>"; };
+		1B9DDDEA18E251D4BC768552ECDECAA4 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = OSX/Fabric.framework/Versions/A/Headers/FABAttributes.h; sourceTree = "<group>"; };
 		1D4EDE13B8869A0387351E01E6F953ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		221567876486C3E16F751798B4D76D3A /* SWXMLHash-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-prefix.pch"; sourceTree = "<group>"; };
 		2A8926880A7C12D4C6F8C2D2F85BFA97 /* Pods-TransitBar-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TransitBar-resources.sh"; sourceTree = "<group>"; };
 		2C30C75396CB32EB7E72DDED2C09A16D /* Pods-TransitBar AppStore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TransitBar AppStore-dummy.m"; sourceTree = "<group>"; };
 		2DCF7EBFE1CE5ABC4974B1B9DEF3DFD6 /* Pods-TransitBar AppStore-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TransitBar AppStore-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2DF71DC7DBF20E9710AEE98813B57DF4 /* TransitVehicle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitVehicle.swift; sourceTree = "<group>"; };
+		2EC719EA57CE3657037B45E8212A609E /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = OSX/Crashlytics.framework/Versions/A/Headers/Crashlytics.h; sourceTree = "<group>"; };
 		3169DB6C9809C7B7C27E85ED4EEB2179 /* Pods-TransitBar.debug appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar.debug appstore.xcconfig"; sourceTree = "<group>"; };
 		3C5CEE082811D632CA870DCB37C71773 /* Pods-TransitBar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TransitBar-acknowledgements.plist"; sourceTree = "<group>"; };
+		3D4801990098B63290796C312000192B /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = OSX/Crashlytics.framework/Versions/A/Headers/Answers.h; sourceTree = "<group>"; };
+		3E57CE14731506FE7F918ACEAD3943E8 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = OSX/Fabric.framework/Versions/A/Headers/Fabric.h; sourceTree = "<group>"; };
 		4B292E6942A21A967449009FF4C381AA /* Pods-TransitBar AppStore.release appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar AppStore.release appstore.xcconfig"; sourceTree = "<group>"; };
 		50F16242B3B07A8E2A6D48F8FB915C4B /* SwiftBusDataParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBusDataParser.swift; sourceTree = "<group>"; };
 		514C6E3853BA8A596910ED00D40F8C95 /* SwiftBus-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBus-prefix.pch"; sourceTree = "<group>"; };
-		51740EA3C0722DF0782A9B0FF8381A5A /* SWXMLHash-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-prefix.pch"; sourceTree = "<group>"; };
 		51D3929C2586A3B1DF2151DEAB39F719 /* TransitRoute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitRoute.swift; sourceTree = "<group>"; };
 		54C991AFD63305339CA4EF9948F7C57A /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWXMLHash.framework; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		563328867477CB783F3ED70ED9738546 /* SWXMLHash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWXMLHash-dummy.m"; sourceTree = "<group>"; };
 		58921ED3B2328059BCD34127B16893FC /* Pods-TransitBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TransitBar-umbrella.h"; sourceTree = "<group>"; };
+		59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWXMLHash.xcconfig; sourceTree = "<group>"; };
 		5A81954E2E61E27B07D2A1B0688F5368 /* SwiftBusConnectionHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBusConnectionHandler.swift; sourceTree = "<group>"; };
 		5B12004CAF2C2A462149A07805DC5C00 /* SwiftBusRequestURLs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBusRequestURLs.swift; sourceTree = "<group>"; };
+		5EBBA7EA9E35C8ED5342C67EEFFEAF22 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSReport.h; sourceTree = "<group>"; };
+		5F1F2654F339E8D6E2708EC1806D278F /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
 		5F394E029532D23C134365370ECB496D /* Pods-TransitBar AppStore-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TransitBar AppStore-frameworks.sh"; sourceTree = "<group>"; };
 		5F921039EBA478CA462E3B64EA719876 /* TransitStop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitStop.swift; sourceTree = "<group>"; };
 		61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftBus.xcconfig; sourceTree = "<group>"; };
-		735842ECAF0F56434547995BD0775807 /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SWXMLHash+TypeConversion.swift"; path = "Source/SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
-		787B88824F2972D0A22B21879972F2D7 /* SWXMLHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SWXMLHash.swift; path = Source/SWXMLHash.swift; sourceTree = "<group>"; };
+		692797A6B530C35A8EDC0350DB23673B /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSAttributes.h; sourceTree = "<group>"; };
+		710FCFF1D188506D63BBBF7472D03680 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77B9662AE27B50BC45C8B7BFD2F6F31C /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SWXMLHash+TypeConversion.swift"; path = "Source/SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
 		796AA2403C6CBB5E11FE71427D98A0F8 /* Pods-TransitBar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TransitBar-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7BFB764A70C9EDE42EC802405F073809 /* Pods_TransitBar_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TransitBar_AppStore.framework; path = "Pods-TransitBar AppStore.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E9891E2C9D31A92B508C1CFC619EA95 /* TransitStation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitStation.swift; sourceTree = "<group>"; };
+		8057D07DF92A3EA81F6BD7708D6D9429 /* SWXMLHash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SWXMLHash.modulemap; sourceTree = "<group>"; };
 		8141272179EF6EFAD799CD7A5DAACFCD /* SwiftBus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBus-umbrella.h"; sourceTree = "<group>"; };
 		846D55F1FAE5F1B0C41D1D97AD1C55CE /* Pods-TransitBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TransitBar.modulemap"; sourceTree = "<group>"; };
+		8782141B032F14929E1BA101344F4565 /* SWXMLHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SWXMLHash.swift; path = Source/SWXMLHash.swift; sourceTree = "<group>"; };
 		8F51AAFBA5A1912671B95C4E24C377FE /* Pods-TransitBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TransitBar-dummy.m"; sourceTree = "<group>"; };
 		922C4314A45AF3751796E9538CEEB593 /* Pods-TransitBar.release appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar.release appstore.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98BEF3655ED088831E7B99B534123A8D /* SWXMLHash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-umbrella.h"; sourceTree = "<group>"; };
 		9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		9E096967228462D361803D9C806F5A06 /* Pods-TransitBar AppStore.debug appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar AppStore.debug appstore.xcconfig"; sourceTree = "<group>"; };
+		9E822F4889771E9DBAB1504D27320725 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		9F42C5D99132F8D70929EC5FEEBD7881 /* TransitAgency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitAgency.swift; sourceTree = "<group>"; };
 		9F5CA3B4F52D6B532F6F1A840E541A62 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A42189235A9785557F802B26CC8D384D /* Pods_TransitBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TransitBar.framework; path = "Pods-TransitBar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,17 +132,20 @@
 		BFB1CAB54D7223162A7890A1EDAD2687 /* Pods-TransitBar AppStore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TransitBar AppStore.modulemap"; sourceTree = "<group>"; };
 		C8C9CEEB1FBC8474206357259DF22901 /* TransitMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitMessage.swift; sourceTree = "<group>"; };
 		CB60D1A32D9F5F87E7694B4372067579 /* Pods-TransitBar AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar AppStore.release.xcconfig"; sourceTree = "<group>"; };
+		CBA25E75C9802F992AFBC1A856FF00B0 /* SWXMLHash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWXMLHash-dummy.m"; sourceTree = "<group>"; };
+		CF1E7987D35FF42AAF15B2ECE8F0A837 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = OSX/Crashlytics.framework/Versions/A/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		CFB1FF66931505BB80CD0C3CCECF1C6C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = OSX/Crashlytics.framework; sourceTree = "<group>"; };
 		D2F4364C0CB059528080E08FBA2D152A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D995384691856A13DAEAFF89DCE53B1E /* SwiftBus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftBus.modulemap; sourceTree = "<group>"; };
 		DB96C6B281F96C04BA7A294C06C5770D /* SwiftBus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftBus-dummy.m"; sourceTree = "<group>"; };
-		E97700937AA94425B5E44533B934F39B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E38DDA0747A3D52B9F7D1AA86A2FBB39 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = OSX/Fabric.framework; sourceTree = "<group>"; };
 		EB5D8B8268950D0E679D3B3954EB1F47 /* Pods-TransitBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar.release.xcconfig"; sourceTree = "<group>"; };
 		EFD97E7481D8ACD0E43ACBE7542337B7 /* Pods-TransitBar AppStore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TransitBar AppStore-umbrella.h"; sourceTree = "<group>"; };
+		F03B93B67F824CCCE721FA597ECD87B7 /* SWXMLHash-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-umbrella.h"; sourceTree = "<group>"; };
 		F359F31474F4DD8301D14D6B17D53CC6 /* Pods-TransitBar-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TransitBar-frameworks.sh"; sourceTree = "<group>"; };
 		F75B36964ADAF9F177242A4315513D79 /* SwiftBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftBus.framework; path = SwiftBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89B574466B828DE2C7033ABFEDF1EA3 /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		FF3E582BEA7FCBA94B3AE4C0A82EFFFD /* TransitPrediction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitPrediction.swift; sourceTree = "<group>"; };
-		FFC3424CB11CF338E06F4613D598DB35 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,19 +195,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		18ADBA973033687B812A58854F0B1171 /* Sparkle */ = {
+		261B270D39553D903875EF16C1DF49CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1DB8BF398D7636FCD270D566FA1B30DC /* Frameworks */,
-			);
-			name = Sparkle;
-			path = Sparkle;
-			sourceTree = "<group>";
-		};
-		1DB8BF398D7636FCD270D566FA1B30DC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FFC3424CB11CF338E06F4613D598DB35 /* Sparkle.framework */,
+				06A215B1877B0E89790F24643E233CD2 /* Sparkle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -219,6 +221,26 @@
 			);
 			name = "Pods-TransitBar AppStore";
 			path = "Target Support Files/Pods-TransitBar AppStore";
+			sourceTree = "<group>";
+		};
+		3BA067805DFE0B2A542C634EC8CD114A /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				261B270D39553D903875EF16C1DF49CE /* Frameworks */,
+			);
+			name = Sparkle;
+			path = Sparkle;
+			sourceTree = "<group>";
+		};
+		44EEDD95A3B21F920103DAA8C425A8D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F923FB9C565547F386CFD78F95581653 /* Crashlytics */,
+				D47656104A13C2747AB2A39F4D35C5DC /* Fabric */,
+				3BA067805DFE0B2A542C634EC8CD114A /* Sparkle */,
+				AF52F35ED24CAF87CFB8D44AD8E90394 /* SWXMLHash */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		54EE477BC10980C59D61899AA1A266B7 /* Classes */ = {
@@ -262,15 +284,12 @@
 			path = ../SwiftBus;
 			sourceTree = "<group>";
 		};
-		5D6A325A4A203DCCFC1030B50CF70E20 /* SWXMLHash */ = {
+		6878CAA833CC76B143C0A1C564632B1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				787B88824F2972D0A22B21879972F2D7 /* SWXMLHash.swift */,
-				735842ECAF0F56434547995BD0775807 /* SWXMLHash+TypeConversion.swift */,
-				A492C2C04E6AEB847D04FD9FC951525E /* Support Files */,
+				CFB1FF66931505BB80CD0C3CCECF1C6C /* Crashlytics.framework */,
 			);
-			name = SWXMLHash;
-			path = SWXMLHash;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -279,21 +298,21 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				F46A6978290CA780871CFA9A7A7EF11F /* Development Pods */,
 				06755EEF98FD941B1FC396AAD461821B /* Frameworks */,
-				C35CF77CFD932985B50437E4008A4D6E /* Pods */,
+				44EEDD95A3B21F920103DAA8C425A8D8 /* Pods */,
 				56F0AFA42D4CD1DDC8742D52B4F4406F /* Products */,
 				CCBFE64C8F236EAD4DF3F2C13017A8B9 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A492C2C04E6AEB847D04FD9FC951525E /* Support Files */ = {
+		811F5F24A8E799629FBEFD443C12E5F6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E97700937AA94425B5E44533B934F39B /* Info.plist */,
-				11E32B5B4E9E428291ED4108336A4352 /* SWXMLHash.modulemap */,
-				1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */,
-				563328867477CB783F3ED70ED9738546 /* SWXMLHash-dummy.m */,
-				51740EA3C0722DF0782A9B0FF8381A5A /* SWXMLHash-prefix.pch */,
-				98BEF3655ED088831E7B99B534123A8D /* SWXMLHash-umbrella.h */,
+				710FCFF1D188506D63BBBF7472D03680 /* Info.plist */,
+				8057D07DF92A3EA81F6BD7708D6D9429 /* SWXMLHash.modulemap */,
+				59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */,
+				CBA25E75C9802F992AFBC1A856FF00B0 /* SWXMLHash-dummy.m */,
+				221567876486C3E16F751798B4D76D3A /* SWXMLHash-prefix.pch */,
+				F03B93B67F824CCCE721FA597ECD87B7 /* SWXMLHash-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SWXMLHash";
@@ -319,6 +338,17 @@
 			path = "Target Support Files/Pods-TransitBar";
 			sourceTree = "<group>";
 		};
+		AF52F35ED24CAF87CFB8D44AD8E90394 /* SWXMLHash */ = {
+			isa = PBXGroup;
+			children = (
+				8782141B032F14929E1BA101344F4565 /* SWXMLHash.swift */,
+				77B9662AE27B50BC45C8B7BFD2F6F31C /* SWXMLHash+TypeConversion.swift */,
+				811F5F24A8E799629FBEFD443C12E5F6 /* Support Files */,
+			);
+			name = SWXMLHash;
+			path = SWXMLHash;
+			sourceTree = "<group>";
+		};
 		AFF044AE8734EBD6FD49C465E359996F /* OS X */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,15 +356,6 @@
 				0BFA005859F9AC113582F591E73243D6 /* Foundation.framework */,
 			);
 			name = "OS X";
-			sourceTree = "<group>";
-		};
-		C35CF77CFD932985B50437E4008A4D6E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				18ADBA973033687B812A58854F0B1171 /* Sparkle */,
-				5D6A325A4A203DCCFC1030B50CF70E20 /* SWXMLHash */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		C42B8BC5E0F35EE97A4C8082D509F332 /* Support Files */ = {
@@ -351,6 +372,14 @@
 			path = "../Pods/Target Support Files/SwiftBus";
 			sourceTree = "<group>";
 		};
+		CC13EA665C4DBF279C795770EB73DB0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E38DDA0747A3D52B9F7D1AA86A2FBB39 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CCBFE64C8F236EAD4DF3F2C13017A8B9 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +387,17 @@
 				38DABD13BFBE3C02DADB722D29A643EF /* Pods-TransitBar AppStore */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D47656104A13C2747AB2A39F4D35C5DC /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				1B9DDDEA18E251D4BC768552ECDECAA4 /* FABAttributes.h */,
+				3E57CE14731506FE7F918ACEAD3943E8 /* Fabric.h */,
+				CC13EA665C4DBF279C795770EB73DB0C /* Frameworks */,
+			);
+			name = Fabric;
+			path = Fabric;
 			sourceTree = "<group>";
 		};
 		E0A58FB0C6A340D99BDF3182E6D12707 /* Pod */ = {
@@ -375,6 +415,22 @@
 				59F940660870DBEC69521BC409A50676 /* SwiftBus */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F923FB9C565547F386CFD78F95581653 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				CF1E7987D35FF42AAF15B2ECE8F0A837 /* ANSCompatibility.h */,
+				3D4801990098B63290796C312000192B /* Answers.h */,
+				692797A6B530C35A8EDC0350DB23673B /* CLSAttributes.h */,
+				9E822F4889771E9DBAB1504D27320725 /* CLSLogging.h */,
+				5EBBA7EA9E35C8ED5342C67EEFFEAF22 /* CLSReport.h */,
+				5F1F2654F339E8D6E2708EC1806D278F /* CLSStackFrame.h */,
+				2EC719EA57CE3657037B45E8212A609E /* Crashlytics.h */,
+				6878CAA833CC76B143C0A1C564632B1B /* Frameworks */,
+			);
+			name = Crashlytics;
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -822,7 +878,7 @@
 		};
 		7C5EDEF9DE51A072654458B254EC0159 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */;
+			baseConfigurationReference = 59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -927,7 +983,7 @@
 		};
 		8D25F9377292A5EF29123C886392DB91 /* Release AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */;
+			baseConfigurationReference = 59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1186,7 +1242,7 @@
 		};
 		F4F79B05EF2716C7A58B60FF5F9AD01A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */;
+			baseConfigurationReference = 59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1221,7 +1277,7 @@
 		};
 		F609D5667BF398FC5506A302F702F631 /* Debug AppStore */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A0BC67F53A3101672ADFCE7CFB0BF09 /* SWXMLHash.xcconfig */;
+			baseConfigurationReference = 59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

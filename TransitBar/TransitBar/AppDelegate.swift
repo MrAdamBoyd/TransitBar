@@ -11,6 +11,8 @@ import SwiftBus
 #if SPARKLE
 import Sparkle
 #endif
+import Fabric
+import Crashlytics
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate {
@@ -25,6 +27,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     var minuteTimer: Timer!
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        
+        //Fabric
+        Fabric.with([Crashlytics.self])
+        
+        //See https://docs.fabric.io/apple/crashlytics/os-x.html
+        UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": true])
         
         //Setting up the status bar menu and the actions from that
         self.statusItem.title = "--"

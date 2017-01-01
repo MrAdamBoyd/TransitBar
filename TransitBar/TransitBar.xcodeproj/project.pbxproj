@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47EF3441531851D492DD07DA /* Pods_TransitBar_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAD3B8F3013F6929D7B4DAD /* Pods_TransitBar_AppStore.framework */; };
 		65298B2094FB3BC994C51EBD /* Pods_TransitBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13636071D5B07439F7926920 /* Pods_TransitBar.framework */; };
 		660F233F1DADF22900832EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F233E1DADF22900832EC6 /* AppDelegate.swift */; };
 		660F23411DADF22900832EC6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F23401DADF22900832EC6 /* ListViewController.swift */; };
@@ -122,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6641821B1E17558600C0EC7B /* Pods_TransitBar.framework in Frameworks */,
+				47EF3441531851D492DD07DA /* Pods_TransitBar_AppStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +249,7 @@
 				6C8DBCF937B39F5924453CEC /* [CP] Embed Pods Frameworks */,
 				767F4B6D7AE4F76D9E2812B3 /* [CP] Copy Pods Resources */,
 				663636CB1DE233660067A79B /* ShellScript */,
+				66D940031E19961A004B4667 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -304,6 +307,7 @@
 				663F9E551E00F050009116D9 /* [CP] Embed Pods Frameworks */,
 				663F9E561E00F050009116D9 /* [CP] Copy Pods Resources */,
 				663F9E571E00F050009116D9 /* ShellScript */,
+				66D940041E199625004B4667 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -496,6 +500,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		66D940031E19961A004B4667 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" ddc2645d54ae392a8abd36a8dbbccb41fca3541d ec4418504bf66c40bfd19499c14e2f454e4ae3fa366b7699d1092e7ef7815f1b";
+		};
+		66D940041E199625004B4667 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" ddc2645d54ae392a8abd36a8dbbccb41fca3541d ec4418504bf66c40bfd19499c14e2f454e4ae3fa366b7699d1092e7ef7815f1b";
 		};
 		6C8DBCF937B39F5924453CEC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -691,6 +721,7 @@
 				CODE_SIGN_ENTITLEMENTS = TransitBar/TransitBar.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -715,6 +746,7 @@
 				CODE_SIGN_ENTITLEMENTS = TransitBar/TransitBar.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -801,6 +833,7 @@
 				CODE_SIGN_ENTITLEMENTS = TransitBar/TransitBar.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -825,6 +858,7 @@
 				CODE_SIGN_ENTITLEMENTS = TransitBar/TransitBar.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -848,6 +882,7 @@
 				CODE_SIGN_ENTITLEMENTS = TransitBar/TransitBar.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -872,6 +907,7 @@
 				CODE_SIGN_ENTITLEMENTS = TransitBar/TransitBar.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -945,6 +981,7 @@
 				CODE_SIGN_ENTITLEMENTS = TransitBar/TransitBar.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -1041,6 +1078,7 @@
 				CODE_SIGN_ENTITLEMENTS = TransitBar/TransitBar.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
