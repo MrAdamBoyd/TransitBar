@@ -74,7 +74,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             SwiftBus.shared.stopPredictions(forStop: entry.stop) { stop in
                 
                 if let stop = stop {
-                    self.sendNotificationsToUser(with: stop.messages, differingFrom: entry.stop.messages, on: stop.routeTitle)
+                    
+                    //Only show alerts if it's in the menu bar
+                    if entry.shouldBeShownInMenuBar {
+                        self.sendNotificationsToUser(with: stop.messages, differingFrom: entry.stop.messages, on: stop.routeTitle)
+                    }
                     
                     entry.stop.predictions = stop.predictions
                     entry.stop.messages = stop.messages
