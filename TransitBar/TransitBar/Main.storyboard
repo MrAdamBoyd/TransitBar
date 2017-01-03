@@ -1035,10 +1035,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="319"/>
                                 <clipView key="contentView" id="bIu-pw-pCL">
                                     <rect key="frame" x="1" y="0.0" width="478" height="318"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" autosaveColumns="NO" headerView="faB-K1-ac6" id="ew1-Ib-gCC">
-                                            <rect key="frame" x="0.0" y="0.0" width="482" height="295"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="481.5" height="295"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1113,7 +1113,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="faB-K1-ac6">
-                                    <rect key="frame" x="0.0" y="0.0" width="482" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="481.5" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
