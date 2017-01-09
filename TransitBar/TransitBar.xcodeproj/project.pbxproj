@@ -28,6 +28,8 @@
 		663F9E541E00F050009116D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663636C51DE12A190067A79B /* Main.storyboard */; };
 		6641821B1E17558600C0EC7B /* Pods_TransitBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13636071D5B07439F7926920 /* Pods_TransitBar.framework */; };
 		665B079A1DEBB55000AF2332 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665B07991DEBB55000AF2332 /* AboutViewController.swift */; };
+		666F303D1E230D7200999222 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666F303C1E230D7200999222 /* AlertsViewController.swift */; };
+		666F303E1E230D7200999222 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666F303C1E230D7200999222 /* AlertsViewController.swift */; };
 		66A6072D1DF675D4003C9DD6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6072C1DF675D4003C9DD6 /* Constants.swift */; };
 		66A6072F1DF67640003C9DD6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6072E1DF67640003C9DD6 /* DataController.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,7 @@
 		663F9E5D1E00F050009116D9 /* TransitBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		664AB2F21E00DC220065385F /* SwiftBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftBus.framework; path = "../../../../../../../../Developer/Xcode/DerivedData/MacTransit-dbegpihfjenydbglgoruwhgktnbs/Build/Products/Release/SwiftBus/SwiftBus.framework"; sourceTree = "<group>"; };
 		665B07991DEBB55000AF2332 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		666F303C1E230D7200999222 /* AlertsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		66A6072C1DF675D4003C9DD6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		66A6072E1DF67640003C9DD6 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		66C923E81E00C8EF00FE067E /* TransitBar-AppStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TransitBar-AppStore-Info.plist"; sourceTree = "<group>"; };
@@ -194,6 +197,7 @@
 				665B07991DEBB55000AF2332 /* AboutViewController.swift */,
 				660F23401DADF22900832EC6 /* ListViewController.swift */,
 				663636C71DE12DFA0067A79B /* NewLineViewController.swift */,
+				666F303C1E230D7200999222 /* AlertsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -571,6 +575,7 @@
 				66A6072F1DF67640003C9DD6 /* DataController.swift in Sources */,
 				660F233F1DADF22900832EC6 /* AppDelegate.swift in Sources */,
 				663636C81DE12DFA0067A79B /* NewLineViewController.swift in Sources */,
+				666F303D1E230D7200999222 /* AlertsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +606,7 @@
 				663F9E4D1E00F050009116D9 /* DataController.swift in Sources */,
 				663F9E4E1E00F050009116D9 /* AppDelegate.swift in Sources */,
 				663F9E4F1E00F050009116D9 /* NewLineViewController.swift in Sources */,
+				666F303E1E230D7200999222 /* AlertsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

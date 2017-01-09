@@ -16,7 +16,7 @@ fileprivate let timeKeyNever = "entryTimesKeyNever"
 
 class TransitEntry: NSObject, NSCoding {
     var stop: TransitStop!
-    var times: (Date?, Date?)? //Nil if should always be shown
+    var times: (Date?, Date?)? //Nil if should always be shown, will exist but both elements in tuple will be nil if should never be shown.
 
     init(stop: TransitStop, times: (Date?, Date?)?) {
         self.stop = stop

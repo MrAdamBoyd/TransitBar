@@ -78,6 +78,12 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
         self.performSegue(withIdentifier: "showNewLine", sender: self)
     }
 
+    @IBAction func viewAlertsAction(_ sender: Any) {
+        if let appDelegate = NSApp.delegate as? AppDelegate {
+            appDelegate.openAlertsWindow()
+        }
+    }
+
     func showAbout() {
         self.performSegue(withIdentifier: "showAbout", sender: self)
     }

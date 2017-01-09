@@ -23,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     let storyboard = NSStoryboard(name: "Main", bundle: nil)
     var listWindowController: NSWindowController?
     var aboutWindowController: NSWindowController?
+    var alertsWindowController: NSWindowController?
     
     var minuteTimer: Timer!
     
@@ -90,10 +91,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         
         group.notify(queue: DispatchQueue.main) {
             self.updateMenuItems()
+            if let alertsVC = self.alertsWindowController?.contentViewController as? AlertsViewController {
+                //If the user has the alerts vc open, reload the messages, as they might have changed
+                alertsVC.tableView.reloadData()
+            }
         }
     }
     
-    /// Sends notifications to the user. This method will send notifications to the user for all the new messages that are not contained in the old messages.
+    /// Sends notifications to the user. This method will send notifications to the user for all the new messages that are not contained in the old messages with high priority.
     ///
     /// - Parameters:
     ///   - newMessages: messages from the most recent prediction
@@ -135,6 +140,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             self.statusItem.menu?.addItem(NSMenuItem(title: "Check for Updates...", action: #selector(self.checkForUpdates), keyEquivalent: ""))
         #endif
         self.statusItem.menu?.addItem(NSMenuItem.separator())
+        self.statusItem.menu?.addItem(NSMenuItem(title: "View Alerts", action: #selector(self.openAlertsWindow), keyEquivalent: ""))
         self.statusItem.menu?.addItem(NSMenuItem(title: "Preferences...", action: #selector(self.openSettingsWindow), keyEquivalent: ","))
         self.statusItem.menu?.addItem(NSMenuItem(title: "Quit", action: #selector(self.terminate), keyEquivalent: "q"))
         
@@ -224,6 +230,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         self.aboutWindowController?.window?.makeKeyAndOrderFront(self)
     }
     
+    /// Opens the window that has all the alerts
+    func openAlertsWindow() {
+        guard let windowController = self.storyboard.instantiateController(withIdentifier: "alertsWindow") as? NSWindowController else { return }
+        self.alertsWindowController = windowController
+        self.alertsWindowController?.window?.makeKeyAndOrderFront(self)
+    }
+    
     /**
      Quits the app
      */
@@ -235,6 +248,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
         //Always return true. Usually notifications are only delivered if application is key. However, this is a menubar application and will never be key.
         return true
+    }
+    
+    func userNotificationCenter(_ center: NSUserNotificationCenter, didActivate notification: NSUserNotification) {
+        self.openAlertsWindow()
     }
     
     deinit {
