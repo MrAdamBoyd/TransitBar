@@ -19,9 +19,15 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     @IBOutlet weak var createNewLineButton: NSButton!
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var numberOfItemsToShowTextField: NSTextField!
+    @IBOutlet weak var icloudSettingsButton: NSButton!
+    @IBOutlet weak var walkTimeButton: NSButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.numberOfItemsToShowTextField.intValue = Int32(DataController.shared.numberOfPredictionsToShow)
+        self.icloudSettingsButton.state = DataController.shared.storeInCloud ? 1 : 0
+        self.walkTimeButton.state = DataController.shared.displayWalkingTime ? 1 : 0
         
         self.numberOfItemsToShowTextField.delegate = self
     }
@@ -84,6 +90,15 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
         }
     }
 
+    
+    @IBAction func icloudSettingsClicked(_ sender: Any) {
+        DataController.shared.storeInCloud = self.icloudSettingsButton.state == 1
+    }
+    
+    @IBAction func walkTimeButtonClicked(_ sender: Any) {
+        DataController.shared.displayWalkingTime = self.walkTimeButton.state == 1
+    
+    }
     func showAbout() {
         self.performSegue(withIdentifier: "showAbout", sender: self)
     }

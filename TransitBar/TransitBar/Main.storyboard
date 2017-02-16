@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1167,13 +1167,13 @@
                                 </connections>
                             </button>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNd-02-vkS">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="319"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="259"/>
                                 <clipView key="contentView" id="bIu-pw-pCL">
-                                    <rect key="frame" x="1" y="0.0" width="478" height="318"/>
+                                    <rect key="frame" x="1" y="0.0" width="478" height="258"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" autosaveColumns="NO" headerView="faB-K1-ac6" id="ew1-Ib-gCC">
-                                            <rect key="frame" x="0.0" y="0.0" width="481.5" height="295"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="481.5" height="235"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1240,7 +1240,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="nRS-lB-4lQ">
-                                    <rect key="frame" x="1" y="302" width="478" height="16"/>
+                                    <rect key="frame" x="1" y="242" width="478" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="z3X-LZ-LOh">
@@ -1282,26 +1282,55 @@
                                     <action selector="viewAlertsAction:" target="XfG-lQ-9wD" id="GVK-kB-EPJ"/>
                                 </connections>
                             </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="0d9-Hb-6Qo">
+                                <rect key="frame" x="8" y="307" width="168" height="18"/>
+                                <buttonCell key="cell" type="check" title="Store settings on iCloud" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qUO-jH-14I">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="icloudSettingsClicked:" target="XfG-lQ-9wD" id="dX0-dh-h3D"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="8dX-KE-lhJ">
+                                <rect key="frame" x="8" y="267" width="464" height="34"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="srA-Rt-Zua">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <string key="title">Display time to walk to stops from current location
+(requires location permissions)</string>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="walkTimeButtonClicked:" target="XfG-lQ-9wD" id="PLJ-9z-aCQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="eEF-2e-TBS" firstAttribute="leading" secondItem="FpD-Qg-nYD" secondAttribute="trailing" constant="5" id="0sy-Y1-3np"/>
                             <constraint firstItem="FpD-Qg-nYD" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="1sL-GW-X1k"/>
                             <constraint firstItem="CRR-Hx-DPL" firstAttribute="centerY" secondItem="h7P-PM-teG" secondAttribute="centerY" id="9Ao-Pb-4O6"/>
                             <constraint firstItem="FpD-Qg-nYD" firstAttribute="centerY" secondItem="h7P-PM-teG" secondAttribute="centerY" id="ASG-C7-EAU"/>
-                            <constraint firstItem="oNd-02-vkS" firstAttribute="top" secondItem="h7P-PM-teG" secondAttribute="bottom" constant="10" id="Izb-6p-EQ4"/>
+                            <constraint firstItem="0d9-Hb-6Qo" firstAttribute="top" secondItem="FpD-Qg-nYD" secondAttribute="bottom" constant="8" id="D3d-qs-SVX"/>
+                            <constraint firstItem="8dX-KE-lhJ" firstAttribute="top" secondItem="0d9-Hb-6Qo" secondAttribute="bottom" constant="10" id="F7A-j6-UeZ"/>
                             <constraint firstItem="oNd-02-vkS" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Qql-vP-jAd"/>
+                            <constraint firstItem="8dX-KE-lhJ" firstAttribute="leading" secondItem="FpD-Qg-nYD" secondAttribute="leading" id="UVF-fk-bJp"/>
                             <constraint firstItem="h7P-PM-teG" firstAttribute="leading" secondItem="CRR-Hx-DPL" secondAttribute="trailing" constant="12" id="VGM-jA-uGm"/>
                             <constraint firstAttribute="bottom" secondItem="oNd-02-vkS" secondAttribute="bottom" id="WAh-ej-qFq"/>
                             <constraint firstAttribute="trailing" secondItem="oNd-02-vkS" secondAttribute="trailing" id="ZK9-ue-YZb"/>
                             <constraint firstItem="h7P-PM-teG" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="bmh-wr-bGk"/>
                             <constraint firstAttribute="trailing" secondItem="h7P-PM-teG" secondAttribute="trailing" constant="20" id="dZE-v6-Zou"/>
+                            <constraint firstItem="0d9-Hb-6Qo" firstAttribute="leading" secondItem="FpD-Qg-nYD" secondAttribute="leading" id="jv1-ga-15I"/>
                             <constraint firstItem="eEF-2e-TBS" firstAttribute="centerY" secondItem="FpD-Qg-nYD" secondAttribute="centerY" id="mZd-jX-MGb"/>
+                            <constraint firstItem="oNd-02-vkS" firstAttribute="top" secondItem="8dX-KE-lhJ" secondAttribute="bottom" constant="10" id="ohj-8W-ieH"/>
+                            <constraint firstAttribute="trailing" secondItem="8dX-KE-lhJ" secondAttribute="trailing" constant="10" id="zmt-Bt-GWY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="createNewLineButton" destination="h7P-PM-teG" id="dm1-cr-633"/>
+                        <outlet property="icloudSettingsButton" destination="0d9-Hb-6Qo" id="i4t-So-pHt"/>
                         <outlet property="numberOfItemsToShowTextField" destination="eEF-2e-TBS" id="y81-Ur-rYT"/>
                         <outlet property="tableView" destination="ew1-Ib-gCC" id="6jV-Gd-NpT"/>
+                        <outlet property="walkTimeButton" destination="8dX-KE-lhJ" id="lHR-xu-Yu6"/>
                         <segue destination="7q5-sU-bEe" kind="show" identifier="showNewLine" id="LhK-YU-JCU"/>
                         <segue destination="Hrf-ru-gnk" kind="show" identifier="showAbout" id="Q5a-Sb-5ym"/>
                     </connections>
