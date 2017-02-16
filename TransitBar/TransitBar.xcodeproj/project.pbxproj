@@ -359,6 +359,14 @@
 					};
 					663F9E461E00F050009116D9 = {
 						DevelopmentTeam = 6GHQ7P7EHA;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

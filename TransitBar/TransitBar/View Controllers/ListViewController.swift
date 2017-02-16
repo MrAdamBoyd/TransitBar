@@ -89,7 +89,6 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
             appDelegate.openAlertsWindow()
         }
     }
-
     
     @IBAction func icloudSettingsClicked(_ sender: Any) {
         DataController.shared.storeInCloud = self.icloudSettingsButton.state == 1
