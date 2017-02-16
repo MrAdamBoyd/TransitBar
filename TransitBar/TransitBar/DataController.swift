@@ -37,6 +37,9 @@ class DataController: NSObject {
             self.set(any: self.storeInCloud, for: Constants.storeInCloudKey)
             NotificationCenter.default.post(name: .storeInCloudChanged, object: nil)
             
+            //Just changed where we are storing the defaults. So now, save the current in memory settings to the new defaults location, overwriting any old settings there
+            self.resetData()
+            
             if self.storeInCloud {
                 //Register for the notification and sync the data
                 NotificationCenter.default.addObserver(self, selector: #selector(self.getDataFromDefaults), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default())
@@ -44,7 +47,6 @@ class DataController: NSObject {
             } else {
                 //For the entry changed notification
                 NotificationCenter.default.removeObserver(self)
-                self.resetData()
             }
         }
     }
