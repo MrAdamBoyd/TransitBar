@@ -18,27 +18,11 @@ class DataController: NSObject {
         super.init()
         
         if self.storeInCloud {
-            NotificationCenter.default.addObserver(self, selector: #selector(self.resetData), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default())
+            NotificationCenter.default.addObserver(self, selector: #selector(self.getDataFromDefaults), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default())
             NSUbiquitousKeyValueStore.default().synchronize()
         }
         
-        //Number of predictions to show
-        if let numberOfPredictions = self.getInt(for: Constants.numberOfPredictionsKey), numberOfPredictions != 0 {
-            self.numberOfPredictionsToShow = numberOfPredictions
-        }
-        
-        if let storeInCloud = self.getBool(for: Constants.storeInCloudKey) {
-            self.storeInCloud = storeInCloud
-        }
-        
-        if let displayWalkingTime = self.getBool(for: Constants.walkingTimeKey) {
-            self.displayWalkingTime = displayWalkingTime
-        }
-        
-        //Get data from user defaults and then convert from data to array of entries
-        if let unarchivedObject = self.getData(for: Constants.entryArrayKey) {
-            self.savedEntries = NSKeyedUnarchiver.unarchiveObject(with: unarchivedObject) as! [TransitEntry]
-        }
+        self.getDataFromDefaults()
     }
     
     var numberOfPredictionsToShow: Int = 3 {
@@ -55,7 +39,7 @@ class DataController: NSObject {
             
             if self.storeInCloud {
                 //Register for the notification and sync the data
-                NotificationCenter.default.addObserver(self, selector: #selector(self.resetData), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default())
+                NotificationCenter.default.addObserver(self, selector: #selector(self.getDataFromDefaults), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default())
                 NSUbiquitousKeyValueStore.default().synchronize()
             } else {
                 //For the entry changed notification
@@ -83,6 +67,26 @@ class DataController: NSObject {
     }
     
     // MARK: - Getting and setting values
+    
+    func getDataFromDefaults() {
+        //Number of predictions to show
+        if let numberOfPredictions = self.getInt(for: Constants.numberOfPredictionsKey), numberOfPredictions != 0 {
+            self.numberOfPredictionsToShow = numberOfPredictions
+        }
+        
+        if let storeInCloud = self.getBool(for: Constants.storeInCloudKey) {
+            self.storeInCloud = storeInCloud
+        }
+        
+        if let displayWalkingTime = self.getBool(for: Constants.walkingTimeKey) {
+            self.displayWalkingTime = displayWalkingTime
+        }
+        
+        //Get data from user defaults and then convert from data to array of entries
+        if let unarchivedObject = self.getData(for: Constants.entryArrayKey) {
+            self.savedEntries = NSKeyedUnarchiver.unarchiveObject(with: unarchivedObject) as! [TransitEntry]
+        }
+    }
     
     func resetData() {
         self.set(any: self.numberOfPredictionsToShow, for: Constants.numberOfPredictionsKey)

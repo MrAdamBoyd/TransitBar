@@ -25,9 +25,11 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.numberOfItemsToShowTextField.intValue = Int32(DataController.shared.numberOfPredictionsToShow)
+        self.setUIFromSettings(reloadData: false)
         self.icloudSettingsButton.state = DataController.shared.storeInCloud ? 1 : 0
-        self.walkTimeButton.state = DataController.shared.displayWalkingTime ? 1 : 0
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setUIFromSettings), name: .entriesChanged, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.setUIFromSettings), name: .displayWalkingTimeChanged, object: nil)
         
         self.numberOfItemsToShowTextField.delegate = self
     }
@@ -78,6 +80,12 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
         self.tableView.reloadData()
     }
     
+    func setUIFromSettings(reloadData: Bool = true) {
+        self.numberOfItemsToShowTextField.intValue = Int32(DataController.shared.numberOfPredictionsToShow)
+        self.walkTimeButton.state = DataController.shared.displayWalkingTime ? 1 : 0
+        if reloadData { self.tableView.reloadData() }
+    }
+    
     // MARK: - Actions
     
     @IBAction func createNewLineAction(_ sender: Any) {
@@ -96,8 +104,8 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     
     @IBAction func walkTimeButtonClicked(_ sender: Any) {
         DataController.shared.displayWalkingTime = self.walkTimeButton.state == 1
-    
     }
+    
     func showAbout() {
         self.performSegue(withIdentifier: "showAbout", sender: self)
     }
@@ -165,6 +173,10 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
                 return "Always"
             }
         }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
 }
