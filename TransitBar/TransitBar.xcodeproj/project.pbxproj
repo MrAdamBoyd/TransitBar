@@ -341,6 +341,9 @@
 							com.apple.Sandbox = {
 								enabled = 0;
 							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
 						};
 					};
 					660F234E1DADF22900832EC6 = {

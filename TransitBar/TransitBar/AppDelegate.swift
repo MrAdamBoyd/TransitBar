@@ -13,12 +13,16 @@ import Sparkle
 #endif
 import Fabric
 import Crashlytics
+import CoreLocation
+import MapKit
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate, CLLocationManagerDelegate {
     
     //Item that lives in the status bar
     let statusItem = NSStatusBar.system().statusItem(withLength: -1)
+    
+    var locManager = CLLocationManager()
     
     let storyboard = NSStoryboard(name: "Main", bundle: nil)
     var listWindowController: NSWindowController?
@@ -26,6 +30,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     var alertsWindowController: NSWindowController?
     
     var minuteTimer: Timer!
+    var currentLocation: CLLocation? {
+        didSet {
+            self.createMenuItems()
+        }
+    }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
@@ -45,7 +54,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             SUUpdater.shared().automaticallyChecksForUpdates = true
         #endif
         
+        self.determineTrackingLocation()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.createMenuItems), name: .entriesChanged, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.createMenuItems), name: .displayWalkingTimeChanged, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.determineTrackingLocation), name: .displayWalkingTimeChanged, object: nil)
         
         if DataController.shared.savedEntries.count == 0 {
             self.openSettingsWindow()
@@ -62,6 +75,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     func applicationWillTerminate(_ aNotification: Notification) {
         
+    }
+    
+    func determineTrackingLocation() {
+        if DataController.shared.displayWalkingTime {
+            self.locManager.delegate = self
+            self.locManager.desiredAccuracy = kCLLocationAccuracyBest
+            self.locManager.startUpdatingLocation()
+        } else {
+            self.locManager.stopUpdatingLocation()
+        }
     }
     
     /// Loads the predictions for all current stops
@@ -133,6 +156,31 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             let title = "\(entry.stop.routeTitle) -> \(entry.stop.direction)"
             
             self.statusItem.menu?.addItem(NSMenuItem(title: title, action: nil, keyEquivalent: ""))
+            
+            if DataController.shared.displayWalkingTime {
+                
+                //If walking time should be displayed
+                if let location = self.currentLocation {
+                    
+                    //Get the actual distance to the location
+                    let stopLocation = CLLocation(latitude: entry.stop.lat, longitude: entry.stop.lon)
+                    let distance = abs(location.distance(from: stopLocation))
+                    
+                    //Format the string
+                    let df = MKDistanceFormatter()
+                    df.unitStyle = .full
+                    
+                    self.statusItem.menu?.addItem(NSMenuItem(title: "Distance: \(df.string(fromDistance: distance))", action: nil, keyEquivalent: ""))
+                    
+                } else {
+                    
+                    //Unknown distance
+                    self.statusItem.menu?.addItem(NSMenuItem(title: "Distance: unknown", action: nil, keyEquivalent: ""))
+                    
+                }
+                self.statusItem.menu?.addItem(NSMenuItem.separator())
+            }
+            
         }
         
         self.statusItem.menu?.addItem(NSMenuItem(title: "About TransitBar", action: #selector(self.openAboutWindow), keyEquivalent: ""))
@@ -190,7 +238,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             
             title.append(addingText)
             
-            self.statusItem.menu?.items[index].title = title
+            self.statusItem.menu?.items[self.menuItemIndexForEntryIndex(index)].title = title
         }
         
         //If there is no menubar text, add two dashes
@@ -198,6 +246,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             self.statusItem.title = "--"
         } else {
             self.statusItem.title = String(menuText.characters.dropLast(2)) //Remove final ; and space
+        }
+    }
+    
+    func menuItemIndexForEntryIndex(_ index: Int) -> Int {
+        if DataController.shared.displayWalkingTime {
+            return index / 3
+        } else {
+            return index
         }
     }
     
@@ -245,6 +301,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     // MARK: - NSUserNotificationCenterDelegate
+    
     func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
         //Always return true. Usually notifications are only delivered if application is key. However, this is a menubar application and will never be key.
         return true
@@ -252,6 +309,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     func userNotificationCenter(_ center: NSUserNotificationCenter, didActivate notification: NSUserNotification) {
         self.openAlertsWindow()
+    }
+    
+    // MARK: - CLLocationManagerDelegate
+    func locationManager(_ manager: CLLocationManager, didUpdateTo newLocation: CLLocation, from oldLocation: CLLocation) {
+        let distance = newLocation.distance(from: oldLocation)
+        if self.currentLocation == nil {
+            self.currentLocation = newLocation
+        }
+        if abs(distance) > 5 {
+            self.currentLocation = newLocation
+            print("New location: \(newLocation)")
+        }
     }
     
     deinit {
