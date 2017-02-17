@@ -76,10 +76,6 @@ class DataController: NSObject {
             self.numberOfPredictionsToShow = numberOfPredictions
         }
         
-        if let storeInCloud = self.getBool(for: Constants.storeInCloudKey) {
-            self.storeInCloud = storeInCloud
-        }
-        
         if let displayWalkingTime = self.getBool(for: Constants.walkingTimeKey) {
             self.displayWalkingTime = displayWalkingTime
         }
@@ -87,6 +83,11 @@ class DataController: NSObject {
         //Get data from user defaults and then convert from data to array of entries
         if let unarchivedObject = self.getData(for: Constants.entryArrayKey) {
             self.savedEntries = NSKeyedUnarchiver.unarchiveObject(with: unarchivedObject) as! [TransitEntry]
+        }
+        
+        //NOTE: This always needs to be the last one saved
+        if let storeInCloud = self.getBool(for: Constants.storeInCloudKey) {
+            self.storeInCloud = storeInCloud
         }
     }
     
