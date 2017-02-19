@@ -2,11 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>com.apple.developer.aps-environment</key>
+	<string>development</string>
+	<key>com.apple.developer.icloud-container-identifiers</key>
+	<array/>
+	<key>com.apple.developer.ubiquity-kvstore-identifier</key>
+	<string>6GHQ7P7EHA.com.adam.MacTransit</string>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>
 	<key>com.apple.security.network.client</key>
 	<true/>
 	<key>com.apple.security.network.server</key>
+	<true/>
+	<key>com.apple.security.personal-information.location</key>
 	<true/>
 </dict>
 </plist>
