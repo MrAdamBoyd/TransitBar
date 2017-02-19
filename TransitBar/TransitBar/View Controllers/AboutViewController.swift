@@ -21,6 +21,6 @@ class AboutViewController: NSViewController {
     }
     
     @IBAction func goToWebsiteButton(_ sender: Any) {
-        NSWorkspace.shared().open(URL(string: "https://github.com/MrAdamBoyd/TransitBar")!)
+        NSWorkspace.shared().open(URL(string: "https://mradamboyd.github.io/TransitBar/")!)
     }
 }
