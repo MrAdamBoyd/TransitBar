@@ -283,7 +283,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         return returnString
     }
     
-    
     /// Formats distance in the locality that user has set
     ///
     /// - Parameter distance: distance to format
@@ -312,7 +311,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                 directions.calculate() { [unowned self] response, error in
                     
                     if let routes = response?.routes {
-                        let quickest = routes.sorted() {$0.expectedTravelTime < $1.expectedTravelTime}[0]
+                        
+                        //Get the quickest route
+                        let quickest = routes.sorted() { $0.expectedTravelTime < $1.expectedTravelTime }[0]
+                        
+                        //Set the text including the walking time and the actual distance with directions
                         self.statusItem.menu?.items[self.menuItemIndexForEntryIndex(index) + 1].title = self.locationTextFrom(source: nil, to: nil, overrideDistance: quickest.distance, walkingTime: quickest.expectedTravelTime)
                     }
                     
@@ -436,10 +439,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     // MARK: - CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didUpdateTo newLocation: CLLocation, from oldLocation: CLLocation) {
         let distance = newLocation.distance(from: oldLocation)
-        if self.currentLocation == nil {
-            self.currentLocation = newLocation
-        }
-        if abs(distance) > 5 {
+        if self.currentLocation == nil || abs(distance) > 5 {
             self.currentLocation = newLocation
             print("New location: \(newLocation)")
         }
