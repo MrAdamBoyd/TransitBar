@@ -1283,8 +1283,8 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="0d9-Hb-6Qo">
-                                <rect key="frame" x="8" y="307" width="168" height="18"/>
-                                <buttonCell key="cell" type="check" title="Store settings on iCloud" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qUO-jH-14I">
+                                <rect key="frame" x="8" y="307" width="210" height="18"/>
+                                <buttonCell key="cell" type="check" title="Sync settings between devices" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qUO-jH-14I">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
