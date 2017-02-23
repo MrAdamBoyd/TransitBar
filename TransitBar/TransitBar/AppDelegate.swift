@@ -437,9 +437,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     // MARK: - CLLocationManagerDelegate
-    func locationManager(_ manager: CLLocationManager, didUpdateTo newLocation: CLLocation, from oldLocation: CLLocation) {
-        let distance = newLocation.distance(from: oldLocation)
-        if self.currentLocation == nil || abs(distance) > 5 {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let newLocation = locations.first else {
+            print("No location provided")
+            return
+        }
+        
+        let distance = self.currentLocation?.distance(from: newLocation)
+        if self.currentLocation == nil || abs(distance ?? 0) > 5 {
             self.currentLocation = newLocation
             print("New location: \(newLocation)")
         }
