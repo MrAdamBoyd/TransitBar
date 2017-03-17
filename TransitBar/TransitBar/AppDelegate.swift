@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     var alertsWindowController: NSWindowController?
     
     var minuteTimer: Timer!
+    var hourTimer: Timer!
     var currentLocation: CLLocation? {
         didSet {
             self.createMenuItems()
@@ -59,12 +60,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         NotificationCenter.default.addObserver(self, selector: #selector(self.createMenuItems), name: .entriesChanged, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.createMenuItems), name: .displayWalkingTimeChanged, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.determineTrackingLocation), name: .displayWalkingTimeChanged, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.determineTrackingLocation), name: NSNotification.Name.NSWorkspaceScreensDidWake, object: nil)
         
         if DataController.shared.savedEntries.count == 0 {
             self.openSettingsWindow()
         }
         
         self.minuteTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.loadData), userInfo: nil, repeats: true)
+        self.hourTimer = Timer.scheduledTimer(timeInterval: 60 * 60, target: self, selector: #selector(self.determineTrackingLocation), userInfo: nil, repeats: true)
         
         //Loads data when computer wakes from sleep
         NotificationCenter.default.addObserver(self, selector: #selector(self.loadData), name: Notification.Name.NSWorkspaceDidWake, object: nil)
@@ -447,6 +450,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         if self.currentLocation == nil || abs(distance ?? 0) > 5 {
             self.currentLocation = newLocation
             print("New location: \(newLocation)")
+            return
+        }
+        
+        if newLocation.horizontalAccuracy < 100 {
+            print("User's location is stable, no longer updating data")
+            self.locManager.stopUpdatingLocation()
         }
     }
     
