@@ -54,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         self.transitManager.determineTrackingLocation()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.createMenuItems), name: .entriesChanged, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.transitManager.determineTrackingLocation), name: .displayWalkingTimeChanged, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.determineTrackingLocation), name: .displayWalkingTimeChanged, object: nil)
         
         if DataController.shared.savedEntries.count == 0 {
             self.openSettingsWindow()
@@ -66,6 +66,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     func applicationWillTerminate(_ aNotification: Notification) {
         
+    }
+    
+    func determineTrackingLocation() {
+        self.transitManager.determineTrackingLocation()
     }
     
     func createMenuItems() {
