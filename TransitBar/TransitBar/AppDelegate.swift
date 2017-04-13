@@ -137,14 +137,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                     
                     //Notification is for this item
                     if notification.entry.stop.stopTag == entry.stop.stopTag && notification.entry.stop.routeTag == entry.stop.routeTag {
+                    
+                        //This filter call leaves in predictions that are less than or equal to the notification's minutes and greater than 5 - the notification's minutes. If this is nonnil, we should send the user a notification
+                        let firstValid = predictions.filter({ $0.predictionInMinutes <= notification.minutesForFirstPredicion && $0.predictionInMinutes > notification.minutesForFirstPredicion - 5  }).first
                         
-                        //Checking if the prediction is within the time
-                        if let firstPredictionMinutes = predictions.first?.predictionInMinutes, firstPredictionMinutes <= notification.minutesForFirstPredicion {
+                        if let firstValid = firstValid {
                             
                             //Remove this and send notification
                             print("Sending user notification for alert")
                             DataController.shared.scheduledNotifications.remove(at: index)
-                            self.sendNotificationFor(notification, firstPredictionInMinutes: firstPredictionMinutes)
+                            self.sendNotificationFor(notification, firstPredictionInMinutes: firstValid.predictionInMinutes)
                             
                         }
                     }
