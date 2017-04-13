@@ -25,7 +25,12 @@ class DataController: NSObject {
         self.getDataFromDefaults()
     }
     
-    var scheduledNotifications: [TransitNotification] = [] //Not saved in core data
+    //Not persisted
+    var scheduledNotifications: [TransitNotification] = [] {
+        didSet {
+            NotificationCenter.default.post(name: .notificationsChanged, object: nil)
+        }
+    }
     
     var numberOfPredictionsToShow: Int = 3 {
         didSet {

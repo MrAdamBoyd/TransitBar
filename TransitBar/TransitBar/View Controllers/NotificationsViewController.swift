@@ -17,6 +17,38 @@ class NotificationsViewController: NSViewController, NSTableViewDelegate, NSTabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationsChanged), name: .notificationsChanged, object: nil)
+    }
+    
+    override func keyDown(with event: NSEvent) {
+        
+        guard let key = event.charactersIgnoringModifiers?.characters.first else { return }
+        
+        guard key == Character(UnicodeScalar(NSDeleteCharacter)!) else {
+            super.keyDown(with: event)
+            return
+        }
+        
+        guard self.tableView.selectedRowIndexes.count != 0 else {
+            super.keyDown(with: event)
+            return
+        }
+        
+        //Continue if the key is the delete key
+        
+        //Need to go in reverse because we could be deleting multiple rows
+        for index in self.tableView.selectedRowIndexes.reversed() {
+            print("Removing entry at index \(index)")
+            DataController.shared.scheduledNotifications.remove(at: index)
+        }
+        
+        self.notificationsChanged()
+    }
+    
+    func notificationsChanged() {
+        self.notifications = DataController.shared.scheduledNotifications
+        self.tableView.reloadData()
     }
     
     // MARK: NSTableView
@@ -45,6 +77,10 @@ class NotificationsViewController: NSViewController, NSTableViewDelegate, NSTabl
     
     func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
         return true
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
 }

@@ -16,6 +16,7 @@ struct Constants {
     static let entriesChangedNotification = "entriesChangedNotification"
     static let storeInCloudNotification = "storeInCloudNotification"
     static let walkingTimeSetNotification = "walkingTimeSetNotification"
+    static let notificationsChangedNotification = "notificationsChangedNotification"
     static var userDefaultsName = "TransitBar"
 }
 
@@ -23,4 +24,5 @@ extension Notification.Name {
     static let entriesChanged = Notification.Name(Constants.entriesChangedNotification)
     static let storeInCloudChanged = Notification.Name(Constants.storeInCloudNotification)
     static let displayWalkingTimeChanged = Notification.Name(Constants.walkingTimeSetNotification)
+    static let notificationsChanged = Notification.Name(Constants.notificationsChangedNotification)
 }
