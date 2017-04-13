@@ -91,6 +91,12 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     @IBAction func createNewLineAction(_ sender: Any) {
         self.performSegue(withIdentifier: "showNewLine", sender: self)
     }
+    
+    @IBAction func viewNotificationsAction(_ sender: Any) {
+        if let appDelegate = NSApp.delegate as? AppDelegate {
+            appDelegate.openNotificationsWindow()
+        }
+    }
 
     @IBAction func viewAlertsAction(_ sender: Any) {
         if let appDelegate = NSApp.delegate as? AppDelegate {

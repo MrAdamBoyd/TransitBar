@@ -14,6 +14,10 @@
 		660F23461DADF22900832EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660F23451DADF22900832EC6 /* Assets.xcassets */; };
 		660F23541DADF22900832EC6 /* MacTransitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F23531DADF22900832EC6 /* MacTransitTests.swift */; };
 		660F235F1DADF22900832EC6 /* MacTransitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F235E1DADF22900832EC6 /* MacTransitUITests.swift */; };
+		661758751E9F061F00E4E052 /* TransitNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661758741E9F061F00E4E052 /* TransitNotification.swift */; };
+		661758761E9F062100E4E052 /* TransitNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661758741E9F061F00E4E052 /* TransitNotification.swift */; };
+		661758791E9F075700E4E052 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661758781E9F075700E4E052 /* NotificationsViewController.swift */; };
+		6617587A1E9F075700E4E052 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661758781E9F075700E4E052 /* NotificationsViewController.swift */; };
 		663636C61DE12A190067A79B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663636C51DE12A190067A79B /* Main.storyboard */; };
 		663636C81DE12DFA0067A79B /* NewLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663636C71DE12DFA0067A79B /* NewLineViewController.swift */; };
 		663636CA1DE161710067A79B /* TransitEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663636C91DE161710067A79B /* TransitEntry.swift */; };
@@ -78,6 +82,8 @@
 		660F235A1DADF22900832EC6 /* TransitBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		660F235E1DADF22900832EC6 /* MacTransitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacTransitUITests.swift; sourceTree = "<group>"; };
 		660F23601DADF22900832EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		661758741E9F061F00E4E052 /* TransitNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitNotification.swift; sourceTree = "<group>"; };
+		661758781E9F075700E4E052 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		663636C51DE12A190067A79B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		663636C71DE12DFA0067A79B /* NewLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLineViewController.swift; sourceTree = "<group>"; };
 		663636C91DE161710067A79B /* TransitEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitEntry.swift; sourceTree = "<group>"; };
@@ -168,11 +174,11 @@
 			isa = PBXGroup;
 			children = (
 				66AA34DC1DF7AF84002C13FD /* View Controllers */,
+				661758771E9F062600E4E052 /* Models */,
 				660F233E1DADF22900832EC6 /* AppDelegate.swift */,
 				66E565C11E9EFCBE00C60D98 /* TransitManager.swift */,
 				66A6072C1DF675D4003C9DD6 /* Constants.swift */,
 				66A6072E1DF67640003C9DD6 /* DataController.swift */,
-				663636C91DE161710067A79B /* TransitEntry.swift */,
 				660F23451DADF22900832EC6 /* Assets.xcassets */,
 				663636C51DE12A190067A79B /* Main.storyboard */,
 				66C923E81E00C8EF00FE067E /* TransitBar-AppStore-Info.plist */,
@@ -200,6 +206,15 @@
 			path = TransitBarUITests;
 			sourceTree = "<group>";
 		};
+		661758771E9F062600E4E052 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				663636C91DE161710067A79B /* TransitEntry.swift */,
+				661758741E9F061F00E4E052 /* TransitNotification.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		66AA34DC1DF7AF84002C13FD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +222,7 @@
 				660F23401DADF22900832EC6 /* ListViewController.swift */,
 				663636C71DE12DFA0067A79B /* NewLineViewController.swift */,
 				666F303C1E230D7200999222 /* AlertsViewController.swift */,
+				661758781E9F075700E4E052 /* NotificationsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -598,7 +614,9 @@
 				66A6072D1DF675D4003C9DD6 /* Constants.swift in Sources */,
 				66A6072F1DF67640003C9DD6 /* DataController.swift in Sources */,
 				660F233F1DADF22900832EC6 /* AppDelegate.swift in Sources */,
+				661758751E9F061F00E4E052 /* TransitNotification.swift in Sources */,
 				663636C81DE12DFA0067A79B /* NewLineViewController.swift in Sources */,
+				661758791E9F075700E4E052 /* NotificationsViewController.swift in Sources */,
 				666F303D1E230D7200999222 /* AlertsViewController.swift in Sources */,
 				66E565C21E9EFCBE00C60D98 /* TransitManager.swift in Sources */,
 			);
@@ -630,7 +648,9 @@
 				663F9E4C1E00F050009116D9 /* Constants.swift in Sources */,
 				663F9E4D1E00F050009116D9 /* DataController.swift in Sources */,
 				663F9E4E1E00F050009116D9 /* AppDelegate.swift in Sources */,
+				661758761E9F062100E4E052 /* TransitNotification.swift in Sources */,
 				663F9E4F1E00F050009116D9 /* NewLineViewController.swift in Sources */,
+				6617587A1E9F075700E4E052 /* NotificationsViewController.swift in Sources */,
 				666F303E1E230D7200999222 /* AlertsViewController.swift in Sources */,
 				66E565C31E9EFCBE00C60D98 /* TransitManager.swift in Sources */,
 			);

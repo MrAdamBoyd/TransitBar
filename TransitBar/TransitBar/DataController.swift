@@ -25,6 +25,8 @@ class DataController: NSObject {
         self.getDataFromDefaults()
     }
     
+    var scheduledNotifications: [TransitNotification] = [] //Not saved in core data
+    
     var numberOfPredictionsToShow: Int = 3 {
         didSet {
             self.set(any: self.numberOfPredictionsToShow, for: Constants.numberOfPredictionsKey)

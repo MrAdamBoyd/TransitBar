@@ -26,6 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     var listWindowController: NSWindowController?
     var aboutWindowController: NSWindowController?
     var alertsWindowController: NSWindowController?
+    var notificationsWindowController: NSWindowController?
     
     let transitManager = TransitManager()
     
@@ -339,6 +340,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         guard let windowController = self.storyboard.instantiateController(withIdentifier: "alertsWindow") as? NSWindowController else { return }
         self.alertsWindowController = windowController
         self.alertsWindowController?.window?.makeKeyAndOrderFront(self)
+    }
+    
+    /// Opens the notification window
+    func openNotificationsWindow() {
+        guard let windowController = self.storyboard.instantiateController(withIdentifier: "notificationsWindow") as? NSWindowController else { return }
+        self.notificationsWindowController = windowController
+        self.notificationsWindowController?.window?.makeKeyAndOrderFront(self)
     }
     
     /**
