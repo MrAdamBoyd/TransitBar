@@ -119,7 +119,7 @@ class SwiftBusConnectionHandler: NSObject, NSURLConnectionDataDelegate {
     //MARK: NSURLConnectionDelegate
     
     func connectionDidFinishLoading(_ connection: NSURLConnection) {
-        xmlString = NSString(data: xmlData as Data, encoding: String.Encoding.utf8.rawValue) as! String
+        xmlString = NSString(data: xmlData as Data, encoding: String.Encoding.utf8.rawValue)! as String
         let xml = SWXMLHash.parse(xmlString)
         let parser = SwiftBusDataParser()
         
