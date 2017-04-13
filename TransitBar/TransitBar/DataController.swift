@@ -12,7 +12,7 @@ class DataController: NSObject {
     
     private lazy var appDefaults = UserDefaults(suiteName: Constants.userDefaultsName)
     
-    static let shared = DataController()
+    static var shared = DataController()
     
     override init() {
         super.init()

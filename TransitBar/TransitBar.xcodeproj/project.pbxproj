@@ -34,6 +34,8 @@
 		66A6072F1DF67640003C9DD6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A6072E1DF67640003C9DD6 /* DataController.swift */; };
 		66D2E0091E5C9D3500EC2567 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D2E0081E5C9D3500EC2567 /* MapKit.framework */; };
 		66D2E00A1E5C9D4C00EC2567 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D2E0081E5C9D3500EC2567 /* MapKit.framework */; };
+		66E565C21E9EFCBE00C60D98 /* TransitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E565C11E9EFCBE00C60D98 /* TransitManager.swift */; };
+		66E565C31E9EFCBE00C60D98 /* TransitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E565C11E9EFCBE00C60D98 /* TransitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,7 @@
 		66A6072E1DF67640003C9DD6 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		66C923E81E00C8EF00FE067E /* TransitBar-AppStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TransitBar-AppStore-Info.plist"; sourceTree = "<group>"; };
 		66D2E0081E5C9D3500EC2567 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		66E565C11E9EFCBE00C60D98 /* TransitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitManager.swift; sourceTree = "<group>"; };
 		70B29E07A8B523C2124B88D7 /* Pods_MacTransitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacTransitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7888A0BD9103E31404704729 /* Pods-MacTransit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.release.xcconfig"; sourceTree = "<group>"; };
 		8831FA90BE3889B49E9F293A /* Pods-MacTransit AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit AppStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +169,7 @@
 			children = (
 				66AA34DC1DF7AF84002C13FD /* View Controllers */,
 				660F233E1DADF22900832EC6 /* AppDelegate.swift */,
+				66E565C11E9EFCBE00C60D98 /* TransitManager.swift */,
 				66A6072C1DF675D4003C9DD6 /* Constants.swift */,
 				66A6072E1DF67640003C9DD6 /* DataController.swift */,
 				663636C91DE161710067A79B /* TransitEntry.swift */,
@@ -596,6 +600,7 @@
 				660F233F1DADF22900832EC6 /* AppDelegate.swift in Sources */,
 				663636C81DE12DFA0067A79B /* NewLineViewController.swift in Sources */,
 				666F303D1E230D7200999222 /* AlertsViewController.swift in Sources */,
+				66E565C21E9EFCBE00C60D98 /* TransitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +632,7 @@
 				663F9E4E1E00F050009116D9 /* AppDelegate.swift in Sources */,
 				663F9E4F1E00F050009116D9 /* NewLineViewController.swift in Sources */,
 				666F303E1E230D7200999222 /* AlertsViewController.swift in Sources */,
+				66E565C31E9EFCBE00C60D98 /* TransitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

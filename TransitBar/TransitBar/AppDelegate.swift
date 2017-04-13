@@ -17,25 +17,17 @@ import CoreLocation
 import MapKit
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate, CLLocationManagerDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate, TransitManagerDelegate {
     
     //Item that lives in the status bar
     let statusItem = NSStatusBar.system().statusItem(withLength: -1)
-    
-    var locManager = CLLocationManager()
     
     let storyboard = NSStoryboard(name: "Main", bundle: nil)
     var listWindowController: NSWindowController?
     var aboutWindowController: NSWindowController?
     var alertsWindowController: NSWindowController?
     
-    var minuteTimer: Timer!
-    var hourTimer: Timer!
-    var currentLocation: CLLocation? {
-        didSet {
-            self.createMenuItems()
-        }
-    }
+    let transitManager = TransitManager()
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
@@ -44,6 +36,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         
         //See https://docs.fabric.io/apple/crashlytics/os-x.html
         UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": true])
+        
+        //Setting self as the delegate
+        self.transitManager.delegate = self
         
         //Setting up the status bar menu and the actions from that
         self.statusItem.title = "--"
@@ -55,22 +50,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             SUUpdater.shared().automaticallyChecksForUpdates = true
         #endif
         
-        self.determineTrackingLocation()
+        self.transitManager.determineTrackingLocation()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.createMenuItems), name: .entriesChanged, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.createMenuItems), name: .displayWalkingTimeChanged, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.determineTrackingLocation), name: .displayWalkingTimeChanged, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.determineTrackingLocation), name: NSNotification.Name.NSWorkspaceScreensDidWake, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.transitManager.determineTrackingLocation), name: .displayWalkingTimeChanged, object: nil)
         
         if DataController.shared.savedEntries.count == 0 {
             self.openSettingsWindow()
         }
-        
-        self.minuteTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.loadData), userInfo: nil, repeats: true)
-        self.hourTimer = Timer.scheduledTimer(timeInterval: 60 * 60, target: self, selector: #selector(self.determineTrackingLocation), userInfo: nil, repeats: true)
-        
-        //Loads data when computer wakes from sleep
-        NotificationCenter.default.addObserver(self, selector: #selector(self.loadData), name: Notification.Name.NSWorkspaceDidWake, object: nil)
         
         NSUserNotificationCenter.default.delegate = self
         
@@ -78,73 +65,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     func applicationWillTerminate(_ aNotification: Notification) {
         
-    }
-    
-    func determineTrackingLocation() {
-        if DataController.shared.displayWalkingTime {
-            self.locManager.delegate = self
-            self.locManager.desiredAccuracy = kCLLocationAccuracyBest
-            self.locManager.startUpdatingLocation()
-        } else {
-            self.locManager.stopUpdatingLocation()
-        }
-    }
-    
-    /// Loads the predictions for all current stops
-    func loadData() {
-        print("Loading data...")
-        let group = DispatchGroup()
-        
-        for entry in DataController.shared.savedEntries {
-            group.enter()
-            
-            SwiftBus.shared.stopPredictions(forStop: entry.stop) { stop in
-                
-                if let stop = stop {
-                    
-                    //Only show alerts if it's in the menu bar
-                    if entry.shouldBeShownInMenuBar {
-                        self.sendNotificationsToUser(with: stop.messages, differingFrom: entry.stop.messages, on: stop.routeTitle)
-                    }
-                    
-                    entry.stop.predictions = stop.predictions
-                    entry.stop.messages = stop.messages
-                }
-                
-                group.leave()
-            }
-        }
-        
-        group.notify(queue: DispatchQueue.main) {
-            self.updateMenuItems()
-            if let alertsVC = self.alertsWindowController?.contentViewController as? AlertsViewController {
-                //If the user has the alerts vc open, reload the messages, as they might have changed
-                alertsVC.tableView.reloadData()
-            }
-        }
-    }
-    
-    /// Sends notifications to the user. This method will send notifications to the user for all the new messages that are not contained in the old messages with high priority.
-    ///
-    /// - Parameters:
-    ///   - newMessages: messages from the most recent prediction
-    ///   - oldMessages: messages from the old prediction
-    ///   - route: title of the route for notification
-    func sendNotificationsToUser(with newMessages: [TransitMessage], differingFrom oldMessages: [TransitMessage], on route: String) {
-        
-        //Create sets of the message strings for transit messages that have a high priority. They are sets so it is easy to perform diffs.
-        let oldMessageSet = Set(oldMessages.filter({ $0.priority == .high }).map({ $0.text }))
-        let newMessageSet = Set(newMessages.filter({ $0.priority == .high }).map({ $0.text }))
-        
-        let messagesToNotify = newMessageSet.subtracting(oldMessageSet)
-        
-        //Go through each notification and send it
-        for message in messagesToNotify {
-            let notification = NSUserNotification()
-            notification.title = "\(route) Alert"
-            notification.informativeText = message
-            NSUserNotificationCenter.default.deliver(notification)
-        }
     }
     
     func createMenuItems() {
@@ -162,7 +82,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             
             if DataController.shared.displayWalkingTime {
                 
-                self.statusItem.menu?.addItem(NSMenuItem(title: self.locationTextFrom(source: self.currentLocation, to: CLLocation(latitude: entry.stop.lat, longitude: entry.stop.lon)), action: nil, keyEquivalent: ""))
+                self.statusItem.menu?.addItem(NSMenuItem(title: self.locationTextFrom(source: self.transitManager.currentLocation, to: CLLocation(latitude: entry.stop.lat, longitude: entry.stop.lon)), action: nil, keyEquivalent: ""))
                 self.setWalkingTimeForMenuItemWith(entry: entry, at: index) //Async gets the walking time
                 
                 self.statusItem.menu?.addItem(NSMenuItem.separator())
@@ -179,7 +99,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         self.statusItem.menu?.addItem(NSMenuItem(title: "Preferences...", action: #selector(self.openSettingsWindow), keyEquivalent: ","))
         self.statusItem.menu?.addItem(NSMenuItem(title: "Quit", action: #selector(self.terminate), keyEquivalent: "q"))
         
-        self.loadData()
+        self.transitManager.loadData()
         self.updateMenuItems()
     }
     
@@ -306,7 +226,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     ///   - entry: entry to calculate distance ot
     ///   - index: entry index of the item
     func setWalkingTimeForMenuItemWith(entry: TransitEntry, at index: Int) {
-        self.directionsRequestFrom(source: self.currentLocation, destination: CLLocation(latitude: entry.stop.lat, longitude: entry.stop.lon)) { directionsRequest in
+        self.directionsRequestFrom(source: self.transitManager.currentLocation, destination: CLLocation(latitude: entry.stop.lat, longitude: entry.stop.lon)) { directionsRequest in
             
             if let directionsRequest = directionsRequest {
                 
@@ -439,23 +359,40 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         self.openAlertsWindow()
     }
     
-    // MARK: - CLLocationManagerDelegate
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let newLocation = locations.first else {
-            print("No location provided")
-            return
+    // MARK: TransitManagerDelegate
+    
+    func userLocationUpdated(_ newLocation: CLLocation?) {
+        self.createMenuItems()
+    }
+    
+    func transitPredictionsUpdated() {
+        self.updateMenuItems()
+        if let alertsVC = self.alertsWindowController?.contentViewController as? AlertsViewController {
+            //If the user has the alerts vc open, reload the messages, as they might have changed
+            alertsVC.tableView.reloadData()
         }
+    }
+    
+    /// Sends notifications to the user. This method will send notifications to the user for all the new messages that are not contained in the old messages with high priority.
+    ///
+    /// - Parameters:
+    ///   - newMessages: messages from the most recent prediction
+    ///   - oldMessages: messages from the old prediction
+    ///   - route: title of the route for notification
+    func sendNotificationsToUser(with newMessages: [TransitMessage], differingFrom oldMessages: [TransitMessage], on route: String) {
         
-        let distance = self.currentLocation?.distance(from: newLocation)
-        if self.currentLocation == nil || abs(distance ?? 0) > 5 {
-            self.currentLocation = newLocation
-            print("New location: \(newLocation)")
-            return
-        }
+        //Create sets of the message strings for transit messages that have a high priority. They are sets so it is easy to perform diffs.
+        let oldMessageSet = Set(oldMessages.filter({ $0.priority == .high }).map({ $0.text }))
+        let newMessageSet = Set(newMessages.filter({ $0.priority == .high }).map({ $0.text }))
         
-        if newLocation.horizontalAccuracy < 100 {
-            print("User's location is stable, no longer updating data")
-            self.locManager.stopUpdatingLocation()
+        let messagesToNotify = newMessageSet.subtracting(oldMessageSet)
+        
+        //Go through each notification and send it
+        for message in messagesToNotify {
+            let notification = NSUserNotification()
+            notification.title = "\(route) Alert"
+            notification.informativeText = message
+            NSUserNotificationCenter.default.deliver(notification)
         }
     }
     
