@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import MapKit
 import SwiftBus
 
 protocol TransitManagerDelegate: class {
@@ -78,6 +79,8 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
         }
     }
     
+    // MARK: - Managing locations
+    
     /// Starts or stops tracking the user's location
     func determineTrackingLocation() {
         if DataController.shared.displayWalkingTime {
@@ -86,6 +89,63 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
             self.locManager.startUpdatingLocation()
         } else {
             self.locManager.stopUpdatingLocation()
+        }
+    }
+    
+    /// Builds an MKDirectionsRequest from the provided source and destination locations
+    ///
+    /// - Parameters:
+    ///   - source: where the user currently is
+    ///   - destination: location of the transit stop
+    ///   - completion: contains the finished mkdirectionsrequest
+    func directionsRequestFrom(source: CLLocation?, destination: CLLocation?, completion: @escaping (MKDirectionsRequest?) -> Void) {
+        guard let sourceLocation = source, let destinationLocation = destination else {
+            //Only works if both items have a location
+            completion(nil)
+            return
+        }
+        
+        var sourceMapItem: MKMapItem?
+        var destMapItem: MKMapItem?
+        
+        //Using a dispatch group for organizing the async work
+        let group = DispatchGroup()
+        group.enter() //For source
+        group.enter() //For destination
+        
+        let geocoder1 = CLGeocoder()
+        geocoder1.reverseGeocodeLocation(sourceLocation) { [unowned self] placemarks, error in
+            sourceMapItem = self.mkmapItemFrom(placemarks: placemarks)
+            group.leave()
+        }
+        
+        let geocoder2 = CLGeocoder()
+        geocoder2.reverseGeocodeLocation(destinationLocation) { [unowned self] placemarks, error in
+            destMapItem = self.mkmapItemFrom(placemarks: placemarks)
+            group.leave()
+        }
+        
+        group.notify(queue: .main) {
+            //Work is now done
+            let request = MKDirectionsRequest()
+            request.source = sourceMapItem
+            request.destination = destMapItem
+            request.requestsAlternateRoutes = true
+            request.transportType = .walking
+            
+            completion(request)
+        }
+    }
+    
+    /// builds an MKMapItem from the provided array of placemarks
+    ///
+    /// - Parameter placemarks: optional array of placemarks
+    /// - Returns: optional map item
+    func mkmapItemFrom(placemarks: [CLPlacemark]?) -> MKMapItem? {
+        if let placemark = placemarks?.first {
+            return MKMapItem(placemark: MKPlacemark(coordinate: placemark.location!.coordinate, addressDictionary: placemark.addressDictionary as! [String:AnyObject]?))
+        } else {
+            return nil
         }
     }
     

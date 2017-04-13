@@ -1107,8 +1107,8 @@
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
-                                                <outlet property="dataSource" destination="97s-LJ-DG7" id="6df-5y-NlV"/>
-                                                <outlet property="delegate" destination="97s-LJ-DG7" id="xJl-Lt-9Mb"/>
+                                                <outlet property="dataSource" destination="zJs-u3-dPl" id="L0r-oE-UKO"/>
+                                                <outlet property="delegate" destination="zJs-u3-dPl" id="uaG-dc-hgh"/>
                                             </connections>
                                         </tableView>
                                     </subviews>

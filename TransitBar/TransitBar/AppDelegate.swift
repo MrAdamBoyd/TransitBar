@@ -85,9 +85,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                 
                 self.statusItem.menu?.addItem(NSMenuItem(title: self.locationTextFrom(source: self.transitManager.currentLocation, to: CLLocation(latitude: entry.stop.lat, longitude: entry.stop.lon)), action: nil, keyEquivalent: ""))
                 self.setWalkingTimeForMenuItemWith(entry: entry, at: index) //Async gets the walking time
-                
-                self.statusItem.menu?.addItem(NSMenuItem.separator())
             }
+            
+            self.statusItem.menu?.addItem(NSMenuItem(title: "Set Notification", action: #selector(self.userWantsToSetNotificationFor(_:)), keyEquivalent: ""))
+            
+            self.statusItem.menu?.addItem(NSMenuItem.separator())
             
         }
         
@@ -97,6 +99,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         #endif
         self.statusItem.menu?.addItem(NSMenuItem.separator())
         self.statusItem.menu?.addItem(NSMenuItem(title: "View Alerts", action: #selector(self.openAlertsWindow), keyEquivalent: ""))
+        self.statusItem.menu?.addItem(NSMenuItem(title: "View Scheduled Notifications", action: #selector(self.openNotificationsWindow), keyEquivalent: ""))
         self.statusItem.menu?.addItem(NSMenuItem(title: "Preferences...", action: #selector(self.openSettingsWindow), keyEquivalent: ","))
         self.statusItem.menu?.addItem(NSMenuItem(title: "Quit", action: #selector(self.terminate), keyEquivalent: "q"))
         
@@ -127,6 +130,24 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                     }
                     
                     addingText.append("\(prediction.predictionInMinutes), ")
+                }
+                
+                //Check for notifications here
+                for (index, notification) in DataController.shared.scheduledNotifications.enumerated() {
+                    
+                    //Notification is for this item
+                    if notification.entry.stop.stopTag == entry.stop.stopTag && notification.entry.stop.routeTag == entry.stop.routeTag {
+                        
+                        //Checking if the prediction is within the time
+                        if let firstPredictionMinutes = predictions.first?.predictionInMinutes, firstPredictionMinutes <= notification.minutesForFirstPredicion {
+                            
+                            //Remove this and send notification
+                            print("Sending user notification for alert")
+                            DataController.shared.scheduledNotifications.remove(at: index)
+                            self.sendNotificationFor(notification, firstPredictionInMinutes: firstPredictionMinutes)
+                            
+                        }
+                    }
                 }
                 
                 //Only show it in the menubar if it should be shown based on current time
@@ -163,9 +184,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     /// - Returns: index in the menu
     func menuItemIndexForEntryIndex(_ index: Int) -> Int {
         if DataController.shared.displayWalkingTime {
-            return index * 3
+            return index * 4
         } else {
-            return index
+            return index * 3
+        }
+    }
+    
+    /// Gets the entry for the specified menu item index
+    ///
+    /// - Parameter index: index of the menu item
+    /// - Returns: Entry at the index
+    func entryForMenuIndex(_ index: Int) -> TransitEntry {
+        if DataController.shared.displayWalkingTime {
+            return DataController.shared.savedEntries[index / 4]
+        } else {
+            return DataController.shared.savedEntries[index / 3]
         }
     }
     
@@ -227,7 +260,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     ///   - entry: entry to calculate distance ot
     ///   - index: entry index of the item
     func setWalkingTimeForMenuItemWith(entry: TransitEntry, at index: Int) {
-        self.directionsRequestFrom(source: self.transitManager.currentLocation, destination: CLLocation(latitude: entry.stop.lat, longitude: entry.stop.lon)) { directionsRequest in
+        self.transitManager.directionsRequestFrom(source: self.transitManager.currentLocation, destination: CLLocation(latitude: entry.stop.lat, longitude: entry.stop.lon)) { directionsRequest in
             
             if let directionsRequest = directionsRequest {
                 
@@ -249,63 +282,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         }
     }
     
-    /// Builds an MKDirectionsRequest from the provided source and destination locations
-    ///
-    /// - Parameters:
-    ///   - source: where the user currently is
-    ///   - destination: location of the transit stop
-    ///   - completion: contains the finished mkdirectionsrequest
-    func directionsRequestFrom(source: CLLocation?, destination: CLLocation?, completion: @escaping (MKDirectionsRequest?) -> Void) {
-        guard let sourceLocation = source, let destinationLocation = destination else {
-            //Only works if both items have a location
-            completion(nil)
-            return
-        }
-        
-        var sourceMapItem: MKMapItem?
-        var destMapItem: MKMapItem?
-        
-        //Using a dispatch group for organizing the async work
-        let group = DispatchGroup()
-        group.enter() //For source
-        group.enter() //For destination
-        
-        let geocoder1 = CLGeocoder()
-        geocoder1.reverseGeocodeLocation(sourceLocation) { [unowned self] placemarks, error in
-            sourceMapItem = self.mkmapItemFrom(placemarks: placemarks)
-            group.leave()
-        }
-        
-        let geocoder2 = CLGeocoder()
-        geocoder2.reverseGeocodeLocation(destinationLocation) { [unowned self] placemarks, error in
-            destMapItem = self.mkmapItemFrom(placemarks: placemarks)
-            group.leave()
-        }
-        
-        group.notify(queue: .main) {
-            //Work is now done
-            let request = MKDirectionsRequest()
-            request.source = sourceMapItem
-            request.destination = destMapItem
-            request.requestsAlternateRoutes = true
-            request.transportType = .walking
-            
-            completion(request)
-        }
-    }
-    
-    /// builds an MKMapItem from the provided array of placemarks
-    ///
-    /// - Parameter placemarks: optional array of placemarks
-    /// - Returns: optional map item
-    func mkmapItemFrom(placemarks: [CLPlacemark]?) -> MKMapItem? {
-        if let placemark = placemarks?.first {
-            return MKMapItem(placemark: MKPlacemark(coordinate: placemark.location!.coordinate, addressDictionary: placemark.addressDictionary as! [String:AnyObject]?))
-        } else {
-            return nil
-        }
-    }
-    
     // MARK: - Actions
     
     #if SPARKLE
@@ -316,6 +292,46 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         SUUpdater.shared().checkForUpdates(self)
     }
     #endif
+    
+    func userWantsToSetNotificationFor(_ sender: Any?) {
+        guard let item = self.statusItem.menu?.highlightedItem else { return }
+        guard let index = self.statusItem.menu?.index(of: item) else { return }
+        
+        print("User wants to set notification, selected menu item: \(index)")
+        let alert = NSAlert()
+        alert.messageText = "Enter the number of minutes you'd like to be alerted before the bus or train arrives"
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "Cancel")
+        
+        //Textfield where user will enter the time
+        let textField = NSTextField(frame: CGRect(x: 0, y: 0, width: 200, height: 24))
+        textField.translatesAutoresizingMaskIntoConstraints = true
+        textField.placeholderString = "5"
+        alert.accessoryView = textField
+        
+        if alert.runModal() == NSAlertFirstButtonReturn {
+            let minutes = textField.integerValue
+            if minutes > 0 {
+            
+                //Valid, create notification
+                print("User entered \(minutes) minutes")
+                let notification = TransitNotification()
+                notification.entry = self.entryForMenuIndex(index)
+                notification.minutesForFirstPredicion = minutes
+                
+                DataController.shared.scheduledNotifications.append(notification)
+            
+            } else {
+                
+                //Not valid
+                print("User didn't enter a valid number")
+                
+            }
+        } else {
+            print("User hit cancel cancel")
+        }
+    }
     
     /**
      Opens the settings window
@@ -402,6 +418,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             notification.informativeText = message
             NSUserNotificationCenter.default.deliver(notification)
         }
+    }
+    
+    /// Sends user notification
+    ///
+    /// - Parameters:
+    ///   - notification: notification to send to user
+    ///   - firstPredictionInMinutes: value of the first prediction
+    func sendNotificationFor(_ notification: TransitNotification, firstPredictionInMinutes: Int) {
+        let userNotification = NSUserNotification()
+        userNotification.title = "\(notification.entry.stop.routeTag) Alert"
+        userNotification.informativeText = "Your bus or train is coming in \(firstPredictionInMinutes) minutes"
+        NSUserNotificationCenter.default.deliver(userNotification)
     }
     
     deinit {
