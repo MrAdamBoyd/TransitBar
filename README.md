@@ -6,10 +6,10 @@ You can download the app from [GitHub](http://adamjboyd.com/TransitBar.zip) or t
 ## Screenshot
 ![Screenshot](https://raw.githubusercontent.com/MrAdamBoyd/TransitBar/master/Images/Example.png)
 
-##Contact
+## Contact
 Your best bet to contact me is on Twitter. [@MrAdamBoyd](https://twitter.com/MrAdamBoyd)
 
 My website is [adamjboyd.com](http://www.adamjboyd.com).
 
-##License
+## License
 MIT
