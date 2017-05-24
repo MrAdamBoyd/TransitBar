@@ -23,6 +23,15 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
     private var hourTimer: Timer!
     private var minuteTimer: Timer!
     
+    var userHasInternet: Bool = true {
+        didSet {
+            if self.userHasInternet && !oldValue {
+                //User now has internet and lost it in the past
+                self.determineTrackingLocation()
+            }
+        }
+    }
+    
     //Location
     var locManager = CLLocationManager()
     var currentLocation: CLLocation? {
@@ -35,7 +44,8 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
         super.init()
         
         //Setting up notifications when the user changes settings or the computer wakes up
-        NotificationCenter.default.addObserver(self, selector: #selector(self.handleComputerWake), name: NSNotification.Name.NSWorkspaceDidWake, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleComputerWake), name: Notification.Name.NSWorkspaceDidWake, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleComputerWake), name: Notification.Name.NSWorkspaceScreensDidWake, object: nil)
         
         //Refresh data every 60 seconds
         self.minuteTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.loadData), userInfo: nil, repeats: true)
@@ -54,6 +64,10 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
         print("Loading data...")
         let group = DispatchGroup()
         
+        //Used to determine if the user has no internet connection
+        //Set to false when at least one prediction has been parsed
+        var possiblyNoInternet: Bool = true
+        
         for entry in DataController.shared.savedEntries {
             group.enter()
             
@@ -68,6 +82,8 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
                     
                     entry.stop.predictions = stop.predictions
                     entry.stop.messages = stop.messages
+                    
+                    possiblyNoInternet = false
                 }
                 
                 group.leave()
@@ -75,6 +91,9 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
         }
         
         group.notify(queue: DispatchQueue.main) { [unowned self] in
+            
+            self.userHasInternet = !possiblyNoInternet
+            
             self.delegate?.transitPredictionsUpdated()
         }
     }
