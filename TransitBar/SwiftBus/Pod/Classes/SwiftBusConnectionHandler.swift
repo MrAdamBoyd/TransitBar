@@ -38,7 +38,7 @@ class SwiftBusConnectionHandler: NSObject {
         startConnection(routeConfigURL + agencyTag + routeURLSegment + routeTag, with: .routeConfiguration(completion))
     }
     
-    func requestVehicleLocationData(onRoute routeTag: String, withAgency agencyTag: String, completion:@escaping (_ locations: [String: [TransitVehicle]]) -> Void) {
+    func requestVehicleLocationData(onRoute routeTag: String, withAgency agencyTag: String, completion: @escaping (_ locations: [String: [TransitVehicle]]) -> Void) {
         
         startConnection(vehicleLocationsURL + agencyTag + routeURLSegment + routeTag, with: .vehicleLocations(completion))
     }
@@ -85,7 +85,7 @@ class SwiftBusConnectionHandler: NSObject {
             let session = URLSession(configuration: URLSessionConfiguration.default)
             
             let dataTask = session.dataTask(with: url) { data, response, error in
-                let xmlString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String
+                let xmlString = NSString(data: data ?? Data(), encoding: String.Encoding.utf8.rawValue)! as String
                 let xml = SWXMLHash.parse(xmlString)
                 let parser = SwiftBusDataParser()
                 

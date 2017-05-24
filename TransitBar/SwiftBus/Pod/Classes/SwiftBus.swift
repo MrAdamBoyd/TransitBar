@@ -258,6 +258,12 @@ open class SwiftBus {
             return
         }
         
+        //If there are no routes, just return nothing
+        guard routeTags.count > 0 else {
+            completion?([:])
+            return
+        }
+        
         var routesLoaded = 0
         var routeDictionary: [String : TransitRoute] = [:]
         
@@ -267,15 +273,12 @@ open class SwiftBus {
             //Getting the route configuration
             self.configuration(forRouteTag: routeTag, withAgencyTag: agencies[index]) { route in
                 
-                //The route exists
-                if let transitRoute = route {
-                    routeDictionary[routeTag] = transitRoute
-                    routesLoaded += 1
-                    
-                    //We have loaded all the routes, call the completion
-                    if routesLoaded == routeTags.count {
-                        completion?(routeDictionary)
-                    }
+                routeDictionary[routeTag] = route
+                routesLoaded += 1
+                
+                //We have loaded all the routes, call the completion
+                if routesLoaded == routeTags.count {
+                    completion?(routeDictionary)
                 }
             }
         }
@@ -358,6 +361,11 @@ open class SwiftBus {
             //Only use the routes that exist
             let existingRouteTags = Array(routes.keys)
             let existingRoutes = Array(routes.values)
+            
+            guard existingRoutes.count > 0 else {
+                completion?(nil)
+                return
+            }
             
             //Get the predictions
             let connectionHandler = SwiftBusConnectionHandler()
