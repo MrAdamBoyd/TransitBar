@@ -137,7 +137,11 @@ My website is [adamjboyd.com](http://www.adamjboyd.com).
 
 1.1: Bug fixes
 
-1.2: New object: TransitStation. A station is just like a TransitStop except for that there are multiple lines that stop there. Getting the predictions for a certain station gets the predictions for all lines that stop at that stop. TransitStations are created manually, so you don't have to show all lines that stop there.
+1.2: New object: `TransitStation`. A station is just like a `TransitStop` except for that there are multiple lines that stop there. Getting the predictions for a certain station gets the predictions for all lines that stop at that stop. `TransitStation`s are created manually, so you don't have to show all lines that stop there.
+
+1.3: Swift 3.0 suport, renaming func and variable names to fit new Swift 3.0 guidelines.
+
+1.4: New Object: `TransitMessage`. Getting messages will now return an array of `TransitMessage` instead of an array of `String`. You now have the ability to see the priority given to a particular message.
 
 ## License
 

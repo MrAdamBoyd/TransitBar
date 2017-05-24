@@ -8,26 +8,20 @@
 
 import Foundation
 
-
 #if os(OSX)
-extension NSColor {
-    public convenience init(rgba: String) {
-        let colorValues = parseRGBAString(rgba)
-        
-        self.init(red:colorValues.red, green:colorValues.green, blue:colorValues.blue, alpha:colorValues.alpha)
-    }
-}
-
+typealias SwiftBusColor = NSColor
 #else
-extension UIColor {
+import UIKit
+typealias SwiftBusColor = UIColor
+#endif
+
+extension SwiftBusColor {
     public convenience init(rgba: String) {
         let colorValues = parseRGBAString(rgba)
         
         self.init(red:colorValues.red, green:colorValues.green, blue:colorValues.blue, alpha:colorValues.alpha)
     }
 }
-
-#endif
 
 //Parsing the string
 private func parseRGBAString(_ rgba: String) -> (red:CGFloat, green:CGFloat, blue:CGFloat, alpha:CGFloat) {

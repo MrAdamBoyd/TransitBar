@@ -1,0 +1,6 @@
+framework module Pods_SwiftBus_Watch_Example_Extension {
+  umbrella header "Pods-SwiftBus Watch Example Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}

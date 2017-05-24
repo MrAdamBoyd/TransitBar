@@ -33,19 +33,13 @@ open class TransitRoute: NSObject, NSCoding {
     open var directionTagToName: [String : String] = [:] //[directionTag : directionName]
     open var routeColor: String = ""
     open var oppositeColor: String = ""
+    open var representedRouteColor = SwiftBusColor.clear
+    open var representedOppositeColor = SwiftBusColor.clear
     
     @available(*, deprecated: 1.4, obsoleted: 2.0, message: "Use variable `stops` instead")
     open var stopsOnRoute: [String : [TransitStop]] {
         return self.stops
     }
-    
-    #if os(OSX)
-    public var representedRouteColor = NSColor()
-    public var representedOppositeColor = NSColor()
-    #else
-    open var representedRouteColor = UIColor.clear
-    open var representedOppositeColor = UIColor.clear
-    #endif
     
     open var vehiclesOnRoute:[TransitVehicle] = []
     open var latMin:Double = 0
@@ -247,13 +241,9 @@ open class TransitRoute: NSObject, NSCoding {
         self.directionTagToName = aDecoder.decodeObject(forKey: directionTagToNameEncoderString) as? [String: String] ?? [:]
         self.routeColor = aDecoder.decodeObject(forKey: routeColorEncoderString) as? String ?? ""
         self.oppositeColor = aDecoder.decodeObject(forKey: oppositeColorEncoderString) as? String ?? ""
-        #if os(OSX)
-        self.representedRouteColor = aDecoder.decodeObject(forKey: representedRouteColorEncoderString) as? NSColor ?? NSColor()
-        self.representedOppositeColor = aDecoder.decodeObject(forKey: representedOppositeColorEncoderString) as? NSColor ?? NSColor()
-        #else
-        self.representedRouteColor = aDecoder.decodeObject(forKey: representedRouteColorEncoderString) as? UIColor ?? UIColor.clear
-        self.representedOppositeColor = aDecoder.decodeObject(forKey: representedOppositeColorEncoderString) as? UIColor ?? UIColor.clear
-        #endif
+        self.representedRouteColor = aDecoder.decodeObject(forKey: representedRouteColorEncoderString) as? SwiftBusColor ?? SwiftBusColor.clear
+        self.representedOppositeColor = aDecoder.decodeObject(forKey: representedOppositeColorEncoderString) as? SwiftBusColor ?? SwiftBusColor.clear
+        
         self.vehiclesOnRoute = aDecoder.decodeObject(forKey: vehiclesOnRouteEncoderString) as? [TransitVehicle] ?? []
         self.latMin = aDecoder.decodeDouble(forKey: latMinEncoderString)
         self.latMax = aDecoder.decodeDouble(forKey: latMaxEncoderString)
