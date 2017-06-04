@@ -147,4 +147,8 @@ class DataController: NSObject {
             self.appDefaults?.synchronize()
         }
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }

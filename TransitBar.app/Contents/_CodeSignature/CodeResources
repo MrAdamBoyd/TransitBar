@@ -10,55 +10,55 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		0cl/l2qiuzbQRHgIc8IuXFXhmrc=
+		V05wfbeXDWP5eVurPkIvFbTfPIs=
 		</data>
 		<key>Resources/Main.storyboardc/97s-LJ-DG7-view-3pO-Wi-KyV.nib</key>
 		<data>
-		Jg2La/BgeGN/645QJlQzZwqEU7s=
+		d+1d+QSOTByvq4JODLyNJRkFt3s=
 		</data>
 		<key>Resources/Main.storyboardc/Info.plist</key>
 		<data>
-		4CdN/8En+Noh7b3kGMSCkg8UKXE=
+		gdXOiXQHHZtV+yvF+6JNsBUz5Vs=
 		</data>
 		<key>Resources/Main.storyboardc/MainMenu.nib</key>
 		<data>
-		RtJ0loJuCNTTaFgIc+D0dhsB2DY=
+		/B32N/GxF14p4PJcKAfJNoGYGgw=
 		</data>
 		<key>Resources/Main.storyboardc/RfJ-oZ-InH-view-eqC-dz-JVY.nib</key>
 		<data>
-		aOeYogClBX2pCDJv0y65qEKGX5g=
+		U1SCQaoZWr7ay0BWCx+xXNjWkiE=
 		</data>
 		<key>Resources/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<data>
-		C67aqR2R/+GxvXqPMl5sC4DM3y8=
+		Bj9Jvvbc2r6skpKZON/KPemLiKw=
 		</data>
 		<key>Resources/Main.storyboardc/aboutWindow.nib</key>
 		<data>
-		G+etooEW5Q24l8QkhpxkOpa3I1I=
+		myNR3nhEifuHZTX5f5+JBRmSDag=
 		</data>
 		<key>Resources/Main.storyboardc/alertsWindow.nib</key>
 		<data>
-		+F5GTtAk1YEWRVTkJBBCOP7WjtU=
+		fpcoO/iQ2QP+JiQcT2Rn4YeHIy0=
 		</data>
 		<key>Resources/Main.storyboardc/mainWindow.nib</key>
 		<data>
-		9kmWPv9o/azNTZcVprRuYXuA5iE=
+		bqYqR6gjBXCG+vQtt/bnHha7wmo=
 		</data>
 		<key>Resources/Main.storyboardc/nAH-hN-dn3-view-AH5-Wu-q8F.nib</key>
 		<data>
-		iuHSOZnqc9QbmgEZ8IWFNxsJ81k=
+		wPsdpd3Rx3QeitlTPf3kyifWxvs=
 		</data>
 		<key>Resources/Main.storyboardc/newLine.nib</key>
 		<data>
-		C2moqyBUWQJkN8hSGjOIO4jjLxU=
+		392C1XjtW7g5nxjE0sEt5SuyUec=
 		</data>
 		<key>Resources/Main.storyboardc/notificationsWindow.nib</key>
 		<data>
-		Mr1X7230RYAhjWXp+bWj3HyglpU=
+		xF9dm3TCLIJDKey3vNcS2WI1tEU=
 		</data>
 		<key>Resources/Main.storyboardc/zJs-u3-dPl-view-1dn-iA-4EG.nib</key>
 		<data>
-		WQpnNOAzHrOfRT3MeQ+Wl2Ue1LI=
+		SDrM15/7XtrRdRtYBk6gtbcAQCU=
 		</data>
 		<key>Resources/archived-expanded-entitlements.xcent</key>
 		<data>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			aIvARSc67vdFX7Vlk/ONB/D7YzM=
+			FiLDH7oowjcyqxKnOkngdqxNBLo=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.cocoapods.SWXMLHash" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -80,7 +80,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			S9ncz6xxuxUc6QWRKbwzv8UUpQQ=
+			/piXzVqSv8phqeK1FBMl4lgvCdE=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.sparkle-project.Sparkle" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			lSuWiiXqOggW5icfJJuDFEG/DFY=
+			HNgWXAgQURt/vAaxu2SBibdRkgo=
 			</data>
 			<key>requirement</key>
 			<string>identifier "org.cocoapods.SwiftBus" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Adam Boyd (22T822X767)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
@@ -235,143 +235,143 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0cl/l2qiuzbQRHgIc8IuXFXhmrc=
+			V05wfbeXDWP5eVurPkIvFbTfPIs=
 			</data>
 			<key>hash2</key>
 			<data>
-			K8OsHvjlSF9QqOBE4UjxUUohTok0M0bc/8oUBjl127o=
+			waHfhKK6ZHbwnrAX08QbB2lP6ka1jA/Q8xCGqxpFCB0=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/97s-LJ-DG7-view-3pO-Wi-KyV.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Jg2La/BgeGN/645QJlQzZwqEU7s=
+			d+1d+QSOTByvq4JODLyNJRkFt3s=
 			</data>
 			<key>hash2</key>
 			<data>
-			qrHpn7lWNkGWa8LsAA4QTYvUdGbi2rS/2tefmKoxqGw=
+			AVA8OYUl5GHz27B6oeU7RualHkGxFt5MvVwmnHqgvpU=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4CdN/8En+Noh7b3kGMSCkg8UKXE=
+			gdXOiXQHHZtV+yvF+6JNsBUz5Vs=
 			</data>
 			<key>hash2</key>
 			<data>
-			fK/He1L5IN9pLBrAVqoSkEc62wOCcfZxtySmrEfsQiU=
+			AoyX0aUHPgp3wE+aHLFQNMiyX7prV/cqC5VqQ2L7AZ8=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/MainMenu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RtJ0loJuCNTTaFgIc+D0dhsB2DY=
+			/B32N/GxF14p4PJcKAfJNoGYGgw=
 			</data>
 			<key>hash2</key>
 			<data>
-			0FCjJ9mURd5LTh89ytHU4VClP7ch0M4/IKRfbGPYKzQ=
+			CLNFIluFkkCPACIrYLdvPoCbBX26mwgJNL6pNTpY0I0=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/RfJ-oZ-InH-view-eqC-dz-JVY.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aOeYogClBX2pCDJv0y65qEKGX5g=
+			U1SCQaoZWr7ay0BWCx+xXNjWkiE=
 			</data>
 			<key>hash2</key>
 			<data>
-			SoEnv/bHmOgXWA04QeBv0vw9IlxncIBSpZkoVJa8ReU=
+			0tfaTJcnQifWUvqcvNNNk4C94DWiG7Hx7SCH0Ui9v2I=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			C67aqR2R/+GxvXqPMl5sC4DM3y8=
+			Bj9Jvvbc2r6skpKZON/KPemLiKw=
 			</data>
 			<key>hash2</key>
 			<data>
-			JT243GL2AOnTaG7AmnY0cX5DVazk39XJ+xgghqdqr/Q=
+			HF05liQbxRa0pp/Q3rF2qhCYD/YEbMLEe4V2o0iiyi8=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/aboutWindow.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			G+etooEW5Q24l8QkhpxkOpa3I1I=
+			myNR3nhEifuHZTX5f5+JBRmSDag=
 			</data>
 			<key>hash2</key>
 			<data>
-			P3ktW6kyUPoAbIgGEQ6dW76wX4+iqarBhiS5ac967YE=
+			ePPNFoSmL/lvKKKcSOTpgCW1l9Q7iTeGdxVY8RfI+OU=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/alertsWindow.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+F5GTtAk1YEWRVTkJBBCOP7WjtU=
+			fpcoO/iQ2QP+JiQcT2Rn4YeHIy0=
 			</data>
 			<key>hash2</key>
 			<data>
-			t3k7JqnRdGpexwK6t1XU6QjA8isgdy3Mi3iXP62Byi0=
+			zb5PcDA8oMfnhiSgM0P5oIFuP4UHDqux6AAP66pMSs0=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/mainWindow.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9kmWPv9o/azNTZcVprRuYXuA5iE=
+			bqYqR6gjBXCG+vQtt/bnHha7wmo=
 			</data>
 			<key>hash2</key>
 			<data>
-			+McHtIdFmDG7y8phtEPIScSLo6Z+VGzjsYVk8uV737U=
+			QYJ39AC4hWZ81CW+t4cxHBoVp7zYUGq1pX81uOhao4s=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/nAH-hN-dn3-view-AH5-Wu-q8F.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iuHSOZnqc9QbmgEZ8IWFNxsJ81k=
+			wPsdpd3Rx3QeitlTPf3kyifWxvs=
 			</data>
 			<key>hash2</key>
 			<data>
-			igVmFMayHDJ6w5QS16F1DAChQ+svUm0DfLnWt60fBDw=
+			naoSUxvkFSrkAqw2140yoGBUISfohiLCOLWd/7xk7eY=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/newLine.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			C2moqyBUWQJkN8hSGjOIO4jjLxU=
+			392C1XjtW7g5nxjE0sEt5SuyUec=
 			</data>
 			<key>hash2</key>
 			<data>
-			6dkwHDddmT61C44rOBYykv8RlVIqOXq7JkWrvVp/vVs=
+			KGx7kFbfRPXVXbcGfo0ccXKcEyTEVYQedsjK8Fu41d8=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/notificationsWindow.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Mr1X7230RYAhjWXp+bWj3HyglpU=
+			xF9dm3TCLIJDKey3vNcS2WI1tEU=
 			</data>
 			<key>hash2</key>
 			<data>
-			yDIp18+C2ZqX264DoHrXykI7YXNeJ6S7W+uZDIK852E=
+			5/Gn8bkIoxbre92Vl/Tb8xwYIfhkDZcrTgB2TAWLZy8=
 			</data>
 		</dict>
 		<key>Resources/Main.storyboardc/zJs-u3-dPl-view-1dn-iA-4EG.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WQpnNOAzHrOfRT3MeQ+Wl2Ue1LI=
+			SDrM15/7XtrRdRtYBk6gtbcAQCU=
 			</data>
 			<key>hash2</key>
 			<data>
-			SwsHt5KScgjJLMFCbEOLvA6pHx8uIJIpRh6+nniuZt0=
+			Rbs3GZdew8Piwg+6nE5KhvdY0hf2FB0mImpd47+3VBE=
 			</data>
 		</dict>
 		<key>Resources/archived-expanded-entitlements.xcent</key>

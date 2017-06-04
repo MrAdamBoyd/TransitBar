@@ -170,4 +170,8 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
             self.locManager.stopUpdatingLocation()
         }
     }
+    
+    deinit {
+        NSWorkspace.shared().notificationCenter.removeObserver(self)
+    }
 }
