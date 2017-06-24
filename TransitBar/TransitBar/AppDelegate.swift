@@ -180,7 +180,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             
             title.append(addingText)
             
-            self.statusItem.menu?.items[self.menuItemIndexForEntryIndex(index)].title = title
+            if self.statusItem.menu?.items[self.menuItemIndexForEntryIndex(index)] != nil {
+                self.statusItem.menu?.items[self.menuItemIndexForEntryIndex(index)].title = title
+            }
         }
 
         self.setStatusBarText(menuText)

@@ -67,20 +67,20 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
             //All stops with same agency, can get them all at once
             
             let stops = entries.map({ $0.stop! })
-            SwiftBus.shared.stopPredictions(forStops: stops) { stops in
+            SwiftBus.shared.stopPredictions(forStops: stops) { [weak self] stops in
                 
                 //Stops not guaranteed to be in the same order, so they need to be reordered
                 
                 for entry in entries {
                     for stop in stops {
                         if entry.stop.stopTag == stop.stopTag && entry.stop.routeTag == stop.routeTag {
-                            self.saveDataFrom(stop, to: entry)
+                            self?.saveDataFrom(stop, to: entry)
                             break
                         }
                     }
                 }
                 
-                self.delegate?.transitPredictionsUpdated()
+                self?.delegate?.transitPredictionsUpdated()
             }
             
         } else {
@@ -92,9 +92,9 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
             for entry in entries {
                 group.enter()
                 
-                SwiftBus.shared.stopPredictions(forStop: entry.stop) { [unowned self] stop in
+                SwiftBus.shared.stopPredictions(forStop: entry.stop) { [weak self] stop in
                     
-                    self.saveDataFrom(stop, to: entry)
+                    self?.saveDataFrom(stop, to: entry)
                     
                     group.leave()
                 }
