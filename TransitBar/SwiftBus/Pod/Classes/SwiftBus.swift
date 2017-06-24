@@ -3,7 +3,7 @@
 //  SwiftBus
 //
 //  Created by Adam on 2015-08-29.
-//  Copyright (c) 2015 Adam Boyd. All rights reserved.
+//  Copyright (c) 2017 Adam Boyd. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 //
@@ -217,12 +217,14 @@ open class SwiftBus {
      
      - parameter routes:        routes to get the configuration for. Do not have to be in the same agency
      - parameter completion:   the code that gets called after all routes have been loaded
-     - parameter routes: dictionary of TransitRoute objects. Objects can be accessed with routes[routeTag]
+     - parameter routes: array of TransitRoute objects. Objects can be accessed with routes[routeTag]
      */
-    open func configurations(forMultipleRoutes routes: [TransitRoute?], completion: ((_ routes: [String: TransitRoute]) -> Void)?) {
-        let routeTags = routes.flatMap({ $0?.routeTag })
-        let agencyTags = routes.flatMap({ $0?.agencyTag })
-        self.configurations(forMultipleRouteTags: routeTags, withAgencies: agencyTags, completion: completion)
+    open func configurations(forMultipleRoutes routes: [TransitRoute], completion: ((_ routes: [TransitRoute]) -> Void)?) {
+        var dictionary: [RouteTag: AgencyTag] = [:]
+        for route in routes {
+            dictionary[route.routeTag] = route.agencyTag
+        }
+        self.configurations(forMultipleRoutes: dictionary, completion: completion)
     }
     
     
@@ -234,53 +236,44 @@ open class SwiftBus {
      - parameter completion:   the code that gets called after all routes have been loaded
      - parameter routes: dictionary of TransitRoute objects. Objects can be accessed with routes[routeTag]
      */
-    open func configurations(forMultipleRouteTags routeTags: [String], withAgencyTag agencyTag: String, completion: ((_ routes: [String: TransitRoute]) -> Void)?) {
-        var agencies: [String] = []
-        for _ in routeTags {
-            agencies.append(agencyTag)
+    open func configurations(forMultipleRouteTags routeTags: [RouteTag], withAgencyTag agencyTag: String, completion: ((_ routes: [TransitRoute]) -> Void)?) {
+        var dictionary: [RouteTag: AgencyTag] = [:]
+        for routeTag in routeTags {
+            dictionary[routeTag] = agencyTag
         }
-        
-        self.configurations(forMultipleRouteTags: routeTags, withAgencies: agencies, completion: completion)
+        self.configurations(forMultipleRoutes: dictionary, completion: completion)
     }
     
     /**
      Gets the route configuration for all routeTags provided.
      
-     - parameter routeTags:     array of routes that will be looked up. Must match 1:1 to agencyTags
-     - parameter agencyTags:    array of agencies. Must match routes 1:1
+     - parameter routeTags:     dictionary of route tags to agency tags
      - parameter completion:    the code that gets called after all routes have been loaded
-     - parameter routes:        dictionary of TransitRoute objects. Objects can be accessed with routes[routeTag]
+     - parameter routes:        array of TransitRoute objects. Objects can be accessed with routes[routeTag]
      */
-    open func configurations(forMultipleRouteTags routeTags: [String], withAgencies agencies: [String], completion: ((_ routes: [String: TransitRoute]) -> Void)?) {
-        //Number of routes needs to equal number of agencies
-        guard routeTags.count == agencies.count else {
-            completion?([:])
-            return
-        }
-        
-        //If there are no routes, just return nothing
-        guard routeTags.count > 0 else {
-            completion?([:])
-            return
-        }
-        
-        var routesLoaded = 0
-        var routeDictionary: [String : TransitRoute] = [:]
+    open func configurations(forMultipleRoutes routeAgencyPairs: [RouteTag: AgencyTag], completion: ((_ routes: [TransitRoute]) -> Void)?) {
+        let group = DispatchGroup()
+        var routeArray: [TransitRoute] = []
         
         //Going through each route tag
-        for (index, routeTag) in routeTags.enumerated() {
+        for pair in routeAgencyPairs {
             
             //Getting the route configuration
-            self.configuration(forRouteTag: routeTag, withAgencyTag: agencies[index]) { route in
+            group.enter()
+            self.configuration(forRouteTag: pair.key, withAgencyTag: pair.value) { route in
                 
-                routeDictionary[routeTag] = route
-                routesLoaded += 1
-                
-                //We have loaded all the routes, call the completion
-                if routesLoaded == routeTags.count {
-                    completion?(routeDictionary)
+                DispatchQueue.main.async {
+                    if let route = route {
+                        routeArray.append(route)
+                    }
+                    group.leave()
                 }
             }
+            
+        }
+        
+        group.notify(queue: .main) {
+            completion?(routeArray)
         }
     }
     
@@ -359,10 +352,9 @@ open class SwiftBus {
         self.configurations(forMultipleRouteTags: routeTags, withAgencyTag: agencyTag) { routes in
             
             //Only use the routes that exist
-            let existingRouteTags = Array(routes.keys)
-            let existingRoutes = Array(routes.values)
+            let existingRouteTags = routes.map({ $0.routeTag })
             
-            guard existingRoutes.count > 0 else {
+            guard existingRouteTags.count > 0 else {
                 completion?(nil)
                 return
             }
@@ -374,12 +366,12 @@ open class SwiftBus {
                 let currentStation = TransitStation()
                 currentStation.stopTag = stopTag
                 currentStation.agencyTag = agencyTag
-                currentStation.routesAtStation = Array(routes.values)
-                currentStation.stopTitle = existingRoutes[0].stop(forTag: stopTag)!.stopTitle //Safe, we know all these exist
+                currentStation.routesAtStation = routes
+                currentStation.stopTitle = routes[0].stop(forTag: stopTag)!.stopTitle //Safe, we know all these exist
                 currentStation.predictions = predictions
 
                 //Saving the predictions in the TransitStop objects for all TransitRoutes
-                for route in routes.values {
+                for route in routes {
                     if let stop = route.stop(forTag: stopTag) {
                         stop.predictions = predictions[route.routeTag]!
                     }
@@ -396,45 +388,96 @@ open class SwiftBus {
     ///
     /// - Parameter stops: stops to get predictions for
     open func stopPredictions(forStops stops: [TransitStop], completion: ((_ stops: [TransitStop]) -> Void)?) {
-        let stopTags = stops.map({ $0.stopTag })
-        let routeTags = stops.map({ $0.routeTag })
         let agencyTag = stops[0].agencyTag
         
-        self.stopPredictions(forStopTags: stopTags, routeTags: routeTags, inAgency: agencyTag, completion: completion)
+        var dictionary: [RouteTag: StopTag] = [:]
+        for stop in stops {
+            dictionary[stop.routeTag] = stop.stopTag
+        }
+        
+        self.stopPredictions(forStops: dictionary, inAgency: agencyTag, completion: completion)
+    }
+    
+    /// Gets predictions for an array of stop tags and route tags. Must have the same number
+    ///
+    /// - Parameters:
+    ///   - stopTags: array of stop tags
+    ///   - routeTags: corresponding array of route tags
+    ///   - agencyTag: agency tag
+    open func stopPredictions(forStopTags stopTags: [StopTag], onRouteTags routeTags: [RouteTag], inAgency agencyTag: String, completion: ((_ stops: [TransitStop]) -> Void)?) {
+        var dictionary: [RouteTag: StopTag] = [:]
+        
+        guard stopTags.count == routeTags.count, stopTags.count > 0 else {
+            completion?([])
+            return
+        }
+        
+        for (index, stop) in stopTags.enumerated() {
+            dictionary[stop] = routeTags[index]
+        }
+        
+        self.stopPredictions(forStops: dictionary, inAgency: agencyTag, completion: completion)
     }
     
     
     /// Gets predictions for multiple stops with multiple routes. MUST BE IN THE SAME AGENCY
     ///
     /// - Parameters:
-    ///   - stopTags: array of stops
-    ///   - routeTags: corresponding array of routes
+    ///   - stopTags: dictionary of all routes to stops
     ///   - agencyTag: agency where all routes/stops are
-    open func stopPredictions(forStopTags stopTags: [String], routeTags: [String], inAgency agencyTag: String, completion: ((_ stops: [TransitStop]) -> Void)?) {
+    open func stopPredictions(forStops stopRoutePairs: [StopTag: RouteTag], inAgency agencyTag: String, completion: ((_ stops: [TransitStop]) -> Void)?) {
         
-        guard stopTags.count == routeTags.count && stopTags.count != 0 else {
-            completion?([])
-            return
-        }
+        let stopTags = stopRoutePairs.map { $0.key }
+        let routeTags = stopRoutePairs.map { $0.value }
         
         self.configurations(forMultipleRouteTags: routeTags, withAgencyTag: agencyTag) { routes in
-                
+            
             let connectionHandler = SwiftBusConnectionHandler()
-            connectionHandler.requestMultipleStopPredictionData(stopTags, forRoutes: routeTags, withAgency: agencyTag) { predictions in
+            connectionHandler.requestMultipleStopPredictionData(stopTags, forRoutes: routeTags, withAgency: agencyTag) { allPredictionData in
                 
-                var finalRoutes: [TransitStop] = []
+                var finalStops: [TransitStop] = []
                 
-                for (index, route) in Array(routes.values).enumerated() {
+                for predictionGroup in allPredictionData {
                     
-                    //If the stop exists, add the predictions and add it to the array which will be passed back to user
-                    if let stop = route.stop(forTag: stopTags[index]) {
-                        stop.predictions = predictions[route.routeTag] ?? [:]
-                        finalRoutes.append(stop)
+                    //Going through each route and organizing the prediction data
+                    
+                    let routeTag = predictionGroup.key
+                    let predictionForRoute = predictionGroup.value
+                    
+                    guard let route = routes.filter({ $0.routeTag == routeTag }).first else { break }
+                    
+                    for predictionForStop in predictionForRoute {
+                        
+                        //Going through all stops that were requested per route
+                        
+                        let stopTag = predictionForStop.key
+                        
+                        if let stop = route.stop(forTag: stopTag) {
+                            var bucketPredictions: [String: [TransitPrediction]] = [:]
+                            
+                            //This can be easily done in swift 4, need to switch to that
+                            for prediction in predictionForStop.value {
+                                
+                                //For each stop, make sure that all directions are taken care of
+                                //For example, at a stop, the same bus can go to 2 different locations
+                                
+                                if let _ = bucketPredictions[prediction.directionName] {
+                                    bucketPredictions[prediction.directionName]?.append(prediction)
+                                } else {
+                                    bucketPredictions[prediction.directionName] = [prediction]
+                                }
+                                
+                            }
+                            
+                            stop.predictions = bucketPredictions
+                            finalStops.append(stop)
+                        }
+                        print("LOL!")
                     }
-                
+                    
                 }
                 
-                completion?(finalRoutes)
+                completion?(finalStops)
                 
             }
         }

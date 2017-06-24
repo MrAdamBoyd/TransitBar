@@ -1,12 +1,12 @@
 {
   "name": "SwiftBus",
-  "version": "1.4.2",
+  "version": "1.4.7",
   "summary": "Asynchronous Swift wrapper for the NextBus API.",
   "homepage": "https://github.com/MrAdamBoyd/SwiftBus",
   "authors": "Adam Boyd",
   "source": {
     "git": "https://github.com/MrAdamBoyd/SwiftBus.git",
-    "tag": "1.4.2"
+    "tag": "1.4.7"
   },
   "social_media_url": "https://twitter.com/MrAdamBoyd",
   "license": {
@@ -15,7 +15,8 @@
   },
   "platforms": {
     "ios": "8.0",
-    "osx": "10.9"
+    "osx": "10.9",
+    "watchos": "2.0"
   },
   "requires_arc": true,
   "frameworks": "Foundation",
@@ -30,6 +31,9 @@
     }
   },
   "source_files": "Pod/Classes/**/*",
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "3.1"
+  },
   "dependencies": {
     "SWXMLHash": [
       "~> 3.0.0"

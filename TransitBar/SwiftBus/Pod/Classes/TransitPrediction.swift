@@ -3,7 +3,7 @@
 //  SwiftBus
 //
 //  Created by Adam on 2015-09-01.
-//  Copyright (c) 2015 Adam Boyd. All rights reserved.
+//  Copyright (c) 2017 Adam Boyd. All rights reserved.
 //
 
 import Foundation
@@ -12,6 +12,7 @@ private let numberOfVehiclesEncoderString = "kNumberOfVehiclesEncoder"
 private let predictionInMinutesEncoderString = "kPredictionInMinutesEncoder"
 private let predictionInSecondsEncoderString = "kPredictionInSecondsEncoder"
 private let vehicleTagEncoderString = "kVehicleTagEncoder"
+private let directionNameEncoderString = "directionNameEncoderString"
 
 open class TransitPrediction: NSObject, NSCoding {
     
@@ -19,6 +20,7 @@ open class TransitPrediction: NSObject, NSCoding {
     open var predictionInMinutes: Int = 0
     open var predictionInSeconds: Int = 0
     open var vehicleTag: Int = 0
+    open var directionName: String = ""
     
     //Basic init
     public override init() { super.init() }
@@ -42,6 +44,9 @@ open class TransitPrediction: NSObject, NSCoding {
         self.predictionInMinutes = aDecoder.decodeInteger(forKey: predictionInMinutesEncoderString)
         self.predictionInSeconds = aDecoder.decodeInteger(forKey: predictionInSecondsEncoderString)
         self.vehicleTag = aDecoder.decodeInteger(forKey: vehicleTagEncoderString)
+        if let directionName = aDecoder.decodeObject(forKey: directionNameEncoderString) as? NSString {
+            self.directionName = directionName as String
+        }
     }
     
     open func encode(with aCoder: NSCoder) {
@@ -49,6 +54,7 @@ open class TransitPrediction: NSObject, NSCoding {
         aCoder.encode(self.predictionInMinutes, forKey: predictionInMinutesEncoderString)
         aCoder.encode(self.predictionInSeconds, forKey: predictionInSecondsEncoderString)
         aCoder.encode(self.vehicleTag, forKey: vehicleTagEncoderString)
+        aCoder.encode(self.directionName as NSString, forKey: directionNameEncoderString)
     }
     
 }

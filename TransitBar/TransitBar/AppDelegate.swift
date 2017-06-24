@@ -128,7 +128,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             var title = "\(entry.stop.routeTitle) @ \(entry.stop.stopTitle) -> \(entry.stop.direction)"
             var addingText = ": "
             
-            if let predictions = entry.stop.predictions[entry.stop.direction] {
+            if let predictions = entry.stop.predictions[entry.stop.stopTag] {
                 
                 //Creating the text that will be for this stop in the menubar
                 var menuTextForThisPrediction = entry.stop.routeTag + ": "
@@ -182,15 +182,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             
             self.statusItem.menu?.items[self.menuItemIndexForEntryIndex(index)].title = title
         }
-        
+
+        self.setStatusBarText(menuText)
+    }
+    
+    /// Determines what the status bar will look like. If there is text to set, uses that text. If no text, uses an image
+    ///
+    /// - Parameter text: text to set
+    fileprivate func setStatusBarText(_ text: String) {
         //If there is no menubar text, add two dashes
-        if menuText == "" {
+        if text.isEmpty {
             self.statusItem.title = ""
             if self.statusItem.image == nil {
                 self.statusItem.image = self.emptyStatusBarTemplateImage
             }
         } else {
-            self.statusItem.title = String(menuText.characters.dropLast(2)) //Remove final ; and space
+            self.statusItem.title = String(text.characters.dropLast(2)) //Remove final ; and space
             if self.statusItem.image != nil {
                 self.statusItem.image = nil
             }

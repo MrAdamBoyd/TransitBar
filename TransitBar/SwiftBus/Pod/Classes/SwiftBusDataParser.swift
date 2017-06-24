@@ -186,14 +186,20 @@ class SwiftBusDataParser: NSObject {
         completion(dictionaryOfVehicles)
     }
     
-    func parseStationPredictions(_ xml: XMLIndexer, completion: (_ predictions: [String: [String: [TransitPrediction]]]) -> Void) {
+    func parseStationPredictions(_ xml: XMLIndexer, completion: (_ predictions: PredictionGroup) -> Void) {
         let predictions = xml["body"]
         var predictionDict:[String : [String : [TransitPrediction]]] = [:]
         
         //For each route that the user wants to get predictions for
         for route in predictions.children {
             if let routeTitle = route.element?.allAttributes["routeTag"]?.text {
-                predictionDict[routeTitle] = parsePredictions(route)
+                if let _ = predictionDict[routeTitle] {
+                    let newPredictions = parsePredictions(route)
+                    let newStopTag = Array(newPredictions.keys).first!
+                    predictionDict[routeTitle]![newStopTag] = newPredictions[newStopTag]
+                } else {
+                    predictionDict[routeTitle] = parsePredictions(route)
+                }
             }
         }
         
@@ -206,7 +212,7 @@ class SwiftBusDataParser: NSObject {
     - parameter xml:    XML gotten from NextBus's API
     - parameter completion:code that gets called when fetch of information is complete
     */
-    func parseStopPredictions(_ xml: XMLIndexer, completion:(_ predictions: [String: [TransitPrediction]], _ messages: [TransitMessage]) -> Void) {
+    func parseStopPredictions(_ xml: XMLIndexer, completion:(_ predictions: [DirectionName: [TransitPrediction]], _ messages: [TransitMessage]) -> Void) {
         let predictions = xml["body"]["predictions"]
         var messageArray: [TransitMessage] = []
         
@@ -228,13 +234,15 @@ class SwiftBusDataParser: NSObject {
     private func parsePredictions(_ predictionXML: XMLIndexer) -> [String: [TransitPrediction]] {
         var predictions:[String : [TransitPrediction]] = [:]
         
+        guard let stopTag = predictionXML.element?.allAttributes["stopTag"]?.text else { return [:] }
+        
         //Getting all the predictions
         for direction in predictionXML.children {
             
-            //Getting the direction name
+            //Making sure this is a valid element
             if let directionName = direction.element?.allAttributes["title"]?.text {
                 
-                predictions[directionName] = []
+                predictions[stopTag] = []
                 
                 for prediction in direction.children {
                     //Getting each individual prediction in minutes
@@ -249,7 +257,9 @@ class SwiftBusDataParser: NSObject {
                             newPrediction.numberOfVehicles = Int(numberOfVechiles)!
                         }
                         
-                        predictions[directionName]?.append(newPrediction)
+                        newPrediction.directionName = directionName
+                        
+                        predictions[stopTag]?.append(newPrediction)
                     }
                 }
             }

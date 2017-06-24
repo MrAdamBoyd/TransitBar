@@ -3,7 +3,7 @@ PODS:
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
   - Sparkle (1.14.0)
-  - SwiftBus (1.4.2):
+  - SwiftBus (1.4.7):
     - SWXMLHash (~> 3.0.0)
   - SWXMLHash (3.0.2)
 
@@ -20,9 +20,9 @@ SPEC CHECKSUMS:
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   Sparkle: ccd95233b12a3e3d4eeb55ff01dd4c8bb8188b07
-  SwiftBus: 1004b44087e478025a4bf5694443ea1f05419d2a
+  SwiftBus: eab5707793851b6f1c86d70f8957c07a5a76e94e
   SWXMLHash: e0f6935971f01b06fb228cf435510d998ecde647
 
 PODFILE CHECKSUM: 8ecc9c8a996e679d164a2ebd42642e8c6c638a6c
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1
