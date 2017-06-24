@@ -53,30 +53,75 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
     /// Loads the predictions for all current stops
     func loadData() {
         print("Loading data...")
-        let group = DispatchGroup()
         
-        for entry in DataController.shared.savedEntries {
-            group.enter()
+        let entries = DataController.shared.savedEntries
+        
+        guard entries.count > 0 else { return }
+        
+        let firstItemAgency = entries[0].stop.agencyTag
+        
+        let numberOfStopsWithSameAgency = entries.filter({ $0.stop.agencyTag == firstItemAgency }).count
+        
+        if numberOfStopsWithSameAgency == entries.count {
             
-            SwiftBus.shared.stopPredictions(forStop: entry.stop) { [unowned self] stop in
+            //All stops with same agency, can get them all at once
+            
+            let stops = entries.map({ $0.stop! })
+            SwiftBus.shared.stopPredictions(forStops: stops) { stops in
                 
-                if let stop = stop {
-                    
-                    //Only show alerts if it's in the menu bar
-                    if entry.shouldBeShownInMenuBar {
-                        self.delegate?.sendNotificationsToUser(with: stop.messages, differingFrom: entry.stop.messages, on: stop.routeTitle)
+                //Stops not guaranteed to be in the same order, so they need to be reordered
+                
+                for entry in entries {
+                    for stop in stops {
+                        if entry.stop.stopTag == stop.stopTag && entry.stop.routeTag == stop.routeTag {
+                            self.saveDataFrom(stop, to: entry)
+                            break
+                        }
                     }
-                    
-                    entry.stop.predictions = stop.predictions
-                    entry.stop.messages = stop.messages
                 }
                 
-                group.leave()
+                self.delegate?.transitPredictionsUpdated()
             }
+            
+        } else {
+
+            //Need to get all the predictions individually
+            
+            let group = DispatchGroup()
+            
+            for entry in entries {
+                group.enter()
+                
+                SwiftBus.shared.stopPredictions(forStop: entry.stop) { [unowned self] stop in
+                    
+                    self.saveDataFrom(stop, to: entry)
+                    
+                    group.leave()
+                }
+            }
+            
+            group.notify(queue: DispatchQueue.main) { [unowned self] in
+                self.delegate?.transitPredictionsUpdated()
+            }
+            
         }
-        
-        group.notify(queue: DispatchQueue.main) { [unowned self] in
-            self.delegate?.transitPredictionsUpdated()
+    }
+    
+    /// Saves the information from a transitstop object to a transitentry object. Also sends notification if notification should be sent
+    ///
+    /// - Parameters:
+    ///   - stop: stop that has prediction and message information
+    ///   - entry: entry that the information should be saved to
+    fileprivate func saveDataFrom(_ stop: TransitStop?, to entry: TransitEntry) {
+        if let stop = stop {
+            
+            //Only show alerts if it's in the menu bar
+            if entry.shouldBeShownInMenuBar {
+                self.delegate?.sendNotificationsToUser(with: stop.messages, differingFrom: entry.stop.messages, on: stop.routeTitle)
+            }
+            
+            entry.stop.predictions = stop.predictions
+            entry.stop.messages = stop.messages
         }
     }
     

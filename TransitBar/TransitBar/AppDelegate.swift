@@ -128,7 +128,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             var title = "\(entry.stop.routeTitle) @ \(entry.stop.stopTitle) -> \(entry.stop.direction)"
             var addingText = ": "
             
-            if let predictions = entry.stop.predictions[entry.stop.stopTag] {
+            if let predictions = entry.stop.predictions[entry.stop.direction] {
                 
                 //Creating the text that will be for this stop in the menubar
                 var menuTextForThisPrediction = entry.stop.routeTag + ": "

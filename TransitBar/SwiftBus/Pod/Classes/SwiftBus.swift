@@ -390,12 +390,9 @@ open class SwiftBus {
     open func stopPredictions(forStops stops: [TransitStop], completion: ((_ stops: [TransitStop]) -> Void)?) {
         let agencyTag = stops[0].agencyTag
         
-        var dictionary: [RouteTag: StopTag] = [:]
-        for stop in stops {
-            dictionary[stop.routeTag] = stop.stopTag
-        }
+        let pairs: [StopRoutePair] = stops.map { (stopTag: $0.stopTag, routeTag: $0.routeTag) }
         
-        self.stopPredictions(forStops: dictionary, inAgency: agencyTag, completion: completion)
+        self.stopPredictions(forStops: pairs, inAgency: agencyTag, completion: completion)
     }
     
     /// Gets predictions for an array of stop tags and route tags. Must have the same number
@@ -405,18 +402,18 @@ open class SwiftBus {
     ///   - routeTags: corresponding array of route tags
     ///   - agencyTag: agency tag
     open func stopPredictions(forStopTags stopTags: [StopTag], onRouteTags routeTags: [RouteTag], inAgency agencyTag: String, completion: ((_ stops: [TransitStop]) -> Void)?) {
-        var dictionary: [RouteTag: StopTag] = [:]
         
         guard stopTags.count == routeTags.count, stopTags.count > 0 else {
             completion?([])
             return
         }
         
+        var pairs: [StopRoutePair] = []
         for (index, stop) in stopTags.enumerated() {
-            dictionary[stop] = routeTags[index]
+            pairs.append((stopTag: stop, routeTag: routeTags[index]))
         }
         
-        self.stopPredictions(forStops: dictionary, inAgency: agencyTag, completion: completion)
+        self.stopPredictions(forStops: pairs, inAgency: agencyTag, completion: completion)
     }
     
     
@@ -425,10 +422,10 @@ open class SwiftBus {
     /// - Parameters:
     ///   - stopTags: dictionary of all routes to stops
     ///   - agencyTag: agency where all routes/stops are
-    open func stopPredictions(forStops stopRoutePairs: [StopTag: RouteTag], inAgency agencyTag: String, completion: ((_ stops: [TransitStop]) -> Void)?) {
+    open func stopPredictions(forStops stopRoutePairs: [(stopTag: StopTag, routeTag: RouteTag)], inAgency agencyTag: String, completion: ((_ stops: [TransitStop]) -> Void)?) {
         
-        let stopTags = stopRoutePairs.map { $0.key }
-        let routeTags = stopRoutePairs.map { $0.value }
+        let stopTags = stopRoutePairs.map { $0.stopTag }
+        let routeTags = stopRoutePairs.map { $0.routeTag }
         
         self.configurations(forMultipleRouteTags: routeTags, withAgencyTag: agencyTag) { routes in
             
@@ -472,7 +469,6 @@ open class SwiftBus {
                             stop.predictions = bucketPredictions
                             finalStops.append(stop)
                         }
-                        print("LOL!")
                     }
                     
                 }

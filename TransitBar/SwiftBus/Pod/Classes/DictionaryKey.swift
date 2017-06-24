@@ -13,3 +13,5 @@ public typealias RouteTag = String
 public typealias StopTag = String
 public typealias DirectionName = String
 public typealias PredictionGroup = [RouteTag: [StopTag: [TransitPrediction]]]
+
+public typealias StopRoutePair = (stopTag: StopTag, routeTag: RouteTag)
