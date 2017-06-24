@@ -20,7 +20,14 @@ import MapKit
 class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate, TransitManagerDelegate {
     
     //Item that lives in the status bar
-    let statusItem = NSStatusBar.system().statusItem(withLength: -1)
+    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    
+    /// This is the icon when there is nothing to show in the menubar
+    var emptyStatusBarTemplateImage: NSImage {
+        let image = #imageLiteral(resourceName: "TemplateIcon")
+        image.isTemplate = true
+        return image
+    }
     
     let storyboard = NSStoryboard(name: "Main", bundle: nil)
     var listWindowController: NSWindowController?
@@ -42,7 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         self.transitManager.delegate = self
         
         //Setting up the status bar menu and the actions from that
-        self.statusItem.title = "--"
+        self.statusItem.image = self.emptyStatusBarTemplateImage
         
         self.createMenuItems()
         
@@ -178,9 +185,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         
         //If there is no menubar text, add two dashes
         if menuText == "" {
-            self.statusItem.title = "--"
+            self.statusItem.title = ""
+            if self.statusItem.image == nil {
+                self.statusItem.image = self.emptyStatusBarTemplateImage
+            }
         } else {
             self.statusItem.title = String(menuText.characters.dropLast(2)) //Remove final ; and space
+            if self.statusItem.image != nil {
+                self.statusItem.image = nil
+            }
         }
     }
     
