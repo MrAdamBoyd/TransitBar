@@ -248,7 +248,9 @@ class SwiftBusDataParser: NSObject {
             if let directionName = direction.element?.allAttributes["title"]?.text {
                 
                 let keyForPredictions = useDirectionAsKey ? directionName : stopTag
-                predictions[keyForPredictions] = []
+                if predictions[keyForPredictions] == nil {
+                    predictions[keyForPredictions] = []
+                }
                 
                 for prediction in direction.children {
                     //Getting each individual prediction in minutes
