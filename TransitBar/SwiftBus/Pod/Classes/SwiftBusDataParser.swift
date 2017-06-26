@@ -136,13 +136,13 @@ class SwiftBusDataParser: NSObject {
             
             currentRoute.stops[stopDirection] = []
             
-            for stopTag in stopDirectionDict[stopDirection]! {
+            for stopTag in stopDirectionDict[stopDirection] ?? [] {
                 //For each stop per direction
                 
                 if let transitStop = allStopsDictionary[stopTag] {
                     //Getting the stop from the dictionary of all stops and adding it to the correct direction for the current TransitRoute
                     transitStop.direction = stopDirection
-                    currentRoute.stops[stopDirection]!.append(transitStop)
+                    currentRoute.stops[stopDirection]?.append(transitStop)
                 }
             }
             
@@ -195,8 +195,10 @@ class SwiftBusDataParser: NSObject {
             if let routeTitle = route.element?.allAttributes["routeTag"]?.text {
                 if let _ = predictionDict[routeTitle] {
                     let newPredictions = parsePredictions(route, useDirectionAsKey: false)
-                    let newStopTag = Array(newPredictions.keys).first!
-                    predictionDict[routeTitle]![newStopTag] = newPredictions[newStopTag]
+                    if let newStopTag = newPredictions.keys.first {
+                        //There should only be one key because we are using the stop as a key and only parsing the predictions for one stop
+                        predictionDict[routeTitle]?[newStopTag] = newPredictions[newStopTag]
+                    }
                 } else {
                     predictionDict[routeTitle] = parsePredictions(route, useDirectionAsKey: false)
                 }
@@ -255,7 +257,7 @@ class SwiftBusDataParser: NSObject {
                 for prediction in direction.children {
                     //Getting each individual prediction in minutes
                     
-                    if let predictionInMinutes = Int((prediction.element?.allAttributes["minutes"]!.text)!), let predictionInSeconds = Int((prediction.element?.allAttributes["seconds"]!.text)!), let vehicleTag = Int((prediction.element?.allAttributes["vehicle"]?.text)!) {
+                    if let predictionInMinutes = Int((prediction.element?.allAttributes["minutes"]?.text) ?? ""), let predictionInSeconds = Int((prediction.element?.allAttributes["seconds"]?.text) ?? ""), let vehicleTag = Int((prediction.element?.allAttributes["vehicle"]?.text) ?? "") {
                         //If all the elements exist
                         
                         let newPrediction = TransitPrediction(predictionInMinutes: predictionInMinutes, predictionInSeconds: predictionInSeconds, vehicleTag: vehicleTag)
