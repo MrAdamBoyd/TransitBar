@@ -180,12 +180,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             
             title.append(addingText)
             
-            if self.statusItem.menu?.items[self.menuItemIndexForEntryIndex(index)] != nil {
-                self.statusItem.menu?.items[self.menuItemIndexForEntryIndex(index)].title = title
+            DispatchQueue.main.async {
+                if let menuItemToUpdate = self.statusItem.menu?.items[self.menuItemIndexForEntryIndex(index)] {
+                    menuItemToUpdate.title = title
+                }
             }
+            
+            self.setStatusBarText(menuText)
         }
 
-        self.setStatusBarText(menuText)
     }
     
     /// Determines what the status bar will look like. If there is text to set, uses that text. If no text, uses an image
