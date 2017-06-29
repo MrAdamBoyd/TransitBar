@@ -35,7 +35,7 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
         super.init()
         
         //Setting up notifications when the user changes settings or the computer wakes up
-        NSWorkspace.shared().notificationCenter.addObserver(self, selector: #selector(self.handleComputerWake), name: Notification.Name.NSWorkspaceDidWake, object: nil)
+        NSWorkspace.shared.notificationCenter.addObserver(self, selector: #selector(self.handleComputerWake), name: NSWorkspace.didWakeNotification, object: nil)
         
         //Refresh data every 60 seconds
         self.minuteTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.loadData), userInfo: nil, repeats: true)
@@ -45,13 +45,13 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
     }
     
     /// Called when the computer wakes from sleep. Loads the data immediately and resets the computer's location
-    func handleComputerWake() {
+    @objc func handleComputerWake() {
         self.loadData()
         self.determineTrackingLocation()
     }
     
     /// Loads the predictions for all current stops
-    func loadData() {
+    @objc func loadData() {
         print("Loading data...")
         
         let entries = DataController.shared.savedEntries
@@ -128,7 +128,7 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
     // MARK: - Managing locations
     
     /// Starts or stops tracking the user's location
-    func determineTrackingLocation() {
+    @objc func determineTrackingLocation() {
         if DataController.shared.displayWalkingTime {
             self.locManager.delegate = self
             self.locManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -217,6 +217,6 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
     }
     
     deinit {
-        NSWorkspace.shared().notificationCenter.removeObserver(self)
+        NSWorkspace.shared.notificationCenter.removeObserver(self)
     }
 }

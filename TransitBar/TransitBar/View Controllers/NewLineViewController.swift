@@ -66,14 +66,14 @@ class NewLineViewController: NSViewController {
 
     @IBAction func radioButtonTapped(_ sender: Any) {
         print("Radio button tapped")
-        let enabled = self.betweenTimesRadioButton.state == 1
+        let enabled = self.betweenTimesRadioButton.state == .on
         self.startTimeDatePicker.isEnabled = enabled
         self.endTimeDatePicker.isEnabled = enabled
     }
     
     // MARK: - Actions from the popup buttons
     
-    func agencySelectedAction() {
+    @objc func agencySelectedAction() {
         self.routePopUpButton.removeAllItems()
         self.routes = []
         self.selectedRoute = nil
@@ -102,7 +102,7 @@ class NewLineViewController: NSViewController {
         }
     }
     
-    func routeSelectedAction() {
+    @objc func routeSelectedAction() {
         self.selectedRoute = nil
         self.directionPopUpButton.removeAllItems()
         self.directions = []
@@ -126,7 +126,7 @@ class NewLineViewController: NSViewController {
     }
     
     /// User selected a direction for the direction popup
-    func directionSelectedAction() {
+    @objc func directionSelectedAction() {
         self.stopPopUpButton.removeAllItems()
         self.stops = []
         self.addStopButton.isEnabled = false
@@ -145,7 +145,7 @@ class NewLineViewController: NSViewController {
         }
     }
     
-    func stopSelectedAction() {
+    @objc func stopSelectedAction() {
         //Only enable if placeholder item isn't there
         guard self.stopPopUpButton.indexOfSelectedItem != 0 else { return }
         
@@ -157,7 +157,7 @@ class NewLineViewController: NSViewController {
         guard let stop = self.selectedStop else { return }
         var times: (Date?, Date?)? = nil
         
-        if self.betweenTimesRadioButton.state == 1 {
+        if self.betweenTimesRadioButton.state == .on {
             
             //Only show the times between two times
             
@@ -168,7 +168,7 @@ class NewLineViewController: NSViewController {
                 times = (self.endTimeDatePicker.dateValue, self.startTimeDatePicker.dateValue)
             }
             
-        } else if self.neverRadioButton.state == 1 {
+        } else if self.neverRadioButton.state == .on {
             //The tuple exists but has nil values for never being shown
             times = (nil, nil)
         }

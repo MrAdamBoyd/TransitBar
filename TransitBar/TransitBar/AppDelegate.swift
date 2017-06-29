@@ -20,7 +20,7 @@ import MapKit
 class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate, TransitManagerDelegate {
     
     //Item that lives in the status bar
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     /// This is the icon when there is nothing to show in the menubar
     var emptyStatusBarTemplateImage: NSImage {
@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         return image
     }
     
-    let storyboard = NSStoryboard(name: "Main", bundle: nil)
+    let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
     var listWindowController: NSWindowController?
     var aboutWindowController: NSWindowController?
     var alertsWindowController: NSWindowController?
@@ -75,11 +75,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         
     }
     
-    func determineTrackingLocation() {
+    @objc func determineTrackingLocation() {
         self.transitManager.determineTrackingLocation()
     }
     
-    func createMenuItems() {
+    @objc func createMenuItems() {
         if self.statusItem.menu == nil {
             self.statusItem.menu = NSMenu()
         }
@@ -184,9 +184,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                 if let menuItemToUpdate = self.statusItem.menu?.items[self.menuItemIndexForEntryIndex(index)] {
                     menuItemToUpdate.title = title
                 }
+                
+                self.setStatusBarText(menuText)
             }
             
-            self.setStatusBarText(menuText)
         }
 
     }
@@ -319,12 +320,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     /**
      Checks Sparkle to see if there are any updates
      */
-    func checkForUpdates() {
+    @objc func checkForUpdates() {
         SUUpdater.shared().checkForUpdates(self)
     }
     #endif
     
-    func userWantsToSetNotificationFor(_ sender: Any?) {
+    @objc func userWantsToSetNotificationFor(_ sender: Any?) {
         guard let item = self.statusItem.menu?.highlightedItem else { return }
         guard let index = self.statusItem.menu?.index(of: item) else { return }
         
@@ -341,7 +342,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         textField.placeholderString = "5"
         alert.accessoryView = textField
         
-        if alert.runModal() == NSAlertFirstButtonReturn {
+        if alert.runModal() == NSApplication.ModalResponse.alertFirstButtonReturn {
             let minutes = textField.integerValue
             if minutes > 0 {
             
@@ -367,8 +368,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     /**
      Opens the settings window
      */
-    func openSettingsWindow() {
-        guard let windowController = self.storyboard.instantiateController(withIdentifier: "mainWindow") as? NSWindowController else { return }
+    @objc func openSettingsWindow() {
+        guard let windowController = self.storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "mainWindow")) as? NSWindowController else { return }
         self.listWindowController = windowController
         self.listWindowController?.window?.makeKeyAndOrderFront(self)
     }
@@ -376,22 +377,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     /**
      Opens the about window
      */
-    func openAboutWindow() {
-        guard let windowController = self.storyboard.instantiateController(withIdentifier: "aboutWindow") as? NSWindowController else { return }
+    @objc func openAboutWindow() {
+        guard let windowController = self.storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "aboutWindow")) as? NSWindowController else { return }
         self.aboutWindowController = windowController
         self.aboutWindowController?.window?.makeKeyAndOrderFront(self)
     }
     
     /// Opens the window that has all the alerts
-    func openAlertsWindow() {
-        guard let windowController = self.storyboard.instantiateController(withIdentifier: "alertsWindow") as? NSWindowController else { return }
+    @objc func openAlertsWindow() {
+        guard let windowController = self.storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "alertsWindow")) as? NSWindowController else { return }
         self.alertsWindowController = windowController
         self.alertsWindowController?.window?.makeKeyAndOrderFront(self)
     }
     
     /// Opens the notification window
-    func openNotificationsWindow() {
-        guard let windowController = self.storyboard.instantiateController(withIdentifier: "notificationsWindow") as? NSWindowController else { return }
+    @objc func openNotificationsWindow() {
+        guard let windowController = self.storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "notificationsWindow")) as? NSWindowController else { return }
         self.notificationsWindowController = windowController
         self.notificationsWindowController?.window?.makeKeyAndOrderFront(self)
     }
@@ -399,8 +400,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     /**
      Quits the app
      */
-    func terminate() {
-        NSApplication.shared().terminate(self)
+    @objc func terminate() {
+        NSApplication.shared.terminate(self)
     }
     
     // MARK: - NSUserNotificationCenterDelegate

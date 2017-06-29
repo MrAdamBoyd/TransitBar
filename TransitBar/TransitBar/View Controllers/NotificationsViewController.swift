@@ -46,7 +46,7 @@ class NotificationsViewController: NSViewController, NSTableViewDelegate, NSTabl
         self.notificationsChanged()
     }
     
-    func notificationsChanged() {
+    @objc func notificationsChanged() {
         self.notifications = DataController.shared.scheduledNotifications
         self.tableView.reloadData()
     }

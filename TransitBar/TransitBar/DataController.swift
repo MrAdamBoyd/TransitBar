@@ -18,8 +18,8 @@ class DataController: NSObject {
         super.init()
         
         if self.storeInCloud {
-            NotificationCenter.default.addObserver(self, selector: #selector(self.getDataFromDefaults), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default())
-            NSUbiquitousKeyValueStore.default().synchronize()
+            NotificationCenter.default.addObserver(self, selector: #selector(self.getDataFromDefaults), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default)
+            NSUbiquitousKeyValueStore.default.synchronize()
         }
         
         self.getDataFromDefaults()
@@ -49,8 +49,8 @@ class DataController: NSObject {
             
             if self.storeInCloud {
                 //Register for the notification and sync the data
-                NotificationCenter.default.addObserver(self, selector: #selector(self.getDataFromDefaults), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default())
-                NSUbiquitousKeyValueStore.default().synchronize()
+                NotificationCenter.default.addObserver(self, selector: #selector(self.getDataFromDefaults), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default)
+                NSUbiquitousKeyValueStore.default.synchronize()
             } else {
                 //For the entry changed notification
                 NotificationCenter.default.removeObserver(self)
@@ -77,7 +77,7 @@ class DataController: NSObject {
     
     // MARK: - Getting and setting values
     
-    func getDataFromDefaults() {
+    @objc func getDataFromDefaults() {
         //Number of predictions to show
         if let numberOfPredictions = self.getInt(for: Constants.numberOfPredictionsKey), numberOfPredictions != 0 {
             self.numberOfPredictionsToShow = numberOfPredictions
@@ -115,7 +115,7 @@ class DataController: NSObject {
         }
         
         if self.storeInCloud {
-            return NSUbiquitousKeyValueStore.default().bool(forKey: key)
+            return NSUbiquitousKeyValueStore.default.bool(forKey: key)
         } else {
             return self.appDefaults?.bool(forKey: key)
         }
@@ -123,7 +123,7 @@ class DataController: NSObject {
     
     fileprivate func getInt(for key: String) -> Int? {
         if self.storeInCloud {
-            return Int(NSUbiquitousKeyValueStore.default().double(forKey: key))
+            return Int(NSUbiquitousKeyValueStore.default.double(forKey: key))
         } else {
             return self.appDefaults?.integer(forKey: key)
         }
@@ -131,7 +131,7 @@ class DataController: NSObject {
     
     fileprivate func getData(for key: String) -> Data? {
         if self.storeInCloud {
-            return NSUbiquitousKeyValueStore.default().object(forKey: key) as? Data
+            return NSUbiquitousKeyValueStore.default.object(forKey: key) as? Data
         } else {
             return self.appDefaults?.object(forKey: key) as? Data
         }
@@ -140,8 +140,8 @@ class DataController: NSObject {
     // Setting values
     fileprivate func set(any: Any, for key: String) {
         if self.storeInCloud && key != Constants.storeInCloudKey {
-            NSUbiquitousKeyValueStore.default().set(any, forKey: key)
-            NSUbiquitousKeyValueStore.default().synchronize()
+            NSUbiquitousKeyValueStore.default.set(any, forKey: key)
+            NSUbiquitousKeyValueStore.default.synchronize()
         } else {
             self.appDefaults?.set(any, forKey: key)
             self.appDefaults?.synchronize()

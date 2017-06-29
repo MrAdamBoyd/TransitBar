@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import MacTransit
+@testable import TransitBar
 
 class MacTransitTests: XCTestCase {
     

@@ -26,7 +26,7 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
         super.viewDidLoad()
         
         self.setUIFromSettings(reloadData: false)
-        self.icloudSettingsButton.state = DataController.shared.storeInCloud ? 1 : 0
+        self.icloudSettingsButton.state = NSControl.StateValue(rawValue: DataController.shared.storeInCloud ? 1 : 0)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.setUIFromSettings), name: .entriesChanged, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.setUIFromSettings), name: .displayWalkingTimeChanged, object: nil)
@@ -44,7 +44,7 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
         super.prepare(for: segue, sender: sender)
         
         //Interrupt segue and set this view controller as the delegate
-        guard let identifier = segue.identifier, identifier == "showNewLine" else {
+        guard let identifier = segue.identifier, identifier.rawValue == "showNewLine" else {
             return
         }
         
@@ -80,16 +80,16 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
         self.tableView.reloadData()
     }
     
-    func setUIFromSettings(reloadData: Bool = true) {
+    @objc func setUIFromSettings(reloadData: Bool = true) {
         self.numberOfItemsToShowTextField.intValue = Int32(DataController.shared.numberOfPredictionsToShow)
-        self.walkTimeButton.state = DataController.shared.displayWalkingTime ? 1 : 0
+        self.walkTimeButton.state = NSControl.StateValue(rawValue: DataController.shared.displayWalkingTime ? 1 : 0)
         if reloadData { self.tableView.reloadData() }
     }
     
     // MARK: - Actions
     
     @IBAction func createNewLineAction(_ sender: Any) {
-        self.performSegue(withIdentifier: "showNewLine", sender: self)
+        self.performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "showNewLine"), sender: self)
     }
     
     @IBAction func viewNotificationsAction(_ sender: Any) {
@@ -105,15 +105,15 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     }
     
     @IBAction func icloudSettingsClicked(_ sender: Any) {
-        DataController.shared.storeInCloud = self.icloudSettingsButton.state == 1
+        DataController.shared.storeInCloud = self.icloudSettingsButton.state == .on
     }
     
     @IBAction func walkTimeButtonClicked(_ sender: Any) {
-        DataController.shared.displayWalkingTime = self.walkTimeButton.state == 1
+        DataController.shared.displayWalkingTime = self.walkTimeButton.state == .on
     }
     
     func showAbout() {
-        self.performSegue(withIdentifier: "showAbout", sender: self)
+        self.performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "showAbout"), sender: self)
     }
     
     // MARK: - NewStopDelegate
