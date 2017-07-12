@@ -697,17 +697,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>embedded.provisionprofile</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			4OcSb8NZqWjslEqTSTMhR/mJWFE=
-			</data>
-			<key>hash2</key>
-			<data>
-			dwcy9kDIkBGoZm3dD4hh7gSve3nmJH33nTfcw/ofgsY=
-			</data>
-		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>
