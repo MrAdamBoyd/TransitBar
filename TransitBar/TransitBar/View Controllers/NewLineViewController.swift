@@ -85,7 +85,7 @@ class NewLineViewController: NSViewController {
         
         guard self.agencyPopUpButton.indexOfSelectedItem != 0 else { return }
         
-        let agency = self.agencies[self.agencyPopUpButton.indexOfSelectedItem - 1]
+        let agency = self.agencies[self.agencyPopUpButton.indexOfSelectedItem]
         SwiftBus.shared.routes(forAgency: agency) { routes in
             var inOrderRoutes = Array(routes.values)
             
@@ -95,10 +95,12 @@ class NewLineViewController: NSViewController {
             }
             
             //Placeholder
-            self.routePopUpButton.addItem(withTitle: "--")
-            
-            self.routes = inOrderRoutes
-            self.routePopUpButton.addItems(withTitles: inOrderRoutes.map({ $0.routeTitle }))
+            DispatchQueue.main.async { [unowned self] in
+                self.routePopUpButton.addItem(withTitle: "--")
+                
+                self.routes = inOrderRoutes
+                self.routePopUpButton.addItems(withTitles: inOrderRoutes.map({ $0.routeTitle }))
+            }
         }
     }
     
@@ -117,11 +119,13 @@ class NewLineViewController: NSViewController {
             guard let route = route else { return }
             
             //Placeholder
-            self.directionPopUpButton.addItem(withTitle: "--")
-            
-            self.selectedRoute = route
-            //The keys to this array are all possible directions
-            self.directionPopUpButton.addItems(withTitles: Array(route.stops.keys))
+            DispatchQueue.main.async { [unowned self] in
+                self.directionPopUpButton.addItem(withTitle: "--")
+                
+                self.selectedRoute = route
+                //The keys to this array are all possible directions
+                self.directionPopUpButton.addItems(withTitles: Array(route.stops.keys))
+            }
         }
     }
     
@@ -136,12 +140,14 @@ class NewLineViewController: NSViewController {
         
         if let title = self.directionPopUpButton.selectedItem?.title, let stops = self.selectedRoute?.stops[title] {
             
-            //Placeholder
-            self.stopPopUpButton.addItem(withTitle: "--")
-            
-            self.stops = stops
-            //Getting the stops for that direction. The direction is the key to the dictionary for the stops on that route
-            self.stopPopUpButton.addItems(withTitles: stops.map({ $0.stopTitle }))
+            DispatchQueue.main.async { [unowned self] in
+                //Placeholder
+                self.stopPopUpButton.addItem(withTitle: "--")
+                
+                self.stops = stops
+                //Getting the stops for that direction. The direction is the key to the dictionary for the stops on that route
+                self.stopPopUpButton.addItems(withTitles: stops.map({ $0.stopTitle }))
+            }
         }
     }
     
