@@ -9,10 +9,10 @@
 import Foundation
 import SwiftBus
 
-fileprivate let stopKey = "entryStopKey"
-fileprivate let timeKey0 = "entryTimesKey0"
-fileprivate let timeKey1 = "entryTimesKey1"
-fileprivate let timeKeyNever = "entryTimesKeyNever"
+private let stopKey = "entryStopKey"
+private let timeKey0 = "entryTimesKey0"
+private let timeKey1 = "entryTimesKey1"
+private let timeKeyNever = "entryTimesKeyNever"
 
 class TransitEntry: NSObject, NSCoding {
     var stop: TransitStop!
@@ -60,7 +60,7 @@ class TransitEntry: NSObject, NSCoding {
         if let date1 = aDecoder.decodeObject(forKey: timeKey0) as? Date, let date2 = aDecoder.decodeObject(forKey: timeKey1) as? Date {
             //Shown in menu bar between certain times
             self.times = (date1, date2)
-        } else if let _ = aDecoder.decodeObject(forKey: timeKeyNever) {
+        } else if aDecoder.decodeObject(forKey: timeKeyNever) != nil {
             //Never shown in menu bar
             self.times = (nil, nil)
         }

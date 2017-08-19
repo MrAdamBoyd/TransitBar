@@ -53,7 +53,7 @@ class DataController: NSObject {
                 NSUbiquitousKeyValueStore.default.synchronize()
             } else {
                 //For the entry changed notification
-                NotificationCenter.default.removeObserver(self)
+                NotificationCenter.default.removeObserver(self, name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default)
             }
         }
     }
@@ -78,6 +78,7 @@ class DataController: NSObject {
     // MARK: - Getting and setting values
     
     @objc func getDataFromDefaults() {
+        
         //Number of predictions to show
         if let numberOfPredictions = self.getInt(for: Constants.numberOfPredictionsKey), numberOfPredictions != 0 {
             self.numberOfPredictionsToShow = numberOfPredictions

@@ -297,7 +297,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             if let directionsRequest = directionsRequest {
                 
                 let directions = MKDirections(request: directionsRequest)
-                directions.calculate() { [unowned self] response, error in
+                directions.calculate() { [unowned self] response, _ in
                     
                     if let routes = response?.routes {
                         

@@ -160,13 +160,13 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
         group.enter() //For destination
         
         let geocoder1 = CLGeocoder()
-        geocoder1.reverseGeocodeLocation(sourceLocation) { [unowned self] placemarks, error in
+        geocoder1.reverseGeocodeLocation(sourceLocation) { [unowned self] placemarks, _ in
             sourceMapItem = self.mkmapItemFrom(placemarks: placemarks)
             group.leave()
         }
         
         let geocoder2 = CLGeocoder()
-        geocoder2.reverseGeocodeLocation(destinationLocation) { [unowned self] placemarks, error in
+        geocoder2.reverseGeocodeLocation(destinationLocation) { [unowned self] placemarks, _ in
             destMapItem = self.mkmapItemFrom(placemarks: placemarks)
             group.leave()
         }
