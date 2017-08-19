@@ -9,7 +9,7 @@
 import Foundation
 import SWXMLHash
 
-class SwiftBusDataParser: NSObject {
+struct SwiftBusDataParser {
     
     /**
     Creating all the transit agencies from the xml, calls the allAgenciesCompletion when done
