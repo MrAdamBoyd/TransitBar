@@ -7,35 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A06453776636D51E796F7B12573B91 /* TransitVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DA15BFE8980C004CADF35706FFBF2B /* TransitVehicle.swift */; };
 		2287387FF99770AAE0176891FFD8A443 /* Pods-TransitBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58921ED3B2328059BCD34127B16893FC /* Pods-TransitBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2364F61DAC56187A11FCEA033EF1AA3E /* TransitStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154F6BD3ADAC6A06A985F2773CDB2EE5 /* TransitStation.swift */; };
+		22FA09F6C9D1E7242A1647E0EAFC2713 /* TransitAgency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33813A283FDDF9EA2FDCEC0376C9C03F /* TransitAgency.swift */; };
 		24C1BE803EA65E045DABDD48801D2CA1 /* Pods-TransitBar AppStore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD97E7481D8ACD0E43ACBE7542337B7 /* Pods-TransitBar AppStore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C872F16E6466AAF114C92EC5C281F76 /* SwiftBus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8141272179EF6EFAD799CD7A5DAACFCD /* SwiftBus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C872F16E6466AAF114C92EC5C281F76 /* SwiftBus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC59BCB2B7D027D0A756873945781B50 /* SwiftBus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F7D0C18975CE2E36D696524A0B2D3A3 /* SWXMLHash+TypeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B9662AE27B50BC45C8B7BFD2F6F31C /* SWXMLHash+TypeConversion.swift */; };
 		4132B89A476998D6B4F407E5E0C1B3CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFA005859F9AC113582F591E73243D6 /* Foundation.framework */; };
 		44F2A5567BD85D290D4F3F81FA9DD295 /* Pods-TransitBar AppStore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C30C75396CB32EB7E72DDED2C09A16D /* Pods-TransitBar AppStore-dummy.m */; };
 		53D8013E6D5ECAC402424235E3DEB77A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */; };
-		5416F5762B89C0351AF5660965C3207B /* DictionaryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C723CCDDFDC175EDDE777BBCEF61A5 /* DictionaryKey.swift */; };
-		589A77F4AFC8220F73C58671696D3F5A /* TransitVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EFC47ABECF13813A262B9C24A54505 /* TransitVehicle.swift */; };
-		5A742F169578FBC88C3D85039F9E2ED1 /* SwiftBusRequestURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB3A0AFE25BE1DEE76565B7BC353DA7 /* SwiftBusRequestURLs.swift */; };
+		5ADEB4D75D9DC7A53679D41D6A022217 /* SwiftBus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBE20376BEF3E4C0DB5731BC5712F05 /* SwiftBus-dummy.m */; };
 		5EF71E713E930BD85DDFA356831E0FDC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */; };
+		618611F5B92DCE9DFF0DF729D417C21E /* TransitPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD37EEDF16542821F44E9F96F5A81F9 /* TransitPrediction.swift */; };
 		638A8A47A6A4FB160D431485AE4ABFC1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */; };
+		63D285676FD0444FC2AD987DF4756518 /* SwiftBusDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC66C9DB99E36B152718C9A78351413 /* SwiftBusDataParser.swift */; };
 		6A9E5419F9840C9C5CAD79BCF37C76F0 /* Pods-TransitBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F51AAFBA5A1912671B95C4E24C377FE /* Pods-TransitBar-dummy.m */; };
-		6EC46C96654844B9DD1AA67D985855EA /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D1647F3D9AE1CB1221E3DF169FFB31 /* ColorExtension.swift */; };
+		6EEA6D6F8F587786E13F369DEC5F88B0 /* SwiftBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14FC03B73D69D670E1E172C1E982AC /* SwiftBus.swift */; };
+		73FD5E7F7780487380F602A9DC36920D /* DictionaryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6A51D238E2C2C36BFED551D2F19014 /* DictionaryKey.swift */; };
 		7C20B5DC170C535984B858AD4EAB49AE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */; };
+		85F9CB2F3B3997A5D094F490ACCB471B /* TransitMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF3132FC8473A572259909D75823EBD /* TransitMessage.swift */; };
+		891C3852231718E4011BCC8CB272FD8E /* TransitRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38440D9EEE157D01D98A377F05D9E02D /* TransitRoute.swift */; };
 		93149A7EE426D478964824D2F023DAF6 /* SWXMLHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188791171C97FFC82FA655EAA1DEED32 /* SWXMLHash.framework */; };
 		9DC369319735B40F1E1096C6685C5F1B /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8782141B032F14929E1BA101344F4565 /* SWXMLHash.swift */; };
-		AB0C801D9EEC8384C2921644771F3A83 /* SwiftBusDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE715DF8CEEE58C281DB1E02F0AAE928 /* SwiftBusDataParser.swift */; };
-		ABDD846DDB2110393FBBCB9D749E1FB5 /* TransitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7188ADC5D8BB3A564DA2D9AAF7E52E /* TransitStop.swift */; };
 		B169A68B1F3F11471E66FC6B4F6734F5 /* SWXMLHash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F03B93B67F824CCCE721FA597ECD87B7 /* SWXMLHash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2DE1D9BCC7C60E1CAB9A0017E0858C5 /* SwiftBusRequestURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96481A78BAF1A0E1D0867CD9EB18692D /* SwiftBusRequestURLs.swift */; };
 		B51EF597142909934620E39B23C51CDF /* SWXMLHash-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA25E75C9802F992AFBC1A856FF00B0 /* SWXMLHash-dummy.m */; };
-		BCA09F5F198830EFAD13A6462388E1F5 /* TransitPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9E8DEE835ACECBF1F9732891F06B4 /* TransitPrediction.swift */; };
-		CABFF52616DD3B7F868C39EA2F3423B3 /* TransitMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A7925F9144B6584B5FA7DF64795D0C /* TransitMessage.swift */; };
-		D3C9DE6C4EAC8210899EB91903F676A9 /* TransitRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68783324FF3AB7B973D02ABA9652D7B2 /* TransitRoute.swift */; };
-		DC9825A2637CD0714CC8D6D8DB94109F /* TransitAgency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4702248D9EE18C69E6767876B3151F /* TransitAgency.swift */; };
-		DE98196F76D8F6285ACF9FA127A135A6 /* SwiftBus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB96C6B281F96C04BA7A294C06C5770D /* SwiftBus-dummy.m */; };
-		F885AA1FF637254FE860853A76CA4C8C /* SwiftBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B7145980909238DCE1A9C5A24B9A89 /* SwiftBus.swift */; };
-		FFE0C2B06D022E5CBBD8B77941D71D83 /* SwiftBusConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE12BCB93ED8907595037B86AC4809C8 /* SwiftBusConnectionHandler.swift */; };
+		CB76C72D9E438F5928B0492D5596BCCA /* TransitStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8198D05C5537C24CE0743EFA9213F4C /* TransitStop.swift */; };
+		DA0907E27DDE3E58D2B99A39BE3C16CE /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71696AC10583E1FF5EA424339E2B4D65 /* ColorExtension.swift */; };
+		DD10C5D2910F862D8463799E54315C8E /* SwiftBusConnectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E6F2D7A89E7B17898BFE11AC4ECA28 /* SwiftBusConnectionHandler.swift */; };
+		F2A5B04A2C5114EA7BB73402FE5DCF81 /* TransitStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6838DBC06D83A4E6E33BD63C70CD77 /* TransitStation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,71 +77,71 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04D9E8DEE835ACECBF1F9732891F06B4 /* TransitPrediction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitPrediction.swift; sourceTree = "<group>"; };
 		06A215B1877B0E89790F24643E233CD2 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		0BFA005859F9AC113582F591E73243D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		154F6BD3ADAC6A06A985F2773CDB2EE5 /* TransitStation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitStation.swift; sourceTree = "<group>"; };
+		0DBE20376BEF3E4C0DB5731BC5712F05 /* SwiftBus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftBus-dummy.m"; sourceTree = "<group>"; };
 		1818D4455625E845F21F133082AB2528 /* Pods-TransitBar AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar AppStore.debug.xcconfig"; sourceTree = "<group>"; };
 		188791171C97FFC82FA655EAA1DEED32 /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B9DDDEA18E251D4BC768552ECDECAA4 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = OSX/Fabric.framework/Versions/A/Headers/FABAttributes.h; sourceTree = "<group>"; };
 		1D4EDE13B8869A0387351E01E6F953ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC66C9DB99E36B152718C9A78351413 /* SwiftBusDataParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftBusDataParser.swift; path = Pod/Classes/SwiftBusDataParser.swift; sourceTree = "<group>"; };
 		221567876486C3E16F751798B4D76D3A /* SWXMLHash-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-prefix.pch"; sourceTree = "<group>"; };
-		22C723CCDDFDC175EDDE777BBCEF61A5 /* DictionaryKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DictionaryKey.swift; sourceTree = "<group>"; };
 		2A8926880A7C12D4C6F8C2D2F85BFA97 /* Pods-TransitBar-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TransitBar-resources.sh"; sourceTree = "<group>"; };
 		2C30C75396CB32EB7E72DDED2C09A16D /* Pods-TransitBar AppStore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TransitBar AppStore-dummy.m"; sourceTree = "<group>"; };
 		2DCF7EBFE1CE5ABC4974B1B9DEF3DFD6 /* Pods-TransitBar AppStore-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TransitBar AppStore-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2EC719EA57CE3657037B45E8212A609E /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = OSX/Crashlytics.framework/Versions/A/Headers/Crashlytics.h; sourceTree = "<group>"; };
 		3169DB6C9809C7B7C27E85ED4EEB2179 /* Pods-TransitBar.debug appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar.debug appstore.xcconfig"; sourceTree = "<group>"; };
-		3B4702248D9EE18C69E6767876B3151F /* TransitAgency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitAgency.swift; sourceTree = "<group>"; };
+		33813A283FDDF9EA2FDCEC0376C9C03F /* TransitAgency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitAgency.swift; path = Pod/Classes/TransitAgency.swift; sourceTree = "<group>"; };
+		38440D9EEE157D01D98A377F05D9E02D /* TransitRoute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitRoute.swift; path = Pod/Classes/TransitRoute.swift; sourceTree = "<group>"; };
 		3C5CEE082811D632CA870DCB37C71773 /* Pods-TransitBar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TransitBar-acknowledgements.plist"; sourceTree = "<group>"; };
 		3D4801990098B63290796C312000192B /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = OSX/Crashlytics.framework/Versions/A/Headers/Answers.h; sourceTree = "<group>"; };
 		3E57CE14731506FE7F918ACEAD3943E8 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = OSX/Fabric.framework/Versions/A/Headers/Fabric.h; sourceTree = "<group>"; };
 		4B292E6942A21A967449009FF4C381AA /* Pods-TransitBar AppStore.release appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar AppStore.release appstore.xcconfig"; sourceTree = "<group>"; };
-		514C6E3853BA8A596910ED00D40F8C95 /* SwiftBus-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBus-prefix.pch"; sourceTree = "<group>"; };
+		4E6838DBC06D83A4E6E33BD63C70CD77 /* TransitStation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitStation.swift; path = Pod/Classes/TransitStation.swift; sourceTree = "<group>"; };
+		51E6F2D7A89E7B17898BFE11AC4ECA28 /* SwiftBusConnectionHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftBusConnectionHandler.swift; path = Pod/Classes/SwiftBusConnectionHandler.swift; sourceTree = "<group>"; };
 		54C991AFD63305339CA4EF9948F7C57A /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56DA15BFE8980C004CADF35706FFBF2B /* TransitVehicle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitVehicle.swift; path = Pod/Classes/TransitVehicle.swift; sourceTree = "<group>"; };
 		58921ED3B2328059BCD34127B16893FC /* Pods-TransitBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TransitBar-umbrella.h"; sourceTree = "<group>"; };
 		59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWXMLHash.xcconfig; sourceTree = "<group>"; };
-		5D7188ADC5D8BB3A564DA2D9AAF7E52E /* TransitStop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitStop.swift; sourceTree = "<group>"; };
+		5E14FC03B73D69D670E1E172C1E982AC /* SwiftBus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftBus.swift; path = Pod/Classes/SwiftBus.swift; sourceTree = "<group>"; };
 		5EBBA7EA9E35C8ED5342C67EEFFEAF22 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSReport.h; sourceTree = "<group>"; };
 		5F1F2654F339E8D6E2708EC1806D278F /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
 		5F394E029532D23C134365370ECB496D /* Pods-TransitBar AppStore-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TransitBar AppStore-frameworks.sh"; sourceTree = "<group>"; };
-		61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftBus.xcconfig; sourceTree = "<group>"; };
-		62EFC47ABECF13813A262B9C24A54505 /* TransitVehicle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitVehicle.swift; sourceTree = "<group>"; };
-		68783324FF3AB7B973D02ABA9652D7B2 /* TransitRoute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitRoute.swift; sourceTree = "<group>"; };
 		692797A6B530C35A8EDC0350DB23673B /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSAttributes.h; sourceTree = "<group>"; };
+		6F6A51D238E2C2C36BFED551D2F19014 /* DictionaryKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryKey.swift; path = Pod/Classes/DictionaryKey.swift; sourceTree = "<group>"; };
 		710FCFF1D188506D63BBBF7472D03680 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71696AC10583E1FF5EA424339E2B4D65 /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtension.swift; path = Pod/Classes/ColorExtension.swift; sourceTree = "<group>"; };
+		74B75DFCDB0EA0D7BD570E624EC8E22F /* SwiftBus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftBus.modulemap; sourceTree = "<group>"; };
 		77B9662AE27B50BC45C8B7BFD2F6F31C /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SWXMLHash+TypeConversion.swift"; path = "Source/SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
 		796AA2403C6CBB5E11FE71427D98A0F8 /* Pods-TransitBar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TransitBar-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7BFB764A70C9EDE42EC802405F073809 /* Pods_TransitBar_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitBar_AppStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8057D07DF92A3EA81F6BD7708D6D9429 /* SWXMLHash.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SWXMLHash.modulemap; sourceTree = "<group>"; };
-		8141272179EF6EFAD799CD7A5DAACFCD /* SwiftBus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBus-umbrella.h"; sourceTree = "<group>"; };
 		846D55F1FAE5F1B0C41D1D97AD1C55CE /* Pods-TransitBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TransitBar.modulemap"; sourceTree = "<group>"; };
 		8782141B032F14929E1BA101344F4565 /* SWXMLHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SWXMLHash.swift; path = Source/SWXMLHash.swift; sourceTree = "<group>"; };
-		87B7145980909238DCE1A9C5A24B9A89 /* SwiftBus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBus.swift; sourceTree = "<group>"; };
-		8EB3A0AFE25BE1DEE76565B7BC353DA7 /* SwiftBusRequestURLs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBusRequestURLs.swift; sourceTree = "<group>"; };
 		8F51AAFBA5A1912671B95C4E24C377FE /* Pods-TransitBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TransitBar-dummy.m"; sourceTree = "<group>"; };
 		922C4314A45AF3751796E9538CEEB593 /* Pods-TransitBar.release appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar.release appstore.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96481A78BAF1A0E1D0867CD9EB18692D /* SwiftBusRequestURLs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftBusRequestURLs.swift; path = Pod/Classes/SwiftBusRequestURLs.swift; sourceTree = "<group>"; };
 		9BABA0A19BE397B6B8EB8EEAB8A64875 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		9BD37EEDF16542821F44E9F96F5A81F9 /* TransitPrediction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitPrediction.swift; path = Pod/Classes/TransitPrediction.swift; sourceTree = "<group>"; };
 		9E096967228462D361803D9C806F5A06 /* Pods-TransitBar AppStore.debug appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar AppStore.debug appstore.xcconfig"; sourceTree = "<group>"; };
 		9E822F4889771E9DBAB1504D27320725 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = OSX/Crashlytics.framework/Versions/A/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		9F5CA3B4F52D6B532F6F1A840E541A62 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1A7925F9144B6584B5FA7DF64795D0C /* TransitMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransitMessage.swift; sourceTree = "<group>"; };
 		A42189235A9785557F802B26CC8D384D /* Pods_TransitBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4D1647F3D9AE1CB1221E3DF169FFB31 /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		A6AAAEC0631660AF6395E880FE145177 /* Pods-TransitBar AppStore-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TransitBar AppStore-acknowledgements.plist"; sourceTree = "<group>"; };
 		AB40B771E990E9FA07943183D4691F4D /* Pods-TransitBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar.debug.xcconfig"; sourceTree = "<group>"; };
+		B8198D05C5537C24CE0743EFA9213F4C /* TransitStop.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitStop.swift; path = Pod/Classes/TransitStop.swift; sourceTree = "<group>"; };
 		BAC53A43621475F039A8BEE5D41CA30E /* Pods-TransitBar AppStore-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TransitBar AppStore-resources.sh"; sourceTree = "<group>"; };
-		BE715DF8CEEE58C281DB1E02F0AAE928 /* SwiftBusDataParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBusDataParser.swift; sourceTree = "<group>"; };
+		BC59BCB2B7D027D0A756873945781B50 /* SwiftBus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBus-umbrella.h"; sourceTree = "<group>"; };
 		BFB1CAB54D7223162A7890A1EDAD2687 /* Pods-TransitBar AppStore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TransitBar AppStore.modulemap"; sourceTree = "<group>"; };
+		BFC6887FD9C055986317BFA0A3ADA205 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB60D1A32D9F5F87E7694B4372067579 /* Pods-TransitBar AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar AppStore.release.xcconfig"; sourceTree = "<group>"; };
 		CBA25E75C9802F992AFBC1A856FF00B0 /* SWXMLHash-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWXMLHash-dummy.m"; sourceTree = "<group>"; };
-		CE12BCB93ED8907595037B86AC4809C8 /* SwiftBusConnectionHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftBusConnectionHandler.swift; sourceTree = "<group>"; };
 		CF1E7987D35FF42AAF15B2ECE8F0A837 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = OSX/Crashlytics.framework/Versions/A/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
 		CFB1FF66931505BB80CD0C3CCECF1C6C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = OSX/Crashlytics.framework; sourceTree = "<group>"; };
-		D2F4364C0CB059528080E08FBA2D152A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D995384691856A13DAEAFF89DCE53B1E /* SwiftBus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftBus.modulemap; sourceTree = "<group>"; };
-		DB96C6B281F96C04BA7A294C06C5770D /* SwiftBus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftBus-dummy.m"; sourceTree = "<group>"; };
+		D134A3713CD88A3593F85DA5438FBB0F /* SwiftBus-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBus-prefix.pch"; sourceTree = "<group>"; };
+		D3A630E2D48E00176A1967940B068801 /* SwiftBus.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftBus.xcconfig; sourceTree = "<group>"; };
+		DEF3132FC8473A572259909D75823EBD /* TransitMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitMessage.swift; path = Pod/Classes/TransitMessage.swift; sourceTree = "<group>"; };
 		E38DDA0747A3D52B9F7D1AA86A2FBB39 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = OSX/Fabric.framework; sourceTree = "<group>"; };
 		EB5D8B8268950D0E679D3B3954EB1F47 /* Pods-TransitBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TransitBar.release.xcconfig"; sourceTree = "<group>"; };
 		EFD97E7481D8ACD0E43ACBE7542337B7 /* Pods-TransitBar AppStore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TransitBar AppStore-umbrella.h"; sourceTree = "<group>"; };
@@ -195,6 +195,28 @@
 				AFF044AE8734EBD6FD49C465E359996F /* OS X */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CFFBC89341C496EA1277EAEFD12785F /* SwiftBus */ = {
+			isa = PBXGroup;
+			children = (
+				71696AC10583E1FF5EA424339E2B4D65 /* ColorExtension.swift */,
+				6F6A51D238E2C2C36BFED551D2F19014 /* DictionaryKey.swift */,
+				5E14FC03B73D69D670E1E172C1E982AC /* SwiftBus.swift */,
+				51E6F2D7A89E7B17898BFE11AC4ECA28 /* SwiftBusConnectionHandler.swift */,
+				1FC66C9DB99E36B152718C9A78351413 /* SwiftBusDataParser.swift */,
+				96481A78BAF1A0E1D0867CD9EB18692D /* SwiftBusRequestURLs.swift */,
+				33813A283FDDF9EA2FDCEC0376C9C03F /* TransitAgency.swift */,
+				DEF3132FC8473A572259909D75823EBD /* TransitMessage.swift */,
+				9BD37EEDF16542821F44E9F96F5A81F9 /* TransitPrediction.swift */,
+				38440D9EEE157D01D98A377F05D9E02D /* TransitRoute.swift */,
+				4E6838DBC06D83A4E6E33BD63C70CD77 /* TransitStation.swift */,
+				B8198D05C5537C24CE0743EFA9213F4C /* TransitStop.swift */,
+				56DA15BFE8980C004CADF35706FFBF2B /* TransitVehicle.swift */,
+				5EAC878717076356ABF903FD3B23FBA9 /* Support Files */,
+			);
+			name = SwiftBus;
+			path = ../SwiftBus;
 			sourceTree = "<group>";
 		};
 		261B270D39553D903875EF16C1DF49CE /* Frameworks */ = {
@@ -255,14 +277,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		59F940660870DBEC69521BC409A50676 /* SwiftBus */ = {
+		5EAC878717076356ABF903FD3B23FBA9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BCE9CB0C79AB8181FBE3F5ABEA7D158D /* Pod */,
-				C42B8BC5E0F35EE97A4C8082D509F332 /* Support Files */,
+				BFC6887FD9C055986317BFA0A3ADA205 /* Info.plist */,
+				74B75DFCDB0EA0D7BD570E624EC8E22F /* SwiftBus.modulemap */,
+				D3A630E2D48E00176A1967940B068801 /* SwiftBus.xcconfig */,
+				0DBE20376BEF3E4C0DB5731BC5712F05 /* SwiftBus-dummy.m */,
+				D134A3713CD88A3593F85DA5438FBB0F /* SwiftBus-prefix.pch */,
+				BC59BCB2B7D027D0A756873945781B50 /* SwiftBus-umbrella.h */,
 			);
-			name = SwiftBus;
-			path = ../SwiftBus;
+			name = "Support Files";
+			path = "../Pods/Target Support Files/SwiftBus";
 			sourceTree = "<group>";
 		};
 		6878CAA833CC76B143C0A1C564632B1B /* Frameworks */ = {
@@ -277,7 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				F46A6978290CA780871CFA9A7A7EF11F /* Development Pods */,
+				8C93416D49E3EC8FF86B1E7BBE3F4B3C /* Development Pods */,
 				06755EEF98FD941B1FC396AAD461821B /* Frameworks */,
 				44EEDD95A3B21F920103DAA8C425A8D8 /* Pods */,
 				56F0AFA42D4CD1DDC8742D52B4F4406F /* Products */,
@@ -297,6 +323,14 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SWXMLHash";
+			sourceTree = "<group>";
+		};
+		8C93416D49E3EC8FF86B1E7BBE3F4B3C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CFFBC89341C496EA1277EAEFD12785F /* SwiftBus */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		AA0649A0F0CB664F72BD5338BF1BA2A2 /* Pods-TransitBar */ = {
@@ -338,28 +372,6 @@
 			name = "OS X";
 			sourceTree = "<group>";
 		};
-		BCE9CB0C79AB8181FBE3F5ABEA7D158D /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				F2EB963BA048225CDB4618A8860D28F8 /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
-		C42B8BC5E0F35EE97A4C8082D509F332 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D2F4364C0CB059528080E08FBA2D152A /* Info.plist */,
-				D995384691856A13DAEAFF89DCE53B1E /* SwiftBus.modulemap */,
-				61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */,
-				DB96C6B281F96C04BA7A294C06C5770D /* SwiftBus-dummy.m */,
-				514C6E3853BA8A596910ED00D40F8C95 /* SwiftBus-prefix.pch */,
-				8141272179EF6EFAD799CD7A5DAACFCD /* SwiftBus-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Pods/Target Support Files/SwiftBus";
-			sourceTree = "<group>";
-		};
 		CC13EA665C4DBF279C795770EB73DB0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,34 +397,6 @@
 				CC13EA665C4DBF279C795770EB73DB0C /* Frameworks */,
 			);
 			path = Fabric;
-			sourceTree = "<group>";
-		};
-		F2EB963BA048225CDB4618A8860D28F8 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				A4D1647F3D9AE1CB1221E3DF169FFB31 /* ColorExtension.swift */,
-				22C723CCDDFDC175EDDE777BBCEF61A5 /* DictionaryKey.swift */,
-				87B7145980909238DCE1A9C5A24B9A89 /* SwiftBus.swift */,
-				CE12BCB93ED8907595037B86AC4809C8 /* SwiftBusConnectionHandler.swift */,
-				BE715DF8CEEE58C281DB1E02F0AAE928 /* SwiftBusDataParser.swift */,
-				8EB3A0AFE25BE1DEE76565B7BC353DA7 /* SwiftBusRequestURLs.swift */,
-				3B4702248D9EE18C69E6767876B3151F /* TransitAgency.swift */,
-				A1A7925F9144B6584B5FA7DF64795D0C /* TransitMessage.swift */,
-				04D9E8DEE835ACECBF1F9732891F06B4 /* TransitPrediction.swift */,
-				68783324FF3AB7B973D02ABA9652D7B2 /* TransitRoute.swift */,
-				154F6BD3ADAC6A06A985F2773CDB2EE5 /* TransitStation.swift */,
-				5D7188ADC5D8BB3A564DA2D9AAF7E52E /* TransitStop.swift */,
-				62EFC47ABECF13813A262B9C24A54505 /* TransitVehicle.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		F46A6978290CA780871CFA9A7A7EF11F /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				59F940660870DBEC69521BC409A50676 /* SwiftBus */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		F923FB9C565547F386CFD78F95581653 /* Crashlytics */ = {
@@ -527,7 +511,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10A91B019FD341177886A64C0CB9572B /* Build configuration list for PBXNativeTarget "SwiftBus" */;
 			buildPhases = (
-				1B7790E9EA85EC7AA34C41797F2557EC /* Sources */,
+				88B8138ECC19CDE3D9D9A7B8EBFE01CF /* Sources */,
 				00B409F7C716744DD20036B3239C8423 /* Frameworks */,
 				60655D53A02B6283B31C97E874C9DAE0 /* Headers */,
 			);
@@ -549,14 +533,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0900;
-				TargetAttributes = {
-					0340EFC2B39429ED31AE0B0AEF43F687 = {
-						LastSwiftMigration = 0900;
-					};
-					EEA4B64420648C5A84C9A81F037E79EA = {
-						LastSwiftMigration = 0900;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -579,27 +555,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1B7790E9EA85EC7AA34C41797F2557EC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6EC46C96654844B9DD1AA67D985855EA /* ColorExtension.swift in Sources */,
-				5416F5762B89C0351AF5660965C3207B /* DictionaryKey.swift in Sources */,
-				DE98196F76D8F6285ACF9FA127A135A6 /* SwiftBus-dummy.m in Sources */,
-				F885AA1FF637254FE860853A76CA4C8C /* SwiftBus.swift in Sources */,
-				FFE0C2B06D022E5CBBD8B77941D71D83 /* SwiftBusConnectionHandler.swift in Sources */,
-				AB0C801D9EEC8384C2921644771F3A83 /* SwiftBusDataParser.swift in Sources */,
-				5A742F169578FBC88C3D85039F9E2ED1 /* SwiftBusRequestURLs.swift in Sources */,
-				DC9825A2637CD0714CC8D6D8DB94109F /* TransitAgency.swift in Sources */,
-				CABFF52616DD3B7F868C39EA2F3423B3 /* TransitMessage.swift in Sources */,
-				BCA09F5F198830EFAD13A6462388E1F5 /* TransitPrediction.swift in Sources */,
-				D3C9DE6C4EAC8210899EB91903F676A9 /* TransitRoute.swift in Sources */,
-				2364F61DAC56187A11FCEA033EF1AA3E /* TransitStation.swift in Sources */,
-				ABDD846DDB2110393FBBCB9D749E1FB5 /* TransitStop.swift in Sources */,
-				589A77F4AFC8220F73C58671696D3F5A /* TransitVehicle.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3A709511E7A03539B390A86D5C2BF8E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -615,6 +570,27 @@
 				2F7D0C18975CE2E36D696524A0B2D3A3 /* SWXMLHash+TypeConversion.swift in Sources */,
 				B51EF597142909934620E39B23C51CDF /* SWXMLHash-dummy.m in Sources */,
 				9DC369319735B40F1E1096C6685C5F1B /* SWXMLHash.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88B8138ECC19CDE3D9D9A7B8EBFE01CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA0907E27DDE3E58D2B99A39BE3C16CE /* ColorExtension.swift in Sources */,
+				73FD5E7F7780487380F602A9DC36920D /* DictionaryKey.swift in Sources */,
+				5ADEB4D75D9DC7A53679D41D6A022217 /* SwiftBus-dummy.m in Sources */,
+				6EEA6D6F8F587786E13F369DEC5F88B0 /* SwiftBus.swift in Sources */,
+				DD10C5D2910F862D8463799E54315C8E /* SwiftBusConnectionHandler.swift in Sources */,
+				63D285676FD0444FC2AD987DF4756518 /* SwiftBusDataParser.swift in Sources */,
+				B2DE1D9BCC7C60E1CAB9A0017E0858C5 /* SwiftBusRequestURLs.swift in Sources */,
+				22FA09F6C9D1E7242A1647E0EAFC2713 /* TransitAgency.swift in Sources */,
+				85F9CB2F3B3997A5D094F490ACCB471B /* TransitMessage.swift in Sources */,
+				618611F5B92DCE9DFF0DF729D417C21E /* TransitPrediction.swift in Sources */,
+				891C3852231718E4011BCC8CB272FD8E /* TransitRoute.swift in Sources */,
+				F2A5B04A2C5114EA7BB73402FE5DCF81 /* TransitStation.swift in Sources */,
+				CB76C72D9E438F5928B0492D5596BCCA /* TransitStop.swift in Sources */,
+				01A06453776636D51E796F7B12573B91 /* TransitVehicle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,42 +638,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		07727075195D7FF39AE447863AFEDCA8 /* Debug AppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftBus;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "Debug AppStore";
-		};
 		078F0AB2551466CCA3B7A7D3F77F5DC4 /* Release AppStore */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 922C4314A45AF3751796E9538CEEB593 /* Pods-TransitBar.release appstore.xcconfig */;
@@ -732,6 +672,42 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Release AppStore";
+		};
+		0DCCB6BF4E8D857799189567E0545C49 /* Release AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SWXMLHash;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -816,9 +792,45 @@
 			};
 			name = Debug;
 		};
-		4414E3ABC5D8EBB5EA5E4A8EDE3348FC /* Release */ = {
+		33965CB162179317086F67041794F251 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */;
+			baseConfigurationReference = D3A630E2D48E00176A1967940B068801 /* SwiftBus.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftBus;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		56E7A1025C1367DF25C5CB85C3BA258C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A630E2D48E00176A1967940B068801 /* SwiftBus.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -844,15 +856,90 @@
 				PRODUCT_NAME = SwiftBus;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		4540B30AD9C0E6CB51B2DD9785470495 /* Debug */ = {
+		5B4BFE68573B7122F49C27E66A9159C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SWXMLHash;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6B488748E64DF96567F64C3882055202 /* Release AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B292E6942A21A967449009FF4C381AA /* Pods-TransitBar AppStore.release appstore.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TransitBar AppStore/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-TransitBar AppStore/Pods-TransitBar AppStore.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TransitBar_AppStore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Release AppStore";
+		};
+		774D345C1316346D6149B25F10444935 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -904,120 +991,10 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
-		};
-		55E58DB96A728F5BD5A41F7CFC00BA78 /* Release AppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SWXMLHash;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "Release AppStore";
-		};
-		6B488748E64DF96567F64C3882055202 /* Release AppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B292E6942A21A967449009FF4C381AA /* Pods-TransitBar AppStore.release appstore.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TransitBar AppStore/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Pods-TransitBar AppStore/Pods-TransitBar AppStore.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TransitBar_AppStore;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "Release AppStore";
-		};
-		7AB472368BD663EC96970AF70070624A /* Release AppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftBus;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "Release AppStore";
 		};
 		92B1CCA60E68C07DE916625DA16FF628 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1110,6 +1087,42 @@
 			};
 			name = Release;
 		};
+		9A38DFEF8A5DFA29C37E30CFD9AC2805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SWXMLHash;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9BBD44C36010A01B525427664863CB49 /* Debug AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1163,79 +1176,6 @@
 			};
 			name = "Debug AppStore";
 		};
-		A67204CE4D52FFA01E9E494078A8F6E5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SWXMLHash;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AC065C6F3F39EADDBF3451AB59524617 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SWXMLHash;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		B529F424C884D2200E3CED1B2138E8BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB60D1A32D9F5F87E7694B4372067579 /* Pods-TransitBar AppStore.release.xcconfig */;
@@ -1275,79 +1215,6 @@
 			};
 			name = Release;
 		};
-		BC352370E8061D106EE2FDCE6BED5069 /* Debug AppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SWXMLHash;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = "Debug AppStore";
-		};
-		CF0020EFCF00EC7441247F6EF39CCFEE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A62CF691BFE43A8D34DCFE7D90F398 /* SwiftBus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftBus;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		EC1E5A544F93339A9A681404999134C9 /* Debug AppStore */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E096967228462D361803D9C806F5A06 /* Pods-TransitBar AppStore.debug appstore.xcconfig */;
@@ -1382,6 +1249,42 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Debug AppStore";
+		};
+		FA252E6DC42830C6BCFFDF1786941C0A /* Debug AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59675D5DCAEAF3D85F3DE7B59F2E0C44 /* SWXMLHash.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWXMLHash/SWXMLHash-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SWXMLHash/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SWXMLHash/SWXMLHash.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SWXMLHash;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1478,16 +1381,88 @@
 			};
 			name = "Release AppStore";
 		};
+		FED41A6037A5FF92FD20D5911635B94C /* Release AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A630E2D48E00176A1967940B068801 /* SwiftBus.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftBus;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Release AppStore";
+		};
+		FFAD07BDA5A534C5C643536E1536193D /* Debug AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A630E2D48E00176A1967940B068801 /* SwiftBus.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftBus/SwiftBus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftBus/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftBus/SwiftBus.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftBus;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Debug AppStore";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		10A91B019FD341177886A64C0CB9572B /* Build configuration list for PBXNativeTarget "SwiftBus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF0020EFCF00EC7441247F6EF39CCFEE /* Debug */,
-				07727075195D7FF39AE447863AFEDCA8 /* Debug AppStore */,
-				4414E3ABC5D8EBB5EA5E4A8EDE3348FC /* Release */,
-				7AB472368BD663EC96970AF70070624A /* Release AppStore */,
+				33965CB162179317086F67041794F251 /* Debug */,
+				FFAD07BDA5A534C5C643536E1536193D /* Debug AppStore */,
+				56E7A1025C1367DF25C5CB85C3BA258C /* Release */,
+				FED41A6037A5FF92FD20D5911635B94C /* Release AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1495,10 +1470,10 @@
 		18F25234A346310451D175FFC97C1DF8 /* Build configuration list for PBXNativeTarget "SWXMLHash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A67204CE4D52FFA01E9E494078A8F6E5 /* Debug */,
-				BC352370E8061D106EE2FDCE6BED5069 /* Debug AppStore */,
-				AC065C6F3F39EADDBF3451AB59524617 /* Release */,
-				55E58DB96A728F5BD5A41F7CFC00BA78 /* Release AppStore */,
+				5B4BFE68573B7122F49C27E66A9159C2 /* Debug */,
+				FA252E6DC42830C6BCFFDF1786941C0A /* Debug AppStore */,
+				9A38DFEF8A5DFA29C37E30CFD9AC2805 /* Release */,
+				0DCCB6BF4E8D857799189567E0545C49 /* Release AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1506,7 +1481,7 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4540B30AD9C0E6CB51B2DD9785470495 /* Debug */,
+				774D345C1316346D6149B25F10444935 /* Debug */,
 				9BBD44C36010A01B525427664863CB49 /* Debug AppStore */,
 				945EB9E2C47E9C30E16985278CFFC5AE /* Release */,
 				FEB2D1A96203AEF97CBB135D44FFB4D8 /* Release AppStore */,

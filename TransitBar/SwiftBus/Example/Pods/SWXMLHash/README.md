@@ -77,7 +77,7 @@ To install manually, you'll need to clone the SWXMLHash repository. You can do t
 
 ## Getting Started
 
-If you're just getting started with SWXMLHash, I'd recommend cloning the repository down and opening the workspace. I've included a Swift playground in the workspace which makes it *very* easy to experiment with the API and the calls.
+If you're just getting started with SWXMLHash, I'd recommend cloning the repository down and opening the workspace. I've included a Swift playground in the workspace which makes it easy to experiment with the API and the calls.
 
 <img src="https://raw.githubusercontent.com/drmohundro/SWXMLHash/assets/swift-playground@2x.png" width="600" alt="Swift Playground" />
 
@@ -95,7 +95,7 @@ let xml = SWXMLHash.config {
 The available options at this time are:
 
 * `shouldProcessLazily`
-    * This determines whether not to use lazy loading of the XML. It can significantly increase the performance of parsing if your XML is very large.
+    * This determines whether not to use lazy loading of the XML. It can significantly increase the performance of parsing if your XML is large.
     * Defaults to `false`
 * `shouldProcessNamespaces`
     * This setting is forwarded on to the internal `NSXMLParser` instance. It will return any XML elements without their namespace parts (i.e. "\<h:table\>" will be returned as "\<table\>")
@@ -227,14 +227,6 @@ for elem in xml["root"]["catalog"]["book"].all {
 }
 ```
 
-Alternatively, XMLIndexer provides `for-in` support directly from the index (no `all` needed in this case).
-
-```swift
-for elem in xml["root"]["catalog"]["book"] {
-  print(elem["genre"].element!.text!)
-}
-```
-
 ### Returning All Child Elements At Current Level
 
 Given:
@@ -261,7 +253,7 @@ func enumerate(indexer: XMLIndexer) {
   }
 }
 
-enumerate(xml)
+enumerate(indexer: xml)
 ```
 
 ### Error Handling
@@ -271,19 +263,19 @@ Using Swift 2.0's new error handling feature:
 ```swift
 do {
   try xml!.byKey("root").byKey("what").byKey("header").byKey("foo")
-} catch let error as IndexerError {
-  // error is an IndexerError instance that you can deal with
+} catch let error as IndexingError {
+  // error is an IndexingError instance that you can deal with
 }
 ```
 
-__Or__ using the existing indexing functionality (__NOTE__ that the `.Error` case has been renamed to `.XMLError` so as to not conflict with the `XMLIndexer.Error` error type):
+__Or__ using the existing indexing functionality:
 
 ```swift
 switch xml["root"]["what"]["header"]["foo"] {
-case .Element(let elem):
+case .element(let elem):
   // everything is good, code away!
-case .XMLError(let error):
-  // error is an IndexerError instance that you can deal with
+case .xmlError(let error):
+  // error is an IndexingError instance that you can deal with
 }
 ```
 
@@ -300,17 +292,29 @@ Given:
       <title>Book A</title>
       <price>12.5</price>
       <year>2015</year>
+      <categories>
+        <category>C1</category>
+        <category>C2</category>
+      </categories>
     </book>
     <book isbn="0000000002">
       <title>Book B</title>
       <price>10</price>
       <year>1988</year>
+      <categories>
+        <category>C2</category>
+        <category>C3</category>
+      </categories>
     </book>
     <book isbn="0000000003">
       <title>Book C</title>
       <price>8.33</price>
       <year>1990</year>
       <amount>10</amount>
+      <categories>
+        <category>C1</category>
+        <category>C3</category>
+      </categories>
     </book>
   <books>
 </root>
@@ -324,6 +328,7 @@ struct Book: XMLIndexerDeserializable {
     let year: Int
     let amount: Int?
     let isbn: Int
+    let category: [String]
 
     static func deserialize(_ node: XMLIndexer) throws -> Book {
         return try Book(
@@ -331,7 +336,8 @@ struct Book: XMLIndexerDeserializable {
             price: node["price"].value(),
             year: node["year"].value(),
             amount: node["amount"].value(),
-            isbn: node.value(ofAttribute: "isbn")
+            isbn: node.value(ofAttribute: "isbn"),
+            category : node["categories"]["category"].value()
         )
     }
 }
@@ -378,7 +384,7 @@ You'll get an error because there isn't any built-in deserializer for `NSDate`. 
 
 ### I'm getting an `EXC_BAD_ACCESS (SIGSEGV)` when I call `parse()`
 
-Chances are very good that your XML content has what is called a "byte order mark" or BOM. SWXMLHash uses `NSXMLParser` for its parsing logic and there are issues with it and handling BOM characters. See [issue #65](https://github.com/drmohundro/SWXMLHash/issues/65) for more details. Others who have run into this problem have just rstripped the BOM out of their content prior to parsing.
+Chances are very good that your XML content has what is called a "byte order mark" or BOM. SWXMLHash uses `NSXMLParser` for its parsing logic and there are issues with it and handling BOM characters. See [issue #65](https://github.com/drmohundro/SWXMLHash/issues/65) for more details. Others who have run into this problem have just stripped the BOM out of their content prior to parsing.
 
 ### How do I handle deserialization with a class versus a struct (such as with `NSDate`)?
 
@@ -388,9 +394,9 @@ See below for the code snippet to get this to work and note in particular the `p
 
 ```swift
 extension NSDate: XMLElementDeserializable {
-  public static func deserialize(element: XMLElement) throws -> Self {
+  public static func deserialize(_ element: XMLElement) throws -> Self {
     guard let dateAsString = element.text else {
-      throw XMLDeserializationError.NodeHasNoValue
+      throw XMLDeserializationError.nodeHasNoValue
     }
 
     let dateFormatter = NSDateFormatter()
@@ -398,7 +404,7 @@ extension NSDate: XMLElementDeserializable {
     let date = dateFormatter.dateFromString(dateAsString)
 
     guard let validDate = date else {
-      throw XMLDeserializationError.TypeConversionFailed(type: "Date", element: element)
+      throw XMLDeserializationError.typeConversionFailed(type: "Date", element: element)
     }
 
     // NOTE THIS

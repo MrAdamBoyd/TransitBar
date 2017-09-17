@@ -78,33 +78,36 @@ class SwiftBusConnectionHandler: NSObject {
     - parameter requestURL: string of the url that is being requested
     */
     fileprivate func startConnection(_ requestURL:String, with requestType: RequestType) {
-        guard let url = URL(string: requestURL.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!) else { return }
-            
-        let session = URLSession(configuration: URLSessionConfiguration.default)
+        let url = URL(string: requestURL.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)
         
-        let dataTask = session.dataTask(with: url) { data, response, error in
-            let xmlString = NSString(data: data ?? Data(), encoding: String.Encoding.utf8.rawValue)! as String
-            let xml = SWXMLHash.parse(xmlString)
-            let parser = SwiftBusDataParser()
+        if let url = url {
             
-            switch requestType {
-            case .allAgencies(let closure):
-                parser.parseAllAgenciesData(xml, completion: closure)
-            case .allRoutes(let closure):
-                parser.parseAllRoutesData(xml, completion: closure)
-            case .routeConfiguration(let closure):
-                parser.parseRouteConfiguration(xml, completion: closure)
-            case .vehicleLocations(let closure):
-                parser.parseVehicleLocations(xml, completion: closure)
-            case .stationPredictions(let closure):
-                parser.parseStationPredictions(xml, completion: closure)
-            case .stopPredictions(let closure):
-                parser.parseStopPredictions(xml, completion: closure)
+            let session = URLSession(configuration: URLSessionConfiguration.default)
+            
+            let dataTask = session.dataTask(with: url) { data, response, error in
+                let xmlString = NSString(data: data ?? Data(), encoding: String.Encoding.utf8.rawValue)! as String
+                let xml = SWXMLHash.parse(xmlString)
+                let parser = SwiftBusDataParser()
+                
+                switch requestType {
+                case .allAgencies(let closure):
+                    parser.parseAllAgenciesData(xml, completion: closure)
+                case .allRoutes(let closure):
+                    parser.parseAllRoutesData(xml, completion: closure)
+                case .routeConfiguration(let closure):
+                    parser.parseRouteConfiguration(xml, completion: closure)
+                case .vehicleLocations(let closure):
+                    parser.parseVehicleLocations(xml, completion: closure)
+                case .stationPredictions(let closure):
+                    parser.parseStationPredictions(xml, completion: closure)
+                case .stopPredictions(let closure):
+                    parser.parseStopPredictions(xml, completion: closure)
+                }
             }
+                
+            dataTask.resume()
+        } else {
+            //TODO: Alert user via closure that something bad happened
         }
-        
-        dataTask.resume()
-        
-        session.finishTasksAndInvalidate()
     }
 }
