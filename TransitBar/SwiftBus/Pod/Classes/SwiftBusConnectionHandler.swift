@@ -89,6 +89,11 @@ class SwiftBusConnectionHandler: NSObject {
                 let xml = SWXMLHash.parse(xmlString)
                 let parser = SwiftBusDataParser()
                 
+                if case let .xmlError(error) = xml {
+                    print("Getting data encountered an error: \(error)")
+                    return
+                }
+                
                 switch requestType {
                 case .allAgencies(let closure):
                     parser.parseAllAgenciesData(xml, completion: closure)

@@ -20,7 +20,6 @@ protocol TransitManagerDelegate: class {
 class TransitManager: NSObject, CLLocationManagerDelegate {
     
     weak var delegate: TransitManagerDelegate?
-    private var hourTimer: Timer!
     private var minuteTimer: Timer!
     
     //Location
@@ -39,9 +38,6 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
         
         //Refresh data every 60 seconds
         self.minuteTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.loadData), userInfo: nil, repeats: true)
-        
-        //Every hour, refresh the user's location
-        self.hourTimer = Timer.scheduledTimer(timeInterval: 60 * 60, target: self, selector: #selector(self.determineTrackingLocation), userInfo: nil, repeats: true)
     }
     
     /// Called when the computer wakes from sleep. Loads the data immediately and resets the computer's location
@@ -133,8 +129,10 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
             self.locManager.delegate = self
             self.locManager.desiredAccuracy = kCLLocationAccuracyBest
             self.locManager.startUpdatingLocation()
+            self.locManager.startMonitoringSignificantLocationChanges()
         } else {
             self.locManager.stopUpdatingLocation()
+            self.locManager.stopMonitoringSignificantLocationChanges()
         }
     }
     
