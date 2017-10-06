@@ -76,13 +76,17 @@ open class TransitRoute: NSObject, NSCoding {
     - parameter completion: Code that is called when the route is finished loading
         - parameter route:   The route object with all the information
     */
-    open func configuration(_ completion: ((_ route: TransitRoute?) -> Void)?) {
+    open func configuration(_ completion: ((_ result: SwiftBusResult<TransitRoute>) -> Void)?) {
         let connectionHandler = SwiftBusConnectionHandler()
-        connectionHandler.requestRouteConfiguration(self.routeTag, fromAgency: self.agencyTag) { route in
-    
-            if let route = route { self.updateData(route) }
+        connectionHandler.requestRouteConfiguration(self.routeTag, fromAgency: self.agencyTag) { result in
             
-            completion?(route)
+            switch result {
+            case let .success(route):
+                self.updateData(route)
+                completion?(.success(self))
+            case let .error(error):
+                completion?(.error(error))
+            }
         }
 
     }
@@ -93,23 +97,28 @@ open class TransitRoute: NSObject, NSCoding {
     - parameter completion:    Code that is called when loading is done
         - parameter vehicles:   Locations of the vehicles
     */
-    open func vehicleLocations(_ completion: ((_ vehicles: [TransitVehicle]?) -> Void)?) {
-        self.configuration() { route in
-            if let _ = route {
+    open func vehicleLocations(_ completion: ((_ vehicles: SwiftBusResult<[TransitVehicle]>) -> Void)?) {
+        self.configuration() { result in
+            switch result {
+            case .success:
                 let connectionHandler = SwiftBusConnectionHandler()
-                connectionHandler.requestVehicleLocationData(onRoute: self.routeTag, withAgency: self.agencyTag) { (locations:[String : [TransitVehicle]]) in
+                connectionHandler.requestVehicleLocationData(onRoute: self.routeTag, withAgency: self.agencyTag) { result in
+                    
+                    switch result {
+                    case let .success(locations):
+                        self.vehiclesOnRoute = []
                         
-                    self.vehiclesOnRoute = []
-                    
-                    for vehiclesInDirection in locations.values {
-                        self.vehiclesOnRoute += vehiclesInDirection
+                        for vehiclesInDirection in locations.values {
+                            self.vehiclesOnRoute += vehiclesInDirection
+                        }
+                        completion?(.success(self.vehiclesOnRoute))
+                        
+                    case let .error(error):
+                        completion?(.error(error))
                     }
-                    
-                    //Note: If vehicles on route == [], the route isn't running
-                    completion?(self.vehiclesOnRoute)
                 }
-            } else {
-                completion?(nil)
+            case let .error(error):
+                completion?(.error(error))
             }
         }
     }
@@ -119,9 +128,9 @@ open class TransitRoute: NSObject, NSCoding {
      
      - parameter stop:          Stop to get predictions for
      - parameter completion:    Code that is called when the information is done downloading
-     - parameter predictions:    Predictions for the current stop
+         - parameter result:    Predictions for the current stop
      */
-    open func stopPredictions(forStop stop: TransitStop?, completion: ((_ predictions: [String : [TransitPrediction]]?) -> Void)?) {
+    open func stopPredictions(forStop stop: TransitStop?, completion: ((_ result: SwiftBusResult<[String : [TransitPrediction]]>) -> Void)?) {
         self.stopPredictions(forStopTag: stop?.stopTag, completion: completion)
     }
     
@@ -130,37 +139,44 @@ open class TransitRoute: NSObject, NSCoding {
     
     - parameter stopTag:    Tag of the stop
     - parameter completion:    Code that is called when the information is done downloading
-        - parameter predictions:    Predictions for the current stop
+        - parameter result:    Predictions for the current stop
     */
-    open func stopPredictions(forStopTag stopTag: String?, completion: ((_ predictions: [String : [TransitPrediction]]?) -> Void)?) {
+    open func stopPredictions(forStopTag stopTag: String?, completion: ((_ result: SwiftBusResult<[String : [TransitPrediction]]>) -> Void)?) {
         
         guard let stopTag = stopTag else {
-            completion?(nil)
+            completion?(.error(SwiftBusError.error(with: .unspecifiedStopTag)))
             return
         }
         
-        self.configuration() { route in
-            if let _ = route {
-                //Everything should be fine
-                if let stop = self.stop(forTag: stopTag) {
+        self.configuration() { result in
+            
+            switch result {
+            case .success:
+                guard let stop = self.stop(forTag: stopTag) else {
+                    //The stop doesn't exist
+                    completion?(.error(SwiftBusError.error(with: .unknownStop)))
+                    return
+                }
+                
+                let connectionHandler = SwiftBusConnectionHandler()
+                connectionHandler.requestStopPredictionData(stopTag, onRoute: self.routeTag, withAgency: self.agencyTag) { result in
                     
-                    let connectionHandler = SwiftBusConnectionHandler()
-                    connectionHandler.requestStopPredictionData(stopTag, onRoute: self.routeTag, withAgency: self.agencyTag, completion: {(predictions:[String : [TransitPrediction]], messages:[TransitMessage]) -> Void in
-                        
+                    switch result {
+                    case let .success(predictions):
                         //Saving the messages and predictions
-                        stop.predictions = predictions
-                        stop.messages = messages
+                        stop.predictions = predictions.predictions
+                        stop.messages = predictions.messages
                         
                         //Finished loading, send back
-                        completion?(predictions)
-                    })
-                } else {
-                    //The stop doesn't exist
-                    completion?(nil)
+                        completion?(.success(predictions.predictions))
+                    case let .error(error):
+                        completion?(.error(error))
+                    }
                 }
-            } else {
+                
+            case let .error(error):
                 //Encountered a problem, the route probably doesn't exist or the agency isn't right
-                completion?(nil)
+                completion?(.error(error))
             }
 
         }
@@ -211,7 +227,7 @@ open class TransitRoute: NSObject, NSCoding {
     }
     
     //Used to update all the data after getting the route information
-    fileprivate func updateData(_ newRoute:TransitRoute) {
+    fileprivate func updateData(_ newRoute: TransitRoute) {
         self.routeTitle = newRoute.routeTitle
         self.stops = newRoute.stops
         self.directionTagToName = newRoute.directionTagToName

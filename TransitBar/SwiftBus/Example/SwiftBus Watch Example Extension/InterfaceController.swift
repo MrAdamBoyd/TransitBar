@@ -33,18 +33,21 @@ class InterfaceController: WKInterfaceController {
     @IBAction func getTimesTapped() {
         //Alternative:
         //var route = TransitRoute(routeTag: "N", agencyTag: "sf-muni")
-        //route.getStopPredictionsForStop("3909", completion: {(success:Bool, predictions:[String : [TransitPrediction]]) -> Void in
-        SwiftBus.shared.stopPredictions(forStopTag: "3909", onRouteTag: "N", withAgencyTag: "sf-muni") { stop in
+        //route.getStopPredictionsForStop("3909") { result in
+        SwiftBus.shared.stopPredictions(forStopTag: "3909", onRouteTag: "N", withAgencyTag: "sf-muni") { result in
             
-            //If the stop and route exists
-            if let transitStop = stop as TransitStop! {
-                let predictionStrings:[Int] = transitStop.allPredictions.map({$0.predictionInMinutes})
+            switch result {
+            case let .success(stop):
+                let predictionStrings:[Int] = stop.allPredictions.map({$0.predictionInMinutes})
                 
                 print("\n-----")
-                print("Stop: \(transitStop.stopTitle)")
+                print("Stop: \(stop.stopTitle)")
                 print("Predictions at stop \(predictionStrings) mins")
                 
                 self.timesLabel.setText("Times: \(predictionStrings)")
+            case let .error(error):
+                print("Error: \(error.localizedDescription)")
+                self.timesLabel.setText("Times \(error.localizedDescription)")
             }
             
         }

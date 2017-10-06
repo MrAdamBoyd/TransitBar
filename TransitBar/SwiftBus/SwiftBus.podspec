@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SwiftBus"
-  s.version          = "1.4.12"
+  s.version          = "1.5"
   s.summary          = "Asynchronous Swift wrapper for the NextBus API."
 
   s.homepage         = "https://github.com/MrAdamBoyd/SwiftBus"

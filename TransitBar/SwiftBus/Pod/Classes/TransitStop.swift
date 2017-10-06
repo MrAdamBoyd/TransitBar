@@ -70,21 +70,23 @@ open class TransitStop: NSObject, NSCoding {
         - parameter predictions: The predictions, in all directions, for this stop
         - parameter messages:    The messages for this stop
     */
-    open func getPredictionsAndMessages(_ completion:@escaping (_ success:Bool, _ predictions:[String : [TransitPrediction]], _ messages:[TransitMessage]) -> Void) {
-        if agencyTag != "" {
+    open func getPredictionsAndMessages(_ completion:@escaping (_ predictions: SwiftBusResult<(predictions: [DirectionName: [TransitPrediction]], messages: [TransitMessage])>) -> Void) {
+        if self.agencyTag != "" {
             let connectionHandler = SwiftBusConnectionHandler()
-            connectionHandler.requestStopPredictionData(self.stopTag, onRoute: self.routeTag, withAgency: self.agencyTag, completion: {(predictions: [String: [TransitPrediction]], messages: [TransitMessage]) in
+            connectionHandler.requestStopPredictionData(self.stopTag, onRoute: self.routeTag, withAgency: self.agencyTag) { result in
                 
-                self.predictions = predictions
-                self.messages = messages
-                
-                //Call completion with success, predictions, and message
-                completion(true, predictions, messages)
-                
-            })
+                switch result {
+                case let .success(predictions):
+                    self.predictions = predictions.predictions
+                    self.messages = predictions.messages
+                    completion(.success(predictions))
+                case let .error(error):
+                    completion(.error(error))
+                }
+            }
         } else {
             //Stop doesn't exist
-            completion(false, [:], [])
+            completion(.error(SwiftBusError.error(with: .unknownStop)))
         }
     }
     

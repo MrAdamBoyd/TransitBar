@@ -40,32 +40,40 @@ open class TransitAgency: NSObject, NSCoding {
     Downloads all agency data from provided agencytag
     
     - parameter completion:    Code that is called when the data is finished loading
-        - parameter success:    Whether or not the call was successful
-        - parameter agency:     The agency when the data is loaded
+        - parameter result:    Result of the API call
     */
-    open func download(_ completion: ((_ success: Bool, _ agency: TransitAgency) -> Void)?) {
+    open func download(_ completion: ((_ result: SwiftBusResult<TransitAgency>) -> Void)?) {
         //We need to load the transit agency data
         let connectionHandler = SwiftBusConnectionHandler()
         
         //Need to request agency data first because only this call has the region and full name
-        connectionHandler.requestAllAgencies() { agencies in
+        connectionHandler.requestAllAgencies() { result in
             
-            //Getting the current agency
-            if let thisAgency = agencies[self.agencyTag] {
+            switch result {
+            case let .success(agencies):
+                //Getting the current agency
+                guard let thisAgency = agencies[self.agencyTag] else {
+                    //This agency doesn't exist
+                    completion?(.error(SwiftBusError.error(with: .unknownAgency)))
+                    return
+                }
+                
                 self.agencyTitle = thisAgency.agencyTitle
                 self.agencyShortTitle = thisAgency.agencyShortTitle
                 self.agencyRegion = thisAgency.agencyRegion
                 
-                connectionHandler.requestAllRouteData(self.agencyTag) { (newAgencyRoutes: [String: TransitRoute])  in
-                    self.agencyRoutes = newAgencyRoutes
-                    
-                    completion?(true, self)
-                    
+                connectionHandler.requestAllRouteData(self.agencyTag) { result in
+                    switch result {
+                    case let .success(agencyRoutes):
+                        self.agencyRoutes = agencyRoutes
+                        completion?(.success(self))
+                    case let .error(error):
+                        completion?(.error(error))
+                    }
                 }
                 
-            } else {
-                //This agency doesn't exist
-                completion?(false, self)
+            case let .error(error):
+                completion?(.error(error))
             }
         }
     }
