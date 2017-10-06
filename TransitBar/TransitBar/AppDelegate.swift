@@ -131,11 +131,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             var addingPredictionsForInsideDropdown = ": "
             
             if let error = entry.error {
+                
+                //Show the error to the user
                 //Need to add comma and space after as characters are normally removed before being shown
                 menuTextForThisEntry.append("Error, ")
                 addingPredictionsForInsideDropdown.append("Error: \(error.localizedDescription), ")
+                
             } else if let predictions = entry.stop.predictions[entry.stop.direction] {
                 
+                //Set up the predictions text
                 for (index, prediction) in predictions.enumerated() {
                     
                     if index < DataController.shared.numberOfPredictionsToShow {
@@ -147,6 +151,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                 }
                 
                 self.checkForNotificationsToSend(for: entry, predictions: predictions)
+                
             }
             
             //Only show it in the menubar if it should be shown based on current time
@@ -173,6 +178,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             
         }
         
+        //At the very end, set the status bar text
         DispatchQueue.main.async { self.setStatusBarText(menuText) }
 
     }
