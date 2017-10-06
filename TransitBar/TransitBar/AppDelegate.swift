@@ -124,72 +124,83 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         
         for (index, entry) in DataController.shared.savedEntries.enumerated() {
             
+            //Creating the text that will be for this stop in the menubar
+            var menuTextForThisEntry = entry.stop.routeTag + ": "
             //Creating the text that will be shown when you click on this item
-            var title = "\(entry.stop.routeTitle) @ \(entry.stop.stopTitle) -> \(entry.stop.direction)"
-            var addingText = ": "
+            var insideDropdownTitle = "\(entry.stop.routeTitle) @ \(entry.stop.stopTitle) -> \(entry.stop.direction)"
+            var addingPredictionsForInsideDropdown = ": "
             
-            if let predictions = entry.stop.predictions[entry.stop.direction] {
-                
-                //Creating the text that will be for this stop in the menubar
-                var menuTextForThisPrediction = entry.stop.routeTag + ": "
+            if let error = entry.error {
+                //Need to add comma and space after as characters are normally removed before being shown
+                menuTextForThisEntry.append("Error, ")
+                addingPredictionsForInsideDropdown.append("Error: \(error.localizedDescription), ")
+            } else if let predictions = entry.stop.predictions[entry.stop.direction] {
                 
                 for (index, prediction) in predictions.enumerated() {
                     
                     if index < DataController.shared.numberOfPredictionsToShow {
                         //Only add however many predictions the user wants
-                        menuTextForThisPrediction.append("\(prediction.predictionInMinutes), ")
+                        menuTextForThisEntry.append("\(prediction.predictionInMinutes), ")
                     }
                     
-                    addingText.append("\(prediction.predictionInMinutes), ")
+                    addingPredictionsForInsideDropdown.append("\(prediction.predictionInMinutes), ")
                 }
                 
-                //Check for notifications here
-                for (index, notification) in DataController.shared.scheduledNotifications.enumerated() {
-                    
-                    //Notification is for this item
-                    if notification.entry.stop.stopTag == entry.stop.stopTag && notification.entry.stop.routeTag == entry.stop.routeTag {
-                    
-                        //This filter call leaves in predictions that are less than or equal to the notification's minutes and greater than 5 - the notification's minutes. If this is nonnil, we should send the user a notification
-                        let firstValid = predictions.filter({ $0.predictionInMinutes <= notification.minutesForFirstPredicion && $0.predictionInMinutes > notification.minutesForFirstPredicion - 5  }).first
-                        
-                        if let firstValid = firstValid {
-                            
-                            //Remove this and send notification
-                            print("Sending user notification for alert")
-                            DataController.shared.scheduledNotifications.remove(at: index)
-                            self.sendNotificationFor(notification, firstPredictionInMinutes: firstValid.predictionInMinutes)
-                            
-                        }
-                    }
-                }
-                
-                //Only show it in the menubar if it should be shown based on current time
-                if entry.shouldBeShownInMenuBar {
-                    menuTextForThisPrediction = String(menuTextForThisPrediction.characters.dropLast(2)) + "; " //Remove last comma and space and add semicolon
-                    menuText.append(menuTextForThisPrediction)
-                }
-                
-                //Remove comma and space
-                addingText = String(addingText.characters.dropLast(2))
+                self.checkForNotificationsToSend(for: entry, predictions: predictions)
             }
+            
+            //Only show it in the menubar if it should be shown based on current time
+            if entry.shouldBeShownInMenuBar {
+                menuTextForThisEntry = String(menuTextForThisEntry.dropLast(2)) + "; " //Remove last comma and space and add semicolon
+                menuText.append(menuTextForThisEntry)
+            }
+            
+            //Remove comma and space
+            addingPredictionsForInsideDropdown = String(addingPredictionsForInsideDropdown.dropLast(2))
             
             //If there are no predictions, add a dash
-            if addingText == ": " {
-                addingText.append("--")
+            if addingPredictionsForInsideDropdown == ": " {
+                addingPredictionsForInsideDropdown.append("--")
             }
             
-            title.append(addingText)
+            insideDropdownTitle.append(addingPredictionsForInsideDropdown)
             
             DispatchQueue.main.async {
                 if let menuItemToUpdate = self.statusItem.menu?.items[self.menuItemIndexForEntryIndex(index)] {
-                    menuItemToUpdate.title = title
+                    menuItemToUpdate.title = insideDropdownTitle
                 }
-                
-                self.setStatusBarText(menuText)
             }
             
         }
+        
+        DispatchQueue.main.async { self.setStatusBarText(menuText) }
 
+    }
+    
+    /// Checks if this entry has notifications waiting, and if it matches all conditions, sends the notification
+    ///
+    /// - Parameter entry: entry to look at
+    /// - Parameter predictions: predictions for this entry
+    private func checkForNotificationsToSend(for entry: TransitEntry, predictions: [TransitPrediction]) {
+        //Check for notifications here
+        for (index, notification) in DataController.shared.scheduledNotifications.enumerated() {
+            
+            //Notification is for this item
+            if notification.entry.stop.stopTag == entry.stop.stopTag && notification.entry.stop.routeTag == entry.stop.routeTag {
+                
+                //This filter call leaves in predictions that are less than or equal to the notification's minutes and greater than 5 - the notification's minutes. If this is nonnil, we should send the user a notification
+                let firstValid = predictions.filter({ $0.predictionInMinutes <= notification.minutesForFirstPredicion && $0.predictionInMinutes > notification.minutesForFirstPredicion - 5  }).first
+                
+                if let firstValid = firstValid {
+                    
+                    //Remove this and send notification
+                    print("Sending user notification for alert")
+                    DataController.shared.scheduledNotifications.remove(at: index)
+                    self.sendNotificationFor(notification, firstPredictionInMinutes: firstValid.predictionInMinutes)
+                    
+                }
+            }
+        }
     }
     
     /// Determines what the status bar will look like. If there is text to set, uses that text. If no text, uses an image

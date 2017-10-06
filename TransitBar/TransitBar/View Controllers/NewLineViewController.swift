@@ -48,19 +48,26 @@ class NewLineViewController: NSViewController {
         self.stopPopUpButton.menu?.autoenablesItems = true
         
         //Get the agencies when the window is opened
-        SwiftBus.shared.transitAgencies() { agencies in
-            var inOrderAgencies = Array(agencies.values)
-            
-            //Ordering the routes alphabetically
-            inOrderAgencies = inOrderAgencies.sorted {
-                $0.agencyTitle.localizedCaseInsensitiveCompare($1.agencyTitle) == ComparisonResult.orderedAscending
+        SwiftBus.shared.transitAgencies() { result in
+            DispatchQueue.main.async {
+                switch result {
+                case let .success(agencies):
+                    var inOrderAgencies = Array(agencies.values)
+                    
+                    //Ordering the routes alphabetically
+                    inOrderAgencies = inOrderAgencies.sorted {
+                        $0.agencyTitle.localizedCaseInsensitiveCompare($1.agencyTitle) == ComparisonResult.orderedAscending
+                    }
+                    
+                    //Placeholder
+                    self.agencyPopUpButton.addItem(withTitle: "--")
+                    
+                    self.agencies = inOrderAgencies
+                    self.agencyPopUpButton.addItems(withTitles: inOrderAgencies.map({ $0.agencyTitle }))
+                case let .error(error):
+                    self.agencyPopUpButton.addItem(withTitle: "Error: \(error.localizedDescription)")
+                }
             }
-            
-            //Placeholder
-            self.agencyPopUpButton.addItem(withTitle: "--")
-            
-            self.agencies = inOrderAgencies
-            self.agencyPopUpButton.addItems(withTitles: inOrderAgencies.map({ $0.agencyTitle }))
         }
     }
 
@@ -86,20 +93,24 @@ class NewLineViewController: NSViewController {
         guard self.agencyPopUpButton.indexOfSelectedItem != 0 else { return }
         
         let agency = self.agencies[self.agencyPopUpButton.indexOfSelectedItem]
-        SwiftBus.shared.routes(forAgency: agency) { routes in
-            var inOrderRoutes = Array(routes.values)
-            
-            //Ordering the routes alphabetically
-            inOrderRoutes = inOrderRoutes.sorted {
-                $0.routeTitle.localizedCaseInsensitiveCompare($1.routeTitle) == ComparisonResult.orderedAscending
-            }
-            
-            //Placeholder
-            DispatchQueue.main.async { [unowned self] in
-                self.routePopUpButton.addItem(withTitle: "--")
-                
-                self.routes = inOrderRoutes
-                self.routePopUpButton.addItems(withTitles: inOrderRoutes.map({ $0.routeTitle }))
+        SwiftBus.shared.routes(forAgency: agency) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case let .success(routes):
+                    var inOrderRoutes = Array(routes.values)
+                    
+                    //Ordering the routes alphabetically
+                    inOrderRoutes = inOrderRoutes.sorted {
+                        $0.routeTitle.localizedCaseInsensitiveCompare($1.routeTitle) == ComparisonResult.orderedAscending
+                    }
+                    
+                    self.routePopUpButton.addItem(withTitle: "--")
+                    
+                    self.routes = inOrderRoutes
+                    self.routePopUpButton.addItems(withTitles: inOrderRoutes.map({ $0.routeTitle }))
+                case let .error(error):
+                    self.agencyPopUpButton.addItem(withTitle: "Error: \(error.localizedDescription)")
+                }
             }
         }
     }
@@ -115,16 +126,18 @@ class NewLineViewController: NSViewController {
         guard self.routePopUpButton.indexOfSelectedItem != 0 else { return }
         
         let selectedRoute = self.routes[self.routePopUpButton.indexOfSelectedItem - 1]
-        SwiftBus.shared.configuration(forRoute: selectedRoute) { route in
-            guard let route = route else { return }
-            
-            //Placeholder
-            DispatchQueue.main.async { [unowned self] in
-                self.directionPopUpButton.addItem(withTitle: "--")
-                
-                self.selectedRoute = route
-                //The keys to this array are all possible directions
-                self.directionPopUpButton.addItems(withTitles: Array(route.stops.keys))
+        SwiftBus.shared.configuration(forRoute: selectedRoute) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case let .success(route):
+                    self.directionPopUpButton.addItem(withTitle: "--")
+                    
+                    self.selectedRoute = route
+                    //The keys to this array are all possible directions
+                    self.directionPopUpButton.addItems(withTitles: Array(route.stops.keys))
+                case let .error(error):
+                    self.agencyPopUpButton.addItem(withTitle: "Error: \(error.localizedDescription)")
+                }
             }
         }
     }

@@ -63,17 +63,22 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
             //All stops with same agency, can get them all at once
             
             let stops = entries.map({ $0.stop! })
-            SwiftBus.shared.stopPredictions(forStops: stops) { [weak self] stops in
+            SwiftBus.shared.stopPredictions(forStops: stops) { [weak self] result in
                 
-                //Stops not guaranteed to be in the same order, so they need to be reordered
-                
-                for entry in entries {
-                    for stop in stops {
-                        if entry.stop.stopTag == stop.stopTag && entry.stop.routeTag == stop.routeTag {
-                            self?.saveDataFrom(stop, to: entry)
-                            break
+                switch result {
+                case let .success(stops):
+                    //Stops not guaranteed to be in the same order, so they need to be reordered
+                    
+                    for entry in entries {
+                        for stop in stops {
+                            if entry.stop.stopTag == stop.stopTag && entry.stop.routeTag == stop.routeTag {
+                                self?.saveDataFrom(stop, to: entry, with: nil)
+                                break
+                            }
                         }
                     }
+                case let .error(error):
+                    entries.forEach({ self?.saveDataFrom(nil, to: $0, with: error) })
                 }
                 
                 self?.delegate?.transitPredictionsUpdated()
@@ -88,16 +93,21 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
             for entry in entries {
                 group.enter()
                 
-                SwiftBus.shared.stopPredictions(forStop: entry.stop) { [weak self] stop in
+                SwiftBus.shared.stopPredictions(forStop: entry.stop) { [weak self] result in
                     
-                    self?.saveDataFrom(stop, to: entry)
+                    switch result {
+                    case let .success(stop):
+                        self?.saveDataFrom(stop, to: entry, with: nil)
+                    case let .error(error):
+                        self?.saveDataFrom(nil, to: entry, with: error)
+                    }
                     
                     group.leave()
                 }
             }
             
-            group.notify(queue: DispatchQueue.main) { [unowned self] in
-                self.delegate?.transitPredictionsUpdated()
+            group.notify(queue: DispatchQueue.main) { [weak self] in
+                self?.delegate?.transitPredictionsUpdated()
             }
             
         }
@@ -108,7 +118,8 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
     /// - Parameters:
     ///   - stop: stop that has prediction and message information
     ///   - entry: entry that the information should be saved to
-    fileprivate func saveDataFrom(_ stop: TransitStop?, to entry: TransitEntry) {
+    ///   - error: any error that occurred while saving the info
+    fileprivate func saveDataFrom(_ stop: TransitStop?, to entry: TransitEntry, with error: Error?) {
         if let stop = stop {
             
             //Only show alerts if it's in the menu bar
@@ -119,6 +130,8 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
             entry.stop.predictions = stop.predictions
             entry.stop.messages = stop.messages
         }
+        
+        entry.error = error
     }
     
     // MARK: - Managing locations
