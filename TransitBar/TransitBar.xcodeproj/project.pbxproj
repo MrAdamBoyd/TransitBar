@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		47EF3441531851D492DD07DA /* Pods_TransitBar_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAD3B8F3013F6929D7B4DAD /* Pods_TransitBar_AppStore.framework */; };
 		65298B2094FB3BC994C51EBD /* Pods_TransitBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13636071D5B07439F7926920 /* Pods_TransitBar.framework */; };
+		660085181F92F7E700987C75 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 660085171F92F57700987C75 /* dsa_pub.pem */; };
 		660F233F1DADF22900832EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F233E1DADF22900832EC6 /* AppDelegate.swift */; };
 		660F23411DADF22900832EC6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F23401DADF22900832EC6 /* ListViewController.swift */; };
 		660F23461DADF22900832EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660F23451DADF22900832EC6 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		56E7B7DC2C28FC26CC3553AB /* Pods-MacTransit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit/Pods-MacTransit.debug.xcconfig"; sourceTree = "<group>"; };
 		595601ADBCCBDE6126163105 /* Pods-MacTransit AppStore.release appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit AppStore.release appstore.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore.release appstore.xcconfig"; sourceTree = "<group>"; };
 		5C3BECD135CD9E8984E1B007 /* Pods-TransitBar.debug appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransitBar.debug appstore.xcconfig"; path = "Pods/Target Support Files/Pods-TransitBar/Pods-TransitBar.debug appstore.xcconfig"; sourceTree = "<group>"; };
+		660085171F92F57700987C75 /* dsa_pub.pem */ = {isa = PBXFileReference; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = SOURCE_ROOT; };
 		660F233B1DADF22900832EC6 /* TransitBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		660F233E1DADF22900832EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		660F23401DADF22900832EC6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				66C923E81E00C8EF00FE067E /* TransitBar-AppStore-Info.plist */,
 				660F234A1DADF22900832EC6 /* TransitBar-Info.plist */,
 				663F9E2C1E00EA7B009116D9 /* TransitBar.entitlements */,
+				660085171F92F57700987C75 /* dsa_pub.pem */,
 			);
 			path = TransitBar;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				660F23461DADF22900832EC6 /* Assets.xcassets in Resources */,
+				660085181F92F7E700987C75 /* dsa_pub.pem in Resources */,
 				663636C61DE12A190067A79B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
