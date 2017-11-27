@@ -20,7 +20,9 @@ class ViewController: UIViewController {
             switch result {
             case let .success(agencies):
                 let agenciesString = "Number of agencies loaded: \(agencies.count)"
-                let agencyNamesString = agencies.map({_, agency in "\(agency.agencyTitle)"})
+                let agencyNamesString = agencies.map({ _, agency in
+                    "\(agency.agencyTitle)"
+                })
                 
                 print("\n-----")
                 print(agenciesString)
@@ -43,7 +45,9 @@ class ViewController: UIViewController {
             case let .success(routes):
                 
                 let agencyString = "Number of routes loaded for SF MUNI: \(routes.count)"
-                let routeNamesString = routes.map({_, route in "\(route.routeTitle)"})
+                let routeNamesString = routes.map({ _, route in
+                    "\(route.routeTitle)"
+                })
                 
                 print("\n-----")
                 print(agencyString)
@@ -111,8 +115,8 @@ class ViewController: UIViewController {
             
             switch result {
             case let .success(station):
-                let lineTitles = "Prediction for lines: \(station.routesAtStation.map({"\($0.routeTitle)"}))"
-                let predictionStrings = "Predictions at stop \(station.allPredictions.map({$0.predictionInMinutes}))"
+                let lineTitles = "Prediction for lines: \(station.routesAtStation.map({ "\($0.routeTitle)" }))"
+                let predictionStrings = "Predictions at stop \(station.allPredictions.map({ $0.predictionInMinutes }))"
 
                 print("\n-----")
                 print("Station: \(station.stopTitle)")
@@ -135,7 +139,7 @@ class ViewController: UIViewController {
             
             switch result {
             case let .success(stop):
-                let predictionStrings:[Int] = stop.allPredictions.map({$0.predictionInMinutes})
+                let predictionStrings: [Int] = stop.allPredictions.map({ $0.predictionInMinutes })
 
                 print("\n-----")
                 print("Stop: \(stop.stopTitle)")
@@ -155,7 +159,7 @@ class ViewController: UIViewController {
             case let .success(stops):
                 var stopString = ""
                 for stop in stops {
-                    stopString += "Stop \(stop.stopTitle) on route \(stop.routeTitle): \(stop.allPredictions.map({$0.predictionInMinutes}))\n\n"
+                    stopString += "Stop \(stop.stopTitle) on route \(stop.routeTitle): \(stop.allPredictions.map({ $0.predictionInMinutes }))\n\n"
                 }
 
                 print("\n-----")
@@ -185,4 +189,3 @@ class ViewController: UIViewController {
     }
 
 }
-

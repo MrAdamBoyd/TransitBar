@@ -77,12 +77,12 @@ open class SwiftBus {
     }
     
     /**
-    Gets the TransitRoutes for a particular agency. If the list of agencies hasn't been downloaded, this functions gets them first
-    
-    - parameter agency:       Agency object
-    - parameter completion:   Code that is called after everything has loaded
-        - parameter agency:   Optional TransitAgency object that contains the routes
-    */
+     Gets the TransitRoutes for a particular agency. If the list of agencies hasn't been downloaded, this functions gets them first
+     
+     - parameter agency:       Agency object
+     - parameter completion:   Code that is called after everything has loaded
+     - parameter agency:   Optional TransitAgency object that contains the routes
+     */
     open func configuration(forAgencyTag agencyTag: String?, completion: ((_ agency: SwiftBusResult<TransitAgency>) -> Void)?) {
         
         guard let agencyTag = agencyTag else {
@@ -96,7 +96,6 @@ open class SwiftBus {
             switch result {
             case let .success(innerAgencies) where innerAgencies[agencyTag] != nil:
                 
-                let currentAgency = innerAgencies[agencyTag]!
                 
                 //The agency exists & we need to load the transit agency data
                 let connectionHandler = SwiftBusConnectionHandler()
@@ -107,6 +106,11 @@ open class SwiftBus {
                         //Adding the agency to the route
                         for route in agencyRoutes.values {
                             route.agencyTag = agencyTag
+                        }
+                        
+                        guard let currentAgency = innerAgencies[agencyTag] else {
+                            completion?(.error(SwiftBusError.error(with: .unknownAgency)))
+                            return
                         }
                         
                         //Saving the routes for the agency
@@ -124,7 +128,7 @@ open class SwiftBus {
                 completion?(.error(error))
             }
         }
-
+        
     }
     
     /**

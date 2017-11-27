@@ -287,6 +287,7 @@
 				19E626D12CE8483797F1B0F2 /* [CP] Embed Pods Frameworks */,
 				93F5BE271274006DE3678627 /* [CP] Copy Pods Resources */,
 				668B66AC1E4435DE00FE0614 /* Embed Watch Content */,
+				664B246D1FCB9E9400C921CE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -542,6 +543,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftBus Watch Example Extension/Pods-SwiftBus Watch Example Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		664B246D1FCB9E9400C921CE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		7D4CE4F4BF361FAEC8C7553C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

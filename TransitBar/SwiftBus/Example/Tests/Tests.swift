@@ -19,6 +19,8 @@ class SwiftBusTests: XCTestCase {
     //This method is called before the invocation of each test method in the class.
     override func setUp() {
         
+        super.setUp()
+        
         //Creating agency
         let agency = TransitAgency()
         agency.agencyTag = "sf-muni"
@@ -43,7 +45,7 @@ class SwiftBusTests: XCTestCase {
     }
     
     func testRouteGetStop() {
-        if let _ = route.stop(forTag: "3909") {
+        if route.stop(forTag: "3909") != nil {
             XCTAssert(true, "Stop is gotten properly")
         } else {
             XCTAssert(false, "Stop is not gotten properly")

@@ -1,12 +1,12 @@
 {
   "name": "SwiftBus",
-  "version": "1.5",
+  "version": "1.5.1",
   "summary": "Asynchronous Swift wrapper for the NextBus API.",
   "homepage": "https://github.com/MrAdamBoyd/SwiftBus",
   "authors": "Adam Boyd",
   "source": {
     "git": "https://github.com/MrAdamBoyd/SwiftBus.git",
-    "tag": "1.5"
+    "tag": "1.5.1"
   },
   "social_media_url": "https://twitter.com/MrAdamBoyd",
   "license": {
@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "SWXMLHash": [
-      "~> 4.0.0"
+      "~> 4.2.5"
     ]
   }
 }

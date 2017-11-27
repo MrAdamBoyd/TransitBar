@@ -1,11 +1,11 @@
 PODS:
-  - Crashlytics (3.8.6):
-    - Fabric (~> 1.6.3)
-  - Fabric (1.6.13)
+  - Crashlytics (3.9.3):
+    - Fabric (~> 1.7.2)
+  - Fabric (1.7.2)
   - Sparkle (1.18.1)
-  - SwiftBus (1.5):
-    - SWXMLHash (~> 4.0.0)
-  - SWXMLHash (4.0.0)
+  - SwiftBus (1.5.1):
+    - SWXMLHash (~> 4.2.5)
+  - SWXMLHash (4.2.5)
 
 DEPENDENCIES:
   - Crashlytics
@@ -17,11 +17,11 @@ EXTERNAL SOURCES:
     :path: ./SwiftBus
 
 SPEC CHECKSUMS:
-  Crashlytics: 95d05f4e4c19a771250c4bd9ce344d996de32bbf
-  Fabric: 2fb5676bc811af011a04513451f463dac6803206
+  Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
+  Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
   Sparkle: 06ea33170007c5937ee54da481b4481af98fac79
-  SwiftBus: ac323cbb57f1726fdc57f1b2f2effc3202098984
-  SWXMLHash: 6bbc0bf72975a18ceda469fb7d6a886a26d81694
+  SwiftBus: e5238275f7d5fd736da962a937f9b8fd632a49ed
+  SWXMLHash: eb16013c6f654853980822e0a778c9d66e017dde
 
 PODFILE CHECKSUM: 8ecc9c8a996e679d164a2ebd42642e8c6c638a6c
 

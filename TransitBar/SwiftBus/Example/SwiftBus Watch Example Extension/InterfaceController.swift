@@ -38,7 +38,7 @@ class InterfaceController: WKInterfaceController {
             
             switch result {
             case let .success(stop):
-                let predictionStrings:[Int] = stop.allPredictions.map({$0.predictionInMinutes})
+                let predictionStrings: [Int] = stop.allPredictions.map({ $0.predictionInMinutes })
                 
                 print("\n-----")
                 print("Stop: \(stop.stopTitle)")
