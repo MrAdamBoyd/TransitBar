@@ -200,7 +200,7 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
     /// - Returns: optional map item
     func mkmapItemFrom(placemarks: [CLPlacemark]?) -> MKMapItem? {
         if let placemark = placemarks?.first {
-            return MKMapItem(placemark: MKPlacemark(coordinate: placemark.location!.coordinate, addressDictionary: placemark.addressDictionary as! [String:AnyObject]?))
+            return MKMapItem(placemark: MKPlacemark(coordinate: placemark.location!.coordinate, addressDictionary: placemark.addressDictionary as! [String: AnyObject]?))
         } else {
             return nil
         }

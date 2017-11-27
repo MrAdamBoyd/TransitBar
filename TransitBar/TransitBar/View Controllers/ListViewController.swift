@@ -57,7 +57,7 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
     
     override func keyDown(with event: NSEvent) {
         
-        guard let key = event.charactersIgnoringModifiers?.characters.first else { return }
+        guard let key = event.charactersIgnoringModifiers?.first else { return }
         
         guard key == Character(UnicodeScalar(NSDeleteCharacter)!) else {
             super.keyDown(with: event)

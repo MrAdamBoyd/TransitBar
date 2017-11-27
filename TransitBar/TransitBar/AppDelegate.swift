@@ -220,7 +220,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
                 self.statusItem.image = self.emptyStatusBarTemplateImage
             }
         } else {
-            self.statusItem.title = String(text.characters.dropLast(2)) //Remove final ; and space
+            self.statusItem.title = String(text.dropLast(2)) //Remove final ; and space
             if self.statusItem.image != nil {
                 self.statusItem.image = nil
             }
