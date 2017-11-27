@@ -64,7 +64,7 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
             return
         }
         
-        guard self.tableView.selectedRowIndexes.count != 0 else {
+        guard !self.tableView.selectedRowIndexes.isEmpty else {
             super.keyDown(with: event)
             return
         }
@@ -80,7 +80,8 @@ class ListViewController: NSViewController, NSTableViewDataSource, NSTableViewDe
         self.tableView.reloadData()
     }
     
-    @objc func setUIFromSettings(reloadData: Bool = true) {
+    @objc
+    func setUIFromSettings(reloadData: Bool = true) {
         self.numberOfItemsToShowTextField.intValue = Int32(DataController.shared.numberOfPredictionsToShow)
         self.walkTimeButton.state = NSControl.StateValue(rawValue: DataController.shared.displayWalkingTime ? 1 : 0)
         if reloadData { self.tableView.reloadData() }

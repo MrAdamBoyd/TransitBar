@@ -63,7 +63,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         NotificationCenter.default.addObserver(self, selector: #selector(self.createMenuItems), name: .entriesChanged, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.determineTrackingLocation), name: .displayWalkingTimeChanged, object: nil)
         
-        if DataController.shared.savedEntries.count == 0 {
+        if DataController.shared.savedEntries.isEmpty {
             self.openSettingsWindow()
         }
         
@@ -75,7 +75,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         
     }
     
-    @objc func determineTrackingLocation() {
+    @objc
+    func determineTrackingLocation() {
         self.transitManager.determineTrackingLocation()
     }
     
@@ -195,7 +196,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             if notification.entry.stop.stopTag == entry.stop.stopTag && notification.entry.stop.routeTag == entry.stop.routeTag {
                 
                 //This filter call leaves in predictions that are less than or equal to the notification's minutes and greater than 5 - the notification's minutes. If this is nonnil, we should send the user a notification
-                let firstValid = predictions.filter({ $0.predictionInMinutes <= notification.minutesForFirstPredicion && $0.predictionInMinutes > notification.minutesForFirstPredicion - 5  }).first
+                let firstValid = predictions.first(where: { $0.predictionInMinutes <= notification.minutesForFirstPredicion && $0.predictionInMinutes > notification.minutesForFirstPredicion - 5 })
                 
                 if let firstValid = firstValid {
                     
@@ -337,12 +338,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     /**
      Checks Sparkle to see if there are any updates
      */
-    @objc func checkForUpdates() {
+    @objc
+    func checkForUpdates() {
         SUUpdater.shared().checkForUpdates(self)
     }
     #endif
     
-    @objc func userWantsToSetNotificationFor(_ sender: Any?) {
+    @objc
+    func userWantsToSetNotificationFor(_ sender: Any?) {
         guard let item = self.statusItem.menu?.highlightedItem else { return }
         guard let index = self.statusItem.menu?.index(of: item) else { return }
         
@@ -385,7 +388,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     /**
      Opens the settings window
      */
-    @objc func openSettingsWindow() {
+    @objc
+    func openSettingsWindow() {
         guard let windowController = self.storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "mainWindow")) as? NSWindowController else { return }
         self.listWindowController = windowController
         self.listWindowController?.window?.makeKeyAndOrderFront(self)
@@ -394,21 +398,24 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     /**
      Opens the about window
      */
-    @objc func openAboutWindow() {
+    @objc
+    func openAboutWindow() {
         guard let windowController = self.storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "aboutWindow")) as? NSWindowController else { return }
         self.aboutWindowController = windowController
         self.aboutWindowController?.window?.makeKeyAndOrderFront(self)
     }
     
     /// Opens the window that has all the alerts
-    @objc func openAlertsWindow() {
+    @objc
+    func openAlertsWindow() {
         guard let windowController = self.storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "alertsWindow")) as? NSWindowController else { return }
         self.alertsWindowController = windowController
         self.alertsWindowController?.window?.makeKeyAndOrderFront(self)
     }
     
     /// Opens the notification window
-    @objc func openNotificationsWindow() {
+    @objc
+    func openNotificationsWindow() {
         guard let windowController = self.storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "notificationsWindow")) as? NSWindowController else { return }
         self.notificationsWindowController = windowController
         self.notificationsWindowController?.window?.makeKeyAndOrderFront(self)
@@ -417,7 +424,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     /**
      Quits the app
      */
-    @objc func terminate() {
+    @objc
+    func terminate() {
         NSApplication.shared.terminate(self)
     }
     

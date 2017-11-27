@@ -30,7 +30,7 @@ class NotificationsViewController: NSViewController, NSTableViewDelegate, NSTabl
             return
         }
         
-        guard self.tableView.selectedRowIndexes.count != 0 else {
+        guard !self.tableView.selectedRowIndexes.isEmpty else {
             super.keyDown(with: event)
             return
         }
@@ -46,7 +46,8 @@ class NotificationsViewController: NSViewController, NSTableViewDelegate, NSTabl
         self.notificationsChanged()
     }
     
-    @objc func notificationsChanged() {
+    @objc
+    func notificationsChanged() {
         self.notifications = DataController.shared.scheduledNotifications
         self.tableView.reloadData()
     }

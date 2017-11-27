@@ -77,7 +77,8 @@ class DataController: NSObject {
     
     // MARK: - Getting and setting values
     
-    @objc func getDataFromDefaults() {
+    @objc
+    func getDataFromDefaults() {
         
         //Number of predictions to show
         if let numberOfPredictions = self.getInt(for: Constants.numberOfPredictionsKey), numberOfPredictions != 0 {

@@ -41,18 +41,20 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
     }
     
     /// Called when the computer wakes from sleep. Loads the data immediately and resets the computer's location
-    @objc func handleComputerWake() {
+    @objc
+    func handleComputerWake() {
         self.loadData()
         self.determineTrackingLocation()
     }
     
     /// Loads the predictions for all current stops
-    @objc func loadData() {
+    @objc
+    func loadData() {
         print("Loading data...")
         
         let entries = DataController.shared.savedEntries
         
-        guard entries.count > 0 else { return }
+        guard !entries.isEmpty else { return }
         
         let firstItemAgency = entries[0].stop.agencyTag
         
@@ -137,7 +139,8 @@ class TransitManager: NSObject, CLLocationManagerDelegate {
     // MARK: - Managing locations
     
     /// Starts or stops tracking the user's location
-    @objc func determineTrackingLocation() {
+    @objc
+    func determineTrackingLocation() {
         if DataController.shared.displayWalkingTime {
             self.locManager.delegate = self
             self.locManager.desiredAccuracy = kCLLocationAccuracyBest

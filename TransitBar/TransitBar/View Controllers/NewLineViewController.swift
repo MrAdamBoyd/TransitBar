@@ -80,7 +80,8 @@ class NewLineViewController: NSViewController {
     
     // MARK: - Actions from the popup buttons
     
-    @objc func agencySelectedAction() {
+    @objc
+    func agencySelectedAction() {
         self.routePopUpButton.removeAllItems()
         self.routes = []
         self.selectedRoute = nil
@@ -115,7 +116,8 @@ class NewLineViewController: NSViewController {
         }
     }
     
-    @objc func routeSelectedAction() {
+    @objc
+    func routeSelectedAction() {
         self.selectedRoute = nil
         self.directionPopUpButton.removeAllItems()
         self.directions = []
@@ -143,7 +145,8 @@ class NewLineViewController: NSViewController {
     }
     
     /// User selected a direction for the direction popup
-    @objc func directionSelectedAction() {
+    @objc
+    func directionSelectedAction() {
         self.stopPopUpButton.removeAllItems()
         self.stops = []
         self.addStopButton.isEnabled = false
@@ -164,7 +167,8 @@ class NewLineViewController: NSViewController {
         }
     }
     
-    @objc func stopSelectedAction() {
+    @objc
+    func stopSelectedAction() {
         //Only enable if placeholder item isn't there
         guard self.stopPopUpButton.indexOfSelectedItem != 0 else { return }
         
