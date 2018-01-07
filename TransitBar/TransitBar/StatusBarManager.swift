@@ -39,11 +39,13 @@ final class StatusBarManager {
         self.statusItem = statusItem
         self.dataController = dataController
         self.delegate = delegate
+        
+        self.setUpMenuItem()
     }
     
     // MARK: - Changing the menu items
     
-    func setUpMenuItem() {
+    private func setUpMenuItem() {
         //Setting up the status bar menu and the actions from that
         self.statusItem.image = self.emptyStatusBarTemplateImage
         self.createMenuItems()
@@ -57,7 +59,7 @@ final class StatusBarManager {
     }
     
     /// Creates the menu item from scratch
-    private func createMenuItems() {
+    func createMenuItems() {
         if self.statusItem.menu == nil {
             self.statusItem.menu = NSMenu()
         }
@@ -68,35 +70,35 @@ final class StatusBarManager {
             //When clicking on the menu, all the stops always show
             let title = "\(entry.stop.routeTitle) -> \(entry.stop.direction)"
             
-            self.statusItem.menu?.addItem(NSMenuItem(title: title, action: nil, keyEquivalent: ""))
+            self.statusItem.menu?.addItem(NSMenuItem.menuItem(withTitle: title, target: nil, action: nil, keyEquivalent: ""))
             
             if self.dataController.displayWalkingTime {
                 
-                self.statusItem.menu?.addItem(NSMenuItem(title: self.locationTextFrom(source: self.delegate?.mostRecentUserLocation, to: CLLocation(latitude: entry.stop.lat, longitude: entry.stop.lon)), action: nil, keyEquivalent: ""))
+                self.statusItem.menu?.addItem(NSMenuItem.menuItem(withTitle: self.locationTextFrom(source: self.delegate?.mostRecentUserLocation, to: CLLocation(latitude: entry.stop.lat, longitude: entry.stop.lon)), target: nil, action: nil, keyEquivalent: ""))
                 self.setWalkingTimeForMenuItemWith(entry: entry, at: index) //Async gets the walking time
             }
             
-            self.statusItem.menu?.addItem(NSMenuItem(title: "Set Notification", action: #selector(self.setNotificationFor(_:)), keyEquivalent: ""))
+            self.statusItem.menu?.addItem(NSMenuItem.menuItem(withTitle: "Set Notification", target: self, action: #selector(self.setNotificationFor(_:)), keyEquivalent: ""))
             
             self.statusItem.menu?.addItem(NSMenuItem.separator())
             
         }
         
-        self.statusItem.menu?.addItem(NSMenuItem(title: "About TransitBar", action: #selector(self.openAboutWindow), keyEquivalent: ""))
+        self.statusItem.menu?.addItem(NSMenuItem.menuItem(withTitle: "About TransitBar", target: self, action: #selector(self.openAboutWindow), keyEquivalent: ""))
         #if SPARKLE
-            self.statusItem.menu?.addItem(NSMenuItem(title: "Check for Updates...", action: #selector(self.checkForUpdates), keyEquivalent: ""))
+            self.statusItem.menu?.addItem(NSMenuItem.menuItem(withTitle: "Check for Updates...", target: self, action: #selector(self.checkForUpdates), keyEquivalent: ""))
         #endif
         self.statusItem.menu?.addItem(NSMenuItem.separator())
-        self.statusItem.menu?.addItem(NSMenuItem(title: "View Alerts", action: #selector(self.openAlertsWindow), keyEquivalent: ""))
-        self.statusItem.menu?.addItem(NSMenuItem(title: "View Scheduled Notifications", action: #selector(self.openNotificationsWindow), keyEquivalent: ""))
-        self.statusItem.menu?.addItem(NSMenuItem(title: "Preferences...", action: #selector(self.openSettingsWindow), keyEquivalent: ","))
-        self.statusItem.menu?.addItem(NSMenuItem(title: "Quit", action: #selector(self.terminate), keyEquivalent: "q"))
+        self.statusItem.menu?.addItem(NSMenuItem.menuItem(withTitle: "View Alerts", target: self, action: #selector(self.openAlertsWindow), keyEquivalent: ""))
+        self.statusItem.menu?.addItem(NSMenuItem.menuItem(withTitle: "View Scheduled Notifications", target: self, action: #selector(self.openNotificationsWindow), keyEquivalent: ""))
+        self.statusItem.menu?.addItem(NSMenuItem.menuItem(withTitle: "Preferences...", target: self, action: #selector(self.openSettingsWindow), keyEquivalent: ","))
+        self.statusItem.menu?.addItem(NSMenuItem.menuItem(withTitle: "Quit", target: self, action: #selector(self.terminate), keyEquivalent: "q"))
         
         self.updateMenuItems()
     }
     
     /// Creates the menu items for preferences/about/etc and also for all the transit entries
-    private func updateMenuItems() {
+    func updateMenuItems() {
         var menuText = ""
         
         for (index, entry) in self.dataController.savedEntries.enumerated() {
@@ -198,7 +200,7 @@ final class StatusBarManager {
     ///
     /// - Parameter index: index of the menu item
     /// - Returns: Entry at the index
-    private func entryForMenuIndex(_ index: Int) -> TransitEntry {
+    func entryForMenuIndex(_ index: Int) -> TransitEntry {
         if self.dataController.displayWalkingTime {
             return self.dataController.savedEntries[index / 4]
         } else {
