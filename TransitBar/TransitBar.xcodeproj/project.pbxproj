@@ -10,6 +10,8 @@
 		47EF3441531851D492DD07DA /* Pods_TransitBar_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAD3B8F3013F6929D7B4DAD /* Pods_TransitBar_AppStore.framework */; };
 		65298B2094FB3BC994C51EBD /* Pods_TransitBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13636071D5B07439F7926920 /* Pods_TransitBar.framework */; };
 		660085181F92F7E700987C75 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 660085171F92F57700987C75 /* dsa_pub.pem */; };
+		660D35D42001E26B00B5B880 /* StatusBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35D32001E26B00B5B880 /* StatusBarManager.swift */; };
+		660D35D52001E26B00B5B880 /* StatusBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35D32001E26B00B5B880 /* StatusBarManager.swift */; };
 		660F233F1DADF22900832EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F233E1DADF22900832EC6 /* AppDelegate.swift */; };
 		660F23411DADF22900832EC6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F23401DADF22900832EC6 /* ListViewController.swift */; };
 		660F23461DADF22900832EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660F23451DADF22900832EC6 /* Assets.xcassets */; };
@@ -73,6 +75,7 @@
 		595601ADBCCBDE6126163105 /* Pods-MacTransit AppStore.release appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacTransit AppStore.release appstore.xcconfig"; path = "Pods/Target Support Files/Pods-MacTransit AppStore/Pods-MacTransit AppStore.release appstore.xcconfig"; sourceTree = "<group>"; };
 		5C3BECD135CD9E8984E1B007 /* Pods-TransitBar.debug appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransitBar.debug appstore.xcconfig"; path = "Pods/Target Support Files/Pods-TransitBar/Pods-TransitBar.debug appstore.xcconfig"; sourceTree = "<group>"; };
 		660085171F92F57700987C75 /* dsa_pub.pem */ = {isa = PBXFileReference; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = SOURCE_ROOT; };
+		660D35D32001E26B00B5B880 /* StatusBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarManager.swift; sourceTree = "<group>"; };
 		660F233B1DADF22900832EC6 /* TransitBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		660F233E1DADF22900832EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		660F23401DADF22900832EC6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 				661758771E9F062600E4E052 /* Models */,
 				660F233E1DADF22900832EC6 /* AppDelegate.swift */,
 				66E565C11E9EFCBE00C60D98 /* TransitManager.swift */,
+				660D35D32001E26B00B5B880 /* StatusBarManager.swift */,
 				66A6072C1DF675D4003C9DD6 /* Constants.swift */,
 				66A6072E1DF67640003C9DD6 /* DataController.swift */,
 				660F23451DADF22900832EC6 /* Assets.xcassets */,
@@ -641,6 +645,7 @@
 				661758751E9F061F00E4E052 /* TransitNotification.swift in Sources */,
 				663636C81DE12DFA0067A79B /* NewLineViewController.swift in Sources */,
 				661758791E9F075700E4E052 /* NotificationsViewController.swift in Sources */,
+				660D35D42001E26B00B5B880 /* StatusBarManager.swift in Sources */,
 				666F303D1E230D7200999222 /* AlertsViewController.swift in Sources */,
 				66E565C21E9EFCBE00C60D98 /* TransitManager.swift in Sources */,
 			);
@@ -675,6 +680,7 @@
 				661758761E9F062100E4E052 /* TransitNotification.swift in Sources */,
 				663F9E4F1E00F050009116D9 /* NewLineViewController.swift in Sources */,
 				6617587A1E9F075700E4E052 /* NotificationsViewController.swift in Sources */,
+				660D35D52001E26B00B5B880 /* StatusBarManager.swift in Sources */,
 				666F303E1E230D7200999222 /* AlertsViewController.swift in Sources */,
 				66E565C31E9EFCBE00C60D98 /* TransitManager.swift in Sources */,
 			);

@@ -17,7 +17,7 @@ protocol TransitManagerDelegate: class {
     func sendNotificationsToUser(with newMessages: [TransitMessage], differingFrom oldMessages: [TransitMessage], on route: String)
 }
 
-class TransitManager: NSObject, CLLocationManagerDelegate {
+final class TransitManager: NSObject, CLLocationManagerDelegate {
     
     weak var delegate: TransitManagerDelegate?
     private var minuteTimer: Timer!

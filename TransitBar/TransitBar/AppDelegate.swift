@@ -20,22 +20,23 @@ import MapKit
 class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate, TransitManagerDelegate {
     
     //Item that lives in the status bar
-    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     /// This is the icon when there is nothing to show in the menubar
-    var emptyStatusBarTemplateImage: NSImage {
+    private var emptyStatusBarTemplateImage: NSImage {
         let image = #imageLiteral(resourceName: "TemplateIcon")
         image.isTemplate = true
         return image
     }
     
-    let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-    var listWindowController: NSWindowController?
-    var aboutWindowController: NSWindowController?
-    var alertsWindowController: NSWindowController?
-    var notificationsWindowController: NSWindowController?
+    private let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
+    private var listWindowController: NSWindowController?
+    private var aboutWindowController: NSWindowController?
+    private var alertsWindowController: NSWindowController?
+    private var notificationsWindowController: NSWindowController?
     
-    let transitManager = TransitManager()
+    private let transitManager = TransitManager()
+    private lazy var statusBarManager = StatusBarManager(statusItem: self.statusItem, dataController: DataController.shared, delegate: self)
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
@@ -45,13 +46,17 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         //See https://docs.fabric.io/apple/crashlytics/os-x.html
         UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": true])
         
-        //Setting self as the delegate
-        self.transitManager.delegate = self
         
         //Setting up the status bar menu and the actions from that
         self.statusItem.image = self.emptyStatusBarTemplateImage
-        
         self.createMenuItems()
+        //TODO: this
+//        self.statusBarManager.setUpMenuItem()
+        
+        //Setting up transit manager
+        self.transitManager.delegate = self
+        self.transitManager.loadData()
+        
         
         #if SPARKLE
             //Setting up the Sparkle updater
@@ -495,4 +500,56 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         NotificationCenter.default.removeObserver(self)
     }
 
+}
+
+// MARK: - Status bar
+
+extension AppDelegate: StatusBarManagerDelegate {
+    var mostRecentUserLocation: CLLocation? {
+        return self.transitManager.currentLocation
+    }
+    
+    func statusBarManager(_ statusBarManager: StatusBarManager, requestDirectionsTo destination: CLLocation?, completion: @escaping (MKDirectionsRequest?) -> Void) {
+        self.transitManager.directionsRequestFrom(source: self.transitManager.currentLocation, destination: destination, completion: completion)
+    }
+    
+    func statusBarManager(_ statusBarManager: StatusBarManager, requestsCheckForNotificationsToSendFor entry: TransitEntry, predictions: [TransitPrediction]) {
+        self.checkForNotificationsToSend(for: entry, predictions: predictions)
+    }
+    
+    func statusBarManager(_ statusBarManager: StatusBarManager, requestsSetNotificationFor sender: Any) {
+        
+    }
+    
+    func statusBarManagerCheckForUpdates(_ statusBarManager: StatusBarManager) {
+        SUUpdater.shared().checkForUpdates(self)
+    }
+    
+    func statusBarManagerOpenAboutWindow(_ statusBarManager: StatusBarManager) {
+        guard let windowController = self.storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "aboutWindow")) as? NSWindowController else { return }
+        self.aboutWindowController = windowController
+        self.aboutWindowController?.window?.makeKeyAndOrderFront(self)
+    }
+    
+    func statusBarManagerOpenAlertsWindow(_ statusBarManager: StatusBarManager) {
+        guard let windowController = self.storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "alertsWindow")) as? NSWindowController else { return }
+        self.alertsWindowController = windowController
+        self.alertsWindowController?.window?.makeKeyAndOrderFront(self)
+    }
+    
+    func statusBarManagerOpenNotificationsWindow(_ statusBarManager: StatusBarManager) {
+        guard let windowController = self.storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "notificationsWindow")) as? NSWindowController else { return }
+        self.notificationsWindowController = windowController
+        self.notificationsWindowController?.window?.makeKeyAndOrderFront(self)
+    }
+    
+    func statusBarManagerOpenSettingsWindow(_ statusBarManager: StatusBarManager) {
+        guard let windowController = self.storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "mainWindow")) as? NSWindowController else { return }
+        self.listWindowController = windowController
+        self.listWindowController?.window?.makeKeyAndOrderFront(self)
+    }
+    
+    func statusBarManagerRequestsToTerminate(_ statusBarManager: StatusBarManager) {
+        NSApplication.shared.terminate(self)
+    }
 }
