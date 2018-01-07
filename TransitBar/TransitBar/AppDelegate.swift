@@ -80,7 +80,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         self.transitManager.determineTrackingLocation()
     }
     
-    @objc func createMenuItems() {
+    /// Creates the menu item from scratch
+    @objc
+    func createMenuItems() {
         if self.statusItem.menu == nil {
             self.statusItem.menu = NSMenu()
         }
