@@ -17,9 +17,19 @@ import Foundation
 
 open class SwiftBus {
     
+    private static let queue = DispatchQueue(label: "com.adam.SwiftBus")
+    
     open static let shared = SwiftBus()
     
-    fileprivate var masterListTransitAgencies: [String: TransitAgency] = [:]
+    private var _masterListTransitAgencies: [String: TransitAgency] = [:]
+    private var masterListTransitAgencies: [String: TransitAgency] {
+        set {
+            SwiftBus.queue.sync { self._masterListTransitAgencies = newValue }
+        }
+        get {
+            return SwiftBus.queue.sync { return self._masterListTransitAgencies }
+        }
+    }
     
     fileprivate init() { }
     

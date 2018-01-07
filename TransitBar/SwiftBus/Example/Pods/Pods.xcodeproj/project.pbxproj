@@ -128,29 +128,29 @@
 /* Begin PBXFileReference section */
 		037C5601BFAA58FC0B8B43A2A386B9EF /* Pods-SwiftBus Watch Example Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftBus Watch Example Extension-frameworks.sh"; sourceTree = "<group>"; };
 		066E6E61A49B2EB51C5623FB22B72CB5 /* TransitMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitMessage.swift; path = Pod/Classes/TransitMessage.swift; sourceTree = "<group>"; };
-		0C46DF5A15E9DBE4D90456070CCAD6B4 /* SWXMLHash-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "SWXMLHash-watchOS.modulemap"; path = "../SWXMLHash-watchOS/SWXMLHash-watchOS.modulemap"; sourceTree = "<group>"; };
+		0C46DF5A15E9DBE4D90456070CCAD6B4 /* SWXMLHash-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "SWXMLHash-watchOS.modulemap"; path = "../SWXMLHash-watchOS/SWXMLHash-watchOS.modulemap"; sourceTree = "<group>"; };
 		10675845E84BEE24B96B5644A81A9685 /* SWXMLHash-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SWXMLHash-watchOS-umbrella.h"; path = "../SWXMLHash-watchOS/SWXMLHash-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		1744D9BB2B8E2F709E357E0E470E9C5D /* SwiftBusResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftBusResult.swift; path = Pod/Classes/SwiftBusResult.swift; sourceTree = "<group>"; };
 		18ECDE88A66349C1ABE446FF855448C6 /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		197FB3FE82630D1EF57464287C1259E5 /* Pods-SwiftBus_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftBus_Example-frameworks.sh"; sourceTree = "<group>"; };
 		1C9DD5643B50EBD21780676D4A8545EF /* SwiftBus-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SwiftBus-watchOS-umbrella.h"; path = "../SwiftBus-watchOS/SwiftBus-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		1DB48837663EEBEA19731924A63947F9 /* TransitVehicle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitVehicle.swift; path = Pod/Classes/TransitVehicle.swift; sourceTree = "<group>"; };
-		206D4767F5FB040FE186A53F5BBD34D5 /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWXMLHash.framework; path = "SWXMLHash-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		21BD40B753A79C341FFA392BBEDF9A86 /* SwiftBus-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "SwiftBus-iOS.modulemap"; sourceTree = "<group>"; };
+		206D4767F5FB040FE186A53F5BBD34D5 /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21BD40B753A79C341FFA392BBEDF9A86 /* SwiftBus-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "SwiftBus-iOS.modulemap"; sourceTree = "<group>"; };
 		22B4A5F12CD8ED7DC6C388E4D25C25CD /* SwiftBus-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBus-iOS-prefix.pch"; sourceTree = "<group>"; };
 		25073B6610E28940E99E2016B77F7EB3 /* SwiftBus-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftBus-iOS.xcconfig"; sourceTree = "<group>"; };
 		2907044C3F68749B32B3A78FA569765E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3313A075D054B5328133DCE4AB831053 /* SWXMLHash-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWXMLHash-iOS-dummy.m"; sourceTree = "<group>"; };
-		34A384F13E204CDFA6B0AC558803D277 /* SWXMLHash-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "SWXMLHash-iOS.modulemap"; sourceTree = "<group>"; };
+		34A384F13E204CDFA6B0AC558803D277 /* SWXMLHash-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "SWXMLHash-iOS.modulemap"; sourceTree = "<group>"; };
 		36A063267D383619D31759FC82E9187A /* Pods-SwiftBus_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftBus_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3C7594A58BF59EE2843B974A1225020C /* Pods-SwiftBus_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBus_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3F72670AF05E291893AA54B682091DAE /* Pods-SwiftBus Watch Example Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBus Watch Example Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		40D613873D57EF1271EC66EC10A7EB35 /* SWXMLHash+TypeConversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SWXMLHash+TypeConversion.swift"; path = "Source/SWXMLHash+TypeConversion.swift"; sourceTree = "<group>"; };
-		40F38DE17C7F9E857105E62511BC4237 /* SwiftBus-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "SwiftBus-watchOS.modulemap"; path = "../SwiftBus-watchOS/SwiftBus-watchOS.modulemap"; sourceTree = "<group>"; };
+		40F38DE17C7F9E857105E62511BC4237 /* SwiftBus-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "SwiftBus-watchOS.modulemap"; path = "../SwiftBus-watchOS/SwiftBus-watchOS.modulemap"; sourceTree = "<group>"; };
 		453848270BA77DBCAA4E6CB22D9DE32C /* Pods-SwiftBus Watch Example Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftBus Watch Example Extension-dummy.m"; sourceTree = "<group>"; };
-		4C4867DC0E5082CADC9577586A791DA6 /* SwiftBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftBus.framework; path = "SwiftBus-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4867DC0E5082CADC9577586A791DA6 /* SwiftBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F3FFAB8FA09ED75FC3A0E8205A1593C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SwiftBus-watchOS/Info.plist"; sourceTree = "<group>"; };
-		4FD86C60ECD5DE7100B0466480A8C47F /* Pods-SwiftBus Watch Example Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftBus Watch Example Extension.modulemap"; sourceTree = "<group>"; };
+		4FD86C60ECD5DE7100B0466480A8C47F /* Pods-SwiftBus Watch Example Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftBus Watch Example Extension.modulemap"; sourceTree = "<group>"; };
 		50213514EFCADEA25304DCB877B7F7FE /* SwiftBusError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftBusError.swift; path = Pod/Classes/SwiftBusError.swift; sourceTree = "<group>"; };
 		5AB29BC62CC48F8B73E168496B68297E /* SwiftBus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftBus.swift; path = Pod/Classes/SwiftBus.swift; sourceTree = "<group>"; };
 		5AD786B1312FF89AB7BE6435473765D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,14 +160,14 @@
 		6A5D7A40F599DABA214272A19BDEC626 /* Pods-SwiftBus_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBus_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C367B3AE2D1771CD8B0D0F5D0C6E2F1 /* SWXMLHash-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-iOS-umbrella.h"; sourceTree = "<group>"; };
 		6CF09F87DF1D3CCE5E26FACAAE4185D8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DD3D50BE6D79C865EBC3DDAAC58E467 /* Pods_SwiftBus_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftBus_Example.framework; path = "Pods-SwiftBus_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DD3D50BE6D79C865EBC3DDAAC58E467 /* Pods_SwiftBus_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBus_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E775F17668E3EA864E36FEF9C914765 /* SwiftBus-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBus-iOS-umbrella.h"; sourceTree = "<group>"; };
 		7108876CECAB23B0B46AE28B9D77484F /* SWXMLHash-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SWXMLHash-watchOS-prefix.pch"; path = "../SWXMLHash-watchOS/SWXMLHash-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		7156188B1D04E10FAC4B7A1C586CA0C6 /* SwiftBus-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftBus-iOS-dummy.m"; sourceTree = "<group>"; };
-		7257D8B75792100F7FD61C2D8A2FAA6E /* SwiftBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftBus.framework; path = "SwiftBus-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7257D8B75792100F7FD61C2D8A2FAA6E /* SwiftBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C1718C069661D7C27C031FFE483982 /* SwiftBusDataParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftBusDataParser.swift; path = Pod/Classes/SwiftBusDataParser.swift; sourceTree = "<group>"; };
 		7820EACD4B470885A30D48D64239D7F4 /* SwiftBus-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SwiftBus-watchOS-dummy.m"; path = "../SwiftBus-watchOS/SwiftBus-watchOS-dummy.m"; sourceTree = "<group>"; };
-		7878273073B214F588B6E94B0100AD07 /* Pods_SwiftBus_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftBus_Tests.framework; path = "Pods-SwiftBus_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7878273073B214F588B6E94B0100AD07 /* Pods_SwiftBus_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBus_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		870E873D7606234B1D093F2CF17F800D /* Pods-SwiftBus_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftBus_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		886C9E693D0210FB51566A741F4E8842 /* DictionaryKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryKey.swift; path = Pod/Classes/DictionaryKey.swift; sourceTree = "<group>"; };
 		8A4C408342F5C88D7BFCDC3B9D890E76 /* Pods-SwiftBus_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftBus_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -176,24 +176,24 @@
 		8C2A7603C17C5D5CE8F990EE136FC563 /* Pods-SwiftBus_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftBus_Tests-resources.sh"; sourceTree = "<group>"; };
 		8F1B0D96B817306B623F8DB83DB7CEAB /* SwiftBusRequestURLs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftBusRequestURLs.swift; path = Pod/Classes/SwiftBusRequestURLs.swift; sourceTree = "<group>"; };
 		92E279352D7E79F448CF1AD9590B56A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		949337A6A833F07E4D75251030737FB0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9556EFBC0E5F61A3CD593427D912C73D /* Pods-SwiftBus_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBus_Example.release.xcconfig"; sourceTree = "<group>"; };
 		991204E67E6971328235BBAD08E645A3 /* Pods-SwiftBus Watch Example Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftBus Watch Example Extension-resources.sh"; sourceTree = "<group>"; };
 		9CCDF866F66DF9A7EC867AA43BABF9AA /* Pods-SwiftBus Watch Example Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftBus Watch Example Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A0D0474C37FAF926C94208D0E3734E38 /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtension.swift; path = Pod/Classes/ColorExtension.swift; sourceTree = "<group>"; };
 		A340580C8BF279E3D0222ADF54B71CBD /* Pods-SwiftBus_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftBus_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A5F0F9CAE49CF6A598AE86B87C763ACE /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SWXMLHash.framework; path = "SWXMLHash-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5F0F9CAE49CF6A598AE86B87C763ACE /* SWXMLHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SWXMLHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BF6A0042F493652667E43FA36B9555 /* TransitPrediction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitPrediction.swift; path = Pod/Classes/TransitPrediction.swift; sourceTree = "<group>"; };
 		ADCA7F637386F7546ECBD0B49DE2E560 /* SWXMLHash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SWXMLHash.swift; path = Source/SWXMLHash.swift; sourceTree = "<group>"; };
-		B3E3B12F4926830804C2BE1FE81016B4 /* Pods-SwiftBus_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftBus_Tests.modulemap"; sourceTree = "<group>"; };
+		B3E3B12F4926830804C2BE1FE81016B4 /* Pods-SwiftBus_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftBus_Tests.modulemap"; sourceTree = "<group>"; };
 		B51F7F3494AA02A0DF3D16315293060A /* SWXMLHash-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SWXMLHash-watchOS-dummy.m"; path = "../SWXMLHash-watchOS/SWXMLHash-watchOS-dummy.m"; sourceTree = "<group>"; };
 		B66AFCE415427D820BD6733190513A92 /* TransitAgency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitAgency.swift; path = Pod/Classes/TransitAgency.swift; sourceTree = "<group>"; };
-		BB9199A53134A8B12E6185C0F9316D5D /* Pods_SwiftBus_Watch_Example_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwiftBus_Watch_Example_Extension.framework; path = "Pods-SwiftBus Watch Example Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB9199A53134A8B12E6185C0F9316D5D /* Pods_SwiftBus_Watch_Example_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftBus_Watch_Example_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DCA4F64175EC2A89D7887A24DBF478 /* SWXMLHash-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWXMLHash-iOS-prefix.pch"; sourceTree = "<group>"; };
 		C7163CBE69E28FE94EA201BA3C08CBB8 /* TransitRoute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitRoute.swift; path = Pod/Classes/TransitRoute.swift; sourceTree = "<group>"; };
 		C74BDFC71C652869CC91A2E94D30BD59 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C80F27C4E65EEF677CB817A668589A71 /* Pods-SwiftBus_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SwiftBus_Example.modulemap"; sourceTree = "<group>"; };
+		C80F27C4E65EEF677CB817A668589A71 /* Pods-SwiftBus_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftBus_Example.modulemap"; sourceTree = "<group>"; };
 		C823B4B6F288E76EF051D9954CC8BC1B /* Pods-SwiftBus_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftBus_Example-umbrella.h"; sourceTree = "<group>"; };
 		CD1B1633DA73E051EA09162ED404FD66 /* SWXMLHash-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SWXMLHash-iOS.xcconfig"; sourceTree = "<group>"; };
 		D0F1E0787FD58F66BCEDAFDCA237A8AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SWXMLHash-watchOS/Info.plist"; sourceTree = "<group>"; };
@@ -307,7 +307,6 @@
 				40D613873D57EF1271EC66EC10A7EB35 /* SWXMLHash+TypeConversion.swift */,
 				C0B9FED1E9D31F7DC15C71317361188C /* Support Files */,
 			);
-			name = SWXMLHash;
 			path = SWXMLHash;
 			sourceTree = "<group>";
 		};
@@ -675,7 +674,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0920;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1109,7 +1108,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1117,14 +1118,20 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -1264,7 +1271,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1272,15 +1281,21 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
