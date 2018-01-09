@@ -10,8 +10,6 @@
 	<string>6GHQ7P7EHA.com.adam.MacTransit</string>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>
-	<key>com.apple.security.get-task-allow</key>
-	<true/>
 	<key>com.apple.security.network.client</key>
 	<true/>
 	<key>com.apple.security.network.server</key>
