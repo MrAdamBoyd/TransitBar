@@ -14,6 +14,18 @@
 		660D35D52001E26B00B5B880 /* StatusBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35D32001E26B00B5B880 /* StatusBarManager.swift */; };
 		660D35D72002E3BD00B5B880 /* NSMenuItem+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35D62002E3BD00B5B880 /* NSMenuItem+Target.swift */; };
 		660D35D82002E3BD00B5B880 /* NSMenuItem+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35D62002E3BD00B5B880 /* NSMenuItem+Target.swift */; };
+		660D35DB200413E600B5B880 /* TouchBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35DA200413E600B5B880 /* TouchBarManager.swift */; };
+		660D35DC200413E600B5B880 /* TouchBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35DA200413E600B5B880 /* TouchBarManager.swift */; };
+		660D35DE2004141200B5B880 /* TouchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35DD2004141200B5B880 /* TouchBarViewController.swift */; };
+		660D35DF2004141200B5B880 /* TouchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35DD2004141200B5B880 /* TouchBarViewController.swift */; };
+		660D35E22004142900B5B880 /* TransitTouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35E12004142900B5B880 /* TransitTouchBar.swift */; };
+		660D35E32004142900B5B880 /* TransitTouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35E12004142900B5B880 /* TransitTouchBar.swift */; };
+		660D35E52004153200B5B880 /* TransitTouchBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35E42004153200B5B880 /* TransitTouchBarItem.swift */; };
+		660D35E62004153200B5B880 /* TransitTouchBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35E42004153200B5B880 /* TransitTouchBarItem.swift */; };
+		660D35E82004820000B5B880 /* TransitEntry+NSTouchBarItemIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35E72004820000B5B880 /* TransitEntry+NSTouchBarItemIdentifier.swift */; };
+		660D35E92004820000B5B880 /* TransitEntry+NSTouchBarItemIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35E72004820000B5B880 /* TransitEntry+NSTouchBarItemIdentifier.swift */; };
+		660D35EB200560B600B5B880 /* TransitPrediction+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35EA200560B600B5B880 /* TransitPrediction+Format.swift */; };
+		660D35EC200560B600B5B880 /* TransitPrediction+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660D35EA200560B600B5B880 /* TransitPrediction+Format.swift */; };
 		660F233F1DADF22900832EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F233E1DADF22900832EC6 /* AppDelegate.swift */; };
 		660F23411DADF22900832EC6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660F23401DADF22900832EC6 /* ListViewController.swift */; };
 		660F23461DADF22900832EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660F23451DADF22900832EC6 /* Assets.xcassets */; };
@@ -79,6 +91,12 @@
 		660085171F92F57700987C75 /* dsa_pub.pem */ = {isa = PBXFileReference; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = SOURCE_ROOT; };
 		660D35D32001E26B00B5B880 /* StatusBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarManager.swift; sourceTree = "<group>"; };
 		660D35D62002E3BD00B5B880 /* NSMenuItem+Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMenuItem+Target.swift"; sourceTree = "<group>"; };
+		660D35DA200413E600B5B880 /* TouchBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarManager.swift; sourceTree = "<group>"; };
+		660D35DD2004141200B5B880 /* TouchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarViewController.swift; sourceTree = "<group>"; };
+		660D35E12004142900B5B880 /* TransitTouchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitTouchBar.swift; sourceTree = "<group>"; };
+		660D35E42004153200B5B880 /* TransitTouchBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitTouchBarItem.swift; sourceTree = "<group>"; };
+		660D35E72004820000B5B880 /* TransitEntry+NSTouchBarItemIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransitEntry+NSTouchBarItemIdentifier.swift"; sourceTree = "<group>"; };
+		660D35EA200560B600B5B880 /* TransitPrediction+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransitPrediction+Format.swift"; sourceTree = "<group>"; };
 		660F233B1DADF22900832EC6 /* TransitBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		660F233E1DADF22900832EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		660F23401DADF22900832EC6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -159,8 +177,21 @@
 			isa = PBXGroup;
 			children = (
 				660D35D62002E3BD00B5B880 /* NSMenuItem+Target.swift */,
+				660D35E72004820000B5B880 /* TransitEntry+NSTouchBarItemIdentifier.swift */,
+				660D35EA200560B600B5B880 /* TransitPrediction+Format.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		660D35E02004141B00B5B880 /* Touch Bar */ = {
+			isa = PBXGroup;
+			children = (
+				660D35DA200413E600B5B880 /* TouchBarManager.swift */,
+				660D35DD2004141200B5B880 /* TouchBarViewController.swift */,
+				660D35E12004142900B5B880 /* TransitTouchBar.swift */,
+				660D35E42004153200B5B880 /* TransitTouchBarItem.swift */,
+			);
+			path = "Touch Bar";
 			sourceTree = "<group>";
 		};
 		660F23321DADF22900832EC6 = {
@@ -195,6 +226,7 @@
 				660F233E1DADF22900832EC6 /* AppDelegate.swift */,
 				66E565C11E9EFCBE00C60D98 /* TransitManager.swift */,
 				660D35D32001E26B00B5B880 /* StatusBarManager.swift */,
+				660D35E02004141B00B5B880 /* Touch Bar */,
 				66A6072C1DF675D4003C9DD6 /* Constants.swift */,
 				66A6072E1DF67640003C9DD6 /* DataController.swift */,
 				660F23451DADF22900832EC6 /* Assets.xcassets */,
@@ -648,7 +680,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				660D35E52004153200B5B880 /* TransitTouchBarItem.swift in Sources */,
 				663636CA1DE161710067A79B /* TransitEntry.swift in Sources */,
+				660D35DB200413E600B5B880 /* TouchBarManager.swift in Sources */,
 				665B079A1DEBB55000AF2332 /* AboutViewController.swift in Sources */,
 				660F23411DADF22900832EC6 /* ListViewController.swift in Sources */,
 				66A6072D1DF675D4003C9DD6 /* Constants.swift in Sources */,
@@ -657,8 +691,12 @@
 				661758751E9F061F00E4E052 /* TransitNotification.swift in Sources */,
 				660D35D72002E3BD00B5B880 /* NSMenuItem+Target.swift in Sources */,
 				663636C81DE12DFA0067A79B /* NewLineViewController.swift in Sources */,
+				660D35DE2004141200B5B880 /* TouchBarViewController.swift in Sources */,
 				661758791E9F075700E4E052 /* NotificationsViewController.swift in Sources */,
+				660D35EB200560B600B5B880 /* TransitPrediction+Format.swift in Sources */,
 				660D35D42001E26B00B5B880 /* StatusBarManager.swift in Sources */,
+				660D35E22004142900B5B880 /* TransitTouchBar.swift in Sources */,
+				660D35E82004820000B5B880 /* TransitEntry+NSTouchBarItemIdentifier.swift in Sources */,
 				666F303D1E230D7200999222 /* AlertsViewController.swift in Sources */,
 				66E565C21E9EFCBE00C60D98 /* TransitManager.swift in Sources */,
 			);
@@ -684,7 +722,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				660D35E62004153200B5B880 /* TransitTouchBarItem.swift in Sources */,
 				663F9E491E00F050009116D9 /* TransitEntry.swift in Sources */,
+				660D35DC200413E600B5B880 /* TouchBarManager.swift in Sources */,
 				663F9E4A1E00F050009116D9 /* AboutViewController.swift in Sources */,
 				663F9E4B1E00F050009116D9 /* ListViewController.swift in Sources */,
 				663F9E4C1E00F050009116D9 /* Constants.swift in Sources */,
@@ -693,8 +733,12 @@
 				661758761E9F062100E4E052 /* TransitNotification.swift in Sources */,
 				660D35D82002E3BD00B5B880 /* NSMenuItem+Target.swift in Sources */,
 				663F9E4F1E00F050009116D9 /* NewLineViewController.swift in Sources */,
+				660D35DF2004141200B5B880 /* TouchBarViewController.swift in Sources */,
 				6617587A1E9F075700E4E052 /* NotificationsViewController.swift in Sources */,
+				660D35EC200560B600B5B880 /* TransitPrediction+Format.swift in Sources */,
 				660D35D52001E26B00B5B880 /* StatusBarManager.swift in Sources */,
+				660D35E32004142900B5B880 /* TransitTouchBar.swift in Sources */,
+				660D35E92004820000B5B880 /* TransitEntry+NSTouchBarItemIdentifier.swift in Sources */,
 				666F303E1E230D7200999222 /* AlertsViewController.swift in Sources */,
 				66E565C31E9EFCBE00C60D98 /* TransitManager.swift in Sources */,
 			);
