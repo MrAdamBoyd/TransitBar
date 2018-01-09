@@ -30,4 +30,25 @@ final class TransitTouchBar: NSTouchBar {
         self.defaultItemIdentifiers = [.fixedSpaceSmall, .flexibleSpace] + items.flatMap { [$0.identifier, .flexibleSpace] } + [.fixedSpaceSmall]
     }
     
+    /// Lets the touch bar items know that the predictions are updated
+    ///
+    /// - Parameter entries: entries with predictions
+    func updatePredictions(entries: [TransitEntry]) {
+        for entry in entries {
+            if let predictions = entry.stop.predictions[entry.stop.direction] {
+                self.item(for: entry)?.format(with: entry, predictions: predictions)
+            }
+        }
+    }
+    
+    /// Gets the touch bar item for the entry
+    ///
+    /// - Parameter entry: entry to filter by
+    /// - Returns: optional item
+    private func item(for entry: TransitEntry) -> TransitTouchBarItem? {
+        let identifier = NSTouchBarItem.Identifier(entry: entry)
+        let matchingItems = self.items.filter({ $0.identifier == identifier })
+        return matchingItems.first
+    }
+    
 }

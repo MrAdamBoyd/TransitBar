@@ -37,4 +37,8 @@ final class TouchBarViewController: NSViewController {
     }
     
     // MARK: - Updating predictions
+    
+    func updatePredictions(for entries: [TransitEntry]) {
+        self.transitTouchBar.updatePredictions(entries: entries)
+    }
 }

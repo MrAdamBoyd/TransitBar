@@ -35,6 +35,7 @@
 		661758761E9F062100E4E052 /* TransitNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661758741E9F061F00E4E052 /* TransitNotification.swift */; };
 		661758791E9F075700E4E052 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661758781E9F075700E4E052 /* NotificationsViewController.swift */; };
 		6617587A1E9F075700E4E052 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661758781E9F075700E4E052 /* NotificationsViewController.swift */; };
+		6625805D20056E9F0002BCBD /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6625805C20056E9F0002BCBD /* DFRFoundation.framework */; };
 		663636C61DE12A190067A79B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 663636C51DE12A190067A79B /* Main.storyboard */; };
 		663636C81DE12DFA0067A79B /* NewLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663636C71DE12DFA0067A79B /* NewLineViewController.swift */; };
 		663636CA1DE161710067A79B /* TransitEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663636C91DE161710067A79B /* TransitEntry.swift */; };
@@ -112,6 +113,7 @@
 		660F23601DADF22900832EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		661758741E9F061F00E4E052 /* TransitNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitNotification.swift; sourceTree = "<group>"; };
 		661758781E9F075700E4E052 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		6625805C20056E9F0002BCBD /* DFRFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DFRFoundation.framework; path = ../../../../../../../../../../../System/Library/PrivateFrameworks/DFRFoundation.framework; sourceTree = "<group>"; };
 		663636C51DE12A190067A79B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		663636C71DE12DFA0067A79B /* NewLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLineViewController.swift; sourceTree = "<group>"; };
 		663636C91DE161710067A79B /* TransitEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitEntry.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6625805D20056E9F0002BCBD /* DFRFoundation.framework in Frameworks */,
 				66D2E00A1E5C9D4C00EC2567 /* MapKit.framework in Frameworks */,
 				65298B2094FB3BC994C51EBD /* Pods_TransitBar.framework in Frameworks */,
 			);
@@ -293,6 +296,7 @@
 		6B953C806CA79452AE1D44D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6625805C20056E9F0002BCBD /* DFRFoundation.framework */,
 				66D2E0081E5C9D3500EC2567 /* MapKit.framework */,
 				664AB2F21E00DC220065385F /* SwiftBus.framework */,
 				92D179A27A7C7A7872D8C1BA /* Pods_MacTransit.framework */,
@@ -887,6 +891,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -914,6 +922,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -1169,6 +1181,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -1276,6 +1292,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6GHQ7P7EHA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",

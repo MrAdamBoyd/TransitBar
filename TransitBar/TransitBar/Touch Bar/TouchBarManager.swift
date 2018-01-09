@@ -42,6 +42,17 @@ final class TouchBarManager {
         }
     }
     
+    /// Updates the predictions
+    ///
+    /// - Parameter entries: entries with new predictions
+    func updatePredictions(entries: [TransitEntry]) {
+        if #available(OSX 10.12.2, *) {
+            DispatchQueue.main.async {
+                (self.touchBarViewContoller?.touchBar as? TransitTouchBar)?.updatePredictions(entries: entries)
+            }
+        }
+    }
+    
     @objc
     @available(OSX 10.12.2, *)
     private func touchBarButtonTapped() {

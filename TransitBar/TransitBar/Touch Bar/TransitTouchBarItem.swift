@@ -15,7 +15,7 @@ final class TransitTouchBarItem: NSTouchBarItem {
     
     // MARK: - Properties
     
-    private lazy var textField = NSTextField(frame: .zero)
+    private lazy var textField = NSTextField(labelWithString: "")
     
     //This is where the system is told where the view for the item should be
     override var view: NSView? {

@@ -232,6 +232,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     func transitPredictionsUpdated() {
         self.statusBarManager.updateMenuItems()
+        self.touchBarManager?.updatePredictions(entries: DataController.shared.savedEntries)
         
         if let alertsVC = self.alertsWindowController?.contentViewController as? AlertsViewController {
             //If the user has the alerts vc open, reload the messages, as they might have changed
