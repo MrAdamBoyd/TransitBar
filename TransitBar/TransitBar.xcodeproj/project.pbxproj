@@ -97,6 +97,8 @@
 		660D35E42004153200B5B880 /* TransitTouchBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitTouchBarItem.swift; sourceTree = "<group>"; };
 		660D35E72004820000B5B880 /* TransitEntry+NSTouchBarItemIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransitEntry+NSTouchBarItemIdentifier.swift"; sourceTree = "<group>"; };
 		660D35EA200560B600B5B880 /* TransitPrediction+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransitPrediction+Format.swift"; sourceTree = "<group>"; };
+		660D35EE200566F500B5B880 /* TouchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchBar.h; sourceTree = "<group>"; };
+		660D35EF2005670E00B5B880 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		660F233B1DADF22900832EC6 /* TransitBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		660F233E1DADF22900832EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		660F23401DADF22900832EC6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,14 @@
 			path = "Touch Bar";
 			sourceTree = "<group>";
 		};
+		660D35ED200566DE00B5B880 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				660D35EE200566F500B5B880 /* TouchBar.h */,
+			);
+			path = "Objective-C";
+			sourceTree = "<group>";
+		};
 		660F23321DADF22900832EC6 = {
 			isa = PBXGroup;
 			children = (
@@ -227,8 +237,10 @@
 				66E565C11E9EFCBE00C60D98 /* TransitManager.swift */,
 				660D35D32001E26B00B5B880 /* StatusBarManager.swift */,
 				660D35E02004141B00B5B880 /* Touch Bar */,
+				660D35ED200566DE00B5B880 /* Objective-C */,
 				66A6072C1DF675D4003C9DD6 /* Constants.swift */,
 				66A6072E1DF67640003C9DD6 /* DataController.swift */,
+				660D35EF2005670E00B5B880 /* Bridging-Header.h */,
 				660F23451DADF22900832EC6 /* Assets.xcassets */,
 				663636C51DE12A190067A79B /* Main.storyboard */,
 				66C923E81E00C8EF00FE067E /* TransitBar-AppStore-Info.plist */,
@@ -885,6 +897,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"SPARKLE\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TransitBar/Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
@@ -911,6 +924,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"SPARKLE\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TransitBar/Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
@@ -1003,6 +1017,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"SPARKLE\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
 				PRODUCT_NAME = TransitBar;
+				SWIFT_OBJC_BRIDGING_HEADER = "TransitBar/Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
@@ -1028,6 +1043,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
 				PRODUCT_NAME = TransitBar;
+				SWIFT_OBJC_BRIDGING_HEADER = "TransitBar/Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
@@ -1054,6 +1070,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"SPARKLE\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
 				PRODUCT_NAME = TransitBar;
+				SWIFT_OBJC_BRIDGING_HEADER = "TransitBar/Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
@@ -1079,6 +1096,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
 				PRODUCT_NAME = TransitBar;
+				SWIFT_OBJC_BRIDGING_HEADER = "TransitBar/Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
@@ -1160,6 +1178,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TransitBar/Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
@@ -1266,6 +1285,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.MacTransit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TransitBar/Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};

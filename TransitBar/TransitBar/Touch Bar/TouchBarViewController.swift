@@ -25,7 +25,6 @@ final class TouchBarViewController: NSViewController {
         self.entries = entries
     }
     
-    
     // MARK: - Methods
     
     //Should have no visible view

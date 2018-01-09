@@ -29,6 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         return image
     }
     
+    
     private let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
     private var listWindowController: NSWindowController?
     private var aboutWindowController: NSWindowController?
@@ -37,6 +38,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     private let transitManager = TransitManager()
     private lazy var statusBarManager = StatusBarManager(statusItem: self.statusItem, dataController: DataController.shared, delegate: self)
+    private var touchBarManager: TouchBarManager?
+    
+    override init() {
+        if #available(OSX 10.12.2, *) {
+            //Starting up the touch bar
+            self.touchBarManager = TouchBarManager(entries: DataController.shared.savedEntries)
+        }
+        
+        super.init()
+    }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
@@ -68,6 +79,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         }
         
         NSUserNotificationCenter.default.delegate = self
+        
+        self.touchBarManager?.makeVisibleIfAvailable()
         
     }
     
