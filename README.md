@@ -5,6 +5,7 @@ You can download the app from [GitHub](http://adamjboyd.com/TransitBar.zip) or t
 
 ## Screenshot
 ![Screenshot](https://raw.githubusercontent.com/MrAdamBoyd/TransitBar/master/Images/Example.png)
+![Screenshot](https://raw.githubusercontent.com/MrAdamBoyd/TransitBar/master/Images/Touchbar.png)
 
 ## Contact
 Your best bet to contact me is on Twitter. [@MrAdamBoyd](https://twitter.com/MrAdamBoyd)
